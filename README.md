@@ -47,26 +47,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ### 1. Push to GitHub
 
-From the repo root (the folder that contains `web/`):
+From the repo root:
 
 ```bash
 git add .
-git commit -m "The Stash: Next.js + Sanity ready for deploy"
-git remote add origin https://github.com/YOUR_USERNAME/thestash.xyz.git   # or your repo URL
+git commit -m "Your message"
+git remote add origin https://github.com/YOUR_USERNAME/thestash.xyz.git
 git push -u origin main
 ```
 
-Use your actual GitHub repo URL. Create the repo on GitHub first if needed (empty repo, no README).
+Create the repo on GitHub first if needed (empty repo, no README).
 
 ### 2. Import to Vercel and create project
 
 1. Go to [vercel.com/new](https://vercel.com/new).
 2. **Import Git Repository** – select your GitHub account and choose the `thestash.xyz` repo.
-3. **Configure Project:**
-   - **Root Directory:** click **Edit**, set to `web` (so Vercel builds the Next.js app inside `web/`).
-   - **Framework Preset:** Next.js (auto-detected).
-   - **Build Command:** `npm run build` (default).
-   - **Output Directory:** leave default (Next.js handles it).
+3. **Configure Project:** The app is at the repo root, so leave **Root Directory** blank (or `.`). **Framework Preset:** Next.js (auto-detected). **Build Command:** `npm run build` (default).
 4. **Environment Variables** – add these (same values as your local `.env.local`):
    - `NEXT_PUBLIC_SANITY_PROJECT_ID` = your Sanity project ID
    - `NEXT_PUBLIC_SANITY_DATASET` = `production` (or your dataset name)

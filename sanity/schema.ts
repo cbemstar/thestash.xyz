@@ -12,6 +12,17 @@ export const resource = defineType({
       validation: (Rule) => Rule.required().min(2).max(120),
     }),
     defineField({
+      name: "slug",
+      title: "URL slug",
+      type: "string",
+      description: "Used in the resource page URL (e.g. figma, linear). Leave empty to auto-generate from title.",
+      validation: (Rule) =>
+        Rule.custom((slug) => {
+          if (!slug) return true;
+          return /^[a-z0-9-]+$/.test(slug) ? true : "Use only lowercase letters, numbers, and hyphens.";
+        }),
+    }),
+    defineField({
       name: "url",
       title: "URL",
       type: "url",
@@ -77,10 +88,89 @@ export const resource = defineType({
     select: {
       title: "title",
       subtitle: "category",
+      slug: "slug",
       media: "icon",
+    },
+    prepare({ title, subtitle, slug, media }) {
+      const slugLabel = slug ? `/${slug}` : "(slug from title)";
+      return {
+        title,
+        subtitle: `${subtitle ?? "—"} · ${slugLabel}`,
+        media,
+      };
     },
   },
 });
 
-export const schemaTypes = [resource];
+export const collection = defineType({
+  name: "collection",
+  title: "Collection",
+  type: "document",
+  fields: [
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required().min(2).max(120),
+    }),
+    defineField({
+      name: "slug",
+      title: "URL slug",
+      type: "string",
+      description: "Used in the collection page URL (e.g. best-ai-tools). Leave empty to auto-generate from title.",
+      validation: (Rule) =>
+        Rule.custom((slug) => {
+          if (!slug) return true;
+          return /^[a-z0-9-]+$/.test(slug) ? true : "Use only lowercase letters, numbers, and hyphens.";
+        }),
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
+      rows: 3,
+      validation: (Rule) => Rule.required().min(10).max(500),
+    }),
+    defineField({
+      name: "resources",
+      title: "Resources",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "resource" }],
+        },
+      ],
+      validation: (Rule) => Rule.min(1).error("Add at least one resource."),
+    }),
+    defineField({
+      name: "featured",
+      title: "Featured",
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({
+      name: "createdAt",
+      title: "Created at",
+      type: "datetime",
+      initialValue: () => new Date().toISOString(),
+    }),
+  ],
+  preview: {
+    select: {
+      title: "title",
+      slug: "slug",
+      createdAt: "createdAt",
+    },
+    prepare({ title, slug, createdAt }) {
+      const slugLabel = slug ? `/${slug}` : "(slug from title)";
+      return {
+        title,
+        subtitle: `${slugLabel}${createdAt ? ` · ${new Date(createdAt).toLocaleDateString()}` : ""}`,
+      };
+    },
+  },
+});
+
+export const schemaTypes = [resource, collection];
 

@@ -32,7 +32,12 @@
    - **Tags** (optional) – e.g. `figma`, `free`
    - **Icon** (optional) – image
    - **Featured** (optional) – toggle for highlighting
-5. Click **Publish**. The new resource appears on the homepage within about a minute (ISR revalidates every 60 seconds), or after a refresh.
+5. Click **Publish**. The new resource appears on the homepage within about a minute (ISR revalidates every 60 seconds), or after a refresh. Each resource also gets a **dedicated page** at `https://thestash.xyz/<slug>` with SEO metadata and JSON-LD.
+
+### Programmatic SEO and automation
+
+- **Dedicated pages**: Every resource has its own URL (e.g. `/figma`, `/linear`) with title, description, Open Graph, and `SoftwareApplication` JSON-LD for search and AI.
+- **Automation**: You can create resources via **POST /api/resources** from n8n, Make, clawd.bot, or any HTTP client. Use an AI step to generate title/description/category from a URL for SEO- and AI-optimized listings. See **[docs/automation.md](docs/automation.md)** for the API spec and n8n/clawd examples.
 
 ## Learn More
 

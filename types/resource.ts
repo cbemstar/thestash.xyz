@@ -11,6 +11,7 @@ export type ResourceCategory =
 export interface Resource {
   _id: string;
   title: string;
+  slug?: string;
   url: string;
   description: string;
   category: ResourceCategory;

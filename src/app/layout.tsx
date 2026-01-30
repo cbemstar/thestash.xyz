@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark grain">
       <body
         className={`${dmSans.variable} ${syne.variable} ${geistMono.variable} font-sans antialiased`}
       >

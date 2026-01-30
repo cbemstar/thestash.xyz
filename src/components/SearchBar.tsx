@@ -19,7 +19,7 @@ export function SearchBar({ value, onChange, placeholder = "Search by title or d
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         autoComplete="off"
-        className="w-full rounded-xl border border-white/20 bg-white/5 py-3 pl-4 pr-10 text-zinc-100 placeholder:text-zinc-500 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors duration-200 motion-reduce:transition-none"
+        className="w-full rounded-xl border border-[var(--border)] bg-white/5 py-3 pl-4 pr-10 text-zinc-100 placeholder:text-zinc-500 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors duration-200 motion-reduce:transition-none"
         aria-describedby="search-clear-hint"
       />
       {value.length > 0 && (

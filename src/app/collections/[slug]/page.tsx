@@ -160,7 +160,7 @@ export default async function CollectionPage({
       <BreadcrumbListJsonLd items={breadcrumbItems} />
       <div className="min-h-screen">
       <header className="border-b border-[var(--border)] bg-background/90 backdrop-blur-md sticky top-0 z-10">
-        <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+        <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6 sm:py-4">
           <Breadcrumbs
             items={[
               { label: "The Stash", href: "/" },

@@ -2,9 +2,13 @@
 
 import { useMemo, useState, useTransition } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Filter } from "lucide-react";
 import { FilterBar } from "./FilterBar";
 import { ResourceGrid } from "./ResourceGrid";
+import PillNav from "./PillNav";
 import { getCollectionSlug } from "@/lib/slug";
+import { cn } from "@/lib/utils";
 import type { Resource } from "@/types/resource";
 import type { ResourceCategory } from "@/types/resource";
 import type { Collection } from "@/types/collection";
@@ -55,48 +59,79 @@ export function StashPage({ resources, collections }: StashPageProps) {
   };
 
   const hasActiveFilters = category !== "all" || search.length > 0;
+  const [filterOpen, setFilterOpen] = useState(false);
+  const pathname = usePathname();
+
+  const pillNavItems = useMemo(
+    () => [
+      { label: "Home", href: "/" },
+      { label: "Collections", href: "/collections" },
+      { label: "Submit", href: "/studio" },
+    ],
+    []
+  );
 
   return (
     <div className="min-h-screen">
       <header className="border-b border-border bg-background/95 backdrop-blur-md sticky top-0 z-10">
-        <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <h1 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                <Link href="/" className="hover:opacity-90">
+        <div className="mx-auto max-w-5xl px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5">
+          {/* Row 1: PillNav (logo + nav pills) + filter toggle (mobile) */}
+          <div className="flex items-center justify-between gap-3">
+            <PillNav
+              logoNode={
+                <span className="font-display text-sm font-bold tracking-tight text-foreground sm:text-base">
                   The Stash
-                </Link>
-                <span className="font-normal text-muted-foreground"> /</span>
-              </h1>
-              <p className="mt-1 text-sm text-muted-foreground max-w-xl">
-                Hand-picked dev & design resources: tools, inspiration, and links.
-              </p>
-            </div>
-            <nav className="flex items-center gap-5 shrink-0" aria-label="Primary">
-              <Link
-                href="/collections"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
-              >
-                Collections
-              </Link>
-              <a
-                href="/studio"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
-              >
-                Submit
-              </a>
-            </nav>
-          </div>
-          <div className="mt-5">
-            <FilterBar
-              category={category}
-              search={search}
-              onCategoryChange={setCategory}
-              onSearchChange={handleSearchChange}
-              resultCount={filtered.length}
-              hasActiveFilters={hasActiveFilters}
-              onClearFilters={handleClearFilters}
+                </span>
+              }
+              items={pillNavItems}
+              activeHref={pathname ?? "/"}
+              absolute={false}
+              className="flex-1 min-w-0"
+              baseColor="var(--background)"
+              pillColor="var(--muted)"
+              pillTextColor="var(--foreground)"
+              hoveredPillTextColor="var(--primary-foreground)"
+              initialLoadAnimation={false}
             />
+            <button
+              type="button"
+              onClick={() => setFilterOpen((o) => !o)}
+              aria-expanded={filterOpen}
+              aria-controls="stash-filter-panel"
+              className={cn(
+                "relative flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-lg border border-input bg-background text-muted-foreground hover:bg-muted hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background sm:hidden",
+                (filterOpen || hasActiveFilters) && "border-primary/30 bg-muted/50 text-foreground"
+              )}
+              aria-label={filterOpen ? "Close filter" : "Open filter"}
+            >
+              <Filter className="size-5" aria-hidden />
+              {hasActiveFilters && (
+                <span className="absolute right-1.5 top-1.5 size-2 rounded-full bg-primary" aria-hidden />
+              )}
+            </button>
+          </div>
+          {/* Row 2: FilterBar — always visible on sm+, collapsible on mobile */}
+          <div
+            id="stash-filter-panel"
+            role="region"
+            aria-label="Filter resources"
+            className={cn(
+              "overflow-hidden transition-[height] duration-200 ease-out motion-reduce:transition-none",
+              "sm:block",
+              filterOpen ? "mt-4 block" : "mt-0 hidden sm:block"
+            )}
+          >
+            <div className={cn(!filterOpen && "sm:mt-4", filterOpen && "mt-4")}>
+              <FilterBar
+                category={category}
+                search={search}
+                onCategoryChange={setCategory}
+                onSearchChange={handleSearchChange}
+                resultCount={filtered.length}
+                hasActiveFilters={hasActiveFilters}
+                onClearFilters={handleClearFilters}
+              />
+            </div>
           </div>
         </div>
       </header>

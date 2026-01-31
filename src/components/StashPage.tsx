@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useTransition } from "react";
 import Link from "next/link";
+import { Navbar } from "./Navbar";
 import { FilterBar } from "./FilterBar";
 import { ResourceGrid } from "./ResourceGrid";
 import { getCollectionSlug } from "@/lib/slug";
@@ -58,48 +59,20 @@ export function StashPage({ resources, collections }: StashPageProps) {
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-border bg-background/95 backdrop-blur-md sticky top-0 z-10">
-        <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <h1 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                <Link href="/" className="hover:opacity-90">
-                  The Stash
-                </Link>
-                <span className="font-normal text-muted-foreground"> /</span>
-              </h1>
-              <p className="mt-1 text-sm text-muted-foreground max-w-xl">
-                Hand-picked dev & design resources: tools, inspiration, and links.
-              </p>
-            </div>
-            <nav className="flex items-center gap-5 shrink-0" aria-label="Primary">
-              <Link
-                href="/collections"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
-              >
-                Collections
-              </Link>
-              <a
-                href="/studio"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
-              >
-                Submit
-              </a>
-            </nav>
-          </div>
-          <div className="mt-5">
-            <FilterBar
-              category={category}
-              search={search}
-              onCategoryChange={setCategory}
-              onSearchChange={handleSearchChange}
-              resultCount={filtered.length}
-              hasActiveFilters={hasActiveFilters}
-              onClearFilters={handleClearFilters}
-            />
-          </div>
+      <Navbar />
+      <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="mt-5">
+          <FilterBar
+            category={category}
+            search={search}
+            onCategoryChange={setCategory}
+            onSearchChange={handleSearchChange}
+            resultCount={filtered.length}
+            hasActiveFilters={hasActiveFilters}
+            onClearFilters={handleClearFilters}
+          />
         </div>
-      </header>
+      </div>
 
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         {/* Intro + answer-engine friendly content */}

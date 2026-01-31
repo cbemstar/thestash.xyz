@@ -25,5 +25,9 @@ export interface Resource {
       _type: "reference";
     };
   };
+  /** SEO/AEO long-form content. Shown below description when present. */
+  body?: string;
+  /** Credible sources for citations and further reading. */
+  sources?: { label: string; url: string }[];
 }
 

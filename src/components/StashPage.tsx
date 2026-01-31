@@ -1,14 +1,17 @@
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
-import { CategoryFilter } from "./CategoryFilter";
-import { SearchBar } from "./SearchBar";
+import Link from "next/link";
+import { FilterBar } from "./FilterBar";
 import { ResourceGrid } from "./ResourceGrid";
+import { getCollectionSlug } from "@/lib/slug";
 import type { Resource } from "@/types/resource";
 import type { ResourceCategory } from "@/types/resource";
+import type { Collection } from "@/types/collection";
 
 interface StashPageProps {
   resources: Resource[];
+  collections: Collection[];
 }
 
 function filterResources(
@@ -30,63 +33,128 @@ function filterResources(
   );
 }
 
-export function StashPage({ resources }: StashPageProps) {
+export function StashPage({ resources, collections }: StashPageProps) {
   const [category, setCategory] = useState<ResourceCategory | "all">("all");
   const [search, setSearch] = useState("");
   const [isPending, startTransition] = useTransition();
 
-  const filtered = useMemo(() => {
-    return filterResources(resources, category, search);
-  }, [resources, category, search]);
+  const filtered = useMemo(
+    () => filterResources(resources, category, search),
+    [resources, category, search]
+  );
 
   const handleSearchChange = (value: string) => {
     startTransition(() => setSearch(value));
   };
 
+  const handleClearFilters = () => {
+    startTransition(() => {
+      setCategory("all");
+      setSearch("");
+    });
+  };
+
+  const hasActiveFilters = category !== "all" || search.length > 0;
+
   return (
     <div className="min-h-screen">
-      <header className="border-b border-[var(--border)] bg-background/90 backdrop-blur-md sticky top-0 z-10">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
+      <header className="border-b border-border bg-background/95 backdrop-blur-md sticky top-0 z-10">
+        <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h1 className="font-display text-2xl font-bold tracking-tight text-zinc-100 sm:text-3xl">
-                The Stash <span className="text-zinc-600 font-normal">&lt;&gt;</span>
+              <h1 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                <Link href="/" className="hover:opacity-90">
+                  The Stash
+                </Link>
+                <span className="font-normal text-muted-foreground"> /</span>
               </h1>
-              <p className="mt-1 text-sm text-zinc-500 max-w-xl">
-                The best dev &amp; design resources — hand-picked tools, inspiration, and links.
+              <p className="mt-1 text-sm text-muted-foreground max-w-xl">
+                Hand-picked dev & design resources: tools, inspiration, and links.
               </p>
             </div>
-            <div className="flex items-center gap-4 shrink-0">
-              <a
+            <nav className="flex items-center gap-5 shrink-0" aria-label="Primary">
+              <Link
                 href="/collections"
-                className="text-sm font-medium text-zinc-500 hover:text-zinc-300 transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
               >
                 Collections
-              </a>
+              </Link>
               <a
                 href="/studio"
-                className="text-sm font-medium text-zinc-500 hover:text-zinc-300 transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
               >
                 Submit
               </a>
-            </div>
+            </nav>
           </div>
           <div className="mt-5">
-            <SearchBar value={search} onChange={handleSearchChange} />
-          </div>
-          <div className="mt-4">
-            <CategoryFilter value={category} onChange={setCategory} />
+            <FilterBar
+              category={category}
+              search={search}
+              onCategoryChange={setCategory}
+              onSearchChange={handleSearchChange}
+              resultCount={filtered.length}
+              hasActiveFilters={hasActiveFilters}
+              onClearFilters={handleClearFilters}
+            />
           </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        {isPending ? (
-          <p className="text-sm text-zinc-500" aria-live="polite">
-            Updating…
+      <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+        {/* Intro + answer-engine friendly content */}
+        <section className="mb-12 rounded-2xl border border-border bg-card p-6 sm:p-8" aria-labelledby="what-is-stash">
+          <h2 id="what-is-stash" className="font-display text-lg font-semibold text-foreground">
+            What is The Stash?
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground max-w-2xl">
+            The Stash is a curated directory of dev and design resources: tools, inspiration, courses, AI tools, and links for developers and designers. Browse by category or explore curated collections like Best Development Tools, Best Design Tools, and UI Components & Patterns.
           </p>
-        ) : null}
-        <ResourceGrid resources={filtered} />
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-2xl">
+            Each resource has a dedicated page with descriptions and links. Use the filter above to narrow by category or search by title, description, or tags.
+          </p>
+        </section>
+
+        {/* Collections hub — internal linking */}
+        {collections?.length > 0 && (
+          <section className="mb-12" aria-labelledby="browse-collections">
+            <h2 id="browse-collections" className="font-display text-lg font-semibold text-foreground mb-4">
+              Browse collections
+            </h2>
+            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {collections.map((c) => {
+                const slug = getCollectionSlug(c);
+                const count = c.resources?.length ?? 0;
+                return (
+                  <li key={c._id}>
+                    <Link
+                      href={`/collections/${slug}`}
+                      className="block rounded-xl border border-border bg-card px-4 py-3 text-sm font-medium text-foreground transition hover:border-primary/30 hover:bg-muted/50 focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    >
+                      <span className="block truncate">{c.title}</span>
+                      <span className="mt-0.5 block text-xs text-muted-foreground">
+                        {count} resource{count !== 1 ? "s" : ""}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
+
+        {/* All resources grid */}
+        <section aria-labelledby="all-resources">
+          <h2 id="all-resources" className="font-display text-lg font-semibold text-foreground mb-4">
+            All resources
+          </h2>
+          {isPending ? (
+            <p className="text-sm text-muted-foreground" aria-live="polite">
+              Updating…
+            </p>
+          ) : null}
+          <ResourceGrid resources={filtered} />
+        </section>
       </main>
     </div>
   );

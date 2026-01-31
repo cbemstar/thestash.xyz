@@ -72,6 +72,29 @@ export const resource = defineType({
       },
     }),
     defineField({
+      name: "body",
+      title: "Extended description",
+      type: "text",
+      rows: 6,
+      description: "SEO and AI-friendly long-form content: what it is, who it’s for, key benefits. Shown on the resource page below the short description.",
+    }),
+    defineField({
+      name: "sources",
+      title: "Sources & further reading",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "label", title: "Label", type: "string", validation: (Rule) => Rule.required() },
+            { name: "url", title: "URL", type: "url", validation: (Rule) => Rule.required() },
+          ],
+          preview: { select: { title: "label" }, prepare: ({ title }) => ({ title: title ?? "Source" }) },
+        },
+      ],
+      description: "Credible links (docs, reviews, articles) for SEO and citations.",
+    }),
+    defineField({
       name: "featured",
       title: "Featured",
       type: "boolean",
@@ -130,6 +153,13 @@ export const collection = defineType({
       type: "text",
       rows: 3,
       validation: (Rule) => Rule.required().min(10).max(500),
+    }),
+    defineField({
+      name: "coverImage",
+      title: "Cover image",
+      type: "image",
+      options: { hotspot: true },
+      description: "Hero/cover image for the collection page. Falls back to a themed image if empty.",
     }),
     defineField({
       name: "resources",

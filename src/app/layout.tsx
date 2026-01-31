@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { DM_Sans, Syne, Geist_Mono } from "next/font/google";
+import { Outfit, Syne, Geist_Mono } from "next/font/google";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -21,7 +22,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "The Stash | Dev & Design Resources",
-  description: "A visual resource repository for web links, design tools, courses, AI tools, and inspiration.",
+  description:
+    "Curated directory of dev and design resources: hand-picked tools, inspiration, courses, AI tools, and links for developers and designers. Browse by category or explore collections.",
 };
 
 export default function RootLayout({
@@ -30,11 +32,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark grain">
+    <html lang="en" className="dark grain" suppressHydrationWarning>
       <body
-        className={`${dmSans.variable} ${syne.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${outfit.variable} ${syne.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
+        suppressHydrationWarning
       >
-        {children}
+        <div className="flex min-h-screen flex-col">
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

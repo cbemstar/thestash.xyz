@@ -3,7 +3,10 @@ import Link from "next/link";
 import { urlFor } from "@/lib/sanity.image";
 import { getCategoryLabel } from "@/lib/categories";
 import { getResourceSlug } from "@/lib/slug";
+import { truncateAtWordBoundary } from "@/lib/utils";
 import type { Resource } from "@/types/resource";
+
+const DESCRIPTION_MAX_CHARS = 90;
 
 interface ResourceCardProps {
   resource: Resource;
@@ -26,11 +29,12 @@ export function ResourceCard({ resource }: ResourceCardProps) {
 
   const slug = getResourceSlug(resource);
 
+  const shortDescription = truncateAtWordBoundary(resource.description, DESCRIPTION_MAX_CHARS);
+
   return (
     <Link
       href={`/${slug}`}
-      className="group relative flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--card)] p-5 text-left backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-white/15 hover:bg-[var(--card-hover)] hover:shadow-xl hover:shadow-black/20 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0"
-      style={{ minHeight: "44px" }}
+      className="group relative flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--card)] p-5 text-left backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-white/15 hover:bg-[var(--card-hover)] hover:shadow-xl hover:shadow-black/20 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0"
     >
       <div className="mb-3 flex items-center gap-3">
         {iconSource ? (
@@ -56,8 +60,8 @@ export function ResourceCard({ resource }: ResourceCardProps) {
       <h2 className="font-display text-lg font-semibold leading-snug text-zinc-100 group-hover:text-white">
         {resource.title}
       </h2>
-      <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-zinc-400">
-        {resource.description}
+      <p className="mt-1.5 min-h-[2.5rem] text-sm leading-relaxed text-zinc-400">
+        {shortDescription}
       </p>
       {Array.isArray(resource.tags) && resource.tags.length > 0 && (
         <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Tags">
@@ -70,7 +74,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
           ))}
         </ul>
       )}
-      <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-accent transition-colors" aria-hidden>
+      <span className="mt-auto pt-3 inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-accent transition-colors" aria-hidden>
         View resource
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0">
           <path d="M5 12h14M12 5l7 7-7 7" />

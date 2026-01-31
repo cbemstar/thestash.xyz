@@ -8,4 +8,11 @@ export interface Collection {
   resources: Resource[];
   featured?: boolean;
   createdAt?: string;
+  coverImage?: {
+    _type: "image";
+    asset: {
+      _ref: string;
+      _type: "reference";
+    };
+  };
 }

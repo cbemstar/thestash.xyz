@@ -7,6 +7,8 @@ export const allResourcesQuery = groq`
     slug,
     "url": coalesce(url, ""),
     description,
+    body,
+    sources,
     category,
     tags,
     featured,
@@ -26,6 +28,8 @@ export const resourceBySlugQuery = groq`
     slug,
     "url": coalesce(url, ""),
     description,
+    body,
+    sources,
     category,
     tags,
     featured,
@@ -60,6 +64,10 @@ export const allCollectionsQuery = groq`
     title,
     slug,
     description,
+    "coverImage": coverImage{
+      ...,
+      asset->
+    },
     "resources": resources[]->{
       _id,
       title,
@@ -80,12 +88,39 @@ export const allCollectionsQuery = groq`
   }
 `;
 
+/** Resources in a category, excluding one by _id. For "Similar resources" section. */
+export const resourcesByCategoryQuery = groq`
+  *[_type == "resource" && category == $category && _id != $excludeId] | order(coalesce(createdAt, _createdAt) desc)[0...$limit] {
+    _id,
+    title,
+    slug,
+    "url": coalesce(url, ""),
+    description,
+    category,
+    tags,
+    "icon": icon{ ..., asset-> }
+  }
+`;
+
+/** Collections that include the given resource (by _id). */
+export const collectionsContainingResourceQuery = groq`
+  *[_type == "collection" && references($resourceId)] {
+    _id,
+    title,
+    slug
+  }
+`;
+
 export const collectionBySlugQuery = groq`
   *[_type == "collection" && slug == $slug][0] {
     _id,
     title,
     slug,
     description,
+    "coverImage": coverImage{
+      ...,
+      asset->
+    },
     "resources": resources[]->{
       _id,
       title,

@@ -1,6 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getAllCollections } from "@/lib/sanity.collection";
+import { urlFor } from "@/lib/sanity.image";
 import { getCollectionSlug } from "@/lib/slug";
+import { getCollectionCoverImageUrl } from "@/lib/collection-images";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -47,21 +50,37 @@ export default async function CollectionsIndexPage() {
             {collections.map((c) => {
               const slug = getCollectionSlug(c);
               const count = c.resources?.length ?? 0;
+              const coverUrl = c.coverImage?.asset?._ref
+                ? urlFor(c.coverImage).width(400).height(240).url()
+                : getCollectionCoverImageUrl(slug);
               return (
                 <li key={c._id}>
                   <Link
                     href={`/collections/${slug}`}
-                    className="block rounded-2xl border border-[var(--border)] bg-[var(--card)] p-5 transition hover:border-white/15 hover:bg-[var(--card-hover)] focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                    className="block overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--card)] transition hover:border-white/15 hover:bg-[var(--card-hover)] focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
                   >
-                    <h2 className="font-display font-semibold text-zinc-100">
-                      {c.title}
-                    </h2>
-                    <p className="mt-1 line-clamp-2 text-sm text-zinc-500">
-                      {c.description}
-                    </p>
-                    <p className="mt-2 text-xs text-zinc-500">
-                      {count} resource{count !== 1 ? "s" : ""}
-                    </p>
+                    <div className="relative aspect-[400/200] w-full bg-white/5">
+                      <Image
+                        src={coverUrl}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        unoptimized={coverUrl.includes("unsplash.com")}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--card)] via-transparent to-transparent" />
+                    </div>
+                    <div className="p-5">
+                      <h2 className="font-display font-semibold text-zinc-100">
+                        {c.title}
+                      </h2>
+                      <p className="mt-1 line-clamp-2 text-sm text-zinc-500">
+                        {c.description}
+                      </p>
+                      <p className="mt-2 text-xs text-zinc-500">
+                        {count} resource{count !== 1 ? "s" : ""}
+                      </p>
+                    </div>
                   </Link>
                 </li>
               );

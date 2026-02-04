@@ -220,6 +220,29 @@ export const resource = defineType({
       description: '"Best for X because Y" — shown in tech stack recommendations.',
     }),
     defineField({
+      name: "exampleSites",
+      title: "Example sites / Used by",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "name", title: "Site name", type: "string", validation: (Rule) => Rule.required() },
+            { name: "url", title: "URL", type: "url" },
+          ],
+          preview: { select: { title: "name" }, prepare: ({ title }) => ({ title: title ?? "Site" }) },
+        },
+      ],
+      description: "Real-world sites that use this tool (e.g. Stripe used by Shopify, Lyft). Builds trust.",
+    }),
+    defineField({
+      name: "caseStudy",
+      title: "Case study / Real-world note",
+      type: "text",
+      rows: 3,
+      description: "Optional: How this tool is used in practice, with examples or case study snippets.",
+    }),
+    defineField({
       name: "createdAt",
       title: "Created at",
       type: "datetime",

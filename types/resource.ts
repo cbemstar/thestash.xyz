@@ -96,5 +96,9 @@ export interface Resource {
   adoptionTier?: ResourceAdoptionTier | null;
   /** "Best for X because Y" blurb for recommendations. */
   recommenderBlurb?: string | null;
+  /** Real-world sites that use this tool (used by X, Y, Z). */
+  exampleSites?: { name: string; url?: string }[];
+  /** Case study or real-world use note. */
+  caseStudy?: string | null;
 }
 

@@ -116,22 +116,43 @@ export function RecommendClient({ resources }: RecommendClientProps) {
         </p>
       </div>
 
-      {/* Progress */}
-      <div className="flex gap-2" role="tablist" aria-label="Steps">
-        {([1, 2, 3, 4] as const).map((s) => (
-          <button
-            key={s}
-            type="button"
-            onClick={() => setStep(s)}
-            className={cn(
-              "h-2 flex-1 rounded-full transition-colors",
-              step >= s ? "bg-primary" : "bg-muted"
-            )}
-            aria-selected={step === s}
-            aria-label={`Step ${s}`}
-          />
-        ))}
-      </div>
+      {/* Progress with stage names: Industry → Requirements → Pricing → Results */}
+      <nav aria-label="Recommendation steps" className="space-y-2">
+        <div className="flex gap-1" role="tablist">
+          {(
+            [
+              [1, "Industry"] as const,
+              [2, "Requirements"] as const,
+              [3, "Pricing"] as const,
+              [4, "Results"] as const,
+            ] as const
+          ).map(([s, label]) => (
+            <button
+              key={s}
+              type="button"
+              onClick={() => setStep(s)}
+              className={cn(
+                "flex min-w-0 flex-1 flex-col items-center gap-1.5 rounded-lg px-2 py-2 text-center transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
+                step === s
+                  ? "bg-primary/10 text-primary"
+                  : step > s
+                    ? "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    : "text-muted-foreground hover:bg-muted/50"
+              )}
+              aria-current={step === s ? "step" : undefined}
+              aria-label={`Step ${s}: ${label}`}
+            >
+              <span className="text-xs font-medium sm:text-sm">{label}</span>
+              <span
+                className={cn(
+                  "h-1 w-full min-w-8 rounded-full transition-colors",
+                  step >= s ? "bg-primary" : "bg-muted"
+                )}
+              />
+            </button>
+          ))}
+        </div>
+      </nav>
 
       {/* Step 1: Industry */}
       {step === 1 && (

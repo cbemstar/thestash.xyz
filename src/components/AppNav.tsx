@@ -8,6 +8,8 @@ import {
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -20,15 +22,26 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const navItems = [
+/** Top-level nav links shown on desktop */
+const primaryNavItems = [
   { label: "Home", href: "/" },
-  { label: "Recommend", href: "/recommend" },
+  { label: "Tech stack", href: "/recommend" },
+  { label: "Saved", href: "/saved" },
+  { label: "Submit", href: "/studio" },
+] as const;
+
+/** Browse submenu items */
+const browseItems = [
   { label: "Collections", href: "/collections" },
   { label: "Category", href: "/category" },
   { label: "Tags", href: "/tags" },
-  { label: "Saved", href: "/saved" },
   { label: "Type", href: "/type" },
-  { label: "Submit", href: "/studio" },
+] as const;
+
+/** All nav items for mobile (flat list) */
+const allNavItems = [
+  ...primaryNavItems,
+  ...browseItems,
 ] as const;
 
 export function AppNav() {
@@ -46,10 +59,10 @@ export function AppNav() {
           The Stash
         </Link>
 
-        {/* Desktop nav – Shadcn NavigationMenu */}
+        {/* Desktop nav – primary links + Browse dropdown */}
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="gap-1">
-            {navItems.map(({ label, href }) => {
+            {primaryNavItems.map(({ label, href }) => {
               const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
               return (
                 <NavigationMenuItem key={href}>
@@ -58,6 +71,7 @@ export function AppNav() {
                       href={href}
                       className={cn(
                         navigationMenuTriggerStyle(),
+                        "focus-visible:ring-ring/50",
                         isActive && "bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground"
                       )}
                       aria-current={isActive ? "page" : undefined}
@@ -68,6 +82,41 @@ export function AppNav() {
                 </NavigationMenuItem>
               );
             })}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger
+                className={cn(
+                  browseItems.some(({ href }) => pathname === href || pathname?.startsWith(href + "/"))
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : ""
+                )}
+                aria-expanded={browseItems.some(({ href }) => pathname === href || pathname?.startsWith(href + "/"))}
+              >
+                Browse
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[180px] gap-1 p-2">
+                  {browseItems.map(({ label, href }) => {
+                    const isActive = pathname === href || pathname?.startsWith(href + "/");
+                    return (
+                      <li key={href}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={href}
+                            className={cn(
+                              "block select-none rounded-md px-3 py-2 text-sm font-medium outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                              isActive && "bg-accent text-accent-foreground"
+                            )}
+                            aria-current={isActive ? "page" : undefined}
+                          >
+                            {label}
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
@@ -88,7 +137,7 @@ export function AppNav() {
               <SheetTitle className="sr-only">Menu</SheetTitle>
             </SheetHeader>
             <nav className="mt-4 flex flex-col items-start gap-0.5 border-t border-border pt-4" aria-label="Primary">
-              {navItems.map(({ label, href }) => {
+              {allNavItems.map(({ label, href }) => {
                 const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
                 return (
                   <Link

@@ -107,9 +107,45 @@ Optional. For consistency:
 - **Cons:** Scraping / manual
 
 ### Recommended: Hybrid
-1. **Phase 1:** Manual `adoptionTier` + `qualityScore` in Sanity
+1. **Phase 1:** Manual `adoptionTier` + `qualityScore` + `exampleSites` in Sanity
 2. **Phase 2:** If budget allows, integrate BuiltWith or Wappalyzer for top tools, store `adoptionCount` and derive tier
 3. **Phase 3:** Optional "Community votes" or "Used by X companies" from manual curation
+
+---
+
+## Wappalyzer Integration Roadmap
+
+Wappalyzer has a Technology Lookup API that returns tech stacks for any website. It indexes millions of sites. **Pricing:** Pro $250/mo, Business $450/mo (required for API). [Docs](https://wappalyzer.com/docs/api/v2/lookup/).
+
+### Use case: Industry-based real-world recommendations
+
+**Goal:** Recommend tools based on what successful sites in that industry actually use.
+
+**Approach:**
+1. **Curate industry example domains** — Maintain a list of well-known sites per industry (e.g. e-commerce: shopify.com, etsy.com, wayfair.com; saas: notion.so, linear.app, figma.com).
+2. **Background job** — Call Wappalyzer API for each domain, get `technologies[]` (slug, name, categories).
+3. **Aggregate & map** — Build `industry → technology slug → count`. Map Wappalyzer slugs to our resource slugs (e.g. `stripe` → our Stripe resource).
+4. **Boost scoring** — When user selects "E-commerce", boost resources that appear in top e-commerce site stacks.
+
+**Implementation:**
+- Add `INDUSTRY_EXAMPLE_DOMAINS` in `lib/recommender.ts` (or Sanity document).
+- Cron/edge function: `GET https://api.wappalyzer.com/v2/lookup/?urls=...` (up to 10 per request, 5 req/sec).
+- Store results in DB or static JSON; refresh weekly.
+- Use in `scoreResources()`: if resource slug matches Wappalyzer tech for user's industry domains → add bonus score.
+
+**Alternative (no API):** Manually curate `exampleSites` on each resource (e.g. "Used by Shopify, Lyft") from public knowledge. Schema already supports this.
+
+---
+
+## Real-World Use Fields (Implemented)
+
+| Field | Purpose |
+|-------|---------|
+| `exampleSites` | Array of `{ name, url }` — "Used by X, Y, Z" |
+| `caseStudy` | Free-text note on how the tool is used in practice |
+| `recommenderBlurb` | "Best for X because Y" |
+
+These are shown in recommendation results. Curators can populate from Wappalyzer's public [Technologies](https://wappalyzer.com/technologies/) browse, case studies, or manual research.
 
 ---
 

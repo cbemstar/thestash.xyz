@@ -32,6 +32,8 @@ export function RecommendResultCard({ scored }: RecommendResultCardProps) {
   const slug = getResourceSlug(resource);
   const shortDescription = truncateAtWordBoundary(resource.description, 100);
   const blurb = resource.recommenderBlurb?.trim();
+  const caseStudy = resource.caseStudy?.trim();
+  const exampleSites = resource.exampleSites ?? [];
   const pricingLabel = getPricingLabel(resource.pricing ?? undefined);
   const adoptionLabel = getAdoptionLabel(resource.adoptionTier ?? undefined);
 
@@ -79,6 +81,17 @@ export function RecommendResultCard({ scored }: RecommendResultCardProps) {
           <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
             {blurb || shortDescription}
           </p>
+          {exampleSites.length > 0 && (
+            <p className="mt-1 text-xs text-muted-foreground">
+              Used by {exampleSites.slice(0, 5).map((s) => s.name).join(", ")}
+              {exampleSites.length > 5 && ` +${exampleSites.length - 5} more`}
+            </p>
+          )}
+          {caseStudy && !exampleSites.length && (
+            <p className="mt-1 text-xs text-muted-foreground line-clamp-2 italic">
+              {caseStudy}
+            </p>
+          )}
           {reasons.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-1.5">
               {reasons.slice(0, 4).map((r) => (

@@ -19,6 +19,8 @@ export const allResourcesQuery = groq`
     qualityScore,
     adoptionTier,
     recommenderBlurb,
+    exampleSites,
+    caseStudy,
     createdAt,
     "icon": icon{
       ...,
@@ -47,6 +49,8 @@ export const resourceBySlugQuery = groq`
     qualityScore,
     adoptionTier,
     recommenderBlurb,
+    exampleSites,
+    caseStudy,
     createdAt,
     "icon": icon{
       ...,

@@ -5,6 +5,17 @@ import type {
   ResourceUseCase,
 } from "@/types/resource";
 
+/** Example domains per industry for display and future Wappalyzer integration. */
+export const INDUSTRY_EXAMPLE_SITES: Record<ResourceIndustry, string[]> = {
+  "e-commerce": ["shopify.com", "etsy.com", "wayfair.com", "bestbuy.com"],
+  saas: ["notion.so", "linear.app", "figma.com", "slack.com"],
+  content: ["medium.com", "substack.com", "ghost.org", "wordpress.org"],
+  community: ["discord.com", "circle.so", "mighty-networks.com"],
+  developer: ["github.com", "vercel.com", "netlify.com", "railway.app"],
+  marketing: ["hubspot.com", "mailchimp.com", "webflow.com", "framer.com"],
+  general: [],
+};
+
 export const INDUSTRIES: { value: ResourceIndustry; label: string }[] = [
   { value: "e-commerce", label: "E-commerce" },
   { value: "saas", label: "SaaS / B2B" },

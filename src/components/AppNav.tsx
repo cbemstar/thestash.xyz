@@ -2,17 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IconMenu2 } from "@tabler/icons-react";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { IconMenu2, IconChevronDown } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   Sheet,
   SheetContent,
@@ -20,9 +17,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Pill } from "@/components/kibo-ui/pill";
 import { cn } from "@/lib/utils";
 
-/** Top-level nav links shown on desktop */
+/** Top-level nav links */
 const primaryNavItems = [
   { label: "Home", href: "/" },
   { label: "Tech stack", href: "/recommend" },
@@ -38,89 +36,103 @@ const browseItems = [
   { label: "Type", href: "/type" },
 ] as const;
 
-/** All nav items for mobile (flat list) */
-const allNavItems = [
-  ...primaryNavItems,
-  ...browseItems,
-] as const;
+/** All nav items for mobile */
+const allNavItems = [...primaryNavItems, ...browseItems] as const;
+
+function NavPill({
+  href,
+  label,
+  isActive,
+}: {
+  href: string;
+  label: string;
+  isActive: boolean;
+}) {
+  return (
+    <Pill asChild variant={isActive ? "default" : "secondary"}>
+      <Link
+        href={href}
+        className={cn(
+          "transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+          isActive && "bg-primary text-primary-foreground hover:bg-primary/90"
+        )}
+        aria-current={isActive ? "page" : undefined}
+      >
+        {label}
+      </Link>
+    </Pill>
+  );
+}
 
 export function AppNav() {
   const pathname = usePathname();
+  const isBrowseActive = browseItems.some(
+    ({ href }) => pathname === href || pathname?.startsWith(href + "/")
+  );
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
         <Link
           href="/"
-          className="font-display text-lg font-semibold tracking-tight text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="font-display text-lg font-semibold tracking-tight text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           aria-label="The Stash – Home"
         >
           The Stash
         </Link>
 
-        {/* Desktop nav – primary links + Browse dropdown */}
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList className="gap-1">
-            {primaryNavItems.map(({ label, href }) => {
-              const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
-              return (
-                <NavigationMenuItem key={href}>
-                  <NavigationMenuLink asChild>
+        {/* Desktop – pill-style nav with Kibo aesthetic */}
+        <nav className="hidden md:flex md:items-center md:gap-1.5" aria-label="Primary">
+          {primaryNavItems.map(({ label, href }) => (
+            <NavPill
+              key={href}
+              href={href}
+              label={label}
+              isActive={
+                pathname === href ||
+                (href !== "/" && pathname?.startsWith(href))
+              }
+            />
+          ))}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                className={cn(
+                  "inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium transition-colors duration-200",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                  isBrowseActive
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted/60 text-muted-foreground hover:bg-muted hover:text-foreground"
+                )}
+                aria-expanded={undefined}
+                aria-haspopup="menu"
+              >
+                Browse
+                <IconChevronDown className="size-3.5" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-[160px]">
+              {browseItems.map(({ label, href }) => {
+                const isActive =
+                  pathname === href || pathname?.startsWith(href + "/");
+                return (
+                  <DropdownMenuItem key={href} asChild>
                     <Link
                       href={href}
-                      className={cn(
-                        navigationMenuTriggerStyle(),
-                        "focus-visible:ring-ring/50",
-                        isActive && "bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground"
-                      )}
+                      className={cn(isActive && "bg-accent font-medium")}
                       aria-current={isActive ? "page" : undefined}
                     >
                       {label}
                     </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              );
-            })}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger
-                className={cn(
-                  browseItems.some(({ href }) => pathname === href || pathname?.startsWith(href + "/"))
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                    : ""
-                )}
-                aria-expanded={browseItems.some(({ href }) => pathname === href || pathname?.startsWith(href + "/"))}
-              >
-                Browse
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[180px] gap-1 p-2">
-                  {browseItems.map(({ label, href }) => {
-                    const isActive = pathname === href || pathname?.startsWith(href + "/");
-                    return (
-                      <li key={href}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={href}
-                            className={cn(
-                              "block select-none rounded-md px-3 py-2 text-sm font-medium outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                              isActive && "bg-accent text-accent-foreground"
-                            )}
-                            aria-current={isActive ? "page" : undefined}
-                          >
-                            {label}
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+                  </DropdownMenuItem>
+                );
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </nav>
 
-        {/* Mobile nav – Sheet */}
+        {/* Mobile – Sheet with pill-styled links */}
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -136,18 +148,23 @@ export function AppNav() {
             <SheetHeader>
               <SheetTitle className="sr-only">Menu</SheetTitle>
             </SheetHeader>
-            <nav className="mt-4 flex flex-col items-start gap-0.5 border-t border-border pt-4" aria-label="Primary">
+            <nav
+              className="mt-6 flex flex-col gap-1 border-t border-border pt-6"
+              aria-label="Primary"
+            >
               {allNavItems.map(({ label, href }) => {
-                const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
+                const isActive =
+                  pathname === href ||
+                  (href !== "/" && pathname?.startsWith(href));
                 return (
                   <Link
                     key={href}
                     href={href}
                     className={cn(
-                      "w-fit rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                      "rounded-full px-4 py-2.5 text-sm font-medium transition-colors",
                       isActive
                         ? "bg-primary text-primary-foreground"
-                        : "text-foreground"
+                        : "text-foreground hover:bg-muted"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >

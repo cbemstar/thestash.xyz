@@ -1,13 +1,20 @@
 import { MetadataRoute } from "next";
-import { getAllResourceSlugs } from "@/lib/sanity.resource";
+import {
+  getAllResourceSlugs,
+  getAllTags,
+  getResourceTypesWithCounts,
+} from "@/lib/sanity.resource";
 import { getAllCollectionSlugs } from "@/lib/sanity.collection";
+import { CATEGORIES } from "@/lib/categories";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [resourceSlugs, collectionSlugs] = await Promise.all([
+  const [resourceSlugs, collectionSlugs, tags, typeSlugs] = await Promise.all([
     getAllResourceSlugs(),
     getAllCollectionSlugs(),
+    getAllTags(),
+    getResourceTypesWithCounts().then((t) => t.map((x) => x.value)),
   ]);
 
   const reserved = ["studio", "api"];
@@ -27,6 +34,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  const tagUrls: MetadataRoute.Sitemap = tags.map((tag) => ({
+    url: `${BASE_URL}/tags/${encodeURIComponent(tag)}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  const typeUrls: MetadataRoute.Sitemap = typeSlugs.map((slug) => ({
+    url: `${BASE_URL}/type/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  const categoryUrls: MetadataRoute.Sitemap = CATEGORIES.map((c) => ({
+    url: `${BASE_URL}/category/${c.value}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: BASE_URL,
@@ -40,7 +68,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/tags`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/recommend`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/type`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/category`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    ...categoryUrls,
     ...collectionUrls,
+    ...tagUrls,
+    ...typeUrls,
     ...resourceUrls,
   ];
 }

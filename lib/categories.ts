@@ -8,6 +8,14 @@ export const CATEGORIES: { value: ResourceCategory; label: string }[] = [
   { value: "ai-tools", label: "AI Tools" },
   { value: "productivity", label: "Productivity" },
   { value: "learning-resources", label: "Learning Resources" },
+  { value: "webflow", label: "Webflow" },
+  { value: "shadcn", label: "Shadcn" },
+  { value: "coding", label: "Coding" },
+  { value: "github", label: "GitHub" },
+  { value: "html", label: "HTML" },
+  { value: "css", label: "CSS" },
+  { value: "javascript", label: "JavaScript" },
+  { value: "languages", label: "Languages" },
   { value: "miscellaneous", label: "Miscellaneous" },
 ];
 

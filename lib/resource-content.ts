@@ -115,6 +115,30 @@ const contentBySlug: Record<string, ResourceExtendedContent> = {
       { label: "Excalidraw documentation", url: "https://excalidraw.com/docs" },
     ],
   },
+  "7tv-emotes": {
+    definition:
+      "7TV is a third-party emote platform that lets streamers and communities use custom animated and static emotes in Twitch, YouTube, Kick, and Discord chat.",
+    benefits: [
+      "Thousands of community and official emotes, including animated and static.",
+      "Browser extension and native integrations so emotes show in chat.",
+      "Upload and manage your own emotes for your channel or server.",
+      "Free to use; emotes work across supported platforms.",
+    ],
+    useCases: [
+      "Adding custom emotes to Twitch or YouTube chat.",
+      "Finding and using emotes in Discord servers.",
+      "Creating or uploading emotes for your community.",
+      "Browsing and discovering trending emotes.",
+    ],
+    overview: [
+      "7TV started as a Twitch emote extension and has grown into a cross-platform emote service. The emotes page lets you browse, search, and use emotes; the 7TV app integrates with Twitch and other platforms so emotes appear in chat.",
+    ],
+    sources: [
+      { label: "7TV — Emotes", url: "https://7tv.app/emotes" },
+      { label: "7TV App", url: "https://7tv.app" },
+      { label: "7TV Docs", url: "https://docs.7tv.app" },
+    ],
+  },
   vercel: {
     definition:
       "Vercel is a platform for developing, previewing, and deploying frontend and full-stack web applications, and the company behind Next.js. It provides serverless functions, an edge network, and Git-based deployments.",

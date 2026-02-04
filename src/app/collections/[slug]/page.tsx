@@ -5,8 +5,10 @@ import { getCollectionBySlug, getAllCollectionSlugs, getAllCollections } from "@
 import { urlFor } from "@/lib/sanity.image";
 import { getResourceSlug, getCollectionSlug } from "@/lib/slug";
 import { getCollectionCoverImageUrl } from "@/lib/collection-images";
-import { ResourceGrid } from "@/components/ResourceGrid";
+import { AppNav } from "@/components/AppNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
+import { ResourceGrid } from "@/components/ResourceGrid";
 import type { Collection } from "@/types/collection";
 import type { Metadata } from "next";
 
@@ -49,29 +51,6 @@ function CollectionItemListJsonLd({
       name: "The Stash",
       url: baseUrl,
     },
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
-  );
-}
-
-function BreadcrumbListJsonLd({
-  items,
-}: {
-  items: { name: string; url: string }[];
-}) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: items.map((item, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: item.name,
-      item: item.url,
-    })),
   };
   return (
     <script
@@ -159,20 +138,18 @@ export default async function CollectionPage({
       />
       <BreadcrumbListJsonLd items={breadcrumbItems} />
       <div className="min-h-screen">
-      <header className="border-b border-[var(--border)] bg-background/90 backdrop-blur-md sticky top-0 z-10">
-        <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6 sm:py-4">
-          <Breadcrumbs
-            items={[
-              { label: "The Stash", href: "/" },
-              { label: "Collections", href: "/collections" },
-              { label: collection.title },
-            ]}
-          />
-        </div>
-      </header>
+        <AppNav />
 
       <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-        <div className="relative mb-10 overflow-hidden rounded-2xl border border-[var(--border)] bg-white/5 aspect-[1200/400] max-h-[280px] sm:aspect-[1200/350] sm:max-h-[320px]">
+        <Breadcrumbs
+          items={[
+            { label: "The Stash", href: "/" },
+            { label: "Collections", href: "/collections" },
+            { label: collection.title },
+          ]}
+          className="mb-6"
+        />
+        <div className="relative mb-10 overflow-hidden rounded-2xl border border-border bg-muted/50 aspect-[1200/400] max-h-[280px] sm:aspect-[1200/350] sm:max-h-[320px]">
           <Image
             src={coverUrl}
             alt=""
@@ -183,26 +160,37 @@ export default async function CollectionPage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-            <h1 className="font-display text-2xl font-bold text-zinc-100 sm:text-3xl drop-shadow-sm">
+            <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl drop-shadow-sm">
               {collection.title}
             </h1>
-            <p className="mt-2 max-w-2xl text-sm text-zinc-300 sm:text-base drop-shadow-sm">
+            <p className="mt-2 max-w-2xl text-sm text-muted-foreground sm:text-base drop-shadow-sm">
               {collection.description}
             </p>
-            <p className="mt-2 text-sm text-zinc-400">
+            <p className="mt-2 text-sm text-muted-foreground">
               {resources.length} resource{resources.length !== 1 ? "s" : ""}
+              {" · "}
+              <Link href="/" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors drop-shadow-sm">
+                All resources
+              </Link>
+              {" · "}
+              <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors drop-shadow-sm">
+                More collections
+              </Link>
             </p>
           </div>
         </div>
         <ResourceGrid resources={resources} />
 
         {moreCollections.length > 0 && (
-          <section className="mt-12 pt-10 border-t border-[var(--border)]" aria-labelledby="more-collections">
-            <h2 id="more-collections" className="font-display text-lg font-semibold text-zinc-100 mb-3">
+          <section className="mt-12 pt-10 border-t border-border" aria-labelledby="more-collections">
+            <h2 id="more-collections" className="font-display text-lg font-semibold text-foreground mb-3">
               More collections
             </h2>
-            <p className="text-sm text-zinc-400 mb-4">
-              Explore other curated lists.
+            <p className="text-sm text-muted-foreground mb-4">
+              <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
+                View all collections
+              </Link>
+              {" "}or explore these curated lists.
             </p>
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {moreCollections.map((c) => {
@@ -215,9 +203,9 @@ export default async function CollectionPage({
                   <li key={c._id}>
                     <Link
                       href={`/collections/${cSlug}`}
-                      className="block overflow-hidden rounded-xl border border-white/20 bg-white/5 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                      className="block overflow-hidden rounded-xl border border-border bg-muted/50 transition hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
                     >
-                      <div className="relative aspect-[400/180] w-full bg-white/5">
+                      <div className="relative aspect-[400/180] w-full bg-muted/50">
                         <Image
                           src={moreCoverUrl}
                           alt=""
@@ -229,8 +217,8 @@ export default async function CollectionPage({
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                       </div>
                       <div className="px-4 py-3">
-                        <span className="block truncate font-medium text-zinc-300">{c.title}</span>
-                        <span className="mt-0.5 block text-xs text-zinc-500">
+                        <span className="block truncate font-medium text-foreground">{c.title}</span>
+                        <span className="mt-0.5 block text-xs text-muted-foreground">
                           {count} resource{count !== 1 ? "s" : ""}
                         </span>
                       </div>

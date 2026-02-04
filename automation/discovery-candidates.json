@@ -1,0 +1,194 @@
+[
+  {
+    "title": "Pencil Project",
+    "url": "https://pencil.evolus.vn/",
+    "description": "Open-source GUI prototyping tool for creating wireframes and mockups across desktop platforms.",
+    "category": "design-tools",
+    "tags": [
+      "wireframing",
+      "prototyping",
+      "ui-design",
+      "open-source"
+    ],
+    "body": "Pencil Project is a free, open-source GUI prototyping app aimed at fast wireframing and mockups. It runs across major desktop platforms and includes built\u2011in shape collections and UI stencils, making it easy to sketch interfaces without starting from scratch. The tool is well-suited for early-stage product exploration, internal reviews, and communicating layouts to stakeholders. Pencil\u2019s focus is practical: quick diagrams, screens, and flowcharts you can export and share. It\u2019s a good fit for teams that want a lightweight, no\u2011friction prototyping option without SaaS lock\u2011in or recurring costs.",
+    "sources": [
+      {
+        "label": "Pencil Project",
+        "url": "https://pencil.evolus.vn/"
+      },
+      {
+        "label": "Pencil GitHub",
+        "url": "https://github.com/evolus/pencil"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "title": "Hound",
+    "url": "https://github.com/hound-search/hound",
+    "description": "Lightning-fast, self-hosted code search engine with a Go backend and web UI.",
+    "category": "development-tools",
+    "tags": [
+      "code-search",
+      "developer-tools",
+      "self-hosted",
+      "go"
+    ],
+    "body": "Hound is an extremely fast source-code search engine designed for teams that want responsive, self-hosted search across large repositories. It combines a Go backend with a lightweight web UI and keeps repositories indexed for quick regex-based queries. Hound supports multiple VCS backends and can be configured to watch repositories for updates. It\u2019s a strong alternative to heavier hosted code search services when you want speed, local control, and predictable infrastructure costs. Ideal for engineering teams that regularly dig through large codebases and want a simple, fast internal search tool.",
+    "sources": [
+      {
+        "label": "Hound GitHub",
+        "url": "https://github.com/hound-search/hound"
+      },
+      {
+        "label": "Hound README",
+        "url": "https://github.com/hound-search/hound#readme"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "title": "The Component Gallery",
+    "url": "https://component.gallery/",
+    "description": "A reference library of UI components from real design systems, built for interface builders.",
+    "category": "ui-ux-resources",
+    "tags": [
+      "design-systems",
+      "ui-components",
+      "reference",
+      "patterns"
+    ],
+    "body": "The Component Gallery is an up\u2011to\u2011date reference of interface components based on real design systems. It catalogs common components (like accordions, ratings, and tree views) and shows how different systems implement them, which is invaluable when you\u2019re defining your own patterns or aligning with existing conventions. It\u2019s a practical research tool for designers and engineers who want to compare solutions across ecosystems and avoid reinventing standard UI patterns. Use it to calibrate component naming, structure, and interaction behavior when building or refining a design system.",
+    "sources": [
+      {
+        "label": "Component Gallery",
+        "url": "https://component.gallery/"
+      },
+      {
+        "label": "Component Gallery About",
+        "url": "https://component.gallery/about/"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "title": "Refs.gallery",
+    "url": "https://refs.gallery/",
+    "description": "Curated web design inspiration gallery focused on standout, high-quality websites.",
+    "category": "inspiration",
+    "tags": [
+      "inspiration",
+      "web-design",
+      "curation",
+      "gallery"
+    ],
+    "body": "Refs.gallery is a curated collection of standout websites, focused on high\u2011quality web experiences. The curation emphasizes concept freshness, visual detail, and strong execution, making it a useful inspiration source when you\u2019re designing new landing pages or refining interface polish. The collection is updated with a strong quality bar and is geared toward designers who want fewer, better examples rather than endless scrolling. Use it to spark layout ideas, typography treatments, motion cues, and overall composition decisions for modern web projects.",
+    "sources": [
+      {
+        "label": "Refs.gallery",
+        "url": "https://refs.gallery/"
+      },
+      {
+        "label": "Refs.gallery About",
+        "url": "https://refs.gallery/about"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "title": "Noema",
+    "url": "https://noemaai.com/",
+    "description": "Privacy-first local AI assistant for iOS that runs models on-device and works offline.",
+    "category": "ai-tools",
+    "tags": [
+      "local-ai",
+      "privacy",
+      "offline",
+      "ios"
+    ],
+    "body": "Noema is a privacy\u2011first AI assistant that runs locally on iPhone and iPad, enabling offline use and keeping data on-device. It focuses on local model execution and private workflows, positioning itself as a personal AI workspace without cloud dependencies. The product emphasizes control, privacy, and offline availability, which makes it attractive for users who handle sensitive materials or want AI assistance without data leaving their device. It\u2019s a notable entry in the local\u2011first AI tooling space for mobile users.",
+    "sources": [
+      {
+        "label": "Noema",
+        "url": "https://noemaai.com/"
+      },
+      {
+        "label": "About Noema",
+        "url": "https://noemaai.com/docs/about-noema"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "title": "ActivityWatch",
+    "url": "https://activitywatch.net/",
+    "description": "Open-source, privacy-first time tracker that automatically records app and web activity.",
+    "category": "productivity",
+    "tags": [
+      "time-tracking",
+      "privacy",
+      "open-source",
+      "analytics"
+    ],
+    "body": "ActivityWatch is an open-source, privacy-first time tracker that automatically records how you spend time on your devices. It captures active applications, window titles, browser activity, and more, and then visualizes your time usage in a dashboard. All data is stored locally, which makes it a strong choice for users who want insight without cloud tracking. It\u2019s useful for understanding focus patterns, identifying distractions, and measuring time spent on projects. The ecosystem includes optional watchers and integrations for deeper tracking.",
+    "sources": [
+      {
+        "label": "ActivityWatch",
+        "url": "https://activitywatch.net/"
+      },
+      {
+        "label": "ActivityWatch GitHub",
+        "url": "https://github.com/ActivityWatch/activitywatch"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "title": "Open Source Society University (OSSU)",
+    "url": "https://ossu.dev/",
+    "description": "Free, structured curricula for computer science and related fields using open online resources.",
+    "category": "learning-resources",
+    "tags": [
+      "curriculum",
+      "self-learning",
+      "computer-science",
+      "open-education"
+    ],
+    "body": "OSSU provides structured, community\u2011supported curricula for self\u2011taught learners across computer science, data science, and math. The programs outline a complete path using high\u2011quality, free resources from universities and reputable platforms. It\u2019s a strong choice for learners who want a coherent, long\u2011term curriculum rather than ad\u2011hoc tutorials. OSSU\u2019s community, public roadmaps, and GitHub\u2011based maintenance make it easy to follow updates and contribute improvements. It\u2019s a proven backbone for disciplined self\u2011study and a reliable reference for building your own learning plan.",
+    "sources": [
+      {
+        "label": "OSSU",
+        "url": "https://ossu.dev/"
+      },
+      {
+        "label": "OSSU Computer Science",
+        "url": "https://github.com/ossu/computer-science"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "title": "OpenMoji",
+    "url": "https://openmoji.org/",
+    "description": "Open-source emoji library with consistent design and CC BY-SA licensing.",
+    "category": "miscellaneous",
+    "tags": [
+      "emoji",
+      "icons",
+      "open-source",
+      "design-assets"
+    ],
+    "body": "OpenMoji is an open\u2011source emoji and icon library designed with a consistent visual style and published under CC BY\u2011SA. The project provides thousands of emojis in multiple formats (SVG/PNG) and is actively maintained by a design school and contributors. It\u2019s a practical asset for product teams that need a cohesive, licensable emoji set for UI, marketing, or documentation without relying on platform\u2011specific emoji rendering. OpenMoji\u2019s open files and permissive licensing make it easy to integrate into design systems and custom products.",
+    "sources": [
+      {
+        "label": "OpenMoji",
+        "url": "https://openmoji.org/index.html"
+      },
+      {
+        "label": "OpenMoji GitHub",
+        "url": "https://github.com/hfg-gmuend/openmoji"
+      }
+    ],
+    "featured": false
+  }
+]

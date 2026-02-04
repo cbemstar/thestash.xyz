@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   turbopack: { root: process.cwd() },
+  async rewrites() {
+    return [{ source: "/ads.txt", destination: "/api/ads-txt" }];
+  },
   images: {
     remotePatterns: [
       {

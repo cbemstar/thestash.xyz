@@ -10,8 +10,15 @@ export const allResourcesQuery = groq`
     body,
     sources,
     category,
+    resourceType,
     tags,
     featured,
+    industries,
+    pricing,
+    useCases,
+    qualityScore,
+    adoptionTier,
+    recommenderBlurb,
     createdAt,
     "icon": icon{
       ...,
@@ -31,8 +38,15 @@ export const resourceBySlugQuery = groq`
     body,
     sources,
     category,
+    resourceType,
     tags,
     featured,
+    industries,
+    pricing,
+    useCases,
+    qualityScore,
+    adoptionTier,
+    recommenderBlurb,
     createdAt,
     "icon": icon{
       ...,
@@ -48,6 +62,7 @@ export const featuredResourcesQuery = groq`
     "url": coalesce(url, ""),
     description,
     category,
+    resourceType,
     tags,
     featured,
     createdAt,
@@ -75,6 +90,7 @@ export const allCollectionsQuery = groq`
       "url": coalesce(url, ""),
       description,
       category,
+      resourceType,
       tags,
       featured,
       createdAt,
@@ -97,7 +113,25 @@ export const resourcesByCategoryQuery = groq`
     "url": coalesce(url, ""),
     description,
     category,
+    resourceType,
     tags,
+    "icon": icon{ ..., asset-> }
+  }
+`;
+
+/** Resources with a given resourceType (for /type/[slug] pages). */
+export const resourcesByTypeQuery = groq`
+  *[_type == "resource" && resourceType == $resourceType] | order(coalesce(createdAt, _createdAt) desc) {
+    _id,
+    title,
+    slug,
+    "url": coalesce(url, ""),
+    description,
+    category,
+    resourceType,
+    tags,
+    featured,
+    createdAt,
     "icon": icon{ ..., asset-> }
   }
 `;
@@ -128,6 +162,7 @@ export const collectionBySlugQuery = groq`
       "url": coalesce(url, ""),
       description,
       category,
+      resourceType,
       tags,
       featured,
       createdAt,

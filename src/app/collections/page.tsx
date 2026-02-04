@@ -4,41 +4,57 @@ import { getAllCollections } from "@/lib/sanity.collection";
 import { urlFor } from "@/lib/sanity.image";
 import { getCollectionSlug } from "@/lib/slug";
 import { getCollectionCoverImageUrl } from "@/lib/collection-images";
+import { AppNav } from "@/components/AppNav";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 import type { Metadata } from "next";
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
 
 export const metadata: Metadata = {
   title: "Collections | The Stash",
   description:
     "Curated lists of dev & design resources. Hand-picked tools, inspiration, and links.",
+  alternates: { canonical: `${BASE_URL}/collections` },
+  openGraph: {
+    title: "Collections | The Stash",
+    url: `${BASE_URL}/collections`,
+  },
 };
 
 export default async function CollectionsIndexPage() {
   const collections = await getAllCollections();
+  const breadcrumbItems = [
+    { name: "The Stash", url: `${BASE_URL}/` },
+    { name: "Collections", url: `${BASE_URL}/collections` },
+  ];
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-[var(--border)] bg-background/90 backdrop-blur-md sticky top-0 z-10">
-        <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6 sm:py-4">
-          <Link
-            href="/"
-            className="text-sm font-medium text-zinc-500 hover:text-zinc-300 transition-colors"
-          >
-            ← The Stash
-          </Link>
-        </div>
-      </header>
+      <BreadcrumbListJsonLd items={breadcrumbItems} />
+      <AppNav />
 
       <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-        <h1 className="font-display text-2xl font-bold text-zinc-100 sm:text-3xl">
+        <Breadcrumbs
+          items={[
+            { label: "The Stash", href: "/" },
+            { label: "Collections" },
+          ]}
+          className="mb-6"
+        />
+        <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
           Collections
         </h1>
-        <p className="mt-2 text-zinc-400 max-w-2xl">
-          Curated lists of tools and resources. Click a collection to see its
-          resources.
+        <p className="mt-2 text-muted-foreground max-w-2xl">
+          Curated lists of dev and design tools.{" "}
+          <Link href="/" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
+            See all resources
+          </Link>
+          {" "}on the homepage or pick a collection below.
         </p>
 
         {!collections?.length ? (
-          <p className="mt-8 text-zinc-500">
+          <p className="mt-8 text-muted-foreground">
             No collections yet. Create one in{" "}
             <Link href="/studio" className="text-accent hover:underline">
               Studio
@@ -57,9 +73,9 @@ export default async function CollectionsIndexPage() {
                 <li key={c._id}>
                   <Link
                     href={`/collections/${slug}`}
-                    className="block overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--card)] transition hover:border-white/15 hover:bg-[var(--card-hover)] focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                    className="block overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/20 hover:bg-accent/50 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
                   >
-                    <div className="relative aspect-[400/200] w-full bg-white/5">
+                    <div className="relative aspect-[400/200] w-full bg-muted/50">
                       <Image
                         src={coverUrl}
                         alt=""
@@ -71,13 +87,13 @@ export default async function CollectionsIndexPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-[var(--card)] via-transparent to-transparent" />
                     </div>
                     <div className="p-5">
-                      <h2 className="font-display font-semibold text-zinc-100">
+                      <h2 className="font-display font-semibold text-foreground">
                         {c.title}
                       </h2>
-                      <p className="mt-1 line-clamp-2 text-sm text-zinc-500">
+                      <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
                         {c.description}
                       </p>
-                      <p className="mt-2 text-xs text-zinc-500">
+                      <p className="mt-2 text-xs text-muted-foreground">
                         {count} resource{count !== 1 ? "s" : ""}
                       </p>
                     </div>

@@ -10,6 +10,14 @@ export const CATEGORY_TO_COLLECTION_SLUG: Partial<Record<ResourceCategory, strin
   "ai-tools": "ai-tools",
   "learning-resources": "learning-resources",
   "productivity": "productivity-tools",
+  "webflow": "webflow",
+  "shadcn": "shadcn",
+  "coding": "coding",
+  "github": "github",
+  "html": "html",
+  "css": "css",
+  "javascript": "javascript",
+  "languages": "languages",
 };
 
 export function getCollectionSlugForCategory(category: ResourceCategory): string | null {

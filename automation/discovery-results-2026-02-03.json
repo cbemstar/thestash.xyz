@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-02-03T20:27:35.931Z",
+  "inputPath": "/Users/karan/Downloads/thestash.xyz/thestash.xyz/automation/discovery-candidates.json",
+  "counts": {
+    "total": 8,
+    "published": 7,
+    "deadLink": 0,
+    "duplicate": 1,
+    "invalid": 0,
+    "error": 0
+  },
+  "items": [
+    {
+      "title": "Pencil Project",
+      "url": "https://pencil.evolus.vn/",
+      "category": "design-tools",
+      "slug": "pencil-project",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:06.872Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "a232b0a2-8057-40cc-9089-a25839aaacff"
+    },
+    {
+      "title": "Hound",
+      "url": "https://github.com/hound-search/hound",
+      "category": "development-tools",
+      "slug": "hound",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:10.829Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "244b2bd8-ce08-4b0e-a749-8a821a298237"
+    },
+    {
+      "title": "The Component Gallery",
+      "url": "https://component.gallery/",
+      "category": "ui-ux-resources",
+      "slug": "the-component-gallery",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:12.387Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "Refs.gallery",
+      "url": "https://refs.gallery/",
+      "category": "inspiration",
+      "slug": "refs-gallery",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:19.453Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "ceaff882-e6be-4e4d-9eef-c7c1959361f1"
+    },
+    {
+      "title": "Noema",
+      "url": "https://noemaai.com/",
+      "category": "ai-tools",
+      "slug": "noema",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:24.389Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "342084ef-80d4-4034-8418-c8d2bf9c6537"
+    },
+    {
+      "title": "ActivityWatch",
+      "url": "https://activitywatch.net/",
+      "category": "productivity",
+      "slug": "activitywatch",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:27.839Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "87f88d11-836d-4f72-8c3a-a2e7b772414a"
+    },
+    {
+      "title": "Open Source Society University (OSSU)",
+      "url": "https://ossu.dev/",
+      "category": "learning-resources",
+      "slug": "open-source-society-university-ossu",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:31.910Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "92e4fc81-88c3-4d66-8b92-b5f1d21e24c6"
+    },
+    {
+      "title": "OpenMoji",
+      "url": "https://openmoji.org/",
+      "category": "miscellaneous",
+      "slug": "openmoji",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-03T20:27:35.931Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "c0735300-8627-4986-a6c3-05aa8a877a83"
+    }
+  ]
+}

@@ -61,6 +61,13 @@ const resources = [
     tags: ["hosting", "nextjs", "serverless"],
     featured: true,
   },
+  {
+    title: "7TV Emotes",
+    url: "https://7tv.app/emotes",
+    description: "Custom emotes for Twitch, YouTube, and Discord. Browse, upload, and use animated and static emotes in chat.",
+    category: "miscellaneous",
+    tags: ["emotes", "twitch", "streaming", "chat"],
+  },
 ];
 
 function slug(id) {

@@ -15,6 +15,14 @@ const VALID_CATEGORIES = [
   "ai-tools",
   "productivity",
   "learning-resources",
+  "webflow",
+  "shadcn",
+  "coding",
+  "github",
+  "html",
+  "css",
+  "javascript",
+  "languages",
   "miscellaneous",
 ] as const;
 

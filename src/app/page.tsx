@@ -1,8 +1,10 @@
+import { Suspense } from "react";
 import { sanityClient, isSanityConfigured } from "@/lib/sanity.client";
 import { allResourcesQuery } from "@/lib/sanity.queries";
 import { getAllCollections } from "@/lib/sanity.collection";
 import { StashPage } from "@/components/StashPage";
 import { HomepageFAQJsonLd } from "@/components/HomepageFAQJsonLd";
+import { HomepageItemListJsonLd } from "@/components/HomepageItemListJsonLd";
 import type { Resource } from "@/types/resource";
 import type { Collection } from "@/types/collection";
 
@@ -18,7 +20,10 @@ export default async function Home() {
   return (
     <>
       <HomepageFAQJsonLd />
-      <StashPage resources={resources} collections={collections ?? []} />
+      <HomepageItemListJsonLd resources={resources} />
+      <Suspense fallback={null}>
+        <StashPage resources={resources} collections={collections ?? []} />
+      </Suspense>
     </>
   );
 }

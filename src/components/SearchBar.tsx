@@ -19,14 +19,14 @@ export function SearchBar({ value, onChange, placeholder = "Search by title or d
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         autoComplete="off"
-        className="w-full rounded-xl border border-[var(--border)] bg-white/5 py-3 pl-4 pr-10 text-zinc-100 placeholder:text-zinc-500 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors duration-200 motion-reduce:transition-none"
+        className="w-full rounded-xl border border-border bg-muted/50 py-3 pl-4 pr-10 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/50 transition-colors duration-200 motion-reduce:transition-none"
         aria-describedby="search-clear-hint"
       />
       {value.length > 0 && (
         <button
           type="button"
           onClick={() => onChange("")}
-          className="absolute right-3 top-1/2 -translate-y-1/2 rounded p-1 text-zinc-500 hover:bg-white/10 hover:text-zinc-300 focus:outline-none focus:ring-2 focus:ring-accent"
+          className="absolute right-3 top-1/2 -translate-y-1/2 rounded p-1 text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           aria-label="Clear search"
           id="search-clear-hint"
         >

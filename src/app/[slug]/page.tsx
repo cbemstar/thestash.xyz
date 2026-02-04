@@ -8,7 +8,14 @@ import { getCategoryLabel } from "@/lib/categories";
 import { getCollectionSlugForCategory } from "@/lib/collections-seo";
 import { getResourceSlug, getCollectionSlug } from "@/lib/slug";
 import { getResourceExtendedContent } from "@/lib/resource-content";
+import { AppNav } from "@/components/AppNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
+import { ShareMenu } from "@/components/ShareMenu";
+import { ResourcePageSaveButton } from "@/components/ResourcePageSaveButton";
+import { RecordView } from "@/components/RecordView";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Pill } from "@/components/kibo-ui/pill";
 import type { Resource } from "@/types/resource";
 import type { Metadata } from "next";
 
@@ -48,6 +55,10 @@ export async function generateMetadata({
   const iconSource = resource.icon?.asset?._ref
     ? urlFor(resource.icon).width(120).height(120).url()
     : faviconForUrl(resource.url);
+  const ogImage =
+    resource.icon?.asset?._ref
+      ? urlFor(resource.icon).width(1200).height(630).url()
+      : iconSource;
 
   return {
     title,
@@ -59,12 +70,15 @@ export async function generateMetadata({
       url: canonical,
       siteName: "The Stash",
       type: "website",
-      images: iconSource ? [{ url: iconSource, width: 120, height: 120 }] : [],
+      images: ogImage
+        ? [{ url: ogImage, width: 1200, height: 630, alt: resource.title }]
+        : [],
     },
     twitter: {
-      card: "summary",
+      card: ogImage ? "summary_large_image" : "summary",
       title,
       description,
+      images: ogImage ? [ogImage] : undefined,
     },
     robots: { index: true, follow: true },
   };
@@ -130,29 +144,6 @@ function ResourceJsonLd({
   );
 }
 
-function BreadcrumbListJsonLd({
-  items,
-}: {
-  items: { name: string; url: string }[];
-}) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: items.map((item, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
-  );
-}
-
 export default async function ResourcePage({
   params,
 }: {
@@ -189,32 +180,33 @@ export default async function ResourcePage({
   const categoryCollectionSlug = getCollectionSlugForCategory(resource.category);
   const categoryLabel = getCategoryLabel(resource.category);
 
+  const resourceSlug = getResourceSlug(resource);
+
   return (
     <>
+      <RecordView slug={resourceSlug} />
       <ResourceJsonLd
         resource={resource}
-        slug={slug}
+        slug={resourceSlug}
         imageUrl={iconSource || null}
         baseUrl={BASE_URL}
       />
       <BreadcrumbListJsonLd items={breadcrumbItems} />
       <div className="min-h-screen">
-        <header className="border-b border-[var(--border)] bg-background/90 backdrop-blur-md sticky top-0 z-10">
-          <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 sm:py-4">
-            <Breadcrumbs
-              items={[
-                { label: "The Stash", href: "/" },
-                { label: resource.title },
-              ]}
-            />
-          </div>
-        </header>
+        <AppNav />
 
         <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+          <Breadcrumbs
+            items={[
+              { label: "The Stash", href: "/" },
+              { label: resource.title },
+            ]}
+            className="mb-6"
+          />
           <article className="space-y-6">
             <div className="flex items-start gap-4">
               {iconSource ? (
-                <span className="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-white/10">
+                <span className="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-muted">
                   <Image
                     src={iconSource}
                     alt=""
@@ -226,62 +218,66 @@ export default async function ResourcePage({
                 </span>
               ) : (
                 <span
-                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/10 font-display text-xl text-zinc-400"
+                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-muted font-display text-xl text-muted-foreground"
                   aria-hidden
                 >
                   {resource.title.charAt(0).toUpperCase()}
                 </span>
               )}
               <div>
-                <p className="text-sm font-medium uppercase tracking-wider text-zinc-500">
+                <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
                   {getCategoryLabel(resource.category)}
                 </p>
-                <h1 className="font-display text-2xl font-bold text-zinc-100 sm:text-3xl mt-0.5">
+                <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl mt-0.5">
                   {resource.title}
                 </h1>
               </div>
             </div>
 
-            <p className="text-zinc-300 leading-relaxed text-lg">
+            <p className="text-foreground leading-relaxed text-lg">
               {resource.description}
             </p>
 
             {/* Internal links: Explore (SEO + crawlability) */}
-            <nav className="rounded-xl border border-[var(--border)] bg-white/5 p-4" aria-label="Explore">
-              <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 mb-3">
-                Explore
-              </p>
-              <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            <Card className="border-border" role="navigation" aria-label="Explore">
+              <CardHeader className="pb-2">
+                <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Explore
+                </p>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
                 <li>
-                  <Link href="/" className="text-zinc-300 underline underline-offset-2 hover:text-zinc-100 transition-colors">
+                  <Link href="/" className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors">
                     All resources
                   </Link>
                 </li>
                 <li>
-                  <Link href="/collections" className="text-zinc-300 underline underline-offset-2 hover:text-zinc-100 transition-colors">
+                  <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors">
                     Collections
                   </Link>
                 </li>
                 {categoryCollectionSlug && (
                   <li>
-                    <Link href={`/collections/${categoryCollectionSlug}`} className="text-zinc-300 underline underline-offset-2 hover:text-zinc-100 transition-colors">
+                    <Link href={`/collections/${categoryCollectionSlug}`} className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors">
                       More in {categoryLabel}
                     </Link>
                   </li>
                 )}
-              </ul>
-            </nav>
+                </ul>
+              </CardContent>
+            </Card>
 
             {definition && (
               <section className="space-y-2" aria-labelledby="what-is">
-                <h2 id="what-is" className="font-display text-lg font-semibold text-zinc-100">
+                <h2 id="what-is" className="font-display text-lg font-semibold text-foreground">
                   What is {resource.title}?
                 </h2>
-                <p className="text-zinc-300 leading-relaxed">
+                <p className="text-foreground leading-relaxed">
                   {definition}
                   {categoryCollectionSlug && (
                     <>{" "}
-                      <Link href={`/collections/${categoryCollectionSlug}`} className="text-zinc-100 underline underline-offset-2 hover:text-accent transition-colors">
+                      <Link href={`/collections/${categoryCollectionSlug}`} className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
                         See it in our {categoryLabel} collection
                       </Link>.
                     </>
@@ -292,10 +288,10 @@ export default async function ResourcePage({
 
             {benefitsList && benefitsList.length > 0 && (
               <section className="space-y-3" aria-labelledby="benefits">
-                <h2 id="benefits" className="font-display text-lg font-semibold text-zinc-100">
+                <h2 id="benefits" className="font-display text-lg font-semibold text-foreground">
                   Key benefits
                 </h2>
-                <ul className="list-disc list-inside space-y-1.5 text-zinc-300 leading-relaxed">
+                <ul className="list-disc list-inside space-y-1.5 text-foreground leading-relaxed">
                   {benefitsList.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}
@@ -305,10 +301,10 @@ export default async function ResourcePage({
 
             {useCasesList && useCasesList.length > 0 && (
               <section className="space-y-3" aria-labelledby="use-cases">
-                <h2 id="use-cases" className="font-display text-lg font-semibold text-zinc-100">
+                <h2 id="use-cases" className="font-display text-lg font-semibold text-foreground">
                   Use cases
                 </h2>
-                <ul className="list-disc list-inside space-y-1.5 text-zinc-300 leading-relaxed">
+                <ul className="list-disc list-inside space-y-1.5 text-foreground leading-relaxed">
                   {useCasesList.map((u, i) => (
                     <li key={i}>{u}</li>
                   ))}
@@ -318,10 +314,10 @@ export default async function ResourcePage({
 
             {overviewParagraphs && overviewParagraphs.length > 0 && (
               <section className="space-y-4" aria-labelledby="about-resource">
-                <h2 id="about-resource" className="font-display text-lg font-semibold text-zinc-100">
+                <h2 id="about-resource" className="font-display text-lg font-semibold text-foreground">
                   About {resource.title}
                 </h2>
-                <div className="space-y-3 text-zinc-300 leading-relaxed">
+                <div className="space-y-3 text-foreground leading-relaxed">
                   {overviewParagraphs.map((paragraph, i) => (
                     <p key={i}>{paragraph}</p>
                   ))}
@@ -331,17 +327,17 @@ export default async function ResourcePage({
 
             {sourcesList && sourcesList.length > 0 && (
               <section className="space-y-3" aria-labelledby="sources">
-                <h2 id="sources" className="font-display text-lg font-semibold text-zinc-100">
+                <h2 id="sources" className="font-display text-lg font-semibold text-foreground">
                   Sources &amp; further reading
                 </h2>
-                <ul className="list-inside list-disc space-y-1.5 text-sm text-zinc-400">
+                <ul className="list-inside list-disc space-y-1.5 text-sm text-muted-foreground">
                   {sourcesList.map((s, i) => (
                     <li key={i}>
                       <a
                         href={s.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-zinc-300 underline underline-offset-2 hover:text-zinc-100 transition-colors"
+                        className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors"
                       >
                         {s.label}
                       </a>
@@ -355,20 +351,27 @@ export default async function ResourcePage({
               <ul className="flex flex-wrap gap-2" aria-label="Tags">
                 {resource.tags.map((tag) => (
                   <li key={tag}>
-                    <span className="rounded-lg bg-white/10 px-3 py-1 text-sm text-zinc-400">
+                    <Pill variant="secondary" className="font-normal">
                       {tag}
-                    </span>
+                    </Pill>
                   </li>
                 ))}
               </ul>
             )}
 
             <div className="flex flex-wrap gap-3 pt-4">
+              <ResourcePageSaveButton slug={resourceSlug} />
+              <ShareMenu
+                url={`${BASE_URL}/${resourceSlug}`}
+                title={resource.title}
+                description={resource.description}
+                className="rounded-xl border-border bg-muted/50 px-5 py-3 hover:bg-muted"
+              />
               <a
                 href={resource.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               >
                 Visit site
                 <svg
@@ -388,31 +391,31 @@ export default async function ResourcePage({
               {getCollectionSlugForCategory(resource.category) && (
                 <Link
                   href={`/collections/${getCollectionSlugForCategory(resource.category)}`}
-                  className="inline-flex items-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-300 hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                  className="inline-flex items-center rounded-xl border border-border bg-muted/50 px-5 py-3 text-sm font-medium text-foreground hover:bg-muted transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
                 >
                   More in {getCategoryLabel(resource.category)}
                 </Link>
               )}
               <Link
                 href="/collections"
-                className="inline-flex items-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-300 hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                className="inline-flex items-center rounded-xl border border-border bg-muted/50 px-5 py-3 text-sm font-medium text-foreground hover:bg-muted transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               >
                 Browse collections
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-300 hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                className="inline-flex items-center rounded-xl border border-border bg-muted/50 px-5 py-3 text-sm font-medium text-foreground hover:bg-muted transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               >
                 All resources
               </Link>
             </div>
 
             {similar.length > 0 && (
-              <section className="mt-10 pt-8 border-t border-[var(--border)]" aria-labelledby="similar-resources">
-                <h2 id="similar-resources" className="font-display text-lg font-semibold text-zinc-100 mb-3">
+              <section className="mt-10 pt-8 border-t border-border" aria-labelledby="similar-resources">
+                <h2 id="similar-resources" className="font-display text-lg font-semibold text-foreground mb-3">
                   Similar resources in {categoryLabel}
                 </h2>
-                <p className="text-sm text-zinc-400 mb-4">
+                <p className="text-sm text-muted-foreground mb-4">
                   More {categoryLabel.toLowerCase()} to explore.
                 </p>
                 <ul className="flex flex-wrap gap-2">
@@ -420,9 +423,11 @@ export default async function ResourcePage({
                     <li key={r._id}>
                       <Link
                         href={`/${getResourceSlug(r)}`}
-                        className="inline-flex rounded-lg border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-zinc-300 hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                        className="inline-flex"
                       >
-                        {r.title}
+                        <Pill variant="outline" className="cursor-pointer font-normal transition hover:bg-accent">
+                          {r.title}
+                        </Pill>
                       </Link>
                     </li>
                   ))}
@@ -431,11 +436,11 @@ export default async function ResourcePage({
             )}
 
             {related.length > 0 && (
-              <section className="mt-10 pt-8 border-t border-[var(--border)]" aria-labelledby="related-collections">
-                <h2 id="related-collections" className="font-display text-lg font-semibold text-zinc-100 mb-3">
+              <section className="mt-10 pt-8 border-t border-border" aria-labelledby="related-collections">
+                <h2 id="related-collections" className="font-display text-lg font-semibold text-foreground mb-3">
                   Related collections
                 </h2>
-                <p className="text-sm text-zinc-400 mb-4">
+                <p className="text-sm text-muted-foreground mb-4">
                   This resource appears in these curated lists.
                 </p>
                 <ul className="flex flex-wrap gap-2">
@@ -443,9 +448,11 @@ export default async function ResourcePage({
                     <li key={c._id}>
                       <Link
                         href={`/collections/${getCollectionSlug(c)}`}
-                        className="inline-flex rounded-lg border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-zinc-300 hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                        className="inline-flex"
                       >
-                        {c.title}
+                        <Pill variant="outline" className="cursor-pointer font-normal transition hover:bg-accent">
+                          {c.title}
+                        </Pill>
                       </Link>
                     </li>
                   ))}

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { ResourceCard } from "./ResourceCard";
 import { ResourceListItem } from "./ResourceListItem";
 import { Button } from "./ui/button";
@@ -20,6 +22,8 @@ interface ResourceGridProps {
   onCategoryClick?: (category: string) => void;
   isSaved?: (slug: string) => boolean;
   onSaveToggle?: (slug: string) => void;
+  /** When no resources match: if provided, show "Clear filters" button; else show "Browse all" link. */
+  onClearFilters?: () => void;
 }
 
 export function ResourceGrid({
@@ -31,6 +35,7 @@ export function ResourceGrid({
   onCategoryClick,
   isSaved,
   onSaveToggle,
+  onClearFilters,
 }: ResourceGridProps) {
   const [visibleCount, setVisibleCount] = useState(initialCount);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
@@ -45,9 +50,26 @@ export function ResourceGrid({
 
   if (resources.length === 0) {
     return (
-      <p className="py-12 text-center text-muted-foreground" role="status">
-        No resources match your filters. Try another category or search.
-      </p>
+      <div
+        className="rounded-xl border border-border bg-muted/30 px-6 py-12 text-center sm:px-10"
+        role="status"
+      >
+        <MagnifyingGlassIcon className="mx-auto size-10 text-muted-foreground/70" aria-hidden />
+        <p className="mt-4 text-sm text-muted-foreground">
+          No resources match your filters. Try another category or search.
+        </p>
+        <div className="mt-6">
+          {onClearFilters ? (
+            <Button variant="default" onClick={onClearFilters} className="min-h-11">
+              Clear filters
+            </Button>
+          ) : (
+            <Button variant="default" asChild className="min-h-11">
+              <Link href="/">Browse all</Link>
+            </Button>
+          )}
+        </div>
+      </div>
     );
   }
 
@@ -96,7 +118,7 @@ export function ResourceGrid({
             size="lg"
             onClick={handleLoadMore}
             disabled={isLoadingMore}
-            className="min-w-[160px] gap-2"
+            className="min-w-[10rem] gap-2"
           >
             {isLoadingMore ? (
               <>

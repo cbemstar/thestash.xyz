@@ -16,7 +16,10 @@ export const Pill = ({
   ...props
 }: PillProps) => (
   <Badge
-    className={cn("gap-2 rounded-full px-3 py-1.5 font-normal", className)}
+    className={cn(
+      "inline-flex items-center justify-center gap-2 rounded-full px-3 py-1.5 font-normal leading-[1.5625rem]",
+      className
+    )}
     variant={variant}
     {...props}
   />

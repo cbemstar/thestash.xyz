@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { IconSearch, IconChevronDown, IconX, IconLayoutGrid, IconList } from "@tabler/icons-react";
+import { MagnifyingGlassIcon, ChevronDownIcon, Cross2Icon, GridIcon, ListBulletIcon } from "@radix-ui/react-icons";
 import { CATEGORIES } from "@/lib/categories";
 import { cn } from "@/lib/utils";
 import type { ResourceCategory } from "@/types/resource";
@@ -44,13 +44,13 @@ export function FilterBar({
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+    <div className="min-w-0 space-y-4">
+      <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
         <label htmlFor="stash-search" className="sr-only">
           Search resources by title, description, or tags
         </label>
-        <div className="relative flex-1">
-          <IconSearch
+        <div className="relative min-w-0 flex-1">
+          <MagnifyingGlassIcon
             className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
             aria-hidden
           />
@@ -73,19 +73,19 @@ export function FilterBar({
             <button
               type="button"
               onClick={() => onSearchChange("")}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded p-1 text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+              className="absolute right-2.5 top-1/2 flex min-h-10 min-w-10 -translate-y-1/2 items-center justify-center rounded text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               aria-label="Clear search"
             >
-              <IconX className="size-4" />
+              <Cross2Icon className="size-4" />
             </button>
           )}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 sm:w-auto">
           <label htmlFor="category-filter" className="sr-only">
             Filter by category
           </label>
-          <div className="relative">
+          <div className="relative w-full min-w-0 sm:w-auto sm:min-w-[10rem]">
             <select
               id="category-filter"
               value={category}
@@ -93,10 +93,10 @@ export function FilterBar({
                 onCategoryChange((e.target.value || "all") as ResourceCategory | "all")
               }
               className={cn(
-                "appearance-none rounded-lg border border-input bg-background py-2.5 pl-4 pr-9 text-sm text-foreground",
+                "w-full min-w-0 appearance-none rounded-lg border border-input bg-background py-2.5 pl-4 pr-9 text-sm text-foreground",
                 "focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
                 "transition-colors motion-reduce:transition-none",
-                "min-w-[10rem]"
+                "sm:min-w-[10rem]"
               )}
               aria-label="Filter by category"
             >
@@ -107,13 +107,13 @@ export function FilterBar({
                 </option>
               ))}
             </select>
-            <IconChevronDown
+            <ChevronDownIcon
               className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
               aria-hidden
             />
           </div>
           {onTimeFilterChange && (
-            <div className="relative">
+            <div className="relative w-full min-w-0 sm:w-auto sm:min-w-[8rem]">
               <label htmlFor="time-filter" className="sr-only">
                 Filter by when added
               </label>
@@ -122,10 +122,10 @@ export function FilterBar({
                 value={timeFilter}
                 onChange={(e) => onTimeFilterChange(e.target.value as TimeFilter)}
                 className={cn(
-                  "appearance-none rounded-lg border border-input bg-background py-2.5 pl-4 pr-9 text-sm text-foreground",
+                  "w-full min-w-0 appearance-none rounded-lg border border-input bg-background py-2.5 pl-4 pr-9 text-sm text-foreground",
                   "focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
                   "transition-colors motion-reduce:transition-none",
-                  "min-w-[8rem]"
+                  "sm:min-w-[8rem]"
                 )}
                 aria-label="Filter by when added"
               >
@@ -133,14 +133,14 @@ export function FilterBar({
                 <option value="week">New this week</option>
                 <option value="month">New this month</option>
               </select>
-              <IconChevronDown
+              <ChevronDownIcon
                 className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
                 aria-hidden
               />
             </div>
           )}
           {onSortModeChange && (
-            <div className="relative">
+            <div className="relative w-full min-w-0 sm:w-auto sm:min-w-[8rem]">
               <label htmlFor="sort-filter" className="sr-only">
                 Sort by
               </label>
@@ -149,42 +149,45 @@ export function FilterBar({
                 value={sortMode}
                 onChange={(e) => onSortModeChange(e.target.value as SortMode)}
                 className={cn(
-                  "appearance-none rounded-lg border border-input bg-background py-2.5 pl-4 pr-9 text-sm text-foreground",
+                  "w-full min-w-0 appearance-none rounded-lg border border-input bg-background py-2.5 pl-4 pr-9 text-sm text-foreground",
                   "focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
                   "transition-colors motion-reduce:transition-none",
-                  "min-w-[8rem]"
+                  "sm:min-w-[8rem]"
                 )}
                 aria-label="Sort by"
               >
                 <option value="newest">Newest first</option>
                 <option value="a-z">A–Z</option>
               </select>
-              <IconChevronDown
+              <ChevronDownIcon
                 className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
                 aria-hidden
               />
             </div>
           )}
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={onClearFilters}
-              className="text-sm text-muted-foreground underline hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background rounded"
-            >
-              Clear
-            </button>
-          )}
-          {onViewModeChange && (
-            <div
-              role="group"
-              aria-label="View layout"
-              className="flex rounded-lg border border-input bg-background p-0.5"
-            >
+          <div className="flex flex-wrap items-center gap-2">
+            {hasActiveFilters && (
+              <button
+                type="button"
+                onClick={onClearFilters}
+                className="flex shrink-0 min-h-10 min-w-10 items-center justify-center gap-1.5 rounded text-sm text-muted-foreground underline hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:min-h-11 sm:min-w-0 sm:px-2"
+                aria-label="Clear all filters"
+              >
+                <Cross2Icon className="size-4 shrink-0 sm:hidden" aria-hidden />
+                Clear
+              </button>
+            )}
+            {onViewModeChange && (
+              <div
+                role="group"
+                aria-label="View layout"
+                className="flex shrink-0 rounded-lg border border-input bg-background p-0.5"
+              >
               <button
                 type="button"
                 onClick={() => onViewModeChange("grid")}
                 className={cn(
-                  "flex min-h-[36px] min-w-[36px] items-center justify-center rounded-md transition-colors",
+                  "flex min-h-11 min-w-11 items-center justify-center rounded-md transition-colors",
                   viewMode === "grid"
                     ? "bg-accent text-accent-foreground"
                     : "text-muted-foreground hover:text-foreground"
@@ -192,13 +195,13 @@ export function FilterBar({
                 aria-label="Grid view"
                 aria-pressed={viewMode === "grid"}
               >
-                <IconLayoutGrid className="size-4" />
+                <GridIcon className="size-4" />
               </button>
               <button
                 type="button"
                 onClick={() => onViewModeChange("list")}
                 className={cn(
-                  "flex min-h-[36px] min-w-[36px] items-center justify-center rounded-md transition-colors",
+                  "flex min-h-11 min-w-11 items-center justify-center rounded-md transition-colors",
                   viewMode === "list"
                     ? "bg-accent text-accent-foreground"
                     : "text-muted-foreground hover:text-foreground"
@@ -206,10 +209,11 @@ export function FilterBar({
                 aria-label="List view"
                 aria-pressed={viewMode === "list"}
               >
-                <IconList className="size-4" />
+                <ListBulletIcon className="size-4" />
               </button>
             </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
       <p id="search-hint" className="text-sm text-muted-foreground" role="status">

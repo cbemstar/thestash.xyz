@@ -224,13 +224,48 @@ export default async function ResourcePage({
                   {resource.title.charAt(0).toUpperCase()}
                 </span>
               )}
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
                   {getCategoryLabel(resource.category)}
                 </p>
-                <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl mt-0.5">
+                <h1 className="mt-1 font-display text-2xl font-bold text-foreground sm:text-3xl min-w-0">
                   {resource.title}
                 </h1>
+                {/* Visit site + Save/Share left-aligned under heading */}
+                <div className="mt-3 flex flex-wrap items-center gap-2 sm:gap-3">
+                  <a
+                    href={resource.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:px-5 sm:py-3"
+                    aria-label={`Visit ${resource.title} (opens in new tab)`}
+                  >
+                    Visit site
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      aria-hidden
+                    >
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </a>
+                  <div className="flex items-center gap-0.5 rounded-xl border border-border bg-muted/50 p-1" role="group" aria-label="Resource actions">
+                    <ResourcePageSaveButton slug={resourceSlug} showLabel={false} />
+                    <ShareMenu
+                      url={`${BASE_URL}/${resourceSlug}`}
+                      title={resource.title}
+                      description={resource.description}
+                      showLabel={false}
+                      className="min-h-8 min-w-8 rounded-lg border-0 bg-transparent px-2 hover:bg-muted sm:min-h-9 sm:min-w-9"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -358,57 +393,6 @@ export default async function ResourcePage({
                 ))}
               </ul>
             )}
-
-            <div className="flex flex-wrap gap-3 pt-4">
-              <ResourcePageSaveButton slug={resourceSlug} />
-              <ShareMenu
-                url={`${BASE_URL}/${resourceSlug}`}
-                title={resource.title}
-                description={resource.description}
-                className="rounded-xl border-border bg-muted/50 px-5 py-3 hover:bg-muted"
-              />
-              <a
-                href={resource.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
-              >
-                Visit site
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-              {getCollectionSlugForCategory(resource.category) && (
-                <Link
-                  href={`/collections/${getCollectionSlugForCategory(resource.category)}`}
-                  className="inline-flex items-center rounded-xl border border-border bg-muted/50 px-5 py-3 text-sm font-medium text-foreground hover:bg-muted transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
-                >
-                  More in {getCategoryLabel(resource.category)}
-                </Link>
-              )}
-              <Link
-                href="/collections"
-                className="inline-flex items-center rounded-xl border border-border bg-muted/50 px-5 py-3 text-sm font-medium text-foreground hover:bg-muted transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
-              >
-                Browse collections
-              </Link>
-              <Link
-                href="/"
-                className="inline-flex items-center rounded-xl border border-border bg-muted/50 px-5 py-3 text-sm font-medium text-foreground hover:bg-muted transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
-              >
-                All resources
-              </Link>
-            </div>
 
             {similar.length > 0 && (
               <section className="mt-10 pt-8 border-t border-border" aria-labelledby="similar-resources">

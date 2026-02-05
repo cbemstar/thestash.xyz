@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { CATEGORIES } from "@/lib/categories";
+import { ThemeSwitcherNav } from "@/components/ThemeSwitcherNav";
 
 export type FooterType = { value: string; label: string };
 
@@ -17,7 +18,7 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
 
   return (
     <footer className="border-t border-border bg-background/80 mt-auto" role="contentinfo">
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
         {/* Nocodesupply-style: Industries (categories), Type, Tags + Browse & Participate */}
         <nav
           className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5"
@@ -129,7 +130,7 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
             </p>
             <ul className="flex flex-wrap gap-x-4 gap-y-1.5 text-sm text-muted-foreground">
               <li>
-                <Link href="/studio" className="hover:text-foreground transition-colors">
+                <Link href="/submit" className="hover:text-foreground transition-colors">
                   Submit a resource
                 </Link>
               </li>
@@ -157,9 +158,23 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
               </li>
             </ul>
           </div>
+          <div>
+            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              Theme
+            </p>
+            <div className="w-fit">
+              <ThemeSwitcherNav />
+            </div>
+          </div>
         </nav>
         <p className="mt-8 text-center text-xs text-muted-foreground">
           © {year} The Stash
+        </p>
+        <p className="mt-4 text-center text-sm text-muted-foreground">
+          Developed by Karan Kumar and AI.{" "}
+          <Link href="/resume" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
+            Check out my resume
+          </Link>
         </p>
       </div>
     </footer>

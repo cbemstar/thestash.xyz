@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IconMenu2, IconChevronDown } from "@tabler/icons-react";
+import { HamburgerMenuIcon, ChevronDownIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -18,6 +18,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Pill } from "@/components/kibo-ui/pill";
+import { ThemeSwitcherNav } from "@/components/ThemeSwitcherNav";
 import { cn } from "@/lib/utils";
 
 /** Top-level nav links */
@@ -25,7 +26,7 @@ const primaryNavItems = [
   { label: "Home", href: "/" },
   { label: "Tech stack", href: "/recommend" },
   { label: "Saved", href: "/saved" },
-  { label: "Submit", href: "/studio" },
+  { label: "Submit", href: "/submit" },
 ] as const;
 
 /** Browse submenu items */
@@ -109,10 +110,10 @@ export function AppNav() {
                 aria-haspopup="menu"
               >
                 Browse
-                <IconChevronDown className="size-3.5" />
+                <ChevronDownIcon className="size-3.5" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="min-w-[160px]">
+            <DropdownMenuContent align="end" className="min-w-[10rem]">
               {browseItems.map(({ label, href }) => {
                 const isActive =
                   pathname === href || pathname?.startsWith(href + "/");
@@ -130,6 +131,7 @@ export function AppNav() {
               })}
             </DropdownMenuContent>
           </DropdownMenu>
+          <ThemeSwitcherNav className="shrink-0" />
         </nav>
 
         {/* Mobile – Sheet with pill-styled links */}
@@ -141,10 +143,10 @@ export function AppNav() {
               className="md:hidden"
               aria-label="Open menu"
             >
-              <IconMenu2 className="size-5" />
+              <HamburgerMenuIcon className="size-5" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[280px] sm:w-[320px]">
+          <SheetContent side="right" className="w-[17.5rem] sm:w-[20rem]">
             <SheetHeader>
               <SheetTitle className="sr-only">Menu</SheetTitle>
             </SheetHeader>
@@ -172,6 +174,12 @@ export function AppNav() {
                   </Link>
                 );
               })}
+              <div className="mt-6 flex items-center justify-between border-t border-border pt-6">
+                <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Theme
+                </span>
+                <ThemeSwitcherNav />
+              </div>
             </nav>
           </SheetContent>
         </Sheet>

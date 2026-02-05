@@ -27,7 +27,7 @@ export default async function RecommendPage() {
   return (
     <>
       <AppNav />
-      <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <main className="mx-auto min-w-0 max-w-5xl overflow-x-hidden px-4 py-10 pb-20 sm:px-6 sm:pb-24 lg:px-8">
       <Suspense
         fallback={
           <div className="mx-auto max-w-3xl animate-pulse space-y-6">

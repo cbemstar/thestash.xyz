@@ -19,7 +19,7 @@ const FAQ_ITEMS = [
   {
     question: "How can I add a resource?",
     answer:
-      "You can submit a resource via the Submit link in the header, which opens Sanity Studio. New listings can also be added programmatically via the API for automation and integrations.",
+      "You can submit a resource via the Submit link in the header: fill out the form with the URL, title, description, and category. We review each submission for quality and safety before publishing. Integrations can add resources programmatically via the API.",
   },
 ];
 

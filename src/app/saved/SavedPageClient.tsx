@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AppNav } from "@/components/AppNav";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ResourceGrid } from "@/components/ResourceGrid";
 import { useSavedResources } from "@/hooks/useSavedResources";
 import { getResourceSlug } from "@/lib/slug";
@@ -41,13 +42,10 @@ export function SavedPageClient({ resources }: SavedPageClientProps) {
     <div className="min-h-screen">
       <AppNav />
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-        <nav className="mb-6 text-sm text-muted-foreground" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-foreground transition-colors">
-            The Stash
-          </Link>
-          <span className="mx-2">/</span>
-          <span className="text-foreground font-medium">Saved</span>
-        </nav>
+        <Breadcrumbs
+          items={[{ label: "The Stash", href: "/" }, { label: "Saved" }]}
+          className="mb-6"
+        />
         <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
           Saved for later
         </h1>
@@ -56,7 +54,14 @@ export function SavedPageClient({ resources }: SavedPageClientProps) {
         </p>
 
         {!mounted ? (
-          <p className="mt-8 text-muted-foreground">Loading…</p>
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-hidden>
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="h-48 rounded-2xl border border-border bg-muted/50 animate-pulse"
+              />
+            ))}
+          </div>
         ) : savedResources.length === 0 ? (
           <div className="mt-10 rounded-xl border border-dashed border-border bg-muted/30 p-12 text-center">
             <p className="text-muted-foreground">

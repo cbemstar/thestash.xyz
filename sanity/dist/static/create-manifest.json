@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "createdAt": "2026-02-04T02:11:55.556Z",
+  "workspaces": [
+    {
+      "name": "thestash",
+      "title": "The Stash",
+      "basePath": "/studio",
+      "projectId": "v7d32rd6",
+      "dataset": "production",
+      "icon": null,
+      "mediaLibrary": {
+        "enabled": false
+      },
+      "schema": "55637014.create-schema.json",
+      "tools": "d8640c31.create-tools.json"
+    }
+  ],
+  "studioVersion": "5.7.0"
+}

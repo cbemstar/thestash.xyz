@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { IconFilter } from "@tabler/icons-react";
+import { MixIcon } from "@radix-ui/react-icons";
 import { AppNav } from "./AppNav";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { HeroSection } from "./HeroSection";
@@ -176,13 +176,13 @@ export function CategoryPageClient({
               aria-expanded={filterOpen}
               aria-controls="category-filter-panel"
               className={cn(
-                "relative flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md border border-input bg-background text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:hidden",
+                "relative flex min-h-[2.75rem] min-w-[2.75rem] shrink-0 items-center justify-center rounded-md border border-input bg-background text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:hidden",
                 (filterOpen || hasActiveFilters) &&
                   "border-primary/30 bg-accent text-accent-foreground"
               )}
               aria-label={filterOpen ? "Hide filters" : "Filter and sort"}
             >
-              <IconFilter className="size-5" aria-hidden />
+              <MixIcon className="size-5" aria-hidden />
               {hasActiveFilters && (
                 <span
                   className="absolute right-1.5 top-1.5 size-2 rounded-full bg-primary"
@@ -195,7 +195,11 @@ export function CategoryPageClient({
             id="category-filter-panel"
             role="region"
             aria-label="Filter and sort the resources below"
-            className={cn("mb-6", "sm:block", filterOpen ? "block" : "hidden sm:block")}
+            className={cn(
+              "mb-6 min-w-0 overflow-hidden",
+              "sm:block",
+              filterOpen ? "block" : "hidden sm:block"
+            )}
           >
             <FilterBar
               category={categorySlug}
@@ -220,6 +224,7 @@ export function CategoryPageClient({
             onCategoryClick={handleCategoryClick}
             isSaved={isSaved}
             onSaveToggle={toggleSaved}
+            onClearFilters={handleClearFilters}
           />
         </section>
       </main>

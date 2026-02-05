@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { ShimmeringText } from "./shimmering-text";
 import { Button } from "./ui/button";
 import { Spinner } from "./kibo-ui/spinner";
 import { CATEGORIES } from "@/lib/categories";
@@ -60,7 +61,12 @@ export function HeroSection({ currentCategory }: HeroSectionProps) {
           id="hero-heading"
           className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl lg:text-4xl"
         >
-          Dev and design resources, hand-picked for you
+          Dev and design resources,{" "}
+          <ShimmeringText
+            text="hand-picked for you"
+            duration={1.2}
+            className="inline [--color:hsl(var(--foreground))] [--shimmering-color:hsl(var(--primary))]"
+          />
         </h1>
 
         <div className="mx-auto mt-6 max-w-[65ch] space-y-3">
@@ -86,7 +92,7 @@ export function HeroSection({ currentCategory }: HeroSectionProps) {
               <Link
                 key={c.value}
                 href={`/category/${c.value}`}
-                className={`min-h-[44px] rounded-full border px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${
+                className={`min-h-[2.75rem] rounded-full border px-4 py-2 text-sm font-medium leading-[1.5625rem] transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${
                   isActive
                     ? "border-primary bg-accent text-accent-foreground"
                     : "border-border bg-muted/50 text-muted-foreground hover:border-primary/30 hover:bg-accent hover:text-foreground"
@@ -115,12 +121,12 @@ export function HeroSection({ currentCategory }: HeroSectionProps) {
             disabled={status === "loading"}
             autoComplete="email"
             aria-describedby={message ? "subscribe-message" : undefined}
-            className="flex h-11 min-h-[44px] flex-1 rounded-md border border-input bg-background px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors duration-200"
+            className="flex h-11 min-h-[2.75rem] flex-1 rounded-md border border-input bg-background px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors duration-200"
           />
           <Button
             type="submit"
             disabled={status === "loading"}
-            className="min-h-[44px] shrink-0 cursor-pointer gap-2"
+            className="min-h-[2.75rem] shrink-0 cursor-pointer gap-2"
           >
             {status === "loading" ? (
               <>

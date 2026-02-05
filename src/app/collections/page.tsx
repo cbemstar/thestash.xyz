@@ -34,7 +34,7 @@ export default async function CollectionsIndexPage() {
       <BreadcrumbListJsonLd items={breadcrumbItems} />
       <AppNav />
 
-      <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
         <Breadcrumbs
           items={[
             { label: "The Stash", href: "/" },
@@ -55,11 +55,11 @@ export default async function CollectionsIndexPage() {
 
         {!collections?.length ? (
           <p className="mt-8 text-muted-foreground">
-            No collections yet. Create one in{" "}
-            <Link href="/studio" className="text-accent hover:underline">
-              Studio
-            </Link>
-            .
+            No collections yet.{" "}
+            <Link href="/submit" className="text-accent hover:underline">
+              Submit a resource
+            </Link>{" "}
+            to get started.
           </p>
         ) : (
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Collections">

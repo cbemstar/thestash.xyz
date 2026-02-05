@@ -78,13 +78,13 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 0.25rem);
+  --radius-md: calc(var(--radius) - 0.125rem);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-xl: calc(var(--radius) + 0.25rem);
+  --radius-2xl: calc(var(--radius) + 0.5rem);
+  --radius-3xl: calc(var(--radius) + 0.75rem);
+  --radius-4xl: calc(var(--radius) + 1rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -101,6 +101,12 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   line-height: 1.6;
 }
+
+/* Pill/badge: override text-xs line-height so text centers vertically (1.5625rem = 25px) */
+[data-slot="badge"] {
+  line-height: 1.5625rem;
+}
+
 
 .font-display {
   font-family: var(--font-geist-sans), var(--font-sans), system-ui, sans-serif;
@@ -171,7 +177,7 @@ body {
   }
   .typography h2:not(.not-typography h2) {
     scroll-margin: calc(var(--spacing) * 20);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 0.0625rem solid var(--color-border);
     padding-bottom: calc(var(--spacing) * 2);
     font-size: var(--text-3xl);
     line-height: var(--text-3xl--line-height);
@@ -246,7 +252,7 @@ body {
   }
   .typography blockquote:not(.not-typography blockquote) {
     margin-top: calc(var(--spacing) * 6);
-    border-left: 2px solid var(--color-border);
+    border-left: 0.125rem solid var(--color-border);
     padding-left: calc(var(--spacing) * 6);
     font-style: italic;
   }
@@ -258,14 +264,14 @@ body {
   }
   .typography table:not(.not-typography table) thead tr {
     margin: 0;
-    border-top: 1px solid var(--color-border);
+    border-top: 0.0625rem solid var(--color-border);
     padding: 0;
   }
   .typography table:not(.not-typography table) thead tr:nth-child(even) {
     background-color: var(--color-muted);
   }
   .typography table:not(.not-typography table) th {
-    border: 1px solid var(--color-border);
+    border: 0.0625rem solid var(--color-border);
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
     text-align: left;
     font-weight: 700;
@@ -278,14 +284,14 @@ body {
   }
   .typography table:not(.not-typography table) tbody tr {
     margin: 0;
-    border-top: 1px solid var(--color-border);
+    border-top: 0.0625rem solid var(--color-border);
     padding: 0;
   }
   .typography table:not(.not-typography table) tbody tr:nth-child(even) {
     background-color: var(--color-muted);
   }
   .typography table:not(.not-typography table) td {
-    border: 1px solid var(--color-border);
+    border: 0.0625rem solid var(--color-border);
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
     text-align: left;
   }
@@ -323,7 +329,7 @@ body {
   }
   .typography pre:not(.not-typography pre) {
     background-color: var(--color-muted);
-    border-radius: calc(var(--radius) - 2px);
+    border-radius: calc(var(--radius) - 0.125rem);
     padding: calc(var(--spacing) * 4);
     margin-top: calc(var(--spacing) * 6);
     margin-bottom: calc(var(--spacing) * 6);
@@ -372,7 +378,7 @@ body {
     margin-bottom: 0;
   }
   .typography kbd:not(.not-typography kbd) {
-    border-radius: calc(var(--radius) - 2px);
+    border-radius: calc(var(--radius) - 0.125rem);
     background-color: var(--color-muted);
     padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.5);
     font-size: var(--text-xs);

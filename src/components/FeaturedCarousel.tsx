@@ -37,7 +37,7 @@ export function FeaturedCarousel({
         {featured.length >= 4 ? "Featured" : "Recently added"}
       </h2>
       <Carousel opts={{ align: "start", loop: false }} className="w-full">
-        <CarouselContent className="-ml-2 sm:-ml-4">
+        <CarouselContent className="-ml-2 sm:-ml-4 pt-2">
           {display.map((resource) => (
             <CarouselItem key={resource._id} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
               <ResourceCard

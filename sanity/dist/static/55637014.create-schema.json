@@ -1,0 +1,434 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 2
+              },
+              {
+                "flag": "max",
+                "constraint": 120
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Used in the resource page URL (e.g. figma, linear). Leave empty to auto-generate from title.",
+        "name": "slug",
+        "type": "string",
+        "title": "URL slug"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "url",
+        "type": "url",
+        "title": "URL"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 10
+              },
+              {
+                "flag": "max",
+                "constraint": 260
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Design Tools",
+              "value": "design-tools"
+            },
+            {
+              "title": "Development Tools",
+              "value": "development-tools"
+            },
+            {
+              "title": "UI/UX Resources",
+              "value": "ui-ux-resources"
+            },
+            {
+              "title": "Inspiration",
+              "value": "inspiration"
+            },
+            {
+              "title": "AI Tools",
+              "value": "ai-tools"
+            },
+            {
+              "title": "Productivity",
+              "value": "productivity"
+            },
+            {
+              "title": "Learning Resources",
+              "value": "learning-resources"
+            },
+            {
+              "title": "Miscellaneous",
+              "value": "miscellaneous"
+            }
+          ],
+          "layout": "dropdown"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "design-tools",
+                  "development-tools",
+                  "ui-ux-resources",
+                  "inspiration",
+                  "ai-tools",
+                  "productivity",
+                  "learning-resources",
+                  "miscellaneous"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "App",
+              "value": "app"
+            },
+            {
+              "title": "Website",
+              "value": "website"
+            },
+            {
+              "title": "Utility",
+              "value": "utility"
+            },
+            {
+              "title": "Library",
+              "value": "library"
+            },
+            {
+              "title": "Directory",
+              "value": "directory"
+            },
+            {
+              "title": "Article",
+              "value": "article"
+            },
+            {
+              "title": "Tool",
+              "value": "tool"
+            },
+            {
+              "title": "Component",
+              "value": "component"
+            },
+            {
+              "title": "Snippet",
+              "value": "snippet"
+            },
+            {
+              "title": "Course",
+              "value": "course"
+            },
+            {
+              "title": "Framework",
+              "value": "framework"
+            },
+            {
+              "title": "Other",
+              "value": "other"
+            }
+          ],
+          "layout": "dropdown"
+        },
+        "description": "Kind of resource (app, website, library, etc.) for browsing by type.",
+        "name": "resourceType",
+        "type": "string",
+        "title": "Resource type"
+      },
+      {
+        "options": {
+          "layout": "tags"
+        },
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "tags",
+        "type": "array"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "icon",
+        "type": "image"
+      },
+      {
+        "rows": 6,
+        "description": "SEO and AI-friendly long-form content: what it is, who it’s for, key benefits. Shown on the resource page below the short description.",
+        "name": "body",
+        "type": "text",
+        "title": "Extended description"
+      },
+      {
+        "description": "Credible links (docs, reviews, articles) for SEO and citations.",
+        "of": [
+          {
+            "fields": [
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "label",
+                "type": "string"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "uri",
+                        "constraint": {
+                          "options": {
+                            "scheme": [
+                              "/^http$/",
+                              "/^https$/"
+                            ],
+                            "allowRelative": false,
+                            "relativeOnly": false,
+                            "allowCredentials": false
+                          }
+                        }
+                      },
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "url",
+                "type": "url",
+                "title": "URL"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "sources",
+        "type": "array",
+        "title": "Sources & further reading"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      },
+      {
+        "name": "createdAt",
+        "type": "datetime",
+        "title": "Created at"
+      }
+    ],
+    "name": "resource",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 2
+              },
+              {
+                "flag": "max",
+                "constraint": 120
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Used in the collection page URL (e.g. best-ai-tools). Leave empty to auto-generate from title.",
+        "name": "slug",
+        "type": "string",
+        "title": "URL slug"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 10
+              },
+              {
+                "flag": "max",
+                "constraint": 500
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "description": "Hero/cover image for the collection page. Falls back to a themed image if empty.",
+        "name": "coverImage",
+        "type": "image",
+        "title": "Cover image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              }
+            ],
+            "level": "error",
+            "message": "Add at least one resource."
+          }
+        ],
+        "of": [
+          {
+            "to": [
+              {
+                "type": "resource"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to resource"
+          }
+        ],
+        "name": "resources",
+        "type": "array"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      },
+      {
+        "name": "createdAt",
+        "type": "datetime",
+        "title": "Created at"
+      }
+    ],
+    "name": "collection",
+    "type": "document"
+  }
+]

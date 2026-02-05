@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
-import { IconX } from "@tabler/icons-react"
+import { Cross2Icon } from "@radix-ui/react-icons"
 
 import { cn } from "@/lib/utils"
 
@@ -76,7 +76,7 @@ function SheetContent({
         {children}
         {showCloseButton && (
           <SheetPrimitive.Close className="absolute top-4 right-4 rounded-xs text-muted-foreground opacity-80 transition-opacity hover:text-foreground hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background disabled:pointer-events-none data-[state=open]:bg-secondary">
-            <IconX className="size-4" />
+            <Cross2Icon className="size-4" />
             <span className="sr-only">Close</span>
           </SheetPrimitive.Close>
         )}

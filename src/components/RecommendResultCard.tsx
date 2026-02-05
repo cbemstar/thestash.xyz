@@ -8,11 +8,14 @@ import { getResourceSlug } from "@/lib/slug";
 import { getPricingLabel, getAdoptionLabel } from "@/lib/recommender";
 import { truncateAtWordBoundary } from "@/lib/utils";
 import { Pill } from "./kibo-ui/pill";
+import { SaveButton } from "./SaveButton";
 import type { Resource } from "@/types/resource";
 import type { ScoredResource } from "@/lib/recommender";
 
 interface RecommendResultCardProps {
   scored: ScoredResource;
+  isSaved?: (slug: string) => boolean;
+  onSaveToggle?: (slug: string) => void;
 }
 
 function faviconForUrl(url: string): string {
@@ -24,12 +27,12 @@ function faviconForUrl(url: string): string {
   }
 }
 
-export function RecommendResultCard({ scored }: RecommendResultCardProps) {
+export function RecommendResultCard({ scored, isSaved, onSaveToggle }: RecommendResultCardProps) {
   const { resource, reasons } = scored;
+  const slug = getResourceSlug(resource);
   const iconSource = resource.icon?.asset?._ref
     ? urlFor(resource.icon).width(80).height(80).url()
     : faviconForUrl(resource.url);
-  const slug = getResourceSlug(resource);
   const shortDescription = truncateAtWordBoundary(resource.description, 100);
   const blurb = resource.recommenderBlurb?.trim();
   const caseStudy = resource.caseStudy?.trim();
@@ -40,9 +43,14 @@ export function RecommendResultCard({ scored }: RecommendResultCardProps) {
   return (
     <Link
       href={`/${slug}`}
-      className="group flex flex-col rounded-2xl border border-border bg-card p-5 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-card focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background motion-reduce:transition-none"
+      className="group relative flex min-w-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-card p-5 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-card focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background motion-reduce:transition-none"
     >
-      <div className="flex gap-4">
+      {onSaveToggle && isSaved && (
+        <div className="absolute right-3 top-3 z-10">
+          <SaveButton slug={slug} isSaved={isSaved(slug)} onToggle={onSaveToggle} />
+        </div>
+      )}
+      <div className="flex items-start gap-4">
         <span className="relative flex h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-muted">
           {iconSource ? (
             <Image
@@ -60,10 +68,12 @@ export function RecommendResultCard({ scored }: RecommendResultCardProps) {
           )}
         </span>
         <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <h2 className="font-display text-lg font-semibold text-foreground group-hover:text-primary">
-              {resource.title}
-            </h2>
+          {/* Title on its own line for clear hierarchy and left alignment */}
+          <h2 className="font-display text-lg font-semibold text-foreground group-hover:text-primary">
+            {resource.title}
+          </h2>
+          {/* Category and metadata on next line, left-aligned */}
+          <div className="mt-1.5 flex flex-wrap items-center gap-2">
             <Pill variant="secondary" className="text-xs font-medium uppercase tracking-wider">
               {getCategoryLabel(resource.category)}
             </Pill>
@@ -78,7 +88,7 @@ export function RecommendResultCard({ scored }: RecommendResultCardProps) {
               </span>
             )}
           </div>
-          <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+          <p className="mt-2 text-sm text-muted-foreground line-clamp-2 leading-relaxed">
             {blurb || shortDescription}
           </p>
           {exampleSites.length > 0 && (
@@ -104,7 +114,7 @@ export function RecommendResultCard({ scored }: RecommendResultCardProps) {
               ))}
             </div>
           )}
-          <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">
+          <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-muted-foreground transition-colors group-hover:text-primary">
             View resource
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />

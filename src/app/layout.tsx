@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import { Toaster } from "@/components/ui/sonner";
 import { getAllTags, getResourceTypesWithCounts } from "@/lib/sanity.resource";
 import "./globals.css";
 
@@ -42,23 +44,26 @@ export default async function RootLayout({
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID?.trim();
 
   return (
-    <html lang="en" className="dark grain" suppressHydrationWarning>
+    <html lang="en" className="grain" suppressHydrationWarning>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
         suppressHydrationWarning
       >
-        {adsenseClientId && (
-          <Script
-            strategy="afterInteractive"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-            crossOrigin="anonymous"
-          />
-        )}
-        <div className="flex min-h-screen flex-col">
-          <main className="flex-1">{children}</main>
-          <Footer tags={footerTags} types={footerTypes} />
-        </div>
-        <CookieConsent />
+        <ThemeProvider>
+          {adsenseClientId && (
+            <Script
+              strategy="afterInteractive"
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+              crossOrigin="anonymous"
+            />
+          )}
+          <div className="flex min-h-screen flex-col">
+            <main className="flex-1">{children}</main>
+            <Footer tags={footerTags} types={footerTypes} />
+          </div>
+          <CookieConsent />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

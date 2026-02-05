@@ -54,7 +54,7 @@ export default async function TagsIndexPage() {
                   href={`/tags/${encodeURIComponent(tag)}`}
                   className="inline-block"
                 >
-                  <span className="inline-flex min-h-[44px] items-center rounded-full border border-border bg-muted/50 px-4 py-2 text-sm font-medium text-muted-foreground transition hover:border-primary/30 hover:bg-accent hover:text-foreground">
+                  <span className="inline-flex min-h-[2.75rem] items-center rounded-full border border-border bg-muted/50 px-4 py-2 text-sm font-medium text-muted-foreground transition hover:border-primary/30 hover:bg-accent hover:text-foreground">
                     {tag}
                   </span>
                 </Link>

@@ -7,6 +7,7 @@ import { urlFor } from "@/lib/sanity.image";
 import { getCategoryLabel } from "@/lib/categories";
 import { getResourceSlug } from "@/lib/slug";
 import { truncateAtWordBoundary } from "@/lib/utils";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Pill } from "./kibo-ui/pill";
 import { SaveButton } from "./SaveButton";
 import type { Resource } from "@/types/resource";
@@ -64,7 +65,7 @@ export function ResourceCard({ resource, onTagClick, onCategoryClick, isSaved, o
   return (
     <Link
       href={`/${slug}`}
-      className="group relative flex h-full cursor-pointer flex-col rounded-2xl border border-border bg-card p-5 text-left backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-card focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+      className="group relative z-0 flex h-full cursor-pointer flex-col rounded-2xl border border-border bg-card p-5 text-left backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:z-10 hover:border-primary/30 hover:bg-card hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:hover:scale-100"
     >
       {onSaveToggle && isSaved && (
         <div className="absolute right-3 top-3 z-10">
@@ -124,9 +125,7 @@ export function ResourceCard({ resource, onTagClick, onCategoryClick, isSaved, o
         )}
         <span className="mt-auto pt-3 inline-flex items-center gap-1 text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors" aria-hidden>
           View resource
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
+          <ArrowRightIcon className="size-4 shrink-0" aria-hidden />
         </span>
       </div>
     </Link>

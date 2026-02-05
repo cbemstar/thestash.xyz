@@ -3,7 +3,7 @@
 import { useMemo, useState, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { IconFilter } from "@tabler/icons-react";
+import { MixIcon } from "@radix-ui/react-icons";
 import { AppNav } from "./AppNav";
 import { HeroSection } from "./HeroSection";
 import { FilterBar, type ViewMode, type SortMode, type TimeFilter } from "./FilterBar";
@@ -210,8 +210,8 @@ export function StashPage({ resources, collections }: StashPageProps) {
                 return (
                   <li key={c._id}>
                     <Link href={`/collections/${slug}`} className="block h-full">
-                      <Card className="h-full gap-0 py-4 transition hover:border-primary/30 hover:bg-accent/50 cursor-pointer">
-                        <CardContent className="py-0">
+                      <Card className="h-full gap-0 p-4 transition hover:border-primary/30 hover:bg-accent/50 cursor-pointer">
+                        <CardContent className="p-0">
                           <div className="flex items-center justify-between gap-2">
                             <span className="font-medium text-foreground truncate">{c.title}</span>
                             <Pill variant="secondary" className="shrink-0 text-xs">
@@ -241,7 +241,7 @@ export function StashPage({ resources, collections }: StashPageProps) {
         {/* All resources – filters below control this section only */}
         <section
           aria-labelledby="all-resources"
-          className="mt-12 rounded-2xl border border-border bg-card/30 px-4 py-6 sm:px-6 sm:py-8 lg:px-8"
+          className="mt-16 rounded-2xl border border-border bg-card/30 px-4 py-6 sm:px-6 sm:py-8 lg:px-8"
         >
           <div className="mb-6 flex items-center justify-between gap-3">
             <h2 id="all-resources" className="font-display text-lg font-semibold text-foreground">
@@ -253,12 +253,12 @@ export function StashPage({ resources, collections }: StashPageProps) {
               aria-expanded={filterOpen}
               aria-controls="stash-filter-panel"
               className={cn(
-                "relative flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md border border-input bg-background text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:hidden",
+                "relative flex min-h-[2.75rem] min-w-[2.75rem] shrink-0 items-center justify-center rounded-md border border-input bg-background text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:hidden",
                 (filterOpen || hasActiveFilters) && "border-primary/30 bg-accent text-accent-foreground"
               )}
               aria-label={filterOpen ? "Hide filters" : "Filter and sort"}
             >
-              <IconFilter className="size-5" aria-hidden />
+              <MixIcon className="size-5" aria-hidden />
               {hasActiveFilters && (
                 <span className="absolute right-1.5 top-1.5 size-2 rounded-full bg-primary" aria-hidden />
               )}
@@ -269,7 +269,7 @@ export function StashPage({ resources, collections }: StashPageProps) {
             role="region"
             aria-label="Filter and sort the resources below"
             className={cn(
-              "mb-6",
+              "mb-6 min-w-0 overflow-hidden",
               "sm:block",
               filterOpen ? "block" : "hidden sm:block"
             )}
@@ -297,6 +297,7 @@ export function StashPage({ resources, collections }: StashPageProps) {
             onCategoryClick={handleCategoryClick}
             isSaved={isSaved}
             onSaveToggle={toggleSaved}
+            onClearFilters={handleClearFilters}
           />
         </section>
       </main>

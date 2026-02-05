@@ -102,7 +102,7 @@ export default async function TypeSlugPage({
               ))}
             </ul>
             <p className="mt-3 text-sm">
-              <Link href="/type" className="text-foreground underline underline-offset-2 hover:text-accent">
+              <Link href="/type" className="text-foreground underline underline-offset-2 hover:text-primary">
                 View all types
               </Link>
             </p>

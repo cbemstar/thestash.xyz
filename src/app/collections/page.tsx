@@ -47,7 +47,7 @@ export default async function CollectionsIndexPage() {
         </h1>
         <p className="mt-2 text-muted-foreground max-w-2xl">
           Curated lists of dev and design tools.{" "}
-          <Link href="/" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
+          <Link href="/" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
             See all resources
           </Link>
           {" "}on the homepage or pick a collection below.

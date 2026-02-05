@@ -169,11 +169,11 @@ export default async function CollectionPage({
             <p className="mt-2 text-sm text-muted-foreground">
               {resources.length} resource{resources.length !== 1 ? "s" : ""}
               {" · "}
-              <Link href="/" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors drop-shadow-sm">
+              <Link href="/" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors drop-shadow-sm">
                 All resources
               </Link>
               {" · "}
-              <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors drop-shadow-sm">
+              <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors drop-shadow-sm">
                 More collections
               </Link>
             </p>
@@ -187,7 +187,7 @@ export default async function CollectionPage({
               More collections
             </h2>
             <p className="text-sm text-muted-foreground mb-4">
-              <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
+              <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
                 View all collections
               </Link>
               {" "}or explore these curated lists.

@@ -101,11 +101,11 @@ export default function SubmitPage() {
           <p className="text-foreground">{message}</p>
           <p className="mt-2 text-sm text-muted-foreground">
             You can{" "}
-            <Link href="/submit" className="text-foreground underline underline-offset-2 hover:text-accent">
+            <Link href="/submit" className="text-foreground underline underline-offset-2 hover:text-primary">
               submit another
             </Link>{" "}
             or{" "}
-            <Link href="/" className="text-foreground underline underline-offset-2 hover:text-accent">
+            <Link href="/" className="text-foreground underline underline-offset-2 hover:text-primary">
               go back home
             </Link>
             .
@@ -236,7 +236,7 @@ export default function SubmitPage() {
             </Button>
             <Link
               href="/"
-              className="text-sm text-muted-foreground underline underline-offset-2 hover:text-foreground"
+              className="text-sm text-muted-foreground underline underline-offset-2 hover:text-primary"
             >
               Cancel
             </Link>

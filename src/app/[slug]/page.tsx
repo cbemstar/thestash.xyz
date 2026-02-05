@@ -283,18 +283,18 @@ export default async function ResourcePage({
               <CardContent className="pt-0">
                 <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
                 <li>
-                  <Link href="/" className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors">
+                  <Link href="/" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
                     All resources
                   </Link>
                 </li>
                 <li>
-                  <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors">
+                  <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
                     Collections
                   </Link>
                 </li>
                 {categoryCollectionSlug && (
                   <li>
-                    <Link href={`/collections/${categoryCollectionSlug}`} className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors">
+                    <Link href={`/collections/${categoryCollectionSlug}`} className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
                       More in {categoryLabel}
                     </Link>
                   </li>
@@ -312,7 +312,7 @@ export default async function ResourcePage({
                   {definition}
                   {categoryCollectionSlug && (
                     <>{" "}
-                      <Link href={`/collections/${categoryCollectionSlug}`} className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
+                      <Link href={`/collections/${categoryCollectionSlug}`} className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
                         See it in our {categoryLabel} collection
                       </Link>.
                     </>
@@ -372,7 +372,7 @@ export default async function ResourcePage({
                         href={s.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground underline underline-offset-2 hover:text-foreground transition-colors"
+                        className="text-foreground underline underline-offset-2 hover:text-primary transition-colors"
                       >
                         {s.label}
                       </a>

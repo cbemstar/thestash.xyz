@@ -65,7 +65,7 @@ export function HeroSection({ currentCategory }: HeroSectionProps) {
           <ShimmeringText
             text="hand-picked for you"
             duration={1.2}
-            className="inline [--color:hsl(var(--foreground))] [--shimmering-color:hsl(var(--primary))]"
+            className="inline [--color:var(--foreground)] [--shimmering-color:var(--primary)]"
           />
         </h1>
 
@@ -73,11 +73,11 @@ export function HeroSection({ currentCategory }: HeroSectionProps) {
           <p className="text-sm leading-relaxed text-muted-foreground sm:text-base sm:leading-[1.65]">
             The Stash is a curated directory of tools, inspiration, and learning resources for
             developers and designers.{" "}
-            <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
+            <Link href="/collections" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
               Browse curated collections
             </Link>
             , filter{" "}
-            <Link href="/#all-resources" className="text-foreground underline underline-offset-2 hover:text-accent transition-colors">
+            <Link href="/#all-resources" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors">
               all resources
             </Link>
             {" "}by category below, or search by title and tags. Subscribe for new picks in your inbox.

@@ -139,7 +139,7 @@ export default function ResumePage() {
                         {pos.employmentPeriod}
                         {pos.employmentType && ` · ${pos.employmentType}`}
                       </p>
-                      {pos.description && (
+                      {"description" in pos && pos.description && (
                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                           {pos.description}
                         </p>

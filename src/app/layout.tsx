@@ -42,6 +42,8 @@ export default async function RootLayout({
   }));
 
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID?.trim();
+  const gaId =
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-YCFR0QKPKM";
 
   return (
     <html lang="en" className="grain" suppressHydrationWarning>
@@ -50,6 +52,19 @@ export default async function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
+          {/* Google Analytics (gtag.js) */}
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}');
+            `}
+          </Script>
           {adsenseClientId && (
             <Script
               strategy="afterInteractive"

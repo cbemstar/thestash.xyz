@@ -285,7 +285,7 @@ const PillNav: React.FC<PillNavProps> = ({
               background: 'var(--base, #000)'
             }}
           >
-            {logoNode ?? (useLogoImage && logo ? <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" /> : null)}
+            {logoNode ?? (useLogoImage && logo ? <img src={logo} alt={logoAlt} ref={logoImgRef} width={40} height={40} decoding="async" className="w-full h-full object-cover block" /> : null)}
           </Link>
         ) : (
           <a
@@ -301,7 +301,7 @@ const PillNav: React.FC<PillNavProps> = ({
               background: 'var(--base, #000)'
             }}
           >
-            {logoNode ?? (useLogoImage && logo ? <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" /> : null)}
+            {logoNode ?? (useLogoImage && logo ? <img src={logo} alt={logoAlt} ref={logoImgRef} width={40} height={40} decoding="async" className="w-full h-full object-cover block" /> : null)}
           </a>
         )}
 

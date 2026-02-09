@@ -13,7 +13,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CATEGORIES } from "@/lib/categories";
-import { Spinner } from "@/components/kibo-ui/spinner";
 import { AppNav } from "@/components/AppNav";
 import { cn } from "@/lib/utils";
 
@@ -224,15 +223,9 @@ export default function SubmitPage() {
             <Button
               type="submit"
               disabled={isLoading || !category.trim()}
+              loading={isLoading}
             >
-              {isLoading ? (
-                <>
-                  <Spinner className="size-4" />
-                  Submitting…
-                </>
-              ) : (
-                "Submit for review"
-              )}
+              Submit for review
             </Button>
             <Link
               href="/"

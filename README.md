@@ -94,3 +94,39 @@ So the live site and Studio at `/studio` can talk to Sanity:
 5. Wait for DNS to propagate (minutes to a few hours). Vercel will issue SSL automatically.
 
 After DNS is live, the site will be at **https://thestash.xyz** and Studio at **https://thestash.xyz/studio**. You can set up automations next.
+
+### 5. Check latest deployment from the terminal (Vercel CLI)
+
+After pushing to GitHub, you can verify the latest Vercel build without opening the dashboard:
+
+1. **Install and link** (one-time):
+   ```bash
+   npm i -g vercel
+   vercel link
+   ```
+   When prompted, choose your Vercel account, project (e.g. thestash.xyz), and link to the existing project.
+
+2. **List recent deployments** (status: READY = success, ERROR = failed, BUILDING = in progress):
+   ```bash
+   vercel list
+   # or: vercel ls
+   ```
+
+3. **Inspect the latest deployment** (by URL or by copying the deployment ID from `vercel list`):
+   ```bash
+   vercel inspect thestash.xyz
+   # or: vercel inspect <deployment-id>
+   ```
+
+4. **View build logs** for a deployment (to debug a failed build):
+   ```bash
+   vercel inspect thestash.xyz --logs
+   # or: vercel inspect <deployment-id> -l
+   ```
+
+5. **Deploy from CLI and stream logs** (optional; GitHub push already triggers a deploy):
+   ```bash
+   vercel deploy --prod --logs
+   ```
+
+See [Vercel CLI – list](https://vercel.com/docs/cli/list) and [Vercel CLI – inspect](https://vercel.com/docs/cli/inspect) for more options (e.g. `--status READY`, `--wait`).

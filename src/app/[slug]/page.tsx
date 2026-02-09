@@ -12,7 +12,7 @@ import { AppNav } from "@/components/AppNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 import { ShareMenu } from "@/components/ShareMenu";
-import { ResourcePageSaveButton } from "@/components/ResourcePageSaveButton";
+import { ResourcePageSaveMicroExpander } from "@/components/ResourcePageSaveMicroExpander";
 import { RecordView } from "@/components/RecordView";
 import { AdUnit } from "@/components/AdUnit";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -396,14 +396,14 @@ export default async function ResourcePage({
                       <line x1="10" y1="14" x2="21" y2="3" />
                     </svg>
                   </a>
-                  <div className="flex items-center gap-0.5 rounded-xl border border-border bg-muted/50 p-1" role="group" aria-label="Resource actions">
-                    <ResourcePageSaveButton slug={resourceSlug} showLabel={false} />
+                  <div className="flex items-center gap-2" role="group" aria-label="Resource actions">
+                    <ResourcePageSaveMicroExpander slug={resourceSlug} />
                     <ShareMenu
                       url={`${BASE_URL}/${resourceSlug}`}
                       title={resource.title}
                       description={resource.description}
                       showLabel={false}
-                      className="min-h-8 min-w-8 rounded-lg border-0 bg-transparent px-2 hover:bg-muted sm:min-h-9 sm:min-w-9"
+                      useMicroExpander
                     />
                   </div>
                 </div>

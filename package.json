@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "kibo:install-all": "node scripts/install-all-kibo-ui.mjs"
+    "kibo:install-all": "node scripts/install-all-kibo-ui.mjs",
+    "vercel:list": "vercel list",
+    "vercel:inspect": "vercel inspect thestash.xyz",
+    "vercel:logs": "vercel inspect thestash.xyz --logs"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",
@@ -40,7 +43,7 @@
     "lodash.throttle": "^4.1.1",
     "lucide-react": "^0.563.0",
     "media-chrome": "^4.17.2",
-    "motion": "^12.31.0",
+    "motion": "^12.34.0",
     "next": "16.1.6",
     "next-sanity": "^12.0.16",
     "next-themes": "^0.4.6",

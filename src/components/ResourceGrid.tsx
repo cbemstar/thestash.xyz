@@ -89,7 +89,7 @@ export function ResourceGrid({
         className={isList ? "flex flex-col gap-2" : "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"}
         aria-label="Resource list"
       >
-        {visible.map((resource) => (
+        {visible.map((resource, index) => (
           <li key={resource._id}>
             {isList ? (
               <ResourceListItem
@@ -98,6 +98,7 @@ export function ResourceGrid({
                 onCategoryClick={onCategoryClick}
                 isSaved={isSaved}
                 onSaveToggle={onSaveToggle}
+                priority={index < 6}
               />
             ) : (
               <ResourceCard
@@ -106,6 +107,7 @@ export function ResourceGrid({
                 onCategoryClick={onCategoryClick}
                 isSaved={isSaved}
                 onSaveToggle={onSaveToggle}
+                priority={index < 6}
               />
             )}
           </li>

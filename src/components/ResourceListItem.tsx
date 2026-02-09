@@ -20,6 +20,8 @@ interface ResourceListItemProps {
   onCategoryClick?: (category: string) => void;
   isSaved?: (slug: string) => boolean;
   onSaveToggle?: (slug: string) => void;
+  /** Set for above-the-fold images to improve LCP */
+  priority?: boolean;
 }
 
 function faviconForUrl(url: string): string {
@@ -37,6 +39,7 @@ export function ResourceListItem({
   onCategoryClick,
   isSaved,
   onSaveToggle,
+  priority,
 }: ResourceListItemProps) {
   const router = useRouter();
   const iconSource = resource.icon?.asset?._ref
@@ -75,6 +78,7 @@ export function ResourceListItem({
             height={40}
             className="object-cover"
             unoptimized={iconSource.includes("google.com/s2/favicons")}
+            priority={priority}
           />
         </span>
       ) : (

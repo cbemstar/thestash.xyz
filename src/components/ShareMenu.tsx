@@ -16,6 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { MicroExpander } from "@/components/satisui/micro-expander";
 
 const SHARE_SITE_PITCH =
   "The Stash is a curated directory of dev & design resources — hand-picked tools, inspiration, and links for developers and designers. thestash.xyz";
@@ -27,9 +28,11 @@ interface ShareMenuProps {
   className?: string;
   /** When false, only the share icon is shown (e.g. in compact action bars). */
   showLabel?: boolean;
+  /** Use MicroExpander (expand-on-hover pill) as the trigger instead of a regular button. */
+  useMicroExpander?: boolean;
 }
 
-export function ShareMenu({ url, title, description, className, showLabel = true }: ShareMenuProps) {
+export function ShareMenu({ url, title, description, className, showLabel = true, useMicroExpander = false }: ShareMenuProps) {
   const [copied, setCopied] = useState(false);
 
   const socialText = `Check out this amazing resource I found on thestash.xyz: ${title}. ${SHARE_SITE_PITCH}`;
@@ -71,18 +74,30 @@ export function ShareMenu({ url, title, description, className, showLabel = true
 
   const hasNativeShare = typeof navigator !== "undefined" && !!navigator.share;
 
+  const trigger = useMicroExpander ? (
+    <MicroExpander
+      text="Share"
+      icon={<Share1Icon className="h-5 w-5" />}
+      variant="ghost"
+      className={className}
+      aria-label="Share this resource"
+    />
+  ) : (
+    <Button
+      variant="outline"
+      size="default"
+      className={className}
+      aria-label="Share this resource"
+    >
+      <Share1Icon className="size-4 shrink-0" aria-hidden />
+      {showLabel && <span className="ml-2">Share</span>}
+    </Button>
+  );
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          size="default"
-          className={className}
-          aria-label="Share this resource"
-        >
-          <Share1Icon className="size-4 shrink-0" aria-hidden />
-          {showLabel && <span className="ml-2">Share</span>}
-        </Button>
+        {trigger}
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="min-w-[11.25rem]">
         {hasNativeShare && (

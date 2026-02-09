@@ -65,18 +65,18 @@ export default async function RootLayout({
   return (
     <html lang="en" className="grain" suppressHydrationWarning>
       <head>
-        {/* AdSense: raw script in head so Google's crawler can verify (exact snippet format) */}
-        <script
-          async
-          src={adsenseScriptSrc}
-          crossOrigin="anonymous"
-        />
+        {/* Preconnect to critical origins for faster LCP and TBT */}
+        <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
       </head>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider>
+          {/* AdSense: load after page interactive to avoid blocking LCP/TBT */}
+          <Script src={adsenseScriptSrc} strategy="lazyOnload" crossOrigin="anonymous" />
           {/* Google consent default must run before gtag config (consent mode v2). */}
           <Script id="google-consent-default" strategy="afterInteractive">
             {`

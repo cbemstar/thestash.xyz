@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { CATEGORIES } from "@/lib/categories";
 import { ThemeSwitcherNav } from "@/components/ThemeSwitcherNav";
+import { FluidText } from "@/components/satisui/fluid-text";
 
 export type FooterType = { value: string; label: string };
 
@@ -191,6 +192,23 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
             Check out my resume
           </Link>
         </p>
+
+        {/* Large stylistic app name at the very bottom */}
+        <div className="mt-12 flex justify-end overflow-hidden pt-8 sm:mt-16 sm:pt-10">
+          <Link
+            href="/"
+            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
+            aria-label="The Stash – Home"
+          >
+            <FluidText
+              text="The Stash"
+              className="font-display font-bold tracking-tight text-foreground text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
+              maxScale={1.15}
+              radius={180}
+              stiffness={0.18}
+            />
+          </Link>
+        </div>
       </div>
     </footer>
   );

@@ -38,7 +38,7 @@ export function FeaturedCarousel({
       </h2>
       <Carousel opts={{ align: "start", loop: false }} className="w-full">
         <CarouselContent className="-ml-2 sm:-ml-4 pt-2">
-          {display.map((resource) => (
+          {display.map((resource, index) => (
             <CarouselItem key={resource._id} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
               <ResourceCard
                 resource={resource}
@@ -46,6 +46,7 @@ export function FeaturedCarousel({
                 onCategoryClick={onCategoryClick}
                 isSaved={isSaved}
                 onSaveToggle={onSaveToggle}
+                priority
               />
             </CarouselItem>
           ))}

@@ -2,14 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HamburgerMenuIcon, ChevronDownIcon } from "@radix-ui/react-icons";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import {
   Sheet,
   SheetContent,
@@ -17,124 +11,70 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Pill } from "@/components/kibo-ui/pill";
+import {
+  SlidingCapsuleNav,
+  type NavTab,
+} from "@/components/satisui/sliding-capsule-nav";
 import { ThemeSwitcherNav } from "@/components/ThemeSwitcherNav";
 import { cn } from "@/lib/utils";
 
-/** Top-level nav links */
-const primaryNavItems = [
-  { label: "Home", href: "/" },
-  { label: "Tech stack", href: "/recommend" },
-  { label: "Saved", href: "/saved" },
-  { label: "Submit", href: "/submit" },
-] as const;
+/** Desktop: brief capsule; Browse dropdown at the end. Mobile: full flat list. */
+const desktopTabs: NavTab[] = [
+  { title: "Home", url: "/" },
+  { title: "Tech stack", url: "/recommend" },
+  { title: "Saved", url: "/saved" },
+  { title: "Submit", url: "/submit" },
+  {
+    title: "Browse",
+    items: [
+      { title: "Collections", url: "/collections" },
+      { title: "Category", url: "/category" },
+      { title: "Tags", url: "/tags" },
+      { title: "Type", url: "/type" },
+    ],
+  },
+];
 
-/** Browse submenu items */
-const browseItems = [
-  { label: "Collections", href: "/collections" },
-  { label: "Category", href: "/category" },
-  { label: "Tags", href: "/tags" },
-  { label: "Type", href: "/type" },
-] as const;
-
-/** All nav items for mobile */
-const allNavItems = [...primaryNavItems, ...browseItems] as const;
-
-function NavPill({
-  href,
-  label,
-  isActive,
-}: {
-  href: string;
-  label: string;
-  isActive: boolean;
-}) {
-  return (
-    <Pill asChild variant={isActive ? "default" : "secondary"}>
-      <Link
-        href={href}
-        className={cn(
-          "transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-          isActive && "bg-primary text-primary-foreground hover:bg-primary/90"
-        )}
-        aria-current={isActive ? "page" : undefined}
-      >
-        {label}
-      </Link>
-    </Pill>
-  );
-}
+/** All items for mobile sheet (flat, no dropdown) */
+const mobileNavItems = [
+  { title: "Home", url: "/" },
+  { title: "Tech stack", url: "/recommend" },
+  { title: "Saved", url: "/saved" },
+  { title: "Submit", url: "/submit" },
+  { title: "Collections", url: "/collections" },
+  { title: "Category", url: "/category" },
+  { title: "Tags", url: "/tags" },
+  { title: "Type", url: "/type" },
+];
 
 export function AppNav() {
   const pathname = usePathname();
-  const isBrowseActive = browseItems.some(
-    ({ href }) => pathname === href || pathname?.startsWith(href + "/")
-  );
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-display text-lg font-semibold tracking-tight text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="shrink-0 font-display text-lg font-semibold tracking-tight text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           aria-label="The Stash – Home"
         >
           The Stash
         </Link>
 
-        {/* Desktop – pill-style nav with Kibo aesthetic */}
-        <nav className="hidden md:flex md:items-center md:gap-1.5" aria-label="Primary">
-          {primaryNavItems.map(({ label, href }) => (
-            <NavPill
-              key={href}
-              href={href}
-              label={label}
-              isActive={
-                pathname === href ||
-                (href !== "/" && pathname?.startsWith(href))
-              }
-            />
-          ))}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                type="button"
-                className={cn(
-                  "inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium transition-colors duration-200",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                  isBrowseActive
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted/60 text-muted-foreground hover:bg-muted hover:text-foreground"
-                )}
-                aria-expanded={undefined}
-                aria-haspopup="menu"
-              >
-                Browse
-                <ChevronDownIcon className="size-3.5" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="min-w-[10rem]">
-              {browseItems.map(({ label, href }) => {
-                const isActive =
-                  pathname === href || pathname?.startsWith(href + "/");
-                return (
-                  <DropdownMenuItem key={href} asChild>
-                    <Link
-                      href={href}
-                      className={cn(isActive && "bg-accent font-medium")}
-                      aria-current={isActive ? "page" : undefined}
-                    >
-                      {label}
-                    </Link>
-                  </DropdownMenuItem>
-                );
-              })}
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <ThemeSwitcherNav className="shrink-0" />
-        </nav>
+        {/* Desktop – sliding capsule; width fits menu items */}
+        <div className="hidden md:flex md:flex-1 md:items-center md:justify-center" aria-label="Primary">
+          <SlidingCapsuleNav
+            tabs={desktopTabs}
+            layoutId="app-nav-capsule"
+            className="w-fit"
+          />
+        </div>
 
-        {/* Mobile – Sheet with pill-styled links */}
+        <div className="hidden md:block shrink-0">
+          <ThemeSwitcherNav />
+        </div>
+
+        {/* Mobile – Sheet with links */}
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -154,14 +94,14 @@ export function AppNav() {
               className="mt-6 flex flex-col gap-1 border-t border-border pt-6"
               aria-label="Primary"
             >
-              {allNavItems.map(({ label, href }) => {
+              {mobileNavItems.map(({ title, url }) => {
                 const isActive =
-                  pathname === href ||
-                  (href !== "/" && pathname?.startsWith(href));
+                  pathname === url ||
+                  (url !== "/" && pathname?.startsWith(url));
                 return (
                   <Link
-                    key={href}
-                    href={href}
+                    key={url}
+                    href={url}
                     className={cn(
                       "rounded-full px-4 py-2.5 text-sm font-medium transition-colors",
                       isActive
@@ -170,7 +110,7 @@ export function AppNav() {
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
-                    {label}
+                    {title}
                   </Link>
                 );
               })}

@@ -20,6 +20,8 @@ interface ResourceCardProps {
   onCategoryClick?: (category: string) => void;
   isSaved?: (slug: string) => boolean;
   onSaveToggle?: (slug: string) => void;
+  /** Set for above-the-fold images to improve LCP */
+  priority?: boolean;
 }
 
 /** Favicon URL for a given origin. */
@@ -32,7 +34,7 @@ function faviconForUrl(url: string): string {
   }
 }
 
-export function ResourceCard({ resource, onTagClick, onCategoryClick, isSaved, onSaveToggle }: ResourceCardProps) {
+export function ResourceCard({ resource, onTagClick, onCategoryClick, isSaved, onSaveToggle, priority }: ResourceCardProps) {
   const router = useRouter();
   const iconSource = resource.icon?.asset?._ref
     ? urlFor(resource.icon).width(80).height(80).url()
@@ -83,6 +85,7 @@ export function ResourceCard({ resource, onTagClick, onCategoryClick, isSaved, o
                 height={40}
                 className="object-cover"
                 unoptimized={iconSource.includes("google.com/s2/favicons")}
+                priority={priority}
               />
             </span>
           ) : (

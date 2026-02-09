@@ -1,5 +1,13 @@
 import { groq } from "next-sanity";
 
+/** Minimal fields for llms-full.txt (title + slug only). */
+export const resourcesTitlesSlugsQuery = groq`
+  *[_type == "resource"] | order(title asc) {
+    title,
+    "slug": coalesce(slug.current, slug)
+  }
+`;
+
 export const allResourcesQuery = groq`
   *[_type == "resource"] | order(coalesce(createdAt, _createdAt) desc) {
     _id,

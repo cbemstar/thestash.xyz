@@ -14,6 +14,7 @@ import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 import { ShareMenu } from "@/components/ShareMenu";
 import { ResourcePageSaveButton } from "@/components/ResourcePageSaveButton";
 import { RecordView } from "@/components/RecordView";
+import { AdUnit } from "@/components/AdUnit";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Pill } from "@/components/kibo-ui/pill";
 import type { Resource } from "@/types/resource";
@@ -29,6 +30,127 @@ function faviconForUrl(url: string): string {
   } catch {
     return "";
   }
+}
+
+function buildGeneratedExtendedContent(resource: Resource) {
+  const title = resource.title.trim();
+  const description = (resource.description || "").trim();
+  const categoryLabel = getCategoryLabel(resource.category);
+
+  const definition =
+    description ||
+    `${title} is a ${categoryLabel.toLowerCase()} resource featured on The Stash to help designers and developers discover high-quality tools and references.`;
+
+  const overview: string[] = [];
+  if (description) {
+    overview.push(description);
+  }
+  overview.push(
+    `${title} appears in The Stash under the ${categoryLabel.toLowerCase()} category so you can quickly understand what it does, when to use it, and where it fits into your workflow.`
+  );
+
+  const benefits: string[] = [];
+  switch (resource.category) {
+    case "ai-tools":
+      benefits.push(
+        `Use ${title} to explore modern AI capabilities without building and hosting your own models.`,
+        `${title} can speed up day-to-day work compared to purely manual workflows.`,
+        `${title} helps you experiment with AI safely before deeply integrating it into production systems.`
+      );
+      break;
+    case "design-tools":
+      benefits.push(
+        `${title} helps you design or prototype interfaces faster than starting from scratch.`,
+        `${title} supports modern product design workflows, from early exploration through handoff.`,
+        `Teams can use ${title} alongside tools like Figma, Webflow, or Framer for a more complete design stack.`
+      );
+      break;
+    case "development-tools":
+      benefits.push(
+        `${title} fits into a modern web development toolchain and can reduce boilerplate work.`,
+        `Using ${title} can improve developer productivity versus ad‑hoc scripts and manual processes.`,
+        `${title} typically integrates with Git-based workflows, CI/CD, or popular runtimes and frameworks.`
+      );
+      break;
+    case "ui-ux-resources":
+      benefits.push(
+        `${title} gives you concrete UI and UX patterns instead of designing every flow from a blank page.`,
+        `Referencing ${title} can improve the usability and consistency of new product work.`,
+        `${title} is useful for quickly benchmarking your designs against real products and flows.`
+      );
+      break;
+    case "inspiration":
+      benefits.push(
+        `${title} is a reliable place to browse real-world examples when you need visual or UX inspiration.`,
+        `Using ${title} can help you spot current design and interaction trends before committing to a direction.`
+      );
+      break;
+    case "learning-resources":
+      benefits.push(
+        `${title} provides structured learning material so you can level up faster than piecing together random links.`,
+        `Using ${title} regularly can help you stay current on best practices across design and development.`
+      );
+      break;
+    default:
+      if (description) {
+        benefits.push(`Quick summary of ${title}: ${description}`);
+      }
+      break;
+  }
+
+  const useCases: string[] = [];
+  switch (resource.category) {
+    case "ai-tools":
+      useCases.push(
+        `Trying out ${title} when you want to prototype AI-assisted features for your product.`,
+        `Using ${title} as a companion while coding, writing, or exploring datasets.`,
+        `Evaluating whether ${title} can replace or augment part of your current workflow.`
+      );
+      break;
+    case "design-tools":
+      useCases.push(
+        `Using ${title} during early sketching and wireframing for a new product or feature.`,
+        `Relying on ${title} to maintain design systems, component libraries, or tokens.`,
+        `Pairing ${title} with your dev stack so handoff to engineering is smoother.`
+      );
+      break;
+    case "development-tools":
+      useCases.push(
+        `Integrating ${title} into your local dev or CI pipeline to automate repetitive work.`,
+        `Using ${title} to monitor, debug, or optimize applications in production.`,
+        `Adopting ${title} as a standard tool across your engineering team for consistency.`
+      );
+      break;
+    case "ui-ux-resources":
+      useCases.push(
+        `Referencing ${title} when designing a new screen, flow, or component to see proven patterns.`,
+        `Using ${title} in design reviews to communicate ideas with concrete examples.`,
+        `Keeping ${title} bookmarked as a go‑to library when you are stuck on UX decisions.`
+      );
+      break;
+    case "learning-resources":
+      useCases.push(
+        `Working through ${title} as a structured path when learning a new language, framework, or tool.`,
+        `Dipping into ${title} to fill specific gaps (for example accessibility, performance, or UX).`
+      );
+      break;
+    default:
+      if (description) {
+        useCases.push(`Use ${title} any time its strengths match the needs described above.`);
+      }
+      break;
+  }
+
+  const sources = resource.url
+    ? [
+        {
+          label: "Official site",
+          url: resource.url,
+        },
+      ]
+    : [];
+
+  return { definition, overview, benefits, useCases, sources };
 }
 
 export async function generateStaticParams() {
@@ -168,15 +290,29 @@ export default async function ResourcePage({
   ];
 
   const extendedContent = getResourceExtendedContent(slug);
-  const definition = extendedContent?.definition ?? null;
+  const generated = buildGeneratedExtendedContent(resource);
+
+  const definition = extendedContent?.definition ?? generated.definition;
+
   const overviewParagraphs =
     (resource.body?.trim() && [resource.body]) ||
-    (extendedContent?.overview?.length ? extendedContent.overview : null);
-  const benefitsList = extendedContent?.benefits?.length ? extendedContent.benefits : null;
-  const useCasesList = extendedContent?.useCases?.length ? extendedContent.useCases : null;
+    (extendedContent?.overview?.length ? extendedContent.overview : null) ||
+    generated.overview;
+
+  const benefitsList =
+    extendedContent?.benefits?.length && extendedContent.benefits.length > 0
+      ? extendedContent.benefits
+      : generated.benefits;
+
+  const useCasesList =
+    extendedContent?.useCases?.length && extendedContent.useCases.length > 0
+      ? extendedContent.useCases
+      : generated.useCases;
+
   const sourcesList =
     (resource.sources?.length ? resource.sources : null) ||
-    (extendedContent?.sources?.length ? extendedContent.sources : null);
+    (extendedContent?.sources?.length ? extendedContent.sources : null) ||
+    (generated.sources.length ? generated.sources : null);
   const categoryCollectionSlug = getCollectionSlugForCategory(resource.category);
   const categoryLabel = getCategoryLabel(resource.category);
 
@@ -202,6 +338,11 @@ export default async function ResourcePage({
               { label: resource.title },
             ]}
             className="mb-6"
+          />
+          <AdUnit
+            slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_CONTENT || "1234567890"}
+            format="rectangle"
+            className="my-6 min-h-[250px]"
           />
           <article className="space-y-6">
             <div className="flex items-start gap-4">

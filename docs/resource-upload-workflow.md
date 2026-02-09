@@ -125,7 +125,37 @@ No extra internal links need to be added manually for standard resource pages.
 
 ---
 
-## 5. API (automation)
+## 5. Batch seed (JSON + quality checks)
+
+To add many resources at once from a curated list:
+
+1. **Data file**: Edit **`scripts/batch-resources-data.json`** (or provide your own path). Each entry must have:
+   - **title** (2–120 chars)
+   - **url** (valid https URL)
+   - **description** (10–260 chars)
+   - **category** (one of: design-tools, development-tools, ui-ux-resources, inspiration, ai-tools, productivity, learning-resources, miscellaneous)
+   - **tags** (optional array of strings)
+
+2. **Run**: `node scripts/seed-batch-resources.mjs [path-to-json]`  
+   Default path is `scripts/batch-resources-data.json`. Requires `.env.local` with `NEXT_PUBLIC_SANITY_PROJECT_ID` and `SANITY_API_TOKEN`.
+
+3. **Quality checks**: The script enforces title length, URL validity, description length, category, and slug format (lowercase, hyphens; reserved slugs `studio`, `api` are rejected). Existing resources (by URL or slug) are skipped.
+
+4. **Extend**: Append more entries to the JSON and re-run to add more resources. To reach 100+ per category, keep adding quality-checked entries and run the script in batches.
+
+### 5a. Generate 100 per category (No-Code Supply Co–style)
+
+To build a batch file with up to 100 resources per category using [No-Code Supply Co](https://www.nocodesupply.co/) and curated lists:
+
+1. **Generate**: `node scripts/generate-100-per-category.mjs`  
+   Reads `scripts/batch-resources-data.json` (if present), merges with embedded No-Code Supply Co and curated resources per category, and writes `scripts/batch-resources-data.json` with up to 100 entries per category. Categories: design-tools, development-tools, ui-ux-resources, inspiration, ai-tools, productivity, learning-resources, webflow, shadcn, coding, github, html, css, javascript, languages, miscellaneous.
+
+2. **Seed**: `node scripts/seed-batch-resources.mjs`  
+   Run the batch seed (see step 2 above). For 400+ resources the script may take several minutes (each resource is created and published in Sanity). Run locally and allow it to finish.
+
+3. **Reach 100 per category**: If any category has fewer than 100 resources after seeding, add more entries to the generator’s `BY_CATEGORY` in `scripts/generate-100-per-category.mjs` for that category, then run the generator and seed again. The seed skips existing URLs/slugs, so only new resources are added.
+
+## 6. API (automation)
 
 See **`docs/automation.md`** for:
 

@@ -81,16 +81,36 @@ export default function PrivacyPage() {
                 >
                   Google’s advertising policy
                 </a>
-                . In some regions (e.g. EEA, UK), we obtain your consent before using data for
-                personalized ads; you can reject personalized ads via our cookie banner or your
-                browser/device settings.
+                . For users in the European Economic Area (EEA), the UK, and Switzerland, we use
+                Google’s certified Consent Management Platform (CMP) to obtain your consent before
+                using data for personalized ads. You can change your consent choices at any time in
+                our{" "}
+                <Link href="/privacy/settings" className="text-foreground underline underline-offset-2 hover:text-primary">
+                  Privacy and cookie settings
+                </Link>{" "}
+                page or via the link in the footer.
               </p>
             </section>
 
             <section>
-              <h2 className="font-semibold text-foreground mb-2">5. Your choices</h2>
+              <h2 className="font-semibold text-foreground mb-2">5. Affiliate links</h2>
               <p>
-                You can opt out of personalized advertising via Google’s{" "}
+                Some links on The Stash may be affiliate links. If you click through and make a
+                purchase or sign up, we may receive a commission or other compensation at no
+                extra cost to you. This helps us run the site. We only link to tools and
+                resources we believe are useful; affiliate status does not influence our
+                editorial choices.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-semibold text-foreground mb-2">6. Your choices</h2>
+              <p>
+                You can manage cookie and ad preferences in our{" "}
+                <Link href="/privacy/settings" className="text-foreground underline underline-offset-2 hover:text-primary">
+                  Privacy and cookie settings
+                </Link>{" "}
+                page. You can also opt out of personalized advertising via Google’s{" "}
                 <a
                   href="https://adssettings.google.com"
                   target="_blank"
@@ -106,7 +126,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="font-semibold text-foreground mb-2">6. Data retention and security</h2>
+              <h2 className="font-semibold text-foreground mb-2">7. Data retention and security</h2>
               <p>
                 We retain data only as long as needed to operate the site and comply with law. We
                 take reasonable steps to protect your data; no method of transmission or storage
@@ -115,7 +135,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="font-semibold text-foreground mb-2">7. Changes</h2>
+              <h2 className="font-semibold text-foreground mb-2">8. Changes</h2>
               <p>
                 We may update this policy from time to time. The “Last updated” date at the top
                 will change when we do. Continued use of the site after changes means you accept
@@ -124,7 +144,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="font-semibold text-foreground mb-2">8. Contact</h2>
+              <h2 className="font-semibold text-foreground mb-2">9. Contact</h2>
               <p>
                 For questions about this privacy policy or your data, contact us via the{" "}
                 <Link href="/about" className="text-foreground underline underline-offset-2 hover:text-primary">

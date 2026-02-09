@@ -13,9 +13,11 @@ const API_ENDPOINT = "/api/subscribe";
 interface HeroSectionProps {
   /** When set, the matching category pill is shown as active (e.g. on category page). */
   currentCategory?: ResourceCategory;
+  /** When set, pills filter in place and scroll to resources (e.g. homepage). When unset, pills link to category pages. */
+  onCategorySelect?: (category: ResourceCategory) => void;
 }
 
-export function HeroSection({ currentCategory }: HeroSectionProps) {
+export function HeroSection({ currentCategory, onCategorySelect }: HeroSectionProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -88,15 +90,28 @@ export function HeroSection({ currentCategory }: HeroSectionProps) {
           <span className="sr-only">Browse by category:</span>
           {CATEGORIES.map((c) => {
             const isActive = currentCategory === c.value;
+            const baseClass = `min-h-[2.75rem] rounded-full border px-4 py-2 text-sm font-medium leading-[1.5625rem] transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${
+              isActive
+                ? "border-primary bg-accent text-accent-foreground"
+                : "border-border bg-muted/50 text-muted-foreground hover:border-primary/30 hover:bg-accent hover:text-foreground"
+            }`;
+            if (onCategorySelect) {
+              return (
+                <button
+                  key={c.value}
+                  type="button"
+                  onClick={() => onCategorySelect(c.value)}
+                  className={baseClass}
+                >
+                  {c.label}
+                </button>
+              );
+            }
             return (
               <Link
                 key={c.value}
                 href={`/category/${c.value}`}
-                className={`min-h-[2.75rem] rounded-full border px-4 py-2 text-sm font-medium leading-[1.5625rem] transition focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${
-                  isActive
-                    ? "border-primary bg-accent text-accent-foreground"
-                    : "border-border bg-muted/50 text-muted-foreground hover:border-primary/30 hover:bg-accent hover:text-foreground"
-                }`}
+                className={baseClass}
               >
                 {c.label}
               </Link>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { MixIcon } from "@radix-ui/react-icons";
 import { AppNav } from "./AppNav";
 import { HeroSection } from "./HeroSection";
+import { AdUnit } from "./AdUnit";
 import { FilterBar, type ViewMode, type SortMode, type TimeFilter } from "./FilterBar";
 import { ResourceGrid } from "./ResourceGrid";
 import { FeaturedCarousel } from "./FeaturedCarousel";
@@ -145,6 +146,18 @@ export function StashPage({ resources, collections }: StashPageProps) {
     [router]
   );
 
+  const handleHeroCategorySelect = useCallback((cat: ResourceCategory) => {
+    setCategory(cat);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.getElementById("all-resources")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  }, []);
+
   const handleClearFilters = useCallback(() => {
     setCategory("all");
     setSearch("");
@@ -185,7 +198,18 @@ export function StashPage({ resources, collections }: StashPageProps) {
   return (
     <div className="min-h-screen">
       <AppNav />
-      <HeroSection currentCategory={category !== "all" ? category : undefined} />
+      <HeroSection
+        currentCategory={category !== "all" ? category : undefined}
+        onCategorySelect={handleHeroCategorySelect}
+      />
+
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <AdUnit
+          slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME || "1234567890"}
+          format="horizontal"
+          className="my-6 min-h-[90px]"
+        />
+      </div>
 
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <FeaturedCarousel

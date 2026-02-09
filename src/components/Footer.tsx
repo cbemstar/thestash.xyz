@@ -139,6 +139,16 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
                   RSS
                 </Link>
               </li>
+              <li>
+                <Link href="/sitemap.xml" className="hover:text-foreground transition-colors">
+                  Sitemap
+                </Link>
+              </li>
+              <li>
+                <Link href="/llms.txt" className="hover:text-foreground transition-colors">
+                  llms.txt
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -149,6 +159,11 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
               <li>
                 <Link href="/privacy" className="hover:text-foreground transition-colors">
                   Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy/settings" className="hover:text-foreground transition-colors">
+                  Privacy and cookie settings
                 </Link>
               </li>
               <li>
@@ -168,7 +183,7 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
           </div>
         </nav>
         <p className="mt-8 text-center text-xs text-muted-foreground">
-          © {year} The Stash
+          © {year} The Stash. Some links may be affiliate links.
         </p>
         <p className="mt-4 text-center text-sm text-muted-foreground">
           Developed by Karan Kumar and AI.{" "}

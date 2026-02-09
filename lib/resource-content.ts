@@ -163,6 +163,91 @@ const contentBySlug: Record<string, ResourceExtendedContent> = {
       { label: "Next.js by Vercel", url: "https://nextjs.org" },
     ],
   },
+  "health-ai-developer-foundations": {
+    definition:
+      "Google Health AI Developer Foundations is documentation and guides for building with Health AI, aimed at developers integrating ML in healthcare and life sciences.",
+    benefits: [
+      "Central docs and libraries for Health AI development.",
+      "Guidance on responsible and compliant Health AI applications.",
+      "Libraries like LangExtract for structured data extraction in health pipelines.",
+    ],
+    useCases: [
+      "Building ML-powered healthcare or life-sciences applications.",
+      "Extracting structured data from clinical or research text.",
+      "Learning Health AI best practices and safeguards.",
+    ],
+    sources: [
+      { label: "Health AI Developer Foundations", url: "https://developers.google.com/health-ai-developer-foundations" },
+    ],
+  },
+  "langextract-library": {
+    definition:
+      "LangExtract is a library for extracting structured data from text in Health AI pipelines, part of Google Health AI Developer Foundations.",
+    benefits: [
+      "Structured extraction from unstructured text in health contexts.",
+      "Integrates with Health AI foundations and best practices.",
+      "Supports pipelines that need entities, relations, or other structured output.",
+    ],
+    useCases: [
+      "Health AI pipelines that need structured data from clinical or research text.",
+      "Building extraction features within Health AI applications.",
+    ],
+    sources: [
+      { label: "LangExtract library overview", url: "https://developers.google.com/health-ai-developer-foundations/libraries/overview" },
+      { label: "Health AI Developer Foundations", url: "https://developers.google.com/health-ai-developer-foundations" },
+    ],
+  },
+  "responsible-generative-ai-toolkit": {
+    definition:
+      "Google's Responsible Generative AI Toolkit provides tools, guides, and best practices for building responsible generative AI: safety, evaluation, and safeguards.",
+    benefits: [
+      "Safety and evaluation guidance for generative AI applications.",
+      "Safeguards like SynthID and ShieldGemma for identification and model safety.",
+      "Best practices for deploying gen AI responsibly.",
+    ],
+    useCases: [
+      "Building or deploying generative AI applications responsibly.",
+      "Evaluating and hardening AI models for safety.",
+      "Watermarking or identifying AI-generated content.",
+    ],
+    sources: [
+      { label: "Responsible Generative AI", url: "https://ai.google.dev/responsible" },
+    ],
+  },
+  "synthid-text": {
+    definition:
+      "SynthID Text is Google's watermarking and identification safeguard for AI-generated text, part of the Responsible Generative AI Toolkit.",
+    benefits: [
+      "Distinguish and label AI-generated text.",
+      "Supports transparency and accountability when deploying gen AI.",
+      "Part of a broader set of responsible AI safeguards.",
+    ],
+    useCases: [
+      "Labeling or verifying AI-generated text in production.",
+      "Meeting transparency requirements for generative AI.",
+    ],
+    sources: [
+      { label: "SynthID Text safeguards", url: "https://ai.google.dev/responsible/docs/safeguards/synthid" },
+      { label: "Responsible Generative AI", url: "https://ai.google.dev/responsible" },
+    ],
+  },
+  shieldgemma: {
+    definition:
+      "ShieldGemma is a set of safety and evaluation tools for Gemma models, part of Google's responsible AI safeguards.",
+    benefits: [
+      "Evaluate and harden Gemma-based applications for safety.",
+      "Align with responsible AI practices when deploying or fine-tuning Gemma.",
+      "Part of the Responsible Generative AI Toolkit.",
+    ],
+    useCases: [
+      "Deploying or fine-tuning Gemma models in production.",
+      "Evaluating Gemma-based applications for safety and alignment.",
+    ],
+    sources: [
+      { label: "ShieldGemma safeguards", url: "https://ai.google.dev/responsible/docs/safeguards/shieldgemma" },
+      { label: "Responsible Generative AI", url: "https://ai.google.dev/responsible" },
+    ],
+  },
 };
 
 /**

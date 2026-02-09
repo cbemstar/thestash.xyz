@@ -6,6 +6,7 @@ import { MixIcon } from "@radix-ui/react-icons";
 import { AppNav } from "./AppNav";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { HeroSection } from "./HeroSection";
+import { AdUnit } from "./AdUnit";
 import { FilterBar, type ViewMode, type SortMode, type TimeFilter } from "./FilterBar";
 import { ResourceGrid } from "./ResourceGrid";
 import { useSavedResources } from "@/hooks/useSavedResources";
@@ -86,6 +87,13 @@ export function CategoryPageClient({
     if (whenParam === "week" || whenParam === "month") setTimeFilter(whenParam);
   }, [searchParam, sortParam, whenParam]);
 
+  useEffect(() => {
+    document.getElementById("category-resources")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, [categorySlug]);
+
   const categoryResources = useMemo(
     () => resources.filter((r) => r.category === categorySlug),
     [resources, categorySlug]
@@ -152,6 +160,14 @@ export function CategoryPageClient({
     <div className="min-h-screen">
       <AppNav />
       <HeroSection currentCategory={categorySlug} />
+
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <AdUnit
+          slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_CONTENT || "1234567890"}
+          format="horizontal"
+          className="my-6 min-h-[90px]"
+        />
+      </div>
 
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <Breadcrumbs

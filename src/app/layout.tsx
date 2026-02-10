@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LenisProvider } from "@/components/LenisProvider";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import { Analytics } from "@vercel/analytics/next";
 import { ConsentInitializer } from "@/components/ConsentInitializer";
 import { Toaster } from "@/components/ui/sonner";
 import { getAllTags, getResourceTypesWithCounts } from "@/lib/sanity.resource";
@@ -113,6 +114,7 @@ export default async function RootLayout({
           </LenisProvider>
           <CookieConsent />
           <Toaster />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

@@ -79,10 +79,10 @@ export async function generateMetadata({
     collection.description ||
     `Curated list: ${collection.title}. ${collection.resources?.length ?? 0} resources.`;
   const canonical = `${BASE_URL}/collections/${slug}`;
-  const coverUrl =
-    collection.coverImage?.asset?._ref
-      ? urlFor(collection.coverImage).width(1200).height(630).url()
-      : getCollectionCoverImageUrl(slug);
+  const ogImageUrl = `${BASE_URL}/api/og?${new URLSearchParams({
+    title: collection.title,
+    description: description.slice(0, 200),
+  }).toString()}`;
 
   return {
     title,
@@ -94,9 +94,9 @@ export async function generateMetadata({
       url: canonical,
       siteName: "The Stash",
       type: "website",
-      images: [{ url: coverUrl, width: 1200, height: 630 }],
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: collection.title }],
     },
-    twitter: { card: "summary_large_image", title, description, images: [coverUrl] },
+    twitter: { card: "summary_large_image", title, description, images: [ogImageUrl] },
     robots: { index: true, follow: true },
   };
 }

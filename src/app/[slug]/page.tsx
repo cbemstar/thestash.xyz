@@ -174,13 +174,10 @@ export async function generateMetadata({
     resource.description ||
     `${resource.title} — dev & design resource. ${getCategoryLabel(resource.category)}.`;
   const canonical = `${BASE_URL}/${slug}`;
-  const iconSource = resource.icon?.asset?._ref
-    ? urlFor(resource.icon).width(120).height(120).url()
-    : faviconForUrl(resource.url);
-  const ogImage =
-    resource.icon?.asset?._ref
-      ? urlFor(resource.icon).width(1200).height(630).url()
-      : iconSource;
+  const ogImageUrl = `${BASE_URL}/api/og?${new URLSearchParams({
+    title: resource.title,
+    description: description.slice(0, 200),
+  }).toString()}`;
 
   return {
     title,
@@ -192,15 +189,13 @@ export async function generateMetadata({
       url: canonical,
       siteName: "The Stash",
       type: "website",
-      images: ogImage
-        ? [{ url: ogImage, width: 1200, height: 630, alt: resource.title }]
-        : [],
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: resource.title }],
     },
     twitter: {
-      card: ogImage ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title,
       description,
-      images: ogImage ? [ogImage] : undefined,
+      images: [ogImageUrl],
     },
     robots: { index: true, follow: true },
   };

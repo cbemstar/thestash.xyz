@@ -22,6 +22,20 @@ export const metadata: Metadata = {
   description:
     "Curated directory of dev and design resources: hand-picked tools, inspiration, courses, AI tools, and links for developers and designers. Browse by category or explore collections.",
   metadataBase: new URL(BASE_URL),
+  openGraph: {
+    title: "The Stash | Dev & Design Resources",
+    description:
+      "Curated directory of dev and design resources: hand-picked tools, inspiration, courses, AI tools, and links for developers and designers.",
+    siteName: "The Stash",
+    type: "website",
+    images: [{ url: "/api/og", width: 1200, height: 630, alt: "The Stash" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Stash | Dev & Design Resources",
+    description:
+      "Curated directory of dev and design resources: hand-picked tools, inspiration, courses, AI tools, and links.",
+  },
   robots: {
     index: true,
     follow: true,

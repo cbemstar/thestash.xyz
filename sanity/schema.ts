@@ -344,5 +344,142 @@ export const collection = defineType({
   },
 });
 
-export const schemaTypes = [resource, collection];
+export const article = defineType({
+  name: "article",
+  title: "Article",
+  type: "document",
+  fields: [
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required().min(4).max(140),
+    }),
+    defineField({
+      name: "slug",
+      title: "URL slug",
+      type: "string",
+      description:
+        "Used in the article URL (e.g. workflow-automation-tools). Leave empty to auto-generate from title.",
+      validation: (Rule) =>
+        Rule.custom((slug) => {
+          if (!slug) return true;
+          return /^[a-z0-9-]+$/.test(slug)
+            ? true
+            : "Use only lowercase letters, numbers, and hyphens.";
+        }),
+    }),
+    defineField({
+      name: "excerpt",
+      title: "Excerpt / meta description",
+      type: "text",
+      rows: 3,
+      description:
+        "1–3 sentences used in listings and as the meta description. Aim for 150–160 characters.",
+      validation: (Rule) => Rule.required().min(40).max(260),
+    }),
+    defineField({
+      name: "body",
+      title: "Body",
+      type: "array",
+      of: [{ type: "block" }],
+      description:
+        "SEO and AI-friendly long-form content. Use headings, lists, and links. Cite credible sources where relevant.",
+      validation: (Rule) => Rule.required().min(1),
+    }),
+    defineField({
+      name: "heroImage",
+      title: "Hero image",
+      type: "image",
+      options: { hotspot: true },
+      description:
+        "Optional hero/cover image for the article. Used in cards and as a visual on the article page.",
+    }),
+    defineField({
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{ type: "string" }],
+      options: { layout: "tags" },
+      description: "Topics and keywords. Used for internal linking and faceted navigation later.",
+    }),
+    defineField({
+      name: "relatedResources",
+      title: "Related resources",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "resource" }],
+        },
+      ],
+      description:
+        "Optional: resources from The Stash that are mentioned in or closely related to this article.",
+    }),
+    defineField({
+      name: "sources",
+      title: "Sources & further reading",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "label",
+              title: "Label",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "url",
+              title: "URL",
+              type: "url",
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+          preview: {
+            select: { title: "label" },
+            prepare: ({ title }) => ({ title: title ?? "Source" }),
+          },
+        },
+      ],
+      description:
+        "External citations (docs, articles, stats) used in the article. Helps with E-E-A-T and AI visibility.",
+    }),
+    defineField({
+      name: "author",
+      title: "Author",
+      type: "string",
+      description:
+        "Displayed as the article author. Defaults to The Stash Editorial Team if left empty.",
+    }),
+    defineField({
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+      initialValue: () => new Date().toISOString(),
+    }),
+  ],
+  preview: {
+    select: {
+      title: "title",
+      slug: "slug",
+      publishedAt: "publishedAt",
+      media: "heroImage",
+    },
+    prepare({ title, slug, publishedAt, media }) {
+      const slugLabel = slug ? `/blog/${slug}` : "(slug from title)";
+      const dateLabel = publishedAt
+        ? new Date(publishedAt).toLocaleDateString()
+        : "";
+      return {
+        title,
+        subtitle: `${slugLabel}${dateLabel ? ` · ${dateLabel}` : ""}`,
+        media,
+      };
+    },
+  },
+});
+
+export const schemaTypes = [resource, collection, article];
 

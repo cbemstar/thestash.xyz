@@ -188,3 +188,49 @@ export const collectionBySlugQuery = groq`
   }
 `;
 
+export const allArticlesQuery = groq`
+  *[_type == "article"] | order(coalesce(publishedAt, _createdAt) desc) {
+    _id,
+    title,
+    slug,
+    excerpt,
+    body,
+    tags,
+    relatedResources[]->{
+      _id,
+      title,
+      slug
+    },
+    sources,
+    author,
+    publishedAt,
+    "heroImage": heroImage{
+      ...,
+      asset->
+    }
+  }
+`;
+
+export const articleBySlugQuery = groq`
+  *[_type == "article" && slug == $slug][0] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    body,
+    tags,
+    relatedResources[]->{
+      _id,
+      title,
+      slug
+    },
+    sources,
+    author,
+    publishedAt,
+    "heroImage": heroImage{
+      ...,
+      asset->
+    }
+  }
+`;
+

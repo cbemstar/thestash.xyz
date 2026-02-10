@@ -5,6 +5,7 @@ import {
   getResourceTypesWithCounts,
 } from "@/lib/sanity.resource";
 import { getAllCollectionSlugs } from "@/lib/sanity.collection";
+import { getAllArticleSlugs } from "@/lib/sanity.article";
 import { CATEGORIES } from "@/lib/categories";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
@@ -14,12 +15,14 @@ export const revalidate = 0;
 export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [resourceSlugs, collectionSlugs, tags, typeSlugs] = await Promise.all([
-    getAllResourceSlugs(),
-    getAllCollectionSlugs(),
-    getAllTags(),
-    getResourceTypesWithCounts().then((t) => t.map((x) => x.value)),
-  ]);
+  const [resourceSlugs, collectionSlugs, tags, typeSlugs, articleSlugs] =
+    await Promise.all([
+      getAllResourceSlugs(),
+      getAllCollectionSlugs(),
+      getAllTags(),
+      getResourceTypesWithCounts().then((t) => t.map((x) => x.value)),
+      getAllArticleSlugs(),
+    ]);
 
   const reserved = ["studio", "api"];
   const filteredResourceSlugs = resourceSlugs.filter((s) => !reserved.includes(s));
@@ -47,6 +50,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const typeUrls: MetadataRoute.Sitemap = typeSlugs.map((slug) => ({
     url: `${BASE_URL}/type/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  const articleUrls: MetadataRoute.Sitemap = articleSlugs.map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.7,
@@ -109,6 +119,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
@@ -130,6 +146,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...collectionUrls,
     ...tagUrls,
     ...typeUrls,
+    ...articleUrls,
     ...resourceUrls,
   ];
 }

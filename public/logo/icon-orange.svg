@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- The Stash – stash jar in brand orange -->
+  <ellipse cx="24" cy="10" rx="13" ry="4.5" fill="#ea580c"/>
+  <path d="M11 14.5h26v22a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4v-22z" fill="#f59e0b"/>
+  <circle cx="20" cy="26" r="3" fill="#ffffff" opacity="0.5"/>
+  <circle cx="28" cy="30" r="2.5" fill="#ffffff" opacity="0.4"/>
+</svg>

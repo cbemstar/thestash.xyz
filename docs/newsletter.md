@@ -4,14 +4,14 @@ The site’s “Get updates” form posts to `/api/subscribe`, which adds the co
 
 ## 1. API and env (already in place)
 
-- `POST /api/subscribe` sends the email to Loops via **Update contact** (`PUT /v1/contacts/update`).
+- `POST /api/subscribe` sends the email to Loops: it calls **Create contact** (`POST /v1/contacts/create`) first so the “Contact added” trigger fires (welcome email). If the contact already exists (409), it falls back to **Update contact** (`PUT /v1/contacts/update`).
 - Set `LOOPS_API_KEY` in your env (get it in [Loops → Settings](https://app.loops.so/settings)).
-- Optionally set `LOOPS_MAILING_LIST_ID` so new subscribers are added to a specific list (see Lists in the Loops dashboard).
+- If your Loop uses **Contact added to list**, set `LOOPS_MAILING_LIST_ID` to that list ID (see Lists in the Loops dashboard); otherwise **Contact added** works without it.
 
 ## 2. Send the confirmation email (do this in Loops)
 
 1. In [Loops](https://app.loops.so), go to **Loop builder** and create a new Loop.
-2. Set the trigger to **Contact added** (contacts added via API, forms, or integrations will trigger this).
+2. Set the trigger to **Contact added** (recommended) so new signups from the API trigger the welcome email. If you use **Contact added to list**, set `LOOPS_MAILING_LIST_ID` in env to the same list ID.
 3. Add an **Email** step: create or choose a template (e.g. “Thanks for subscribing – confirm your email” or “You’re on the list”).
 4. Use your verified sending domain so emails don’t go to spam.
 5. Activate the Loop.

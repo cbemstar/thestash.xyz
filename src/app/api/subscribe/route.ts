@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const LOOPS_API = "https://app.loops.so/api/v1/contacts/update";
+const LOOPS_CREATE = "https://app.loops.so/api/v1/contacts/create";
+const LOOPS_UPDATE = "https://app.loops.so/api/v1/contacts/update";
 
 /** Simple email validation. */
 function isValidEmail(email: string): boolean {
@@ -10,6 +11,8 @@ function isValidEmail(email: string): boolean {
 /**
  * Newsletter subscription endpoint.
  * Uses Loops.so when LOOPS_API_KEY is set.
+ * Calls Create contact first so "Contact added" fires (welcome Loop); on 409 (already exists), falls back to Update contact.
+ * https://loops.so/docs/api-reference/create-contact
  * https://loops.so/docs/api-reference/update-contact
  */
 export async function POST(request: NextRequest) {
@@ -43,14 +46,25 @@ export async function POST(request: NextRequest) {
       payload.mailingLists = { [mailingListId]: true };
     }
 
-    const res = await fetch(LOOPS_API, {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
+    const headers = {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    };
+
+    // Create contact first so Loops "Contact added" trigger fires (welcome email). If contact already exists (409), update instead.
+    let res = await fetch(LOOPS_CREATE, {
+      method: "POST",
+      headers,
       body: JSON.stringify(payload),
     });
+
+    if (res.status === 409) {
+      res = await fetch(LOOPS_UPDATE, {
+        method: "PUT",
+        headers,
+        body: JSON.stringify(payload),
+      });
+    }
 
     const data = (await res.json().catch(() => ({}))) as { success?: boolean; message?: string };
 

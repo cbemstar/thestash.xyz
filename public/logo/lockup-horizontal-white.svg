@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 48" fill="none">
+  <!-- Icon + wordmark horizontal, for dark backgrounds (stash jar) -->
+  <g transform="translate(0, 5.75)">
+    <ellipse cx="24" cy="10" rx="13" ry="4.5" fill="#ffffff"/>
+    <path d="M11 14.5h26v22a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4v-22z" fill="#ffffff"/>
+    <circle cx="20" cy="26" r="3" fill="#ffffff" opacity="0.4"/>
+    <circle cx="28" cy="30" r="2.5" fill="#ffffff" opacity="0.3"/>
+  </g>
+  <text x="56" y="34" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="700" letter-spacing="-0.03em" fill="#ffffff">The Stash</text>
+</svg>

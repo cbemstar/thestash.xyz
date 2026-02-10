@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
-import { getAllArticleSlugs, getArticleBySlug } from "@/lib/sanity.article";
-import { getAllArticles } from "@/lib/sanity.article";
+import { getAllArticleSlugs, getArticleBySlug, getAllArticles } from "@/lib/sanity.article";
+import { AppNav } from "@/components/AppNav";
+import { ArticlePortableText } from "@/components/ArticlePortableText";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 import type { Article } from "@/types/article";
@@ -119,6 +119,7 @@ export default async function ArticlePage({
     <>
       <BreadcrumbListJsonLd items={breadcrumbItems} />
       <ArticleJsonLd article={article} slug={slug} />
+      <AppNav />
       <div className="min-h-screen">
         <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
           <Breadcrumbs
@@ -148,7 +149,7 @@ export default async function ArticlePage({
             </header>
 
             <section aria-label="Article body" className="space-y-4">
-              <PortableText value={article.body} />
+              <ArticlePortableText value={article.body} />
             </section>
 
             {article.sources?.length ? (

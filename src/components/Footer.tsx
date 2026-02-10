@@ -41,6 +41,11 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="hover:text-foreground transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/collections" className="hover:text-foreground transition-colors">
                   Collections
                 </Link>

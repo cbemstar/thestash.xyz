@@ -24,6 +24,7 @@ const desktopTabs: NavTab[] = [
   { title: "Tech stack", url: "/recommend" },
   { title: "Saved", url: "/saved" },
   { title: "Submit", url: "/submit" },
+  { title: "Blog", url: "/blog" },
   {
     title: "Browse",
     items: [
@@ -41,6 +42,7 @@ const mobileNavItems = [
   { title: "Tech stack", url: "/recommend" },
   { title: "Saved", url: "/saved" },
   { title: "Submit", url: "/submit" },
+  { title: "Blog", url: "/blog" },
   { title: "Collections", url: "/collections" },
   { title: "Category", url: "/category" },
   { title: "Tags", url: "/tags" },

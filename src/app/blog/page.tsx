@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllArticles } from "@/lib/sanity.article";
+import { AppNav } from "@/components/AppNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 
@@ -28,6 +29,7 @@ export default async function BlogIndexPage() {
   return (
     <>
       <BreadcrumbListJsonLd items={breadcrumbItems} />
+      <AppNav />
       <div className="min-h-screen">
         <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
           <Breadcrumbs

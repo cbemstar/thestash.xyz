@@ -1,6 +1,7 @@
 "use client";
 
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import type { TypedObject } from "@portabletext/types";
 
 const articleComponents: PortableTextComponents = {
   block: {
@@ -43,7 +44,7 @@ const articleComponents: PortableTextComponents = {
 };
 
 interface ArticlePortableTextProps {
-  value: unknown;
+  value: TypedObject | TypedObject[];
 }
 
 export function ArticlePortableText({ value }: ArticlePortableTextProps) {

@@ -58,6 +58,7 @@ const Link001 = ({
     <a
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       className={cn(
         "group relative flex items-center",
         "before:pointer-events-none before:absolute before:left-0 before:top-[1.5em] before:h-[0.05em] before:w-full before:bg-current before:content-['']",

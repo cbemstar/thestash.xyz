@@ -3,6 +3,7 @@ import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LenisProvider } from "@/components/LenisProvider";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
 import { ConsentInitializer } from "@/components/ConsentInitializer";
@@ -104,10 +105,12 @@ export default async function RootLayout({
             `}
           </Script>
           <ConsentInitializer />
-          <div className="flex min-h-screen flex-col">
-            <main className="flex-1">{children}</main>
-            <Footer tags={footerTags} types={footerTypes} />
-          </div>
+          <LenisProvider>
+            <div className="flex min-h-screen flex-col">
+              <main className="flex-1">{children}</main>
+              <Footer tags={footerTags} types={footerTypes} />
+            </div>
+          </LenisProvider>
           <CookieConsent />
           <Toaster />
         </ThemeProvider>

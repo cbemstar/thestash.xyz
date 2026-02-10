@@ -1313,7 +1313,7 @@ export const GanttProvider: FC<GanttProviderProps> = ({
   useEffect(() => {
     const scrollElement = scrollRef.current;
     if (scrollElement) {
-      scrollElement.addEventListener("scroll", handleScroll);
+      scrollElement.addEventListener("scroll", handleScroll, { passive: true });
     }
 
     return () => {

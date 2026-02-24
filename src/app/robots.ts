@@ -1,30 +1,39 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
-/** Same allow/disallow for all crawlers. Explicit rules for AI bots per SEO/GEO skill (skills.sh/resciencelab/opc-skills/seo-geo). /api/og allowed for social crawlers (OG image generation). */
-const CRAWL_RULES: { allow: string; disallow: string[] } = {
-  allow: "/",
-  disallow: [
-    "/studio/",
-    "/api/ads-txt",
-    "/api/resources",
-    "/api/submit",
-    "/api/subscribe",
-  ],
-};
+/**
+ * Crawl rules:
+ * - Keep all indexable content crawlable.
+ * - Block non-indexable app surfaces and API routes to avoid crawl waste.
+ * - /ads.txt is served via rewrite from /api/ads-txt; crawlers fetch /ads.txt (allowed).
+ */
+const DISALLOW_PATHS = [
+  "/studio/",
+  "/api/ads-txt",
+  "/api/resources",
+  "/api/revalidate-sitemap",
+  "/api/submit",
+  "/api/subscribe",
+  "/saved",
+];
+const ALLOW_PATH = "/";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", ...CRAWL_RULES },
-      { userAgent: "Googlebot", ...CRAWL_RULES },
-      { userAgent: "Bingbot", ...CRAWL_RULES },
-      { userAgent: "PerplexityBot", ...CRAWL_RULES },
-      { userAgent: "GPTBot", ...CRAWL_RULES },
-      { userAgent: "ChatGPT-User", ...CRAWL_RULES },
-      { userAgent: "ClaudeBot", ...CRAWL_RULES },
-      { userAgent: "anthropic-ai", ...CRAWL_RULES },
+      { userAgent: "Googlebot", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "Googlebot-Image", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "Googlebot-News", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "Googlebot-Video", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "AdsBot-Google", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "Bingbot", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "PerplexityBot", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "GPTBot", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "ChatGPT-User", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "ClaudeBot", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "anthropic-ai", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
+      { userAgent: "*", allow: ALLOW_PATH, disallow: DISALLOW_PATHS },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
     host: BASE_URL,

@@ -1,15 +1,20 @@
 "use client";
 
 import { useMemo, useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { MixIcon } from "@radix-ui/react-icons";
 import { AppNav } from "./AppNav";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { HeroSection } from "./HeroSection";
 import { AdUnit } from "./AdUnit";
+import { TrackedCompareLink } from "./TrackedCompareLink";
 import { FilterBar, type ViewMode, type SortMode, type TimeFilter } from "./FilterBar";
 import { ResourceGrid } from "./ResourceGrid";
 import { useSavedResources } from "@/hooks/useSavedResources";
+import { useVoteBatch } from "@/hooks/useVoteBatch";
+import { getResourceSlug } from "@/lib/slug";
+import { getWebflowHubStats } from "@/lib/webflow-hub-data";
 import { cn } from "@/lib/utils";
 import type { Resource } from "@/types/resource";
 import type { ResourceCategory } from "@/types/resource";
@@ -60,12 +65,18 @@ interface CategoryPageClientProps {
   resources: Resource[];
   categorySlug: ResourceCategory;
   categoryLabel: string;
+  alternatives: Array<{ slug: string; title: string }>;
+  comparisons: Array<{ slug: string; title: string }>;
+  useCases: Array<{ slug: string; title: string }>;
 }
 
 export function CategoryPageClient({
   resources,
   categorySlug,
   categoryLabel,
+  alternatives,
+  comparisons,
+  useCases,
 }: CategoryPageClientProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -80,12 +91,14 @@ export function CategoryPageClient({
   );
 
   const { isSaved, toggleSaved } = useSavedResources();
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thestash.xyz";
 
   useEffect(() => {
+    // Keep local control state in sync with URL query params (supports back/forward navigation).
     setSearch(searchParams.get("search") ?? "");
-    if (sortParam === "a-z") setSortMode("a-z");
-    if (whenParam === "week" || whenParam === "month") setTimeFilter(whenParam);
-  }, [searchParam, sortParam, whenParam]);
+    setSortMode(sortParam === "a-z" ? "a-z" : "newest");
+    setTimeFilter(whenParam === "week" || whenParam === "month" ? whenParam : "all");
+  }, [searchParams, sortParam, whenParam]);
 
   useEffect(() => {
     document.getElementById("category-resources")?.scrollIntoView({
@@ -98,6 +111,10 @@ export function CategoryPageClient({
     () => resources.filter((r) => r.category === categorySlug),
     [resources, categorySlug]
   );
+  const webflowHubStats = useMemo(
+    () => (categorySlug === "webflow" ? getWebflowHubStats() : null),
+    [categorySlug]
+  );
 
   const filtered = useMemo(
     () =>
@@ -107,6 +124,12 @@ export function CategoryPageClient({
       ),
     [categoryResources, search, timeFilter, sortMode]
   );
+
+  const voteSlugs = useMemo(
+    () => filtered.map((r) => getResourceSlug(r)).slice(0, 100),
+    [filtered]
+  );
+  const { voteFor, setUpvote, setDownvote, upvotes, downvotes } = useVoteBatch(voteSlugs);
 
   const handleSearchChange = useCallback((value: string) => setSearch(value), []);
   const handleCategoryChange = useCallback(
@@ -144,8 +167,14 @@ export function CategoryPageClient({
 
   const [viewMode, setViewMode] = useState<ViewMode>("grid");
   useEffect(() => {
-    const stored = localStorage.getItem("thestash-view-mode") as ViewMode | null;
-    if (stored === "grid" || stored === "list") setViewMode(stored);
+    try {
+      const stored = localStorage.getItem("thestash-view-mode") as ViewMode | null;
+      if (stored === "grid" || stored === "list") {
+        setViewMode(stored);
+      }
+    } catch {
+      // localStorage can throw in cross-origin iframes (e.g. AdSense preview)
+    }
   }, []);
   const handleViewModeChange = useCallback((mode: ViewMode) => {
     setViewMode(mode);
@@ -165,7 +194,7 @@ export function CategoryPageClient({
         <AdUnit
           slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_CONTENT || "1234567890"}
           format="horizontal"
-          className="my-6 min-h-[90px]"
+          className="my-6"
         />
       </div>
 
@@ -178,9 +207,117 @@ export function CategoryPageClient({
           ]}
           className="mb-6"
         />
+        {webflowHubStats && (
+          <section className="browse-shell mb-8 px-4 py-6 sm:px-6">
+            <h2 className="font-display text-lg font-semibold text-foreground">
+              Dedicated Webflow ecosystem repository
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Explore curated Webflow apps, cloneables, templates, and inspiration in one
+              implementation-focused view.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted-foreground">
+              <span className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1">
+                {webflowHubStats.byKind.app} apps
+              </span>
+              <span className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1">
+                {webflowHubStats.byKind.cloneable} cloneables
+              </span>
+              <span className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1">
+                {webflowHubStats.byKind.template} templates
+              </span>
+              <span className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1">
+                {webflowHubStats.byKind.inspiration} inspiration picks
+              </span>
+              <span className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1">
+                {webflowHubStats.codeReady} code-ready resources
+              </span>
+            </div>
+            <Link
+              href="/ecosystems/webflow"
+              className="mt-4 inline-flex rounded-full border border-stash-line-soft bg-stash-control px-4 py-2 text-sm font-medium text-foreground transition hover:border-stash-line-strong hover:bg-stash-control-hover"
+            >
+              Open Webflow ecosystem repository
+            </Link>
+          </section>
+        )}
+        {(alternatives.length > 0 || comparisons.length > 0 || useCases.length > 0) && (
+          <section
+            className="browse-shell mb-8 px-4 py-6 sm:px-6"
+            aria-labelledby="category-decision-guides"
+          >
+            <h2
+              id="category-decision-guides"
+              className="font-display text-lg font-semibold text-foreground"
+            >
+              Decision guides for {categoryLabel}
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Use alternatives and comparison pages to choose the best fit quickly.
+            </p>
+            {alternatives.length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Alternatives
+                </p>
+                <ul className="mt-2 flex flex-wrap gap-2">
+                  {alternatives.map((item) => (
+                    <li key={item.slug}>
+                      <Link
+                        href={`/alternatives/${item.slug}`}
+                        className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1.5 text-sm text-foreground transition hover:border-stash-line-strong hover:bg-stash-control-hover"
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {useCases.length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Use cases
+                </p>
+                <ul className="mt-2 flex flex-wrap gap-2">
+                  {useCases.map((item) => (
+                    <li key={item.slug}>
+                      <Link
+                        href={`/use-cases/${item.slug}`}
+                        className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1.5 text-sm text-foreground transition hover:border-stash-line-strong hover:bg-stash-control-hover"
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {comparisons.length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Comparisons
+                </p>
+                <ul className="mt-2 flex flex-wrap gap-2">
+                  {comparisons.map((item) => (
+                    <li key={item.slug}>
+                      <TrackedCompareLink
+                        href={`/compare/${item.slug}`}
+                        comparisonSlug={item.slug}
+                        className="inline-flex rounded-full border border-stash-line-soft bg-stash-control px-3 py-1.5 text-sm text-foreground transition hover:border-stash-line-strong hover:bg-stash-control-hover"
+                      >
+                        {item.title}
+                      </TrackedCompareLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
         <section
           aria-labelledby="category-resources"
-          className="mt-8 rounded-2xl border border-border bg-card/30 px-4 py-6 sm:px-6 sm:py-8 lg:px-8"
+          className="browse-shell mt-8 px-4 py-6 sm:px-6 sm:py-8 lg:px-8"
         >
           <div className="mb-6 flex items-center justify-between gap-3">
             <h2 id="category-resources" className="font-display text-lg font-semibold text-foreground">
@@ -192,9 +329,8 @@ export function CategoryPageClient({
               aria-expanded={filterOpen}
               aria-controls="category-filter-panel"
               className={cn(
-                "relative flex min-h-[2.75rem] min-w-[2.75rem] shrink-0 items-center justify-center rounded-md border border-input bg-background text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:hidden",
-                (filterOpen || hasActiveFilters) &&
-                  "border-primary/30 bg-accent text-accent-foreground"
+                "browse-control relative flex min-h-[2.75rem] min-w-[2.75rem] shrink-0 items-center justify-center sm:hidden",
+                (filterOpen || hasActiveFilters) && "border-stash-line-strong bg-stash-control-hover text-foreground"
               )}
               aria-label={filterOpen ? "Hide filters" : "Filter and sort"}
             >
@@ -240,6 +376,12 @@ export function CategoryPageClient({
             onCategoryClick={handleCategoryClick}
             isSaved={isSaved}
             onSaveToggle={toggleSaved}
+            voteFor={voteFor}
+            onUpvote={setUpvote}
+            onDownvote={setDownvote}
+            upvotes={upvotes}
+            downvotes={downvotes}
+            baseUrl={baseUrl}
             onClearFilters={handleClearFilters}
           />
         </section>

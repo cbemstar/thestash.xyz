@@ -1,17 +1,18 @@
 "use client";
 
-import { useMemo, useState, useEffect, useCallback } from "react";
+import { useMemo, useState, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { MixIcon } from "@radix-ui/react-icons";
 import { AppNav } from "./AppNav";
 import { HeroSection } from "./HeroSection";
-import { FilterBar, type ViewMode, type SortMode, type TimeFilter } from "./FilterBar";
+import type { ViewMode, SortMode, TimeFilter } from "./FilterBar";
 import { ResourceGrid } from "./ResourceGrid";
 import { FeaturedCarousel } from "./FeaturedCarousel";
 import { useSavedResources } from "@/hooks/useSavedResources";
-import { getCollectionSlug } from "@/lib/slug";
+import { useVoteBatch } from "@/hooks/useVoteBatch";
+import { getCollectionSlug, getResourceSlug } from "@/lib/slug";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Pill } from "./kibo-ui/pill";
@@ -19,14 +20,25 @@ import type { Resource } from "@/types/resource";
 import type { ResourceCategory } from "@/types/resource";
 import type { Collection } from "@/types/collection";
 
-// Lazily load ad + "recently viewed" sections so they don't affect initial hydration.
-const AdUnit = dynamic(() => import("./AdUnit").then((m) => m.AdUnit), {
-  ssr: false,
-});
-
+// Lazily load "recently viewed" so it doesn't affect initial hydration.
 const RecentlyViewed = dynamic(
   () => import("./RecentlyViewed").then((m) => m.RecentlyViewed),
   { ssr: false }
+);
+
+// Radix Select IDs can drift when SSR/client trees diverge, so render the
+// filter controls client-only to avoid hydration attribute mismatches.
+const FilterBar = dynamic(
+  () => import("./FilterBar").then((m) => m.FilterBar),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        aria-hidden
+        className="h-[168px] rounded-[16px] border border-stash-line-soft bg-stash-panel/40"
+      />
+    ),
+  }
 );
 
 interface StashPageClientProps {
@@ -107,46 +119,119 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
   const searchParam = searchParams.get("search") ?? "";
   const sortParam = searchParams.get("sort");
   const whenParam = searchParams.get("when");
-  const [category, setCategory] = useState<ResourceCategory | "all">(() =>
+  const category: ResourceCategory | "all" =
     categoryParam && VALID_CATEGORIES.includes(categoryParam as ResourceCategory | "all")
       ? (categoryParam as ResourceCategory | "all")
-      : "all"
-  );
-  const [search, setSearch] = useState(() => searchParam);
-  const [sortMode, setSortMode] = useState<SortMode>(() =>
-    sortParam === "a-z" ? "a-z" : "newest"
-  );
-  const [timeFilter, setTimeFilter] = useState<TimeFilter>(() =>
-    whenParam === "week" || whenParam === "month" ? whenParam : "all"
-  );
+      : "all";
+  const search = searchParam;
+  const sortMode: SortMode = sortParam === "a-z" ? "a-z" : "newest";
+  const timeFilter: TimeFilter =
+    whenParam === "week" || whenParam === "month" ? whenParam : "all";
 
   const { isSaved, toggleSaved } = useSavedResources();
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thestash.xyz";
 
-  useEffect(() => {
-    if (categoryParam && VALID_CATEGORIES.includes(categoryParam as ResourceCategory | "all")) {
-      setCategory(categoryParam as ResourceCategory | "all");
-    }
-    setSearch(searchParam);
-    if (sortParam === "a-z") setSortMode("a-z");
-    if (whenParam === "week" || whenParam === "month") setTimeFilter(whenParam);
-  }, [categoryParam, searchParam, sortParam, whenParam]);
+  const updateFilters = useCallback(
+    (updates: {
+      category?: ResourceCategory | "all";
+      search?: string;
+      sortMode?: SortMode;
+      timeFilter?: TimeFilter;
+    }) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      if (updates.category !== undefined) {
+        if (updates.category === "all") params.delete("category");
+        else params.set("category", updates.category);
+      }
+
+      if (updates.search !== undefined) {
+        if (updates.search.trim().length > 0) params.set("search", updates.search);
+        else params.delete("search");
+      }
+
+      if (updates.timeFilter !== undefined) {
+        if (updates.timeFilter === "all") params.delete("when");
+        else params.set("when", updates.timeFilter);
+      }
+
+      if (updates.sortMode !== undefined) {
+        if (updates.sortMode === "newest") params.delete("sort");
+        else params.set("sort", updates.sortMode);
+      }
+
+      const next = params.toString();
+      router.replace(next ? `/?${next}` : "/", { scroll: false });
+    },
+    [router, searchParams]
+  );
 
   const filtered = useMemo(
     () => sortResources(filterResources(resources, category, search, timeFilter), sortMode),
     [resources, category, search, timeFilter, sortMode]
   );
+  const featuredCount = useMemo(
+    () => resources.filter((resource) => resource.featured).length,
+    [resources]
+  );
+  const topTags = useMemo(() => {
+    const tagCounts = new Map<string, { label: string; count: number }>();
 
-  const handleSearchChange = useCallback((value: string) => {
-    setSearch(value);
-  }, []);
+    for (const resource of resources) {
+      for (const rawTag of resource.tags ?? []) {
+        const normalized = rawTag.trim().toLowerCase();
+        if (!normalized) continue;
 
-  const handleCategoryChange = useCallback((value: ResourceCategory | "all") => {
-    setCategory(value);
-  }, []);
+        const existing = tagCounts.get(normalized);
+        if (existing) {
+          existing.count += 1;
+          continue;
+        }
 
-  const handleTagClick = useCallback((tag: string) => {
-    setSearch(tag);
-  }, []);
+        tagCounts.set(normalized, { label: rawTag.trim(), count: 1 });
+      }
+    }
+
+    return [...tagCounts.values()]
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label))
+      .slice(0, 14)
+      .map((item) => item.label);
+  }, [resources]);
+
+  const carouselSlugs = useMemo(() => {
+    const featured = resources.filter((r) => r.featured).slice(0, 8);
+    const display = featured.length >= 4 ? featured : resources.slice(0, 6);
+    return display.map((r) => getResourceSlug(r));
+  }, [resources]);
+
+  const voteSlugs = useMemo(
+    () =>
+      [...new Set([...filtered.map((r) => getResourceSlug(r)), ...carouselSlugs])].slice(0, 100),
+    [filtered, carouselSlugs]
+  );
+
+  const { voteFor, setUpvote, setDownvote, upvotes, downvotes } = useVoteBatch(voteSlugs);
+
+  const handleSearchChange = useCallback(
+    (value: string) => {
+      updateFilters({ search: value });
+    },
+    [updateFilters]
+  );
+
+  const handleCategoryChange = useCallback(
+    (value: ResourceCategory | "all") => {
+      updateFilters({ category: value });
+    },
+    [updateFilters]
+  );
+
+  const handleTagClick = useCallback(
+    (tag: string) => {
+      updateFilters({ search: tag });
+    },
+    [updateFilters]
+  );
 
   const handleCategoryClick = useCallback(
     (cat: string) => {
@@ -155,49 +240,39 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
     [router]
   );
 
-  const handleHeroCategorySelect = useCallback((cat: ResourceCategory) => {
-    setCategory(cat);
-    requestAnimationFrame(() => {
+  const handleHeroCategorySelect = useCallback(
+    (cat: ResourceCategory) => {
+      updateFilters({ category: cat });
       requestAnimationFrame(() => {
-        document.getElementById("all-resources")?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
+        requestAnimationFrame(() => {
+          document.getElementById("all-resources")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         });
       });
-    });
-  }, []);
+    },
+    [updateFilters]
+  );
 
   const handleClearFilters = useCallback(() => {
-    setCategory("all");
-    setSearch("");
-    setTimeFilter("all");
-  }, []);
-
-  useEffect(() => {
-    const params = new URLSearchParams();
-    if (category !== "all") params.set("category", category);
-    if (search) params.set("search", search);
-    if (timeFilter !== "all") params.set("when", timeFilter);
-    if (sortMode !== "newest") params.set("sort", sortMode);
-    const qs = params.toString();
-    const desired = qs ? `/?${qs}` : "/";
-    const current =
-      typeof window !== "undefined"
-        ? `${window.location.pathname}${window.location.search || ""}`
-        : "";
-    if (current !== desired) {
-      router.replace(desired, { scroll: false });
-    }
-  }, [category, search, timeFilter, sortMode, router]);
+    updateFilters({ category: "all", search: "", timeFilter: "all" });
+  }, [updateFilters]);
 
   const hasActiveFilters = category !== "all" || search.length > 0 || timeFilter !== "all";
   const [filterOpen, setFilterOpen] = useState(false);
 
-  const [viewMode, setViewMode] = useState<ViewMode>("grid");
-  useEffect(() => {
-    const stored = localStorage.getItem("thestash-view-mode") as ViewMode | null;
-    if (stored === "grid" || stored === "list") setViewMode(stored);
-  }, []);
+  const [viewMode, setViewMode] = useState<ViewMode>(() => {
+    if (typeof window === "undefined") {
+      return "grid";
+    }
+    try {
+      const stored = window.localStorage.getItem("thestash-view-mode");
+      return stored === "grid" || stored === "list" ? stored : "grid";
+    } catch {
+      return "grid";
+    }
+  });
   const handleViewModeChange = useCallback((mode: ViewMode) => {
     setViewMode(mode);
     try {
@@ -208,37 +283,57 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--primary)_2.5%,var(--stash-canvas))_0%,var(--stash-canvas)_20rem,var(--stash-canvas)_100%)]">
       <AppNav />
       <HeroSection
         currentCategory={category !== "all" ? category : undefined}
         onCategorySelect={handleHeroCategorySelect}
+        resourceCount={resources.length}
+        collectionCount={collections?.length ?? 0}
+        featuredCount={featuredCount}
+        topTags={topTags}
       />
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <AdUnit
-          slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME || "1234567890"}
-          format="horizontal"
-          className="my-6 min-h-[90px]"
-        />
-      </div>
-
-      <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="space-y-12 sm:space-y-14">
         <FeaturedCarousel
           resources={resources}
           onTagClick={handleTagClick}
           onCategoryClick={handleCategoryClick}
           isSaved={isSaved}
           onSaveToggle={toggleSaved}
+          voteFor={voteFor}
+          onUpvote={setUpvote}
+          onDownvote={setDownvote}
+          upvotes={upvotes}
+          downvotes={downvotes}
+          baseUrl={baseUrl}
         />
 
-        <div className="my-12" />
-
         {collections?.length > 0 && (
-          <section className="mb-12" aria-labelledby="browse-collections">
-            <h2 id="browse-collections" className="font-display text-lg font-semibold text-foreground mb-4">
-              Browse collections
-            </h2>
+          <section
+            className="browse-shell px-4 py-6 sm:px-6 sm:py-7"
+            aria-labelledby="browse-collections"
+          >
+            <div className="mb-5 flex flex-wrap items-end justify-start gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-stash-muted-text">
+                  Curated sets
+                </p>
+                <h2 id="browse-collections" className="mt-1 font-display text-xl font-semibold text-foreground">
+                  Browse collections
+                </h2>
+                <p className="mt-1 text-sm text-stash-muted-text">
+                  Explore grouped stacks by workflow and outcome.
+                </p>
+              </div>
+              <Link
+                href="/collections"
+                className="inline-flex min-h-10 items-center rounded-full border border-stash-line-soft bg-stash-control px-3.5 text-sm font-medium text-stash-muted-text transition hover:border-stash-line-strong hover:text-foreground"
+              >
+                View all collections
+              </Link>
+            </div>
             <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {collections.map((c) => {
                 const slug = getCollectionSlug(c);
@@ -246,11 +341,11 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
                 return (
                   <li key={c._id}>
                     <Link href={`/collections/${slug}`} className="block h-full">
-                      <Card className="h-full gap-0 p-4 transition hover:border-primary/30 hover:bg-accent/50 cursor-pointer">
+                      <Card className="browse-card h-full gap-0 p-4 shadow-none cursor-pointer">
                         <CardContent className="p-0">
-                          <div className="flex items-center justify-between gap-2">
+                          <div className="flex flex-wrap items-center justify-start gap-2">
                             <span className="font-medium text-foreground truncate">{c.title}</span>
-                            <Pill variant="secondary" className="shrink-0 text-xs">
+                            <Pill variant="outline" className="shrink-0 border-stash-line-soft bg-stash-control text-xs text-stash-muted-text">
                               {count} resource{count !== 1 ? "s" : ""}
                             </Pill>
                           </div>
@@ -264,33 +359,42 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
           </section>
         )}
 
-        <div className="mt-12">
-          <RecentlyViewed
-            resources={resources}
-            onTagClick={handleTagClick}
-            onCategoryClick={handleCategoryClick}
-            isSaved={isSaved}
-            onSaveToggle={toggleSaved}
-          />
-        </div>
+        <RecentlyViewed
+          resources={resources}
+          onTagClick={handleTagClick}
+          onCategoryClick={handleCategoryClick}
+          isSaved={isSaved}
+          onSaveToggle={toggleSaved}
+          voteFor={voteFor}
+          onUpvote={setUpvote}
+          onDownvote={setDownvote}
+          upvotes={upvotes}
+          downvotes={downvotes}
+          baseUrl={baseUrl}
+        />
 
         {/* All resources – filters below control this section only */}
         <section
           aria-labelledby="all-resources"
-          className="mt-16 rounded-2xl border border-border bg-card/30 px-4 py-6 sm:px-6 sm:py-8 lg:px-8"
+          className="browse-shell px-4 py-6 sm:px-6 sm:py-7 lg:px-8"
         >
-          <div className="mb-6 flex items-center justify-between gap-3">
-            <h2 id="all-resources" className="font-display text-lg font-semibold text-foreground">
-              All resources
-            </h2>
+          <div className="mb-5 flex flex-wrap items-start justify-start gap-3">
+            <div>
+              <h2 id="all-resources" className="font-display text-xl font-semibold text-foreground">
+                All resources
+              </h2>
+              <p className="mt-1 text-sm text-stash-muted-text">
+                Filter by category, recency, and keyword to find exactly what you need.
+              </p>
+            </div>
             <button
               type="button"
               onClick={() => setFilterOpen((o) => !o)}
               aria-expanded={filterOpen}
               aria-controls="stash-filter-panel"
               className={cn(
-                "relative flex min-h-[2.75rem] min-w-[2.75rem] shrink-0 items-center justify-center rounded-md border border-input bg-background text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:hidden",
-                (filterOpen || hasActiveFilters) && "border-primary/30 bg-accent text-accent-foreground"
+                "browse-control relative flex min-h-[2.75rem] min-w-[2.75rem] shrink-0 items-center justify-center sm:hidden",
+                (filterOpen || hasActiveFilters) && "border-stash-line-strong bg-stash-control-hover text-foreground"
               )}
               aria-label={filterOpen ? "Hide filters" : "Filter and sort"}
             >
@@ -321,9 +425,9 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
               viewMode={viewMode}
               onViewModeChange={handleViewModeChange}
               sortMode={sortMode}
-              onSortModeChange={setSortMode}
+              onSortModeChange={(mode) => updateFilters({ sortMode: mode })}
               timeFilter={timeFilter}
-              onTimeFilterChange={setTimeFilter}
+              onTimeFilterChange={(mode) => updateFilters({ timeFilter: mode })}
             />
           </div>
           <ResourceGrid
@@ -333,11 +437,17 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
             onCategoryClick={handleCategoryClick}
             isSaved={isSaved}
             onSaveToggle={toggleSaved}
+            voteFor={voteFor}
+            onUpvote={setUpvote}
+            onDownvote={setDownvote}
+            upvotes={upvotes}
+            downvotes={downvotes}
+            baseUrl={baseUrl}
             onClearFilters={handleClearFilters}
           />
         </section>
+        </div>
       </main>
     </div>
   );
 }
-

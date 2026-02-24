@@ -1,0 +1,73 @@
+{
+  "version": "2026-02-24.1",
+  "description": "Resource discovery and validation playbook for The Stash automation agents.",
+  "objective": "Add net-new, source-validated resources while rebalancing underrepresented categories and preserving editorial quality.",
+  "categoryPriority": [
+    "ui-ux-resources",
+    "coding",
+    "github",
+    "html",
+    "css",
+    "javascript",
+    "languages",
+    "learning-resources",
+    "productivity",
+    "webflow",
+    "shadcn",
+    "ai-tools",
+    "development-tools",
+    "design-tools",
+    "inspiration",
+    "miscellaneous"
+  ],
+  "marketingSignals": [
+    "marketing",
+    "growth",
+    "seo",
+    "newsletter",
+    "email",
+    "social",
+    "ppc",
+    "ads",
+    "campaign",
+    "content"
+  ],
+  "blockedHosts": [
+    "reddit.com",
+    "x.com",
+    "twitter.com",
+    "facebook.com",
+    "instagram.com"
+  ],
+  "nonToolHosts": [
+    "techcrunch.com",
+    "substack.com",
+    "medium.com",
+    "dev.to",
+    "hashnode.com",
+    "chrisbrunet.com",
+    "rsdoiel.github.io",
+    "magicalmushroom.com"
+  ],
+  "sourcePolicy": {
+    "prefer": [
+      "official docs",
+      "first-party product pages",
+      "official benchmark reports",
+      "maintained repositories"
+    ],
+    "avoid": [
+      "forum-only threads",
+      "low-context social reposts",
+      "unattributed aggregators"
+    ]
+  },
+  "validation": {
+    "urlCheck": "HEAD then GET fallback",
+    "descriptionLength": {
+      "min": 10,
+      "max": 260
+    },
+    "slugFormat": "lowercase-hyphenated"
+  }
+}

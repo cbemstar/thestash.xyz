@@ -1,8 +1,11 @@
 import { getAllCollectionSlugs } from "@/lib/sanity.collection";
 import { getAllResourceSlugs } from "@/lib/sanity.resource";
 import { CATEGORIES } from "@/lib/categories";
+import { getAllUseCasePages } from "@/lib/use-case-pages";
+import { getAllAlternativePagesData, getAllComparisonPageSlugs } from "@/lib/seo-pages";
+import { getAllArticles } from "@/lib/sanity.article";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
 const RESERVED_SLUGS = ["studio", "api"];
 
@@ -13,24 +16,34 @@ const RESERVED_SLUGS = ["studio", "api"];
  * GEO: stats line adds factual density for AI citation (seo-geo skill).
  */
 export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 export async function GET() {
-  const [collectionSlugs, resourceSlugs] = await Promise.all([
+  const [collectionSlugs, resourceSlugs, articles] = await Promise.all([
     getAllCollectionSlugs(),
     getAllResourceSlugs(),
+    getAllArticles(),
   ]);
+  const useCases = getAllUseCasePages();
+  const alternatives = getAllAlternativePagesData();
+  const comparisonSlugs = getAllComparisonPageSlugs();
 
   const resourceCount = resourceSlugs.filter((s) => !RESERVED_SLUGS.includes(s)).length;
   const collectionCount = collectionSlugs.length;
   const categoryCount = CATEGORIES.length;
+  const articleCount = articles.length;
+  const useCaseCount = useCases.length;
+  const alternativesCount = alternatives.length;
+  const comparisonCount = comparisonSlugs.length;
+  const latestArticles = articles
+    .filter((article) => typeof article.slug === "string" && article.slug.length > 0)
+    .slice(0, 6);
 
   const lines: string[] = [
     "# The Stash",
     "",
     "> The Stash is a curated, authoritative directory of design, development, and AI resources. It helps designers and developers discover high-quality tools, inspiration, learning resources, and productivity apps. Content is hand-picked and categorized (design tools, dev tools, AI tools, inspiration, learning, Webflow, and more) with descriptions, use cases, and citations so users and AI systems can quickly assess relevance and trustworthiness.",
     "",
-    `The directory includes **${resourceCount}** resources, **${collectionCount}** collections, and **${categoryCount}** categories. Each resource has a dedicated page with a clear definition, benefits, use cases, and cited sources. Use this file and the linked sections below to understand site structure, browse by category or collection, and point users or agents to the right URLs.`,
+    `The directory includes **${resourceCount}** resources, **${collectionCount}** collections, **${categoryCount}** categories, **${articleCount}** blog guides, **${useCaseCount}** use-case pages, **${alternativesCount}** alternatives hubs, and **${comparisonCount}** comparison pages. Use this file and the linked sections below to route users and agents to canonical URLs quickly.`,
     "",
     "## Browse",
     "",
@@ -39,7 +52,29 @@ export async function GET() {
     `- [Categories](${BASE_URL}/category): Browse by category (design tools, development tools, AI tools, inspiration, learning, etc.)`,
     `- [Tags](${BASE_URL}/tags): Filter by tag`,
     `- [By type](${BASE_URL}/type): Filter by resource type (app, website, library, etc.)`,
+    `- [Blog](${BASE_URL}/blog): Editorial guides and benchmark refreshes`,
+    `- [Use cases](${BASE_URL}/use-cases): Answer-first decision pages`,
+    `- [Alternatives](${BASE_URL}/alternatives): Tool alternatives with migration guidance`,
+    `- [Comparisons](${BASE_URL}/compare): Head-to-head decision matrices`,
+    `- [Reports](${BASE_URL}/reports): Original benchmark datasets and analysis assets`,
+    `- [AI coding tools benchmark](${BASE_URL}/reports/ai-coding-tools-benchmark): Weighted tool scoring dataset`,
+    `- [AI adoption and trust signals](${BASE_URL}/reports/ai-adoption-trust-signals): Official adoption and trust metrics`,
+    `- [SEO and AI-answer discoverability](${BASE_URL}/reports/seo-ai-answer-discoverability): Official AI-search signals and execution framework`,
     `- [Recommend](${BASE_URL}/recommend): Get personalized suggestions`,
+    "",
+    "## Answer-first snippets",
+    "",
+    ...useCases.slice(0, 8).map(
+      (page) =>
+        `- **${page.title}**: ${page.answerFirst} (${BASE_URL}/use-cases/${page.slug})`
+    ),
+    "",
+    "## Latest blog updates",
+    "",
+    ...latestArticles.map(
+      (article) =>
+        `- [${article.title}](${BASE_URL}/blog/${article.slug}): ${article.excerpt}`
+    ),
     "",
     "## Collections",
     "",

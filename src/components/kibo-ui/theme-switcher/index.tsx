@@ -3,7 +3,7 @@
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { motion } from "motion/react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 import { cn } from "@/lib/utils";
 
 const themes = [
@@ -42,7 +42,11 @@ export const ThemeSwitcher = ({
     prop: value,
     onChange,
   });
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   const handleThemeClick = useCallback(
     (themeKey: "light" | "dark" | "system") => {
@@ -51,11 +55,6 @@ export const ThemeSwitcher = ({
     [setTheme]
   );
 
-  // Prevent hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   if (!mounted) {
     return null;
   }
@@ -63,7 +62,7 @@ export const ThemeSwitcher = ({
   return (
     <div
       className={cn(
-        "relative isolate flex h-8 rounded-full bg-background p-1 ring-1 ring-border",
+        "relative isolate flex h-8 items-center justify-center gap-1 rounded-full border border-stash-line-soft bg-stash-control p-1",
         className
       )}
     >
@@ -73,14 +72,15 @@ export const ThemeSwitcher = ({
         return (
           <button
             aria-label={label}
-            className="relative h-6 w-6 rounded-full"
+            aria-pressed={isActive}
+            className="relative h-6 w-6 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             key={key}
             onClick={() => handleThemeClick(key as "light" | "dark" | "system")}
             type="button"
           >
             {isActive && (
               <motion.div
-                className="absolute inset-0 rounded-full bg-secondary"
+                className="absolute inset-0 rounded-full bg-stash-panel-strong"
                 layoutId="activeTheme"
                 transition={{ type: "spring", duration: 0.5 }}
               />
@@ -88,7 +88,7 @@ export const ThemeSwitcher = ({
             <Icon
               className={cn(
                 "relative z-10 m-auto h-4 w-4",
-                isActive ? "text-foreground" : "text-muted-foreground"
+                isActive ? "text-foreground" : "text-stash-muted-text"
               )}
             />
           </button>

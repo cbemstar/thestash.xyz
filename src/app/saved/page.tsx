@@ -1,10 +1,10 @@
 import { sanityClient, isSanityConfigured } from "@/lib/sanity.client";
-import { allResourcesQuery } from "@/lib/sanity.queries";
+import { allResourcesLiteQuery } from "@/lib/sanity.queries";
 import { SavedPageClient } from "./SavedPageClient";
 import type { Resource } from "@/types/resource";
 import type { Metadata } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Saved Resources | The Stash",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default async function SavedPage() {
   const resources: Resource[] = isSanityConfigured()
-    ? (await sanityClient.fetch<Resource[]>(allResourcesQuery)) ?? []
+    ? (await sanityClient.fetch<Resource[]>(allResourcesLiteQuery)) ?? []
     : [];
 
   return <SavedPageClient resources={resources} />;

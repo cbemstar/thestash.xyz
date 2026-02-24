@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-02-13T19:06:32.202Z",
+  "inputPath": "/Users/karan/.codex/worktrees/5ac9/thestash.xyz/automation/discovery-candidates.json",
+  "counts": {
+    "total": 8,
+    "published": 8,
+    "deadLink": 0,
+    "duplicate": 0,
+    "invalid": 0,
+    "error": 0
+  },
+  "items": [
+    {
+      "title": "Akira",
+      "url": "https://github.com/akiraux/Akira",
+      "category": "design-tools",
+      "slug": "akira",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:07.494Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "7030f127-ea93-454f-a2ac-bec78c79c153"
+    },
+    {
+      "title": "Difftastic",
+      "url": "https://github.com/Wilfred/difftastic",
+      "category": "development-tools",
+      "slug": "difftastic",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:10.511Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "6f2b23d7-de85-47d5-a415-09475efdce69"
+    },
+    {
+      "title": "Open UI",
+      "url": "https://open-ui.org/",
+      "category": "ui-ux-resources",
+      "slug": "open-ui",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:14.517Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "666e0d98-6f99-4d19-bf3d-8da35ff12a99"
+    },
+    {
+      "title": "H1 Gallery",
+      "url": "https://h1gallery.com/",
+      "category": "inspiration",
+      "slug": "h1-gallery",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:17.538Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "f5c8af7c-91a7-4e10-bef8-65e7c02d2c15"
+    },
+    {
+      "title": "LibreChat",
+      "url": "https://www.librechat.ai/",
+      "category": "ai-tools",
+      "slug": "librechat",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:21.566Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "3a12e349-8b1a-46ad-98f1-d19c85fcab29"
+    },
+    {
+      "title": "Vikunja",
+      "url": "https://vikunja.io/",
+      "category": "productivity",
+      "slug": "vikunja",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:24.574Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "81cc6239-6b28-4833-afce-817fff993e2b"
+    },
+    {
+      "title": "Full Stack Open",
+      "url": "https://fullstackopen.com/",
+      "category": "learning-resources",
+      "slug": "full-stack-open",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:28.061Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "80cc71a5-e1dc-4832-84c6-cebfc6dc54a1"
+    },
+    {
+      "title": "Collection Directory",
+      "url": "https://collection.directory/",
+      "category": "miscellaneous",
+      "slug": "collection-directory",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-13T19:06:32.202Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "b7ddd85f-64d6-438c-b0e6-f3b93de3b552"
+    }
+  ]
+}

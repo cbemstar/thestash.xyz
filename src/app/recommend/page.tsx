@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { sanityClient, isSanityConfigured } from "@/lib/sanity.client";
-import { allResourcesQuery } from "@/lib/sanity.queries";
+import { allResourcesLiteQuery } from "@/lib/sanity.queries";
 import { AppNav } from "@/components/AppNav";
 import { RecommendClient } from "./RecommendClient";
 import type { Resource } from "@/types/resource";
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 60;
+export const revalidate = 21600; // 6 hr — reduce ISR writes on free plan
 
 export default async function RecommendPage() {
   const resources: Resource[] = isSanityConfigured()
-    ? (await sanityClient.fetch<Resource[]>(allResourcesQuery)) ?? []
+    ? (await sanityClient.fetch<Resource[]>(allResourcesLiteQuery)) ?? []
     : [];
 
   return (

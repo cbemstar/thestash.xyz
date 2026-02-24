@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-02-16T23:54:09.555Z",
+  "missingCount": 36,
+  "missing": [
+    {
+      "_id": "2f65499c-7814-4111-9a39-3ac4cc93f2fb",
+      "title": "Aider",
+      "url": "https://aider.dev/"
+    },
+    {
+      "_id": "72c4526e-f2ea-441a-9dfc-aff20f07890f",
+      "title": "Awesome Learning Dev",
+      "url": "https://www.learndev.info/en.html"
+    },
+    {
+      "_id": "df7e1758-9770-4127-9d13-7d25c178fefe",
+      "title": "Brutalist Websites",
+      "url": "https://brutalistwebsites.com"
+    },
+    {
+      "_id": "fc66f84a-033c-4ac0-a412-4332d63587cb",
+      "title": "CSS.gg",
+      "url": "https://css.gg"
+    },
+    {
+      "_id": "e4ab3772-b226-4659-9650-747e9613d6f1",
+      "title": "ChatArena",
+      "url": "https://chatarena.ai/"
+    },
+    {
+      "_id": "d3dc2085-f477-4e72-bee1-eb7dd9563446",
+      "title": "Claude Code Skills Hub",
+      "url": "https://claudecodeplugins.io"
+    },
+    {
+      "_id": "8ddbf984-baf0-4961-b046-d0a781ae3a51",
+      "title": "ColorBox",
+      "url": "https://colorbox.io"
+    },
+    {
+      "_id": "82d84ca2-32c2-4272-8979-9ca85f35542d",
+      "title": "Colorable",
+      "url": "https://colorable.jxnblk.com"
+    },
+    {
+      "_id": "1b55e9fb-5b05-4d82-8539-4f7fbcc1f1d2",
+      "title": "Composio",
+      "url": "https://composio.dev"
+    },
+    {
+      "_id": "27c75877-3ad6-4175-8e9d-fc5bf1b83e89",
+      "title": "HTML Standard",
+      "url": "https://html.spec.whatwg.org"
+    },
+    {
+      "_id": "834ba683-b333-49d2-a15a-50e1ebb744bb",
+      "title": "HTML Validator",
+      "url": "https://validator.w3.org"
+    },
+    {
+      "_id": "ab82b66c-9f75-4510-a246-eefa54ebc13e",
+      "title": "Httpster",
+      "url": "https://httpster.net"
+    },
+    {
+      "_id": "30fd77c5-7861-4922-827c-da79b17cf39f",
+      "title": "Huemint",
+      "url": "https://huemint.com"
+    },
+    {
+      "_id": "1ad743df-4763-4fb1-bf5a-7ce389695344",
+      "title": "Inclusive Components",
+      "url": "https://inclusive-components.design"
+    },
+    {
+      "_id": "5cc4e65c-e8c2-4854-b1a4-36b6497aa332",
+      "title": "Land-book Collections",
+      "url": "https://land-book.com/collections"
+    },
+    {
+      "_id": "f88c7de2-3651-4bb6-adda-ee3fb4bc1d1f",
+      "title": "Learn X in Y Minutes",
+      "url": "https://learnxinyminutes.com/"
+    },
+    {
+      "_id": "760cfd85-16f2-4f0f-8ef9-6d9b43034b6d",
+      "title": "Livegrep",
+      "url": "https://livegrep.com/"
+    },
+    {
+      "_id": "2768e2e4-3063-4fde-aad5-70717da87d25",
+      "title": "MCP Market",
+      "url": "https://mcpmarket.com/"
+    },
+    {
+      "_id": "a3a4c1d7-7576-41fc-a93e-9f68ab83438a",
+      "title": "Modulz",
+      "url": "https://modulz.app"
+    },
+    {
+      "_id": "22da0590-74a9-4714-a1a0-d1c3b052ee3c",
+      "title": "Open Notebook",
+      "url": "https://www.opennotebook.ai/"
+    },
+    {
+      "_id": "9ddec28b-d06a-4db3-8633-361b482519af",
+      "title": "Paperless-ngx",
+      "url": "https://docs.paperless-ngx.com/"
+    },
+    {
+      "_id": "8c1004cc-52e1-47f7-ba42-42a7028155b2",
+      "title": "Principle",
+      "url": "https://principleformac.com"
+    },
+    {
+      "_id": "9b51c58a-95b1-4bce-ab5e-cf92416e9a7b",
+      "title": "PromptHive",
+      "url": "https://prompthive.sh/"
+    },
+    {
+      "_id": "0d70e142-51ee-42bd-ac68-4013abf46b95",
+      "title": "Puppeteer",
+      "url": "https://pptr.dev"
+    },
+    {
+      "_id": "d1eeb56c-8707-422a-a62f-805a86337de3",
+      "title": "Quant-UX",
+      "url": "https://quant-ux.com/"
+    },
+    {
+      "_id": "c7a73991-dae1-4d71-b70d-67c2e093239d",
+      "title": "Regexer",
+      "url": "https://regexer.dev/"
+    },
+    {
+      "_id": "5aa101f8-429e-4ef6-a8dc-18e8edb62fa3",
+      "title": "Remix Icon",
+      "url": "https://remixicon.com"
+    },
+    {
+      "_id": "7e4b68bd-0393-4951-a5e1-cb73c70a4244",
+      "title": "Spline Tutorials",
+      "url": "https://spline.design/learn"
+    },
+    {
+      "_id": "22873f45-1ca3-4ade-bfcf-5f285aa68894",
+      "title": "Tabler Icons",
+      "url": "https://tabler.io/icons"
+    },
+    {
+      "_id": "451ecdd2-eca0-43b6-854a-1324e47346ea",
+      "title": "Trakit",
+      "url": "https://gettrakit.app/"
+    },
+    {
+      "_id": "a3ef2dd1-a61a-454b-af42-6876d245373e",
+      "title": "Turbo",
+      "url": "https://turbo.build"
+    },
+    {
+      "_id": "12211f09-cc71-45df-993e-023a2fe21cff",
+      "title": "Useberry",
+      "url": "https://www.useberry.com"
+    },
+    {
+      "_id": "05328762-ed4d-4025-a81c-ceb0623fa858",
+      "title": "WebAIM",
+      "url": "https://webaim.org"
+    },
+    {
+      "_id": "316442aa-040e-4321-97fc-883b5be854e4",
+      "title": "Zeroheight",
+      "url": "https://zeroheight.com"
+    },
+    {
+      "_id": "733eb838-40d0-4d19-ac51-47c098bd54f1",
+      "title": "in progress works",
+      "url": "https://www.inprogress.works"
+    },
+    {
+      "_id": "72289440-b71f-4403-a1b4-14db56358052",
+      "title": "webflow-python",
+      "url": "https://pypi.org/project/webflow-python"
+    }
+  ]
+}

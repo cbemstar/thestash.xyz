@@ -1,0 +1,701 @@
+{
+  "startedAt": "2026-02-16T23:50:22.796Z",
+  "endedAt": "2026-02-16T23:51:29.418Z",
+  "args": {
+    "concurrency": 6,
+    "minSize": 96,
+    "timeoutMs": 12000,
+    "limit": 0,
+    "force": false
+  },
+  "totals": {
+    "totalResources": 548,
+    "targetResources": 75,
+    "updated": 39,
+    "skipped": 36,
+    "failed": 0
+  },
+  "results": [
+    {
+      "_id": "2768e2e4-3063-4fde-aad5-70717da87d25",
+      "title": "MCP Market",
+      "url": "https://mcpmarket.com/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "d1eeb56c-8707-422a-a62f-805a86337de3",
+      "title": "Quant-UX",
+      "url": "https://quant-ux.com/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "9b51c58a-95b1-4bce-ab5e-cf92416e9a7b",
+      "title": "PromptHive",
+      "url": "https://prompthive.sh/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "72c4526e-f2ea-441a-9dfc-aff20f07890f",
+      "title": "Awesome Learning Dev",
+      "url": "https://www.learndev.info/en.html",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "760cfd85-16f2-4f0f-8ef9-6d9b43034b6d",
+      "title": "Livegrep",
+      "url": "https://livegrep.com/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "c7a73991-dae1-4d71-b70d-67c2e093239d",
+      "title": "Regexer",
+      "url": "https://regexer.dev/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "e4ab3772-b226-4659-9650-747e9613d6f1",
+      "title": "ChatArena",
+      "url": "https://chatarena.ai/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "2f65499c-7814-4111-9a39-3ac4cc93f2fb",
+      "title": "Aider",
+      "url": "https://aider.dev/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "8c1004cc-52e1-47f7-ba42-42a7028155b2",
+      "title": "Principle",
+      "url": "https://principleformac.com",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "316442aa-040e-4321-97fc-883b5be854e4",
+      "title": "Zeroheight",
+      "url": "https://zeroheight.com",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "a3a4c1d7-7576-41fc-a93e-9f68ab83438a",
+      "title": "Modulz",
+      "url": "https://modulz.app",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "12211f09-cc71-45df-993e-023a2fe21cff",
+      "title": "Useberry",
+      "url": "https://www.useberry.com",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "23f3ac26-8391-4157-ad43-50bbe9595caa",
+      "title": "Whimsical",
+      "url": "https://whimsical.com",
+      "status": "updated",
+      "width": 1200,
+      "height": 628,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-82346ced74a36d903cc1ad5e19bf6a4214a0cc35-1200x628-png"
+    },
+    {
+      "_id": "82d84ca2-32c2-4272-8979-9ca85f35542d",
+      "title": "Colorable",
+      "url": "https://colorable.jxnblk.com",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "54091843-320e-46d1-b460-c16aee844d4e",
+      "title": "Contrast Ratio",
+      "url": "https://contrast-ratio.com",
+      "status": "updated",
+      "width": 1800,
+      "height": 900,
+      "format": "jpg",
+      "source": "meta",
+      "assetId": "image-fbf0dd7df7c7db5639de9f7f824bf281d41fc9fe-1800x900-jpg"
+    },
+    {
+      "_id": "05328762-ed4d-4025-a81c-ceb0623fa858",
+      "title": "WebAIM",
+      "url": "https://webaim.org",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "1ad743df-4763-4fb1-bf5a-7ce389695344",
+      "title": "Inclusive Components",
+      "url": "https://inclusive-components.design",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "33cc3f30-3a0a-4edd-96ee-61ea9357fbfd",
+      "title": "Radix Colors",
+      "url": "https://www.radix-ui.com/colors",
+      "status": "updated",
+      "width": 3025,
+      "height": 1700,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-cb8febb76f9f6fb6d7d9710a4b3e62b3a8f4efd3-3025x1700-png"
+    },
+    {
+      "_id": "8ddbf984-baf0-4961-b046-d0a781ae3a51",
+      "title": "ColorBox",
+      "url": "https://colorbox.io",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "533b0ef9-1724-41d5-b3fd-18150e723096",
+      "title": "Realtime Colors",
+      "url": "https://realtimecolors.com",
+      "status": "updated",
+      "width": 801,
+      "height": 419,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-316dc2ec400b5c0034fe91af803c764af453399a-801x419-png"
+    },
+    {
+      "_id": "30fd77c5-7861-4922-827c-da79b17cf39f",
+      "title": "Huemint",
+      "url": "https://huemint.com",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "1f9f8606-5056-4f61-95a8-a3e65d189f11",
+      "title": "Type Scale",
+      "url": "https://typescale.com",
+      "status": "updated",
+      "width": 1200,
+      "height": 675,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-68072cebb87d6289671df15e5765118f0c65bd52-1200x675-png"
+    },
+    {
+      "_id": "22873f45-1ca3-4ade-bfcf-5f285aa68894",
+      "title": "Tabler Icons",
+      "url": "https://tabler.io/icons",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "f56dd432-b8bd-4578-9b54-5e35b3853b7c",
+      "title": "Feather Icons",
+      "url": "https://feathericons.com",
+      "status": "updated",
+      "width": 1800,
+      "height": 945,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-6f4b853c29f279dca9fae22fffd6a0ae7385e7c8-1800x945-png"
+    },
+    {
+      "_id": "5aa101f8-429e-4ef6-a8dc-18e8edb62fa3",
+      "title": "Remix Icon",
+      "url": "https://remixicon.com",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "ee835942-bffc-4bd4-bc23-8ecb165ac6b3",
+      "title": "Icons8",
+      "url": "https://icons8.com",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-2dd13af5bb46d84c082ee689eacd6f8c954cd67f-1200x630-png"
+    },
+    {
+      "_id": "66518882-fbb7-4584-98b0-e0c0037a1765",
+      "title": "Iconoir",
+      "url": "https://iconoir.com",
+      "status": "updated",
+      "width": 1760,
+      "height": 990,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-0202b71bd698bbc99afafc89464e5785963750eb-1760x990-png"
+    },
+    {
+      "_id": "fc66f84a-033c-4ac0-a412-4332d63587cb",
+      "title": "CSS.gg",
+      "url": "https://css.gg",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "a3da4b8a-5975-4aee-93aa-9fbb5ceb2ac8",
+      "title": "Spline AI",
+      "url": "https://spline.design/ai",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-6364376d54ad1bd963530cc5ebbbcdce6fc5851c-1200x630-png"
+    },
+    {
+      "_id": "7e4b68bd-0393-4951-a5e1-cb73c70a4244",
+      "title": "Spline Tutorials",
+      "url": "https://spline.design/learn",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "9a21cfdd-f0a3-4f83-99da-b6d459c8a231",
+      "title": "Note API Connector",
+      "url": "https://noteapiconnector.com",
+      "status": "updated",
+      "width": 1280,
+      "height": 720,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-2fc021562ac54e356539e57bc2dfd20818df2dd3-1280x720-png"
+    },
+    {
+      "_id": "a3ef2dd1-a61a-454b-af42-6876d245373e",
+      "title": "Turbo",
+      "url": "https://turbo.build",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "087f5140-b611-4034-9479-3e79979d7950",
+      "title": "pnpm",
+      "url": "https://pnpm.io",
+      "status": "updated",
+      "width": 1200,
+      "height": 1200,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-632470b780623955065ee67584131ceed04be162-1200x1200-png"
+    },
+    {
+      "_id": "a7def335-d1e2-42d0-947f-914e748ac4c5",
+      "title": "Testing Library",
+      "url": "https://testing-library.com",
+      "status": "updated",
+      "width": 128,
+      "height": 128,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-4329e724fc69a5c844cb09ee9d9530824e157aa3-128x128-png"
+    },
+    {
+      "_id": "8df8650b-74a6-491f-844c-ccb97c791f37",
+      "title": "Nuxt",
+      "url": "https://nuxt.com",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "jpg",
+      "source": "meta",
+      "assetId": "image-3da768251b881db0f9423140c2b14c919d20b46d-1200x630-jpg"
+    },
+    {
+      "_id": "ed23aee2-a0c1-4d2e-b4eb-44bd8761091f",
+      "title": "SolidStart",
+      "url": "https://start.solidjs.com",
+      "status": "updated",
+      "width": 1208,
+      "height": 638,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-b896ea803c3a965c123f8c47d75e74fab8e734cf-1208x638-png"
+    },
+    {
+      "_id": "d7f7e0aa-2d23-4ef7-bb92-aa3d0634fee5",
+      "title": "Wasp",
+      "url": "https://wasp-lang.dev",
+      "status": "updated",
+      "width": 800,
+      "height": 400,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-c62eb8f8b82e147faeca9bec8b4fb8c80af19d01-800x400-png"
+    },
+    {
+      "_id": "45cfe064-097f-43bf-bcb1-7cf912bf64a5",
+      "title": "Strapi",
+      "url": "https://strapi.io",
+      "status": "updated",
+      "width": 2208,
+      "height": 1103,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-70102091adb7b4e305af7e3e81097a213cddafd6-2208x1103-png"
+    },
+    {
+      "_id": "11465227-2ff6-4d4a-91e5-bfa84f80cefa",
+      "title": "Uploadthing",
+      "url": "https://uploadthing.com",
+      "status": "updated",
+      "width": 1536,
+      "height": 768,
+      "format": "jpg",
+      "source": "meta",
+      "assetId": "image-fa51d642e34fbfb135771c7b34a966a540ff0275-1536x768-jpg"
+    },
+    {
+      "_id": "de0ae7ab-440c-4327-9832-058a7ca9a1dc",
+      "title": "Trigger.dev",
+      "url": "https://trigger.dev",
+      "status": "updated",
+      "width": 1280,
+      "height": 640,
+      "format": "jpg",
+      "source": "meta",
+      "assetId": "image-462fddc2ff9dab97503549d7e6bebebc0e6b7d24-1280x640-jpg"
+    },
+    {
+      "_id": "0d70e142-51ee-42bd-ac68-4013abf46b95",
+      "title": "Puppeteer",
+      "url": "https://pptr.dev",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "86858a0d-b01d-458f-91ee-4cca0f2a7fb7",
+      "title": "Artillery",
+      "url": "https://www.artillery.io",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-2ebb93c518994a00374744f198604687fdf2f107-1200x630-png"
+    },
+    {
+      "_id": "d5a9abff-6c80-4baf-8aef-5d88e4605284",
+      "title": "Turborepo",
+      "url": "https://turbo.build/repo",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-7bc179a2dcb4875f5c6d6f2799d5b363c860c23e-1200x630-png"
+    },
+    {
+      "_id": "b6a91f33-77f3-4246-b38d-994d663f80df",
+      "title": "Lerna",
+      "url": "https://lerna.js.org",
+      "status": "updated",
+      "width": 800,
+      "height": 400,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-2f9be4860c5b0a07af1bbe295a065adc5ff73301-800x400-png"
+    },
+    {
+      "_id": "a45dddf6-fde4-40cc-b47b-7c41aff4500d",
+      "title": "Oratory",
+      "url": "https://www.oratory.co",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-bf53c7e93bedb851a2f6293b80c66799d4b0a3b5-1200x630-png"
+    },
+    {
+      "_id": "ac241b0e-a9fa-408a-b902-1702a00bbb5e",
+      "title": "Making UX Decisions",
+      "url": "https://uxdecisions.com",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-79972ac98a7be2fc8422421b0bcfdb01bc2fb570-1200x630-png"
+    },
+    {
+      "_id": "df7e1758-9770-4127-9d13-7d25c178fefe",
+      "title": "Brutalist Websites",
+      "url": "https://brutalistwebsites.com",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "ab82b66c-9f75-4510-a246-eefa54ebc13e",
+      "title": "Httpster",
+      "url": "https://httpster.net",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "4b977946-6cf9-4793-ba57-d9e92bd780c2",
+      "title": "Collect UI",
+      "url": "http://collectui.com",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-493fb21e3d5c1a915634f5aa3aa9773f9528b01a-1200x630-png"
+    },
+    {
+      "_id": "eb21c811-fbb9-48ca-aaf0-96e4f75e8fcc",
+      "title": "UX Design Weekly",
+      "url": "https://uxdesignweekly.com",
+      "status": "updated",
+      "width": 400,
+      "height": 400,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-a5575877a9076db756af5acec10ca050432c5b6b-400x400-png"
+    },
+    {
+      "_id": "5cc4e65c-e8c2-4854-b1a4-36b6497aa332",
+      "title": "Land-book Collections",
+      "url": "https://land-book.com/collections",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "79f81410-27b0-4509-bb3d-949750a1bc93",
+      "title": "Pencil",
+      "url": "https://pencil.dev",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-832f5c60a8819f1dad6e9c34cfbbc7473ea9af34-1200x630-png"
+    },
+    {
+      "_id": "733eb838-40d0-4d19-ac51-47c098bd54f1",
+      "title": "in progress works",
+      "url": "https://www.inprogress.works",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "1d76dfcd-f47c-4e22-b837-191ff5ae6e04",
+      "title": "Context7",
+      "url": "https://context7.com",
+      "status": "updated",
+      "width": 1600,
+      "height": 838,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-2ec094e144e8a83a4f53dc7c4e642915f2d2215d-1600x838-png"
+    },
+    {
+      "_id": "cdf32f48-8e65-48ab-bc4e-0e66ac182b13",
+      "title": "Pablo",
+      "url": "https://pablo.design",
+      "status": "updated",
+      "width": 720,
+      "height": 378,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-507cf1d207253af9095a05258eb29ac2787902d5-720x378-png"
+    },
+    {
+      "_id": "f3bec247-9cbd-4568-9c4b-cfeb2ec82026",
+      "title": "Raydian",
+      "url": "https://raydian.dev",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-9c56061a81cc7054278c57df85c0f2fa354f0802-1200x630-png"
+    },
+    {
+      "_id": "54890127-9cc5-44de-97fa-8d02171ca3fb",
+      "title": "MagicPath",
+      "url": "https://www.magicpath.ai",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-c2c81c41fdc24c68b9d94daaa95f713d97f9a0ef-1200x630-png"
+    },
+    {
+      "_id": "1b55e9fb-5b05-4d82-8539-4f7fbcc1f1d2",
+      "title": "Composio",
+      "url": "https://composio.dev",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "d3dc2085-f477-4e72-bee1-eb7dd9563446",
+      "title": "Claude Code Skills Hub",
+      "url": "https://claudecodeplugins.io",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "92afea21-85f4-4bea-906f-325e622d3664",
+      "title": "SafetyKit",
+      "url": "https://www.safetykit.com",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "jpg",
+      "source": "meta",
+      "assetId": "image-3d7f88cd4533b6f1ac4a7a9ee2996a2fd8fd0421-1200x630-jpg"
+    },
+    {
+      "_id": "3236ff26-0e2b-479b-be86-d056cc7f4ca4",
+      "title": "UI Skills",
+      "url": "https://www.ui-skills.com",
+      "status": "updated",
+      "width": 3020,
+      "height": 1632,
+      "format": "webp",
+      "source": "meta",
+      "assetId": "image-494efb73545e575c0262dbc82f132597ed598281-3020x1632-webp"
+    },
+    {
+      "_id": "cfac1147-3ee3-4213-94ed-e7d085d5427c",
+      "title": "Ballpark",
+      "url": "https://www.ballpark.ing",
+      "status": "updated",
+      "width": 1800,
+      "height": 945,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-177274a47785818b330142ae4efc495bd084e30d-1800x945-png"
+    },
+    {
+      "_id": "679a0497-7b22-4ef3-8deb-b96cf0efba56",
+      "title": "Memberstack",
+      "url": "https://www.memberstack.io",
+      "status": "updated",
+      "width": 1466,
+      "height": 1042,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-b092b7b49b41c3f9bf6434c9eb42c7de39b44386-1466x1042-png"
+    },
+    {
+      "_id": "14f0e904-de7a-4882-9e9f-4bfee35ec438",
+      "title": "Radix UI",
+      "url": "https://www.radix-ui.com",
+      "status": "updated",
+      "width": 3025,
+      "height": 1700,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-946f86faa7c4f7620168c8f97761ca026bbf17ed-3025x1700-png"
+    },
+    {
+      "_id": "27c75877-3ad6-4175-8e9d-fc5bf1b83e89",
+      "title": "HTML Standard",
+      "url": "https://html.spec.whatwg.org",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "834ba683-b333-49d2-a15a-50e1ebb744bb",
+      "title": "HTML Validator",
+      "url": "https://validator.w3.org",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "4493328e-c020-41a2-b08b-198cfb1a0ead",
+      "title": "CSS Grid Generator",
+      "url": "https://cssgrid-generator.netlify.app",
+      "status": "updated",
+      "width": 800,
+      "height": 511,
+      "format": "jpg",
+      "source": "meta",
+      "assetId": "image-721f9e9ccd9b333e413e239a9a79df12a789e187-800x511-jpg"
+    },
+    {
+      "_id": "resource-api-layer",
+      "title": "API Layer",
+      "url": "https://apilayer.com/products/",
+      "status": "updated",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-bf68d19e1b55fd25ac8823f1b1d11bf3aa0de6f2-512x512-png"
+    },
+    {
+      "_id": "ba1d2a58-c261-48b3-adcb-2e7094d25fd8",
+      "title": "accessiBe for Webflow",
+      "url": "https://accessibe.com/integrations/webflow",
+      "status": "updated",
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-068de197f8f0fdf396d768513956668d2f25b4f6-1200x630-png"
+    },
+    {
+      "_id": "72289440-b71f-4403-a1b4-14db56358052",
+      "title": "webflow-python",
+      "url": "https://pypi.org/project/webflow-python",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "22da0590-74a9-4714-a1a0-d1c3b052ee3c",
+      "title": "Open Notebook",
+      "url": "https://www.opennotebook.ai/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "451ecdd2-eca0-43b6-854a-1324e47346ea",
+      "title": "Trakit",
+      "url": "https://gettrakit.app/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "f5c8af7c-91a7-4e10-bef8-65e7c02d2c15",
+      "title": "H1 Gallery",
+      "url": "https://h1gallery.com/",
+      "status": "updated",
+      "width": 2400,
+      "height": 1260,
+      "format": "png",
+      "source": "meta",
+      "assetId": "image-ecdd13b164758e7b363049cc26ef80b77485c6b3-2400x1260-png"
+    },
+    {
+      "_id": "9ddec28b-d06a-4db3-8633-361b482519af",
+      "title": "Paperless-ngx",
+      "url": "https://docs.paperless-ngx.com/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    },
+    {
+      "_id": "f88c7de2-3651-4bb6-adda-ee3fb4bc1d1f",
+      "title": "Learn X in Y Minutes",
+      "url": "https://learnxinyminutes.com/",
+      "status": "skipped",
+      "reason": "no-valid-icon"
+    }
+  ]
+}

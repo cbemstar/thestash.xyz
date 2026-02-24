@@ -16,6 +16,8 @@ const COVER_IMAGES_BY_SLUG: Record<string, string> = {
     "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80&fit=crop",
   "ui-components":
     "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200&q=80&fit=crop",
+  "marketing-growth-tools":
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&fit=crop",
 };
 
 /** Default cover when slug has no themed image (abstract gradient / workspace). */

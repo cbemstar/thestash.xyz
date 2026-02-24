@@ -1,0 +1,72 @@
+{
+  "runId": "research-1771966164834",
+  "generatedAt": "2026-02-24T20:49:48.151Z",
+  "playbookVersion": "2026-02-24.1",
+  "queued": 7,
+  "prioritized": 7,
+  "validated": 5,
+  "skippedReasons": {
+    "missing": 0,
+    "blocked": 0,
+    "duplicate": 0,
+    "invalid": 0,
+    "slugConflict": 1,
+    "lowQuality": 1
+  },
+  "createdByCategory": {
+    "ai-tools": 1,
+    "development-tools": 4
+  },
+  "validationStatuses": [
+    {
+      "url": "https://github.com/greatscott/enveil",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://simonwillison.net/guides/agentic-engineering-patterns/code-is-cheap",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://cline.dev",
+      "status": 200,
+      "method": "GET",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/yjeanrenaud/yj_nearbyglasses",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://keepandroidopen.org/open-letter",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/vignesh07/babyshark",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    }
+  ],
+  "durationMs": 23317
+}

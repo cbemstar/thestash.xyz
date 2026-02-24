@@ -37,6 +37,9 @@ Each resource page can show:
 
 - **slug** — URL path (e.g. `figma`). If empty, derived from title.
 - **tags** — e.g. `["design", "prototyping"]`.
+- **alternatives** — array of resource slugs used by `/alternatives/[slug]`.
+- **bestFor** — bullets for who should choose this tool.
+- **notFor** — bullets for who should avoid this tool.
 - **featured** — boolean.
 - **icon** — image in Sanity.
 - **body** — long-form text (definition + overview). If set, used for “What is X?” / “About X” instead of `resource-content.ts`.

@@ -35,12 +35,12 @@ function getTabId(tab: NavTab): string {
   return tab.url;
 }
 
-function isTabActive(tab: NavTab, pathname: string | null): boolean {
-  if (!pathname) return false;
-  if (isDropdownTab(tab)) {
-    return tab.items.some((item) => pathname === item.url || pathname.startsWith(item.url + '/'));
-  }
-  return pathname === tab.url || (tab.url !== '/' && pathname.startsWith(tab.url));
+function toDomId(value: string): string {
+  const normalized = value
+    .toLowerCase()
+    .replace(/[^a-z0-9_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return normalized || 'tab';
 }
 
 /** Best matching tab for pathname: longest url match for links, or dropdown if any item matches. */
@@ -74,6 +74,7 @@ interface SlidingCapsuleNavProps {
   layoutId?: string;
   currentTab?: string;
   onChange?: (url: string) => void;
+  variant?: 'default' | 'stash';
 }
 
 export const SlidingCapsuleNav = ({
@@ -84,6 +85,7 @@ export const SlidingCapsuleNav = ({
   layoutId = 'capsule-nav',
   currentTab,
   onChange,
+  variant = 'default',
 }: SlidingCapsuleNavProps) => {
   const pathname = usePathname();
   const [hoveredTab, setHoveredTab] = React.useState<string | null>(null);
@@ -111,22 +113,29 @@ export const SlidingCapsuleNav = ({
     }
   };
 
+  const isStash = variant === 'stash';
+  const shellClassName = isStash
+    ? 'relative flex items-center gap-1 rounded-full border border-stash-line-soft bg-stash-control p-1 shadow-none'
+    : 'relative flex items-center gap-1 rounded-full border bg-background p-1 shadow-sm';
+
   const sharedTabClasses = cn(
     'relative flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium transition-colors duration-200',
     'rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+    isStash && 'px-3.5 text-[0.8125rem] tracking-tight',
     tabClassName
   );
 
   return (
     <nav
       className={cn(
-        'relative flex items-center gap-1 rounded-full border bg-background p-1 shadow-sm',
+        shellClassName,
         className
       )}
       onMouseLeave={() => setHoveredTab(null)}
     >
       {tabs.map((tab) => {
         const tabId = getTabId(tab);
+        const tabDomId = toDomId(`${layoutId}-${tabId}`);
         const isActive = activeTabId === tabId;
         const isHovered = hoveredTab === tabId;
         const isClicked = clickedTab === tabId;
@@ -137,13 +146,16 @@ export const SlidingCapsuleNav = ({
 
         const contentColor = isActive
           ? 'text-primary-foreground'
-          : 'text-muted-foreground hover:text-foreground';
+          : isStash
+            ? 'text-stash-muted-text hover:text-foreground'
+            : 'text-muted-foreground hover:text-foreground';
 
         if (isDropdownTab(tab)) {
           return (
             <DropdownMenu key={tabId} open={dropdownOpen} onOpenChange={setDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <button
+                  id={`${tabDomId}-trigger`}
                   type="button"
                   className={cn(sharedTabClasses, contentColor)}
                   onMouseEnter={() => setHoveredTab(tabId)}
@@ -156,7 +168,7 @@ export const SlidingCapsuleNav = ({
                       layoutId={`${layoutId}-active`}
                       transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                       className={cn(
-                        'absolute inset-0 z-10 rounded-full bg-primary shadow-md',
+                        'absolute inset-0 z-10 rounded-full bg-primary shadow-none',
                         activeTabClassName
                       )}
                     />
@@ -165,7 +177,10 @@ export const SlidingCapsuleNav = ({
                     <motion.div
                       layoutId={`${layoutId}-ghost`}
                       transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                      className="absolute inset-0 z-0 rounded-full bg-muted/80"
+                      className={cn(
+                        'absolute inset-0 z-0 rounded-full',
+                        isStash ? 'bg-stash-control-hover' : 'bg-muted/80'
+                      )}
                     />
                   )}
                   <span className="relative z-20 flex items-center gap-2">
@@ -174,14 +189,24 @@ export const SlidingCapsuleNav = ({
                   </span>
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="min-w-[10rem]">
+              <DropdownMenuContent
+                id={`${tabDomId}-content`}
+                aria-labelledby={`${tabDomId}-trigger`}
+                align="start"
+                className={cn(
+                  'min-w-[10rem]',
+                  isStash && 'border-stash-line-soft bg-stash-panel-strong'
+                )}
+              >
                 {tab.items.map((item) => (
                   <DropdownMenuItem key={item.url} asChild>
                     <Link
                       href={item.url}
                       className={cn(
                         pathname === item.url || pathname?.startsWith(item.url + '/')
-                          ? 'bg-accent font-medium'
+                          ? isStash
+                            ? 'bg-stash-control-hover font-medium'
+                            : 'bg-accent font-medium'
                           : ''
                       )}
                       aria-current={
@@ -213,7 +238,7 @@ export const SlidingCapsuleNav = ({
                 layoutId={`${layoutId}-active`}
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                 className={cn(
-                  'absolute inset-0 z-10 rounded-full bg-primary shadow-md',
+                  'absolute inset-0 z-10 rounded-full bg-primary shadow-none',
                   activeTabClassName
                 )}
               />
@@ -222,7 +247,10 @@ export const SlidingCapsuleNav = ({
               <motion.div
                 layoutId={`${layoutId}-ghost`}
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                className="absolute inset-0 z-0 rounded-full bg-muted/80"
+                className={cn(
+                  'absolute inset-0 z-0 rounded-full',
+                  isStash ? 'bg-stash-control-hover' : 'bg-muted/80'
+                )}
               />
             )}
             <span className="relative z-20 flex items-center gap-2">

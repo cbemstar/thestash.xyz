@@ -1,0 +1,206 @@
+[
+  {
+    "url": "https://github.com/greatscott/enveil",
+    "title": "enveil",
+    "slug": "enveil",
+    "description": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil",
+    "category": "ai-tools",
+    "tags": [
+      "ai-tools",
+      "ai",
+      "devtools"
+    ],
+    "bestFor": [
+      "Engineering teams adopting AI-assisted workflows",
+      "Developers who need faster iteration loops"
+    ],
+    "notFor": [
+      "Teams with strict data residency constraints and no approved exception process"
+    ],
+    "alternatives": [],
+    "body": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "8432dc52-54af-4ccb-832a-074fa4566f20",
+        "label": "enveil official site",
+        "url": "https://github.com/greatscott/enveil"
+      }
+    ],
+    "source": "Hacker News",
+    "sourceDomain": "github.com",
+    "image": "https://opengraph.githubassets.com/df8351ad038c5034dccdb369bf7e5f7c2df824ea26b4d02a88c3c4dd49e5ce85/GreatScott/enveil",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-24.1",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-24T20:49:26.731Z"
+    },
+    "lastReviewedAt": "2026-02-24T20:49:28.164Z",
+    "validatedAt": "2026-02-24T20:49:28.164Z"
+  },
+  {
+    "url": "https://github.com/yjeanrenaud/yj_nearbyglasses",
+    "title": "yj_nearbyglasses",
+    "slug": "yj-nearbyglasses",
+    "description": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses",
+    "category": "development-tools",
+    "tags": [
+      "development-tools"
+    ],
+    "bestFor": [
+      "Developers shipping production code",
+      "Teams standardizing tooling across projects"
+    ],
+    "notFor": [
+      "Non-technical users with no engineering support"
+    ],
+    "alternatives": [],
+    "body": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "037ce31b-0216-4f55-9606-1f7171b3bc82",
+        "label": "yj_nearbyglasses official site",
+        "url": "https://github.com/yjeanrenaud/yj_nearbyglasses"
+      }
+    ],
+    "source": "Hacker News",
+    "sourceDomain": "github.com",
+    "image": "https://opengraph.githubassets.com/ef70170ae9bbd8314706a4ec4a5ae7a45722bdcf1f972ad4366ba20667ab1aec/yjeanrenaud/yj_nearbyglasses",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-24.1",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-24T20:49:41.214Z"
+    },
+    "lastReviewedAt": "2026-02-24T20:49:42.305Z",
+    "validatedAt": "2026-02-24T20:49:42.305Z"
+  },
+  {
+    "url": "https://keepandroidopen.org/open-letter",
+    "title": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution",
+    "slug": "an-open-letter-to-google-regarding-mandatory-developer-registration-for-android-app-distribution",
+    "description": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution",
+    "category": "development-tools",
+    "tags": [
+      "development-tools",
+      "devtools"
+    ],
+    "bestFor": [
+      "Developers shipping production code",
+      "Teams standardizing tooling across projects"
+    ],
+    "notFor": [
+      "Non-technical users with no engineering support"
+    ],
+    "alternatives": [],
+    "body": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "61e82d78-380d-488e-b818-137715dbc111",
+        "label": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution official site",
+        "url": "https://keepandroidopen.org/open-letter"
+      }
+    ],
+    "source": "Hacker News",
+    "sourceDomain": "keepandroidopen.org",
+    "image": "https://keepandroidopen.org/img/altered-deal.png",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-24.1",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-24T20:49:42.387Z"
+    },
+    "lastReviewedAt": "2026-02-24T20:49:43.145Z",
+    "validatedAt": "2026-02-24T20:49:43.145Z"
+  },
+  {
+    "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle",
+    "title": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up",
+    "slug": "samsung-039-s-galaxy-upcycle-promised-to-make-old-phones-useful-then-won-an-award-for-giving-up",
+    "description": "Your old phone could have been so much more.",
+    "category": "development-tools",
+    "tags": [
+      "development-tools"
+    ],
+    "bestFor": [
+      "Developers shipping production code",
+      "Teams standardizing tooling across projects"
+    ],
+    "notFor": [
+      "Non-technical users with no engineering support"
+    ],
+    "alternatives": [],
+    "body": "Your old phone could have been so much more. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "055149d3-c382-4556-9514-81b918443466",
+        "label": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up official site",
+        "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle"
+      }
+    ],
+    "source": "Hacker News",
+    "sourceDomain": "xda-developers.com",
+    "image": "https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2026/02/galaxy-upcycling-1.jpg?w=1600&amp;h=900&amp;fit=crop",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-24.1",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-24T20:49:43.226Z"
+    },
+    "lastReviewedAt": "2026-02-24T20:49:46.955Z",
+    "validatedAt": "2026-02-24T20:49:46.955Z"
+  },
+  {
+    "url": "https://github.com/vignesh07/babyshark",
+    "title": "babyshark",
+    "slug": "babyshark",
+    "description": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark",
+    "category": "development-tools",
+    "tags": [
+      "development-tools",
+      "design"
+    ],
+    "bestFor": [
+      "Developers shipping production code",
+      "Teams standardizing tooling across projects"
+    ],
+    "notFor": [
+      "Non-technical users with no engineering support"
+    ],
+    "alternatives": [],
+    "body": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "36cc1796-c17f-468a-ac76-3e80a5923bb6",
+        "label": "babyshark official site",
+        "url": "https://github.com/vignesh07/babyshark"
+      }
+    ],
+    "source": "Hacker News",
+    "sourceDomain": "github.com",
+    "image": "https://opengraph.githubassets.com/caa9a97869036cd84a87f823a0197cbcf6d9a62f54c2f07187df190327506d98/vignesh07/babyshark",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-24.1",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-24T20:49:47.036Z"
+    },
+    "lastReviewedAt": "2026-02-24T20:49:48.064Z",
+    "validatedAt": "2026-02-24T20:49:48.064Z"
+  }
+]

@@ -6,56 +6,85 @@ import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { ResourceCard } from "./ResourceCard";
 import { ResourceListItem } from "./ResourceListItem";
 import { Button } from "./ui/button";
-import { Spinner } from "./kibo-ui/spinner";
+import { Pagination } from "./kibo-ui/pagination";
 import type { Resource } from "@/types/resource";
 import type { ViewMode } from "./FilterBar";
 
-const INITIAL_COUNT = 18;
-const LOAD_MORE_COUNT = 12;
+const PAGE_SIZE = 18;
 
 interface ResourceGridProps {
   resources: Resource[];
-  initialCount?: number;
-  loadMoreCount?: number;
+  /** Items per page (used for pagination) */
+  pageSize?: number;
+  /** Show page size selector. Set false when using a fixed/custom page size (e.g. saved page). */
+  showPageSizeSelector?: boolean;
   viewMode?: ViewMode;
   onTagClick?: (tag: string) => void;
   onCategoryClick?: (category: string) => void;
   isSaved?: (slug: string) => boolean;
   onSaveToggle?: (slug: string) => void;
+  /** Vote state and handlers for upvote/downvote */
+  voteFor?: (slug: string) => "up" | "down" | null;
+  onUpvote?: (slug: string) => void;
+  onDownvote?: (slug: string) => void;
+  upvotes?: (slug: string) => number;
+  downvotes?: (slug: string) => number;
+  baseUrl?: string;
   /** When no resources match: if provided, show "Clear filters" button; else show "Browse all" link. */
   onClearFilters?: () => void;
 }
 
 export function ResourceGrid({
   resources,
-  initialCount = INITIAL_COUNT,
-  loadMoreCount = LOAD_MORE_COUNT,
+  pageSize: initialPageSize = PAGE_SIZE,
+  showPageSizeSelector = true,
   viewMode = "grid",
   onTagClick,
   onCategoryClick,
   isSaved,
   onSaveToggle,
+  voteFor,
+  onUpvote,
+  onDownvote,
+  upvotes,
+  downvotes,
+  baseUrl,
   onClearFilters,
 }: ResourceGridProps) {
-  const [visibleCount, setVisibleCount] = useState(initialCount);
-  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(initialPageSize);
 
   useEffect(() => {
-    setVisibleCount(initialCount);
-  }, [resources, initialCount]);
+    setPage(1);
+  }, [resources]);
 
-  const visible = resources.slice(0, visibleCount);
-  const hasMore = visibleCount < resources.length;
-  const remaining = resources.length - visibleCount;
+  useEffect(() => {
+    setPageSize(initialPageSize);
+  }, [initialPageSize]);
+
+  const handlePageChange = (newPage: number) => {
+    setPage(newPage);
+    document.getElementById("resource-list")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handlePageSizeChange = (newSize: number) => {
+    setPageSize(newSize);
+    setPage(1);
+    document.getElementById("resource-list")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const totalPages = Math.max(1, Math.ceil(resources.length / pageSize));
+  const start = (page - 1) * pageSize;
+  const visible = resources.slice(start, start + pageSize);
 
   if (resources.length === 0) {
     return (
       <div
-        className="rounded-xl border border-border bg-muted/30 px-6 py-12 text-center sm:px-10"
+        className="browse-shell px-6 py-12 text-center sm:px-10"
         role="status"
       >
-        <MagnifyingGlassIcon className="mx-auto size-10 text-muted-foreground/70" aria-hidden />
-        <p className="mt-4 text-sm text-muted-foreground">
+        <MagnifyingGlassIcon className="mx-auto size-10 text-stash-muted-text/80" aria-hidden />
+        <p className="mt-4 text-sm text-stash-muted-text">
           No resources match your filters. Try another category or search.
         </p>
         <div className="mt-6">
@@ -73,24 +102,16 @@ export function ResourceGrid({
     );
   }
 
-  const handleLoadMore = () => {
-    setIsLoadingMore(true);
-    requestAnimationFrame(() => {
-      setVisibleCount((prev) => Math.min(prev + loadMoreCount, resources.length));
-      setTimeout(() => setIsLoadingMore(false), 150);
-    });
-  };
-
   const isList = viewMode === "list";
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8" id="resource-list">
       <ul
-        className={isList ? "flex flex-col gap-2" : "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"}
+        className={isList ? "flex flex-col gap-2" : "grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"}
         aria-label="Resource list"
       >
         {visible.map((resource, index) => (
-          <li key={resource._id}>
+          <li key={resource._id} className="min-w-0">
             {isList ? (
               <ResourceListItem
                 resource={resource}
@@ -107,31 +128,31 @@ export function ResourceGrid({
                 onCategoryClick={onCategoryClick}
                 isSaved={isSaved}
                 onSaveToggle={onSaveToggle}
+                voteFor={voteFor}
+                onUpvote={onUpvote}
+                onDownvote={onDownvote}
+                upvotes={upvotes}
+                downvotes={downvotes}
+                baseUrl={baseUrl}
                 priority={index < 6}
               />
             )}
           </li>
         ))}
       </ul>
-      {hasMore && (
-        <div className="flex justify-center pt-4">
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={handleLoadMore}
-            disabled={isLoadingMore}
-            className="min-w-[10rem] gap-2"
-          >
-            {isLoadingMore ? (
-              <>
-                <Spinner variant="ellipsis" size={16} />
-                Loading…
-              </>
-            ) : (
-              `Load more (${remaining} remaining)`
-            )}
-          </Button>
-        </div>
+      {(totalPages > 1 || (showPageSizeSelector && resources.length > 0)) && (
+        <Pagination
+          page={page}
+          totalItems={resources.length}
+          pageSize={pageSize}
+          onPageChange={handlePageChange}
+          onPageSizeChange={showPageSizeSelector ? handlePageSizeChange : undefined}
+          showPageSize={showPageSizeSelector}
+          showFirstLast
+          showSummary
+          showJumpTo
+          itemLabel="resources"
+        />
       )}
     </div>
   );

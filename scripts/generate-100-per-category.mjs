@@ -496,6 +496,23 @@ const BY_CATEGORY = {
     { title: "BlogSync", url: "https://blogsync.io/", description: "SAAS AI CMS workflow. Text, assets, automation for Webflow.", tags: ["saas", "ai", "cms", "webflow"] },
     { title: "CartGenie", url: "https://cartgenie.com/", description: "No-code dev tools ecommerce extending authentication. Webflow.", tags: ["no-code", "ecommerce", "webflow", "authentication"] },
     { title: "Relume", url: "https://www.relume.io/", description: "AI-powered site map and wireframe tool. Webflow integration.", tags: ["ai", "wireframes", "sitemap", "webflow"] },
+    { title: "Webflow Designer API", url: "https://developers.webflow.com/designer/reference/", description: "Official Webflow Designer APIs for extensions, apps, and in-designer automation workflows.", tags: ["webflow", "api", "designer", "automation"] },
+    { title: "Webflow Data API", url: "https://developers.webflow.com/data/reference/", description: "Official Data API reference for CMS items, collections, and Webflow site data operations.", tags: ["webflow", "api", "cms", "data"] },
+    { title: "Webflow App UI Kit 2.0", url: "https://developers.webflow.com/code-sdks/ui-kit", description: "Build production-ready Webflow apps quickly with official UI kit components and patterns.", tags: ["webflow", "ui-kit", "apps", "components"] },
+    { title: "Webflow App Monorepo", url: "https://github.com/Webflow-Examples/webflow-app-monorepo", description: "Official example monorepo showing modern architecture patterns for building Webflow apps.", tags: ["webflow", "github", "examples", "monorepo"] },
+    { title: "Webflow Create App", url: "https://github.com/Webflow-Examples/webflow-create-app", description: "Starter CLI and scaffolding toolkit for bootstrapping custom Webflow app projects.", tags: ["webflow", "starter", "cli", "apps"] },
+    { title: "Webflow VS Code Extension", url: "https://github.com/Webflow-Examples/webflow-vscode-extension", description: "Example VS Code extension project focused on integrating workflows with Webflow platform APIs.", tags: ["webflow", "vscode", "extension", "developer-tools"] },
+    { title: "Webflow AI Translator App", url: "https://github.com/Webflow-Examples/webflow-ai-translator-app", description: "Sample Webflow app that automates multilingual translation workflows using AI services.", tags: ["webflow", "ai", "translation", "automation"] },
+    { title: "Webflow Calendar App", url: "https://github.com/Webflow-Examples/webflow-calendar-app", description: "Reference Webflow app for event and calendar style integrations using official app tooling.", tags: ["webflow", "events", "integration", "apps"] },
+    { title: "Webflow Sync to Airtable App", url: "https://github.com/Webflow-Examples/webflow-sync-to-airtable-app", description: "Example integration that syncs Webflow data with Airtable for no-code operations and reporting.", tags: ["webflow", "airtable", "sync", "integration"] },
+    { title: "Webflow Radix Tailwind UI Library", url: "https://github.com/Webflow-Examples/webflow-radix-tailwind-ui-library", description: "Component library example combining Radix and Tailwind patterns for Webflow app interfaces.", tags: ["webflow", "radix", "tailwind", "components"] },
+    { title: "webflow-app-hot-reload", url: "https://www.npmjs.com/package/@xatom/wf-app-hot-reload", description: "NPM utility to speed up Webflow app development with hot reload during local iteration.", tags: ["webflow", "npm", "developer-tools", "hot-reload"] },
+    { title: "webflow-sdk-react", url: "https://www.npmjs.com/package/@xatom/webflow-sdk-react", description: "React helpers for building Webflow app experiences faster with reusable SDK abstractions.", tags: ["webflow", "react", "sdk", "npm"] },
+    { title: "js-webflow-api", url: "https://www.npmjs.com/package/js-webflow-api", description: "JavaScript client for Webflow APIs to automate CMS workflows and data operations.", tags: ["webflow", "javascript", "api", "cms"] },
+    { title: "webflow-cms-ts", url: "https://www.npmjs.com/package/webflow-cms-ts", description: "TypeScript package for Webflow CMS interactions with typed helpers and automation support.", tags: ["webflow", "typescript", "cms", "api"] },
+    { title: "webflow-python", url: "https://pypi.org/project/webflow-python/", description: "Python SDK for Webflow API usage in scripts, ETL pipelines, and backend integrations.", tags: ["webflow", "python", "sdk", "api"] },
+    { title: "webflow-laravel-sdk", url: "https://packagist.org/packages/storipress/webflow-laravel-sdk", description: "Laravel SDK package for integrating Webflow CMS and API workflows into PHP applications.", tags: ["webflow", "laravel", "php", "sdk"] },
+    { title: "Awesome Webflow", url: "https://github.com/Webflow-Examples/awesome-webflow", description: "Curated list of Webflow resources, tooling, SDKs, templates, and community references.", tags: ["webflow", "awesome-list", "resources", "community"] },
   ],
   "learning-resources": [
     { title: "MDN Web Docs", url: "https://developer.mozilla.org/", description: "Authoritative docs for HTML, CSS, JavaScript, and web APIs. Mozilla and community.", tags: ["docs", "javascript", "html", "css"] },
@@ -534,6 +551,22 @@ const BY_CATEGORY = {
     { title: "Radix UI", url: "https://www.radix-ui.com/", description: "Unstyled, accessible components for React. Primitives that power shadcn/ui.", tags: ["react", "components", "accessibility", "primitives"] },
     { title: "Tailwind CSS", url: "https://tailwindcss.com/", description: "Utility-first CSS framework. Design in the markup; used by shadcn/ui.", tags: ["css", "utility", "frontend", "design"] },
     { title: "shadcn/ui Blocks", url: "https://ui.shadcn.com/blocks", description: "Pre-built sections and pages. Copy-paste blocks for landing and dashboards.", tags: ["shadcn", "blocks", "react", "tailwind"] },
+    { title: "Awesome Shadcn UI", url: "https://awesome-shadcn-ui.com/", description: "Curated directory of shadcn/ui templates, blocks, starters, and ecosystem tooling.", tags: ["shadcn", "awesome-list", "templates", "blocks"] },
+    { title: "Shadcn Registry", url: "https://ui.shadcn.com/docs/registry", description: "Official registry docs for packaging and sharing shadcn/ui components and patterns.", tags: ["shadcn", "registry", "components", "docs"] },
+    { title: "Shadcn Theming", url: "https://ui.shadcn.com/docs/theming", description: "Official guidance for design tokens, color systems, and theming in shadcn/ui.", tags: ["shadcn", "theming", "design-tokens", "docs"] },
+    { title: "Shadcn CLI", url: "https://ui.shadcn.com/docs/cli", description: "Install and manage shadcn/ui components with the official command line tooling.", tags: ["shadcn", "cli", "components", "developer-tools"] },
+    { title: "Shadcn Components", url: "https://ui.shadcn.com/docs/components/accordion", description: "Official component docs entrypoint for reusable shadcn/ui building blocks.", tags: ["shadcn", "components", "accordion", "docs"] },
+    { title: "21st.dev", url: "https://21st.dev/", description: "Community marketplace for modern React and shadcn-style UI blocks and interactions.", tags: ["shadcn", "react", "components", "marketplace"] },
+    { title: "Shadcnblocks", url: "https://www.shadcnblocks.com/", description: "Prebuilt website sections and app UI blocks designed around shadcn and Tailwind.", tags: ["shadcn", "blocks", "tailwind", "ui"] },
+    { title: "Shadcn.io", url: "https://www.shadcn.io/", description: "Catalog of shadcn/ui components, templates, and implementation resources for builders.", tags: ["shadcn", "components", "templates", "resources"] },
+    { title: "Aceternity UI", url: "https://ui.aceternity.com/", description: "Animated React and Tailwind components often combined with shadcn-based product stacks.", tags: ["shadcn", "react", "tailwind", "animation"] },
+    { title: "Magic UI", url: "https://magicui.design/", description: "Beautiful, composable UI elements for React and Tailwind that pair well with shadcn/ui.", tags: ["shadcn", "react", "tailwind", "ui-library"] },
+    { title: "Origin UI", url: "https://originui.com/", description: "Production-ready UI patterns and sections built with Tailwind and shadcn conventions.", tags: ["shadcn", "tailwind", "patterns", "components"] },
+    { title: "Kibo UI", url: "https://www.kibo-ui.com/", description: "Open-source React components and blocks with design patterns compatible with shadcn setups.", tags: ["shadcn", "react", "components", "open-source"] },
+    { title: "Cruip Templates", url: "https://cruip.com/templates/", description: "Tailwind templates and product marketing UIs that are commonly adapted to shadcn stacks.", tags: ["shadcn", "templates", "tailwind", "saas"] },
+    { title: "Tremor", url: "https://www.tremor.so/", description: "React components for dashboards and analytics, frequently used alongside shadcn/ui.", tags: ["shadcn", "react", "dashboard", "components"] },
+    { title: "React Bits", url: "https://www.reactbits.dev/", description: "Collection of reusable React UI snippets and effects that integrate into shadcn projects.", tags: ["shadcn", "react", "snippets", "ui"] },
+    { title: "Animate UI", url: "https://animate-ui.com/", description: "Motion-focused React UI components compatible with Tailwind and shadcn implementation styles.", tags: ["shadcn", "react", "motion", "components"] },
   ],
   coding: [
     { title: "GitHub", url: "https://github.com/", description: "Code hosting, review, and collaboration. Git repos, Actions, Copilot, and open source.", tags: ["git", "hosting", "open-source", "ci"] },
@@ -594,24 +627,50 @@ function ensureDesc(r) {
   return { ...r, description: d };
 }
 
-// Flatten and dedupe by URL
-const seenUrls = new Set();
-const all = [];
-for (const cat of CATEGORIES) {
-  const list = BY_CATEGORY[cat];
-  if (!list) continue;
-  let count = 0;
-  for (const r of list) {
-    if (count >= 100) break;
-    const url = cleanUrl(r.url);
-    if (seenUrls.has(url)) continue;
-    seenUrls.add(url);
-    all.push(ensureDesc({ ...r, url, category: cat }));
-    count++;
-  }
+const RELATED_CATEGORY_FALLBACKS = {
+  "design-tools": ["ui-ux-resources", "inspiration", "webflow", "shadcn"],
+  "development-tools": ["coding", "github", "javascript", "css", "html", "ai-tools"],
+  "ui-ux-resources": ["design-tools", "inspiration", "webflow", "shadcn"],
+  inspiration: ["design-tools", "ui-ux-resources", "webflow"],
+  "ai-tools": ["development-tools", "coding", "productivity"],
+  productivity: ["development-tools", "ai-tools", "learning-resources"],
+  "learning-resources": ["coding", "javascript", "html", "css", "languages", "development-tools"],
+  webflow: ["design-tools", "inspiration", "development-tools"],
+  shadcn: ["development-tools", "ui-ux-resources", "javascript", "css", "coding"],
+  coding: ["development-tools", "github", "javascript", "ai-tools"],
+  github: ["coding", "development-tools", "javascript"],
+  html: ["css", "javascript", "development-tools", "learning-resources"],
+  css: ["html", "javascript", "design-tools", "ui-ux-resources"],
+  javascript: ["development-tools", "coding", "github", "learning-resources"],
+  languages: ["learning-resources", "coding", "javascript", "development-tools"],
+  miscellaneous: [
+    "design-tools",
+    "development-tools",
+    "ui-ux-resources",
+    "inspiration",
+    "ai-tools",
+    "productivity",
+    "learning-resources",
+  ],
+};
+
+function addUniqueByUrl(list, urlSet, entry, categoryOverride) {
+  if (!entry || typeof entry !== "object") return false;
+  const rawUrl = typeof entry.url === "string" ? entry.url : "";
+  const cleaned = cleanUrl(rawUrl);
+  if (!cleaned || urlSet.has(cleaned)) return false;
+  urlSet.add(cleaned);
+  list.push(
+    ensureDesc({
+      ...entry,
+      category: categoryOverride ?? entry.category,
+      url: cleaned,
+    })
+  );
+  return true;
 }
 
-// For categories not yet at 100, add placeholders from existing batch or repeat from similar category
+// Supplement seeds from existing batch file when available.
 const existingPath = path.join(process.cwd(), "scripts", "batch-resources-data.json");
 let existing = [];
 if (fs.existsSync(existingPath)) {
@@ -621,21 +680,54 @@ if (fs.existsSync(existingPath)) {
   } catch (_) {}
 }
 
-const byCat = {};
-for (const r of all) {
-  byCat[r.category] = byCat[r.category] || [];
-  byCat[r.category].push(r);
+const seedByCategory = Object.fromEntries(CATEGORIES.map((c) => [c, []]));
+const seedUrlSets = Object.fromEntries(CATEGORIES.map((c) => [c, new Set()]));
+
+for (const cat of CATEGORIES) {
+  const list = BY_CATEGORY[cat] || [];
+  for (const r of list) {
+    addUniqueByUrl(seedByCategory[cat], seedUrlSets[cat], { ...r, category: cat }, cat);
+  }
 }
+
 for (const r of existing) {
-  const c = r.category;
-  if (!CATEGORIES.includes(c)) continue;
-  const list = byCat[c] || [];
-  if (list.length >= 100) continue;
-  const url = cleanUrl(r.url);
-  if (seenUrls.has(url)) continue;
-  seenUrls.add(url);
-  list.push(ensureDesc({ ...r, url, category: c }));
-  byCat[c] = list;
+  const cat = r?.category;
+  if (!CATEGORIES.includes(cat)) continue;
+  addUniqueByUrl(seedByCategory[cat], seedUrlSets[cat], r, cat);
+}
+
+// Global high-signal pool used only as final fallback to guarantee 100/category.
+const globalPool = [];
+const globalSeen = new Set();
+for (const cat of CATEGORIES) {
+  for (const r of seedByCategory[cat]) {
+    const url = cleanUrl(r.url);
+    if (globalSeen.has(url)) continue;
+    globalSeen.add(url);
+    globalPool.push(r);
+  }
+}
+
+const byCat = {};
+for (const cat of CATEGORIES) {
+  const outList = [];
+  const outUrlSet = new Set();
+  const appendPool = (pool) => {
+    for (const item of pool) {
+      if (outList.length >= 100) break;
+      addUniqueByUrl(outList, outUrlSet, item, cat);
+    }
+  };
+
+  appendPool(seedByCategory[cat] || []);
+  const related = RELATED_CATEGORY_FALLBACKS[cat] || [];
+  for (const relatedCat of related) {
+    if (outList.length >= 100) break;
+    appendPool(seedByCategory[relatedCat] || []);
+  }
+  if (outList.length < 100) appendPool(globalPool);
+
+  byCat[cat] = outList.slice(0, 100);
 }
 
 const out = [];

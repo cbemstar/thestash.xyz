@@ -5,6 +5,8 @@ export interface Collection {
   title: string;
   slug?: string;
   description: string;
+  /** Server-computed count from Sanity (use this over resources.length for accuracy). */
+  resourceCount?: number;
   resources: Resource[];
   featured?: boolean;
   createdAt?: string;

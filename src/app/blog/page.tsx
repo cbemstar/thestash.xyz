@@ -1,13 +1,20 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllArticles } from "@/lib/sanity.article";
 import { AppNav } from "@/components/AppNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
+import { BlogArticleCard } from "@/components/BlogArticleCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
-export const revalidate = 3600;
+export const revalidate = 21600; // 6 hr — blog index does not require hourly regeneration
 
 export const metadata: Metadata = {
   title: "Blog & Guides | The Stash",
@@ -26,86 +33,120 @@ export default async function BlogIndexPage() {
     { name: "Blog & guides", url: `${BASE_URL}/blog` },
   ];
 
+  const [hero, ...carouselArticles] = articles;
+  const featuredCarousel = carouselArticles.slice(0, 4);
+  const rest = articles.slice(5);
+  const lastReviewedCount = articles.filter((article) => Boolean(article.lastReviewedAt)).length;
+
   return (
     <>
       <BreadcrumbListJsonLd items={breadcrumbItems} />
       <AppNav />
       <div className="min-h-screen">
-        <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+        <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <Breadcrumbs
             items={[{ label: "The Stash", href: "/" }, { label: "Blog & guides" }]}
-            className="mb-6"
+            className="mb-8"
           />
-          <header className="mb-8 space-y-2">
-            <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
-              Blog & guides for developers and designers
-            </h1>
-            <p className="text-sm text-muted-foreground sm:text-base max-w-2xl">
-              Deep dives, comparisons, and how‑tos on the tools, workflows, and patterns we
-              feature in The Stash directory—written to be useful for both humans and AI systems.
+          <header className="insight-hero mb-10">
+            <p className="insight-kicker">Editorial hub</p>
+            <h1 className="insight-title">Blog & guides for developers and designers</h1>
+            <p className="insight-lead max-w-3xl">
+              Deep dives, comparisons, and implementation guides on the tools, workflows, and
+              patterns featured in The Stash.
             </p>
+            <div className="mt-4 grid gap-2 sm:grid-cols-3">
+              <div className="rounded-lg border border-border/70 bg-background/75 p-3">
+                <p className="text-[0.62rem] uppercase tracking-[0.12em] text-muted-foreground">
+                  Published articles
+                </p>
+                <p className="mt-1 text-sm font-semibold text-foreground">{articles.length}</p>
+              </div>
+              <div className="rounded-lg border border-border/70 bg-background/75 p-3">
+                <p className="text-[0.62rem] uppercase tracking-[0.12em] text-muted-foreground">
+                  Reviewed articles
+                </p>
+                <p className="mt-1 text-sm font-semibold text-foreground">{lastReviewedCount}</p>
+              </div>
+              <div className="rounded-lg border border-border/70 bg-background/75 p-3">
+                <p className="text-[0.62rem] uppercase tracking-[0.12em] text-muted-foreground">
+                  Featured now
+                </p>
+                <p className="mt-1 text-sm font-semibold text-foreground">{featuredCarousel.length + (hero ? 1 : 0)}</p>
+              </div>
+            </div>
           </header>
+
           {articles.length === 0 ? (
-            <p className="text-sm text-muted-foreground">
-              No articles published yet. Check back soon.
-            </p>
+            <div className="rounded-2xl border border-dashed border-border bg-muted/30 py-16 text-center">
+              <p className="text-muted-foreground">
+                No articles published yet. Check back soon.
+              </p>
+            </div>
           ) : (
-            <ul className="space-y-6">
-              {articles.map((article) => {
-                const slug =
-                  article.slug && typeof article.slug === "string"
-                    ? article.slug
-                    : "";
-                if (!slug) return null;
-                const href = `/blog/${slug}`;
-                const dateLabel = article.publishedAt
-                  ? new Date(article.publishedAt).toLocaleDateString()
-                  : null;
-                return (
-                  <li
-                    key={article._id}
-                    className="rounded-2xl border border-border bg-card/30 p-5 transition hover:border-primary/30 hover:bg-accent/40"
+            <div className="space-y-12">
+              {hero && (
+                <section aria-labelledby="hero-heading">
+                  <h2 id="hero-heading" className="sr-only">
+                    Latest article
+                  </h2>
+                  <BlogArticleCard
+                    article={hero}
+                    variant="featured"
+                    priority
+                  />
+                </section>
+              )}
+              {featuredCarousel.length > 0 && (
+                <section aria-labelledby="latest-heading">
+                  <h2
+                    id="latest-heading"
+                    className="mb-6 font-display text-lg font-semibold text-foreground"
                   >
-                    <article className="space-y-2">
-                      <header>
-                        <h2 className="font-display text-lg font-semibold text-foreground">
-                          <Link
-                            href={href}
-                            className="hover:text-primary transition-colors underline-offset-4 hover:underline"
-                          >
-                            {article.title}
-                          </Link>
-                        </h2>
-                        {dateLabel && (
-                          <p className="text-xs text-muted-foreground mt-1">
-                            Published on {dateLabel}
-                          </p>
-                        )}
-                      </header>
-                      <p className="text-sm text-muted-foreground">
-                        {article.excerpt}
-                      </p>
-                      {article.tags?.length ? (
-                        <p className="mt-2 flex flex-wrap gap-2 text-xs text-muted-foreground">
-                          {article.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="rounded-full border border-border px-2 py-0.5"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </p>
-                      ) : null}
-                    </article>
-                  </li>
-                );
-              })}
-            </ul>
+                    Latest
+                  </h2>
+                  <Carousel
+                    opts={{ align: "start", loop: false }}
+                    className="w-full"
+                  >
+                    <CarouselContent className="-ml-3 sm:-ml-4">
+                      {featuredCarousel.map((article, i) => (
+                        <CarouselItem
+                          key={article._id}
+                          className="pl-3 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 flex flex-col"
+                        >
+                          <BlogArticleCard
+                            article={article}
+                            priority={i < 2}
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="hidden sm:flex" />
+                    <CarouselNext className="hidden sm:flex" />
+                  </Carousel>
+                </section>
+              )}
+
+              {rest.length > 0 && (
+                <section aria-labelledby="all-articles-heading">
+                  <h2
+                    id="all-articles-heading"
+                    className="mb-6 font-display text-lg font-semibold text-foreground"
+                  >
+                    All articles
+                  </h2>
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+                    {rest.map((article) => (
+                      <BlogArticleCard key={article._id} article={article} />
+                    ))}
+                  </div>
+                </section>
+              )}
+            </div>
           )}
         </main>
       </div>
     </>
   );
 }
-

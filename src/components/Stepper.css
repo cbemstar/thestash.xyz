@@ -25,6 +25,7 @@
   aspect-ratio: auto !important;
   min-height: 0 !important;
   justify-content: flex-start !important;
+  padding: 0 !important;
 }
 
 .step-circle-container {
@@ -45,12 +46,12 @@
   width: 100%;
   min-width: 0;
   align-items: center;
-  padding: 1rem 1.25rem;
+  padding: 1rem 1.25rem 0.75rem;
 }
 
 @media (min-width: 640px) {
   .step-indicator-row {
-    padding: 2rem;
+    padding: 1.25rem 2rem;
   }
 }
 
@@ -62,7 +63,7 @@
 
 
 .step-default {
-  padding-top: 1rem;
+  padding-top: 0.75rem;
   padding-left: 1rem;
   padding-right: 1rem;
   min-width: 0;
@@ -70,7 +71,7 @@
 
 @media (min-width: 640px) {
   .step-default {
-    padding-top: 1.25rem;
+    padding-top: 0.75rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -91,7 +92,7 @@
 }
 
 .footer-nav {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   display: flex;
 }
 

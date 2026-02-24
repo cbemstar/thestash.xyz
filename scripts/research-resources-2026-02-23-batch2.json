@@ -1,0 +1,412 @@
+[
+  {
+    "title": "Metricool",
+    "url": "https://metricool.com",
+    "description": "Social media and ad analytics platform for scheduling content and tracking campaign performance.",
+    "category": "productivity",
+    "tags": ["marketing", "social-media", "analytics", "scheduling"],
+    "marketing": true
+  },
+  {
+    "title": "Publer",
+    "url": "https://publer.io",
+    "description": "Social publishing tool for multi-channel scheduling, content recycling, and team approvals.",
+    "category": "productivity",
+    "tags": ["marketing", "social-media", "publishing", "workflow"],
+    "marketing": true
+  },
+  {
+    "title": "Planable",
+    "url": "https://planable.io",
+    "description": "Content collaboration workspace for social calendars, approvals, and stakeholder feedback.",
+    "category": "productivity",
+    "tags": ["marketing", "collaboration", "content-calendar", "social-media"],
+    "marketing": true
+  },
+  {
+    "title": "Loomly",
+    "url": "https://www.loomly.com",
+    "description": "Editorial calendar and social media planning platform with publishing workflows.",
+    "category": "productivity",
+    "tags": ["marketing", "social-media", "calendar", "content"],
+    "marketing": true
+  },
+  {
+    "title": "CoSchedule",
+    "url": "https://coschedule.com",
+    "description": "Marketing calendar suite for campaign planning, task orchestration, and publishing.",
+    "category": "productivity",
+    "tags": ["marketing", "calendar", "campaigns", "workflow"],
+    "marketing": true
+  },
+  {
+    "title": "ConvertKit",
+    "url": "https://convertkit.com",
+    "description": "Email marketing platform for creators with automations, audience segmentation, and forms.",
+    "category": "productivity",
+    "tags": ["marketing", "email", "automation", "creators"],
+    "marketing": true
+  },
+  {
+    "title": "MailerLite",
+    "url": "https://www.mailerlite.com",
+    "description": "Email campaign platform with landing pages, automation flows, and subscriber management.",
+    "category": "productivity",
+    "tags": ["marketing", "email", "landing-pages", "automation"],
+    "marketing": true
+  },
+  {
+    "title": "Iterable",
+    "url": "https://iterable.com",
+    "description": "Cross-channel lifecycle marketing platform for personalized customer messaging.",
+    "category": "productivity",
+    "tags": ["marketing", "lifecycle", "messaging", "automation"],
+    "marketing": true
+  },
+  {
+    "title": "Braze",
+    "url": "https://www.braze.com",
+    "description": "Customer engagement platform for coordinated messaging across email, push, and in-app.",
+    "category": "productivity",
+    "tags": ["marketing", "customer-engagement", "messaging", "lifecycle"],
+    "marketing": true
+  },
+  {
+    "title": "ActiveCampaign",
+    "url": "https://www.activecampaign.com",
+    "description": "Marketing automation and CRM workflows for email campaigns and customer journeys.",
+    "category": "productivity",
+    "tags": ["marketing", "crm", "email", "automation"],
+    "marketing": true
+  },
+
+  {
+    "title": "Reforge",
+    "url": "https://www.reforge.com",
+    "description": "Advanced growth and product strategy programs for marketing and product leaders.",
+    "category": "learning-resources",
+    "tags": ["marketing", "growth", "product", "learning"],
+    "marketing": true
+  },
+  {
+    "title": "Marketing Examples",
+    "url": "https://marketingexamples.com",
+    "description": "Practical marketing teardowns with real campaign examples and copy patterns.",
+    "category": "learning-resources",
+    "tags": ["marketing", "copywriting", "examples", "learning"],
+    "marketing": true
+  },
+  {
+    "title": "Content Marketing Institute",
+    "url": "https://contentmarketinginstitute.com",
+    "description": "Authority publication for content strategy, editorial operations, and audience growth.",
+    "category": "learning-resources",
+    "tags": ["marketing", "content", "strategy", "seo"],
+    "marketing": true
+  },
+  {
+    "title": "Animalz Blog",
+    "url": "https://www.animalz.co/blog/",
+    "description": "B2B content marketing insights focused on SEO, positioning, and conversion.",
+    "category": "learning-resources",
+    "tags": ["marketing", "b2b", "content", "seo"],
+    "marketing": true
+  },
+  {
+    "title": "Ahrefs Blog",
+    "url": "https://ahrefs.com/blog",
+    "description": "SEO tutorials and case studies for keyword strategy, backlinks, and organic growth.",
+    "category": "learning-resources",
+    "tags": ["marketing", "seo", "backlinks", "growth"],
+    "marketing": true
+  },
+  {
+    "title": "frontend.fyi",
+    "url": "https://www.frontend.fyi",
+    "description": "Front-end engineering tutorials and workshop-style lessons for modern UI development.",
+    "category": "learning-resources",
+    "tags": ["frontend", "learning", "react", "ui"],
+    "marketing": false
+  },
+  {
+    "title": "CodeCrafters",
+    "url": "https://codecrafters.io",
+    "description": "Hands-on coding challenges that teach you by rebuilding developer tools from scratch.",
+    "category": "learning-resources",
+    "tags": ["coding", "learning", "backend", "challenges"],
+    "marketing": false
+  },
+  {
+    "title": "SQLBolt",
+    "url": "https://sqlbolt.com",
+    "description": "Interactive SQL lessons for learning query fundamentals with practice exercises.",
+    "category": "learning-resources",
+    "tags": ["sql", "learning", "database", "interactive"],
+    "marketing": false
+  },
+
+  {
+    "title": "Pttrns",
+    "url": "https://pttrns.com",
+    "description": "Mobile UI pattern library organized by interaction and product flow.",
+    "category": "ui-ux-resources",
+    "tags": ["ui", "ux", "mobile", "patterns"],
+    "marketing": false
+  },
+  {
+    "title": "UXmatters",
+    "url": "https://www.uxmatters.com",
+    "description": "Long-form UX articles on research methods, interaction design, and content strategy.",
+    "category": "ui-ux-resources",
+    "tags": ["ux", "research", "design", "articles"],
+    "marketing": false
+  },
+  {
+    "title": "MeasuringU",
+    "url": "https://measuringu.com",
+    "description": "UX metrics and evidence-based usability measurement resources for product teams.",
+    "category": "ui-ux-resources",
+    "tags": ["ux", "usability", "metrics", "research"],
+    "marketing": false
+  },
+  {
+    "title": "A List Apart",
+    "url": "https://alistapart.com",
+    "description": "Classic publication on web standards, UX writing, and front-end craft.",
+    "category": "ui-ux-resources",
+    "tags": ["ux", "frontend", "web-standards", "writing"],
+    "marketing": false
+  },
+
+  {
+    "title": "CodeSignal",
+    "url": "https://codesignal.com",
+    "description": "Technical assessment and coding practice platform for interviews and skill development.",
+    "category": "coding",
+    "tags": ["coding", "assessments", "interview", "practice"],
+    "marketing": false
+  },
+  {
+    "title": "CodinGame",
+    "url": "https://www.codingame.com",
+    "description": "Game-based coding challenges that improve algorithmic thinking and language fluency.",
+    "category": "coding",
+    "tags": ["coding", "challenges", "algorithms", "games"],
+    "marketing": false
+  },
+  {
+    "title": "Advent of Code",
+    "url": "https://adventofcode.com",
+    "description": "Annual programming puzzles that sharpen problem-solving across multiple languages.",
+    "category": "coding",
+    "tags": ["coding", "puzzles", "algorithms", "learning"],
+    "marketing": false
+  },
+  {
+    "title": "Topcoder",
+    "url": "https://www.topcoder.com",
+    "description": "Competitive programming community with algorithm contests and engineering challenges.",
+    "category": "coding",
+    "tags": ["coding", "competitive-programming", "challenges", "community"],
+    "marketing": false
+  },
+  {
+    "title": "Codeforces",
+    "url": "https://codeforces.com",
+    "description": "Popular competitive programming platform with ranked contests and problem archives.",
+    "category": "coding",
+    "tags": ["coding", "contests", "algorithms", "practice"],
+    "marketing": false
+  },
+
+  {
+    "title": "GitHub Next",
+    "url": "https://githubnext.com",
+    "description": "GitHub research lab exploring prototypes like Copilot and future developer workflows.",
+    "category": "github",
+    "tags": ["github", "research", "copilot", "developer-tools"],
+    "marketing": false
+  },
+  {
+    "title": "GitHub Archive Program",
+    "url": "https://archiveprogram.github.com",
+    "description": "Initiative preserving open-source software for long-term cultural and technical history.",
+    "category": "github",
+    "tags": ["github", "open-source", "archive", "preservation"],
+    "marketing": false
+  },
+  {
+    "title": "Octokit",
+    "url": "https://octokit.github.io",
+    "description": "Official SDKs for integrating with the GitHub API across JavaScript and other languages.",
+    "category": "github",
+    "tags": ["github", "api", "sdk", "javascript"],
+    "marketing": false
+  },
+  {
+    "title": "GitHub API Docs",
+    "url": "https://docs.github.com/en/rest",
+    "description": "REST API reference for building integrations and automation on top of GitHub.",
+    "category": "github",
+    "tags": ["github", "api", "docs", "automation"],
+    "marketing": false
+  },
+
+  {
+    "title": "Modern CSS",
+    "url": "https://moderncss.dev",
+    "description": "Guides and patterns for resilient modern CSS architecture and component styling.",
+    "category": "css",
+    "tags": ["css", "frontend", "patterns", "architecture"],
+    "marketing": false
+  },
+  {
+    "title": "CSS Loaders",
+    "url": "https://css-loaders.com",
+    "description": "Library of pure CSS loading spinners with copy-paste snippets.",
+    "category": "css",
+    "tags": ["css", "loaders", "snippets", "ui"],
+    "marketing": false
+  },
+  {
+    "title": "Animista",
+    "url": "https://animista.net",
+    "description": "CSS animation playground and generator for reusable motion presets.",
+    "category": "css",
+    "tags": ["css", "animation", "generator", "ui"],
+    "marketing": false
+  },
+  {
+    "title": "Cubic-Bezier",
+    "url": "https://cubic-bezier.com",
+    "description": "Timing-function editor for fine-tuning CSS easing curves and transitions.",
+    "category": "css",
+    "tags": ["css", "animation", "easing", "transitions"],
+    "marketing": false
+  },
+  {
+    "title": "SmolCSS",
+    "url": "https://smolcss.dev",
+    "description": "Minimal CSS snippets demonstrating modern layouts and component patterns.",
+    "category": "css",
+    "tags": ["css", "snippets", "patterns", "frontend"],
+    "marketing": false
+  },
+
+  {
+    "title": "SWC",
+    "url": "https://swc.rs",
+    "description": "Rust-based JavaScript and TypeScript compiler built for speed in modern toolchains.",
+    "category": "javascript",
+    "tags": ["javascript", "typescript", "compiler", "tooling"],
+    "marketing": false
+  },
+  {
+    "title": "Rspack",
+    "url": "https://rspack.dev",
+    "description": "High-performance bundler compatible with webpack-style workflows.",
+    "category": "javascript",
+    "tags": ["javascript", "bundler", "performance", "tooling"],
+    "marketing": false
+  },
+  {
+    "title": "UnoCSS",
+    "url": "https://unocss.dev",
+    "description": "Instant on-demand atomic CSS engine with flexible presets and transformers.",
+    "category": "javascript",
+    "tags": ["javascript", "css", "tooling", "atomic-css"],
+    "marketing": false
+  },
+
+  {
+    "title": "Gleam",
+    "url": "https://gleam.run",
+    "description": "Statically typed language for the BEAM ecosystem with an ergonomic developer experience.",
+    "category": "languages",
+    "tags": ["languages", "gleam", "beam", "functional"],
+    "marketing": false
+  },
+  {
+    "title": "Zig",
+    "url": "https://ziglang.org",
+    "description": "Low-level systems language focused on predictable performance and simple tooling.",
+    "category": "languages",
+    "tags": ["languages", "zig", "systems", "performance"],
+    "marketing": false
+  },
+  {
+    "title": "Crystal",
+    "url": "https://crystal-lang.org",
+    "description": "Compiled language with Ruby-like syntax and strong performance characteristics.",
+    "category": "languages",
+    "tags": ["languages", "crystal", "compiled", "ruby-like"],
+    "marketing": false
+  },
+  {
+    "title": "OCaml",
+    "url": "https://ocaml.org",
+    "description": "Functional-first language and tooling ecosystem for robust application development.",
+    "category": "languages",
+    "tags": ["languages", "ocaml", "functional", "compiler"],
+    "marketing": false
+  },
+
+  {
+    "title": "Finsweet Client-First",
+    "url": "https://finsweet.com/client-first",
+    "description": "Naming and class strategy for scalable, maintainable Webflow projects.",
+    "category": "webflow",
+    "tags": ["webflow", "finsweet", "best-practices", "css"],
+    "marketing": false
+  },
+  {
+    "title": "Flowout",
+    "url": "https://www.flowout.com",
+    "description": "Webflow development partner and service model for fast growth marketing sites.",
+    "category": "webflow",
+    "tags": ["webflow", "development", "agency", "marketing-sites"],
+    "marketing": true
+  },
+  {
+    "title": "Webflow University Courses",
+    "url": "https://university.webflow.com/courses",
+    "description": "Structured Webflow curriculum covering CMS, interactions, SEO, and responsive design.",
+    "category": "webflow",
+    "tags": ["webflow", "learning", "courses", "no-code"],
+    "marketing": false
+  },
+
+  {
+    "title": "Shadcn UI Expansions",
+    "url": "https://shadcnui-expansions.typeart.cc",
+    "description": "Additional component patterns built on top of shadcn/ui foundations.",
+    "category": "shadcn",
+    "tags": ["shadcn", "components", "ui", "react"],
+    "marketing": false
+  },
+  {
+    "title": "Tailwind Plus",
+    "url": "https://tailwindcss.com/plus",
+    "description": "Official premium component and template library for Tailwind-driven product UIs.",
+    "category": "shadcn",
+    "tags": ["shadcn", "tailwind", "components", "templates"],
+    "marketing": false
+  },
+
+  {
+    "title": "G2",
+    "url": "https://www.g2.com",
+    "description": "B2B software review platform for evaluating tools by category and user feedback.",
+    "category": "miscellaneous",
+    "tags": ["marketing", "reviews", "software-directory", "research"],
+    "marketing": true
+  },
+  {
+    "title": "Capterra",
+    "url": "https://www.capterra.com",
+    "description": "Software marketplace with buyer guides, reviews, and product comparisons.",
+    "category": "miscellaneous",
+    "tags": ["marketing", "software-directory", "reviews", "buying-guides"],
+    "marketing": true
+  }
+]

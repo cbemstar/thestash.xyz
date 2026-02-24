@@ -1,7 +1,7 @@
 import { getResourceSlug } from "@/lib/slug";
 import type { Resource } from "@/types/resource";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
 interface HomepageItemListJsonLdProps {
   resources: Resource[];

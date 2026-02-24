@@ -13,6 +13,7 @@ import { SaveButton } from "./SaveButton";
 import type { Resource } from "@/types/resource";
 
 const DESCRIPTION_MAX_CHARS = 140;
+const MOBILE_TAG_LIMIT = 4;
 
 interface ResourceListItemProps {
   resource: Resource;
@@ -43,7 +44,7 @@ export function ResourceListItem({
 }: ResourceListItemProps) {
   const router = useRouter();
   const iconSource = resource.icon?.asset?._ref
-    ? urlFor(resource.icon).width(80).height(80).url()
+    ? urlFor(resource.icon).width(160).height(160).url()
     : faviconForUrl(resource.url);
 
   const slug = getResourceSlug(resource);
@@ -67,10 +68,10 @@ export function ResourceListItem({
   return (
     <Link
       href={`/${slug}`}
-      className="group flex items-center gap-4 rounded-xl border border-border bg-card px-4 py-3 text-left transition hover:border-primary/30 hover:bg-card focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+      className="browse-card group flex items-start gap-3 px-3.5 py-3 text-left focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background sm:items-center sm:gap-4 sm:px-4"
     >
       {iconSource ? (
-        <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-muted">
+        <span className="relative flex h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-stash-control sm:h-10 sm:w-10">
           <Image
             src={iconSource}
             alt=""
@@ -82,38 +83,48 @@ export function ResourceListItem({
           />
         </span>
       ) : (
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-muted font-mono text-sm text-muted-foreground" aria-hidden>
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-stash-control font-mono text-sm text-stash-muted-text sm:h-10 sm:w-10" aria-hidden>
           {resource.title.charAt(0).toUpperCase()}
         </span>
       )}
 
       <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-2">
-          <h2 className="font-display font-semibold text-foreground group-hover:text-primary truncate">
+        <div className="flex min-w-0 flex-col gap-1">
+          <h2 className="min-w-0 truncate font-display font-semibold text-foreground group-hover:text-primary">
             {resource.title}
           </h2>
-          <button type="button" onClick={handleCategoryClick} className="shrink-0 text-left">
-            <Pill variant="secondary" className="text-xs font-medium uppercase tracking-wider hover:bg-primary/20">
-              {getCategoryLabel(resource.category)}
-            </Pill>
-          </button>
-          {addedAt && (
-            <span className="shrink-0 text-xs text-muted-foreground" title="Added">
-              {addedAt}
-            </span>
-          )}
+          <div className="flex min-w-0 flex-wrap items-center gap-1.5 sm:gap-2">
+            <button
+              type="button"
+              onClick={handleCategoryClick}
+              className="min-w-0 max-w-full text-left"
+              title={getCategoryLabel(resource.category)}
+            >
+              <Pill
+                variant="outline"
+                className="max-w-[12rem] truncate border-stash-line-soft bg-stash-control text-xs font-medium uppercase tracking-[0.08em] text-stash-muted-text hover:border-stash-line-strong hover:bg-stash-control-hover hover:text-foreground sm:max-w-full"
+              >
+                {getCategoryLabel(resource.category)}
+              </Pill>
+            </button>
+            {addedAt && (
+              <span className="shrink-0 text-xs text-stash-muted-text" title="Added">
+                {addedAt}
+              </span>
+            )}
+          </div>
         </div>
-        <p className="mt-0.5 text-sm text-muted-foreground line-clamp-2">{shortDescription}</p>
+        <p className="mt-1 text-sm text-stash-muted-text line-clamp-2">{shortDescription}</p>
         {Array.isArray(resource.tags) && resource.tags.length > 0 && (
-          <ul className="mt-1.5 flex flex-wrap gap-1.5" aria-label="Tags">
-            {resource.tags.slice(0, 5).map((tag) => (
+          <ul className="mt-2 flex flex-wrap gap-1.5" aria-label="Tags">
+            {resource.tags.slice(0, MOBILE_TAG_LIMIT).map((tag) => (
               <li key={tag}>
                 <button
                   type="button"
                   onClick={(e) => handleTagClick(e, tag)}
-                  className="text-left"
+                  className="max-w-full text-left"
                 >
-                  <Pill variant="outline" className="text-xs font-normal transition hover:bg-accent">
+                  <Pill variant="outline" className="max-w-[10rem] truncate border-stash-line-soft bg-stash-control text-xs font-normal text-stash-muted-text transition hover:border-stash-line-strong hover:bg-stash-control-hover hover:text-foreground sm:max-w-full">
                     {tag}
                   </Pill>
                 </button>
@@ -123,22 +134,24 @@ export function ResourceListItem({
         )}
       </div>
 
-      <div className="flex shrink-0 items-center gap-1">
+      <div className="flex shrink-0 items-center gap-0.5 self-start sm:self-center">
         {onSaveToggle && isSaved && (
           <SaveButton slug={slug} isSaved={isSaved(slug)} onToggle={onSaveToggle} />
         )}
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          className="shrink-0 text-muted-foreground group-hover:text-primary transition-colors"
-          aria-hidden
-        >
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
+        <span className="inline-flex min-h-11 min-w-9 items-center justify-center" aria-hidden>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="shrink-0 text-stash-muted-text transition-colors group-hover:text-primary"
+            aria-hidden
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </span>
       </div>
     </Link>
   );

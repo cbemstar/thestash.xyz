@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
 /** GEO-optimized: "According to [source]" + statistics improve AI citation (seo-geo skill). */
 const FAQ_ITEMS = [

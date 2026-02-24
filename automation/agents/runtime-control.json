@@ -1,0 +1,8 @@
+{
+  "stopRequested": false,
+  "requestedAt": "2026-02-24T04:15:43.209Z",
+  "requestedBy": "test",
+  "reason": "dashboard-stop-test",
+  "clearedAt": "2026-02-24T04:17:05.012Z",
+  "clearedBy": "cli"
+}

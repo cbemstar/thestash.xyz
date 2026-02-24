@@ -95,11 +95,11 @@ export function ShareMenu({ url, title, description, className, showLabel = true
   );
 
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         {trigger}
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start" className="min-w-[11.25rem]">
+      <DropdownMenuContent align="start" className="min-w-[11.25rem]" onCloseAutoFocus={(e) => e.preventDefault()}>
         {hasNativeShare && (
           <DropdownMenuItem onClick={handleNativeShare}>
             <Share1Icon className="size-4" />

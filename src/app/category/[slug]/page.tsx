@@ -1,16 +1,20 @@
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { sanityClient, isSanityConfigured } from "@/lib/sanity.client";
-import { allResourcesQuery } from "@/lib/sanity.queries";
+import { allResourcesLiteQuery } from "@/lib/sanity.queries";
 import { CATEGORIES, getCategoryLabel } from "@/lib/categories";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import {
+  getAlternativePagesByCategory,
+  getComparisonPagesByCategory,
+} from "@/lib/seo-pages";
+import { getUseCasePagesForCategory } from "@/lib/use-case-pages";
 import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 import { CategoryPageClient } from "@/components/CategoryPageClient";
 import type { Resource } from "@/types/resource";
 import type { ResourceCategory } from "@/types/resource";
 import type { Metadata } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
 const VALID_CATEGORY_SLUGS = new Set(CATEGORIES.map((c) => c.value));
 
@@ -48,7 +52,7 @@ export async function generateMetadata({
   };
 }
 
-export const revalidate = 60;
+export const revalidate = 21600; // 6 hr — reduce ISR writes on free plan
 
 export default async function CategoryPage({
   params,
@@ -61,8 +65,26 @@ export default async function CategoryPage({
   }
 
   const resources: Resource[] = isSanityConfigured()
-    ? (await sanityClient.fetch<Resource[]>(allResourcesQuery)) ?? []
+    ? (await sanityClient.fetch<Resource[]>(allResourcesLiteQuery)) ?? []
     : [];
+  const alternatives = getAlternativePagesByCategory(slug as ResourceCategory)
+    .slice(0, 6)
+    .map((page) => ({
+      slug: page.slug,
+      title: `${page.tool.title} alternatives`,
+    }));
+  const comparisons = getComparisonPagesByCategory(slug as ResourceCategory)
+    .slice(0, 8)
+    .map((comparison) => ({
+      slug: comparison.slug,
+      title: comparison.title,
+    }));
+  const useCases = getUseCasePagesForCategory(slug as ResourceCategory)
+    .slice(0, 6)
+    .map((page) => ({
+      slug: page.slug,
+      title: page.title,
+    }));
 
   const categoryLabel = getCategoryLabel(slug as ResourceCategory);
   const breadcrumbItems = [
@@ -79,6 +101,9 @@ export default async function CategoryPage({
           resources={resources}
           categorySlug={slug as ResourceCategory}
           categoryLabel={categoryLabel}
+          alternatives={alternatives}
+          comparisons={comparisons}
+          useCases={useCases}
         />
       </Suspense>
     </>

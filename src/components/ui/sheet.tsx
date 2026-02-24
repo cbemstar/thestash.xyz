@@ -76,8 +76,11 @@ function SheetContent({
       >
         {children}
         {showCloseButton && (
-          <SheetPrimitive.Close className="absolute top-4 right-4 rounded-xs text-muted-foreground opacity-80 transition-opacity hover:text-foreground hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background disabled:pointer-events-none data-[state=open]:bg-secondary">
-            <Cross2Icon className="size-4" />
+          <SheetPrimitive.Close
+            className="absolute top-4 right-4 flex min-h-11 min-w-11 items-center justify-center rounded-xs text-muted-foreground opacity-80 transition-opacity hover:text-foreground hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background disabled:pointer-events-none data-[state=open]:bg-secondary"
+            aria-label="Close"
+          >
+            <Cross2Icon className="size-4" aria-hidden />
             <span className="sr-only">Close</span>
           </SheetPrimitive.Close>
         )}

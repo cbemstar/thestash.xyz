@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { CATEGORIES } from "@/lib/categories";
 import { ThemeSwitcherNav } from "@/components/ThemeSwitcherNav";
-import { FluidText } from "@/components/satisui/fluid-text";
+import TextPressure from "@/components/TextPressure";
 
 export type FooterType = { value: string; label: string };
 
@@ -12,24 +12,28 @@ interface FooterProps {
   tags?: string[];
   /** Resource types with at least one resource. Links to /type/[value]. */
   types?: FooterType[];
+  /** Total resource count for stats line. */
+  resourceCount?: number;
+  /** Total collection count for stats line. */
+  collectionCount?: number;
 }
 
-export function Footer({ tags = [], types = [] }: FooterProps) {
+export function Footer({ tags = [], types = [], resourceCount = 0, collectionCount = 0 }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border bg-background/80 mt-auto" role="contentinfo">
-      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-12">
         {/* Nocodesupply-style: Industries (categories), Type, Tags + Browse & Participate */}
         <nav
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5"
+          className="grid grid-cols-1 items-start gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5"
           aria-label="Footer navigation"
         >
-          <div>
+          <div className="text-left w-fit">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Browse
             </p>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1.5 text-sm text-muted-foreground">
+            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
               <li>
                 <Link href="/" className="hover:text-foreground transition-colors">
                   Home
@@ -46,8 +50,38 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
                 </Link>
               </li>
               <li>
+                <Link href="/tools" className="hover:text-foreground transition-colors">
+                  Tools
+                </Link>
+              </li>
+              <li>
                 <Link href="/collections" className="hover:text-foreground transition-colors">
                   Collections
+                </Link>
+              </li>
+              <li>
+                <Link href="/reports" className="hover:text-foreground transition-colors">
+                  Reports
+                </Link>
+              </li>
+              <li>
+                <Link href="/use-cases" className="hover:text-foreground transition-colors">
+                  Use cases
+                </Link>
+              </li>
+              <li>
+                <Link href="/migrate" className="hover:text-foreground transition-colors">
+                  Migrate
+                </Link>
+              </li>
+              <li>
+                <Link href="/alternatives" className="hover:text-foreground transition-colors">
+                  Alternatives
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare" className="hover:text-foreground transition-colors">
+                  Compare
                 </Link>
               </li>
               <li>
@@ -62,11 +96,11 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="text-left w-fit">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Industries
             </p>
-            <ul className="flex flex-wrap gap-x-3 gap-y-1.5 text-sm text-muted-foreground">
+            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
               {CATEGORIES.map((c) => (
                 <li key={c.value}>
                   <Link
@@ -80,11 +114,11 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
             </ul>
           </div>
           {types.length > 0 && (
-            <div>
+            <div className="text-left w-fit">
               <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 Type
               </p>
-              <ul className="flex flex-wrap gap-x-3 gap-y-1.5 text-sm text-muted-foreground">
+              <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
                 {types.map((t) => (
                   <li key={t.value}>
                     <Link
@@ -98,11 +132,11 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
               </ul>
             </div>
           )}
-          <div>
+          <div className="text-left w-fit">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Tags
             </p>
-            <ul className="flex flex-wrap gap-x-2 gap-y-1.5 text-sm text-muted-foreground">
+            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
               {tags.length === 0 ? (
                 <li>
                   <Link href="/tags" className="hover:text-foreground transition-colors">
@@ -130,11 +164,11 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
               )}
             </ul>
           </div>
-          <div>
+          <div className="text-left w-fit">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Participate
             </p>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1.5 text-sm text-muted-foreground">
+            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
               <li>
                 <Link href="/submit" className="hover:text-foreground transition-colors">
                   Submit a resource
@@ -146,8 +180,13 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/sitemap.xml" className="hover:text-foreground transition-colors">
+                <Link href="/sitemap-index" className="hover:text-foreground transition-colors">
                   Sitemap
+                </Link>
+              </li>
+              <li>
+                <Link href="/sitemap.xml" className="hover:text-foreground transition-colors">
+                  Sitemap XML
                 </Link>
               </li>
               <li>
@@ -157,11 +196,11 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="text-left w-fit">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Legal
             </p>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1.5 text-sm text-muted-foreground">
+            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
               <li>
                 <Link href="/privacy" className="hover:text-foreground transition-colors">
                   Privacy Policy
@@ -179,7 +218,7 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="text-left w-fit">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Theme
             </p>
@@ -188,8 +227,16 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
             </div>
           </div>
         </nav>
+        {(resourceCount > 0 || collectionCount > 0) && (
+          <p className="mt-6 text-center text-sm text-muted-foreground">
+            {resourceCount.toLocaleString()} resources across {collectionCount.toLocaleString()} collections and counting. Updated weekly.
+          </p>
+        )}
         <p className="mt-8 text-center text-xs text-muted-foreground">
           © {year} The Stash. Some links may be affiliate links.
+        </p>
+        <p className="mt-2 text-center text-sm text-muted-foreground">
+          Made with love ❤️ in Christchurch, New Zealand
         </p>
         <p className="mt-4 text-center text-sm text-muted-foreground">
           Developed by Karan Kumar and AI.{" "}
@@ -197,21 +244,56 @@ export function Footer({ tags = [], types = [] }: FooterProps) {
             Check out my resume
           </Link>
         </p>
+        <p className="mt-2 text-center text-sm text-muted-foreground">
+          Contact:{" "}
+          <a
+            href="mailto:karankumar230@gmail.com"
+            className="text-foreground underline underline-offset-2 hover:text-primary transition-colors"
+          >
+            karankumar230@gmail.com
+          </a>
+          {" · "}
+          <a
+            href="https://www.linkedin.com/in/cbemstar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline underline-offset-2 hover:text-primary transition-colors"
+          >
+            LinkedIn
+          </a>
+          {" · "}
+          <a
+            href="https://x.com/KaranKumarEm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline underline-offset-2 hover:text-primary transition-colors"
+          >
+            X
+          </a>
+        </p>
 
         {/* Large stylistic app name at the very bottom */}
-        <div className="mt-12 flex justify-end overflow-hidden pt-8 sm:mt-16 sm:pt-10">
+        <div className="mt-12 flex items-center justify-center overflow-hidden pt-8 pb-2 text-left sm:mt-16 sm:pt-10 sm:pb-3">
           <Link
             href="/"
-            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
+            className="inline-flex w-full max-w-full items-center justify-center rounded px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             aria-label="The Stash – Home"
           >
-            <FluidText
-              text="The Stash"
-              className="font-display font-bold tracking-tight text-foreground text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
-              maxScale={1.15}
-              radius={180}
-              stiffness={0.18}
-            />
+            <div className="flex h-[6.25rem] w-full max-w-[min(100%,22rem)] items-center justify-center overflow-hidden px-1 pb-2 text-foreground sm:h-[7.25rem] sm:px-2 sm:pb-3 lg:h-[8rem]">
+              <TextPressure
+                text="The Stash"
+                className="font-display tracking-tight"
+                fontFamily="Compressa VF"
+                width={false}
+                flex={false}
+                stroke={false}
+                italic={false}
+                alpha={false}
+                scale={false}
+                textColor="var(--foreground)"
+                minFontSize={52}
+              />
+            </div>
           </Link>
         </div>
       </div>

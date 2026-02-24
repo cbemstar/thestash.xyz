@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backlink Growth Engine"
+  short_description: "Plan and execute backlink acquisition workflows"
+  default_prompt: "Use $backlink-growth-engine to build a prioritized backlink acquisition sprint for [domain]."

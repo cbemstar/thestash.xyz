@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-02-12T19:16:37.719Z",
+  "inputPath": "/Users/karan/.codex/worktrees/f6b4/thestash.xyz/automation/discovery-candidates.json",
+  "counts": {
+    "total": 8,
+    "published": 6,
+    "deadLink": 1,
+    "duplicate": 1,
+    "invalid": 0,
+    "error": 0
+  },
+  "items": [
+    {
+      "title": "Pencil Project",
+      "url": "https://pencil.evolus.vn/",
+      "category": "design-tools",
+      "slug": "pencil-project",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:16.642Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "WhatsDiff",
+      "url": "https://whatsdiff.app/",
+      "category": "development-tools",
+      "slug": "whatsdiff",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:20.624Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "286bee2a-6327-4ad0-a230-0df4502cb212"
+    },
+    {
+      "title": "GitLab UX Heuristics",
+      "url": "https://handbook.gitlab.com/handbook/product/ux/heuristics/",
+      "category": "ui-ux-resources",
+      "slug": "gitlab-ux-heuristics",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:24.640Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "64dd346b-2ff2-4082-aec6-b1b690c45e9f"
+    },
+    {
+      "title": "Uiverse",
+      "url": "https://uiverse.io/",
+      "category": "inspiration",
+      "slug": "uiverse",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:26.667Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "0180f0c9-0f0e-40aa-8970-d9a6d106aff2"
+    },
+    {
+      "title": "Open Notebook",
+      "url": "https://www.opennotebook.ai/",
+      "category": "ai-tools",
+      "slug": "open-notebook",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:29.746Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "22da0590-74a9-4714-a1a0-d1c3b052ee3c"
+    },
+    {
+      "title": "Trakit",
+      "url": "https://gettrakit.app/",
+      "category": "productivity",
+      "slug": "trakit",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:33.694Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "451ecdd2-eca0-43b6-854a-1324e47346ea"
+    },
+    {
+      "title": "OpenDSA",
+      "url": "https://opendsa.org/",
+      "category": "learning-resources",
+      "slug": "opendsa",
+      "status": "dead-link",
+      "linkStatus": "dead",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:34.812Z",
+        "httpStatus": null,
+        "error": "TypeError"
+      }
+    },
+    {
+      "title": "CourseLit",
+      "url": "https://courselit.app/",
+      "category": "miscellaneous",
+      "slug": "courselit",
+      "status": "published",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-12T19:16:37.719Z",
+        "httpStatus": 200,
+        "error": null
+      },
+      "sanityId": "da159c5a-94ba-4347-8297-6926a8b7fbf4"
+    }
+  ]
+}

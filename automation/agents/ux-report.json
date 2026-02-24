@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-02-24T07:34:31.456Z",
+  "resourceStats": {
+    "byCategory": {
+      "ai-tools": 112,
+      "design-tools": 111,
+      "development-tools": 119,
+      "inspiration": 107,
+      "learning-resources": 38,
+      "miscellaneous": 15,
+      "productivity": 32,
+      "shadcn": 24,
+      "ui-ux-resources": 12,
+      "webflow": 44
+    },
+    "featured": 3,
+    "total": 673,
+    "withoutAlternatives": 673,
+    "withoutBestFor": 611,
+    "withoutDescription": 0,
+    "withoutTags": 0
+  },
+  "articleStats": {
+    "published": 27,
+    "recent": [
+      {
+        "publishedAt": "2026-02-24T03:51:55.753Z",
+        "title": "Best Productivity Tools for Teams (2026 Decision Guide)"
+      },
+      {
+        "publishedAt": "2026-02-19T23:56:53.649Z",
+        "title": "Claude vs ChatGPT vs Gemini for Developers (2026 Decision Guide)"
+      },
+      {
+        "publishedAt": "2026-02-19T00:00:00Z",
+        "title": "Claude vs ChatGPT vs Gemini: Best AI Assistant for Developers in 2026"
+      },
+      {
+        "publishedAt": "2026-02-18T08:36:00.334Z",
+        "title": "AI Code Review Workflow with GitHub, Cursor, and Claude"
+      },
+      {
+        "publishedAt": "2026-02-18T08:35:59.399Z",
+        "title": "How to Build a Webflow App: APIs, Auth, and Deployment"
+      }
+    ],
+    "total": 29,
+    "withoutExcerpt": 0,
+    "withoutIntent": 22,
+    "withoutKeyword": 22,
+    "withoutRelated": 21
+  },
+  "collectionStats": {
+    "collections": [
+      {
+        "resourceCount": 41,
+        "slug": "marketing-growth-tools",
+        "title": "Marketing & Growth Stack"
+      },
+      {
+        "resourceCount": 6,
+        "slug": "best-development-tools",
+        "title": "Best Development Tools"
+      },
+      {
+        "resourceCount": 4,
+        "slug": "ui-components",
+        "title": "UI Components & Patterns"
+      },
+      {
+        "resourceCount": 4,
+        "slug": "best-design-tools",
+        "title": "Best Design Tools"
+      },
+      {
+        "resourceCount": 2,
+        "slug": "ai-tools",
+        "title": "AI Tools for Dev & Design"
+      },
+      {
+        "resourceCount": 2,
+        "slug": "productivity-tools",
+        "title": "Productivity Tools"
+      },
+      {
+        "resourceCount": 1,
+        "slug": "learning-resources",
+        "title": "Learning Resources"
+      }
+    ],
+    "total": 7
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "category": "content",
+      "issue": "Category imbalance in: miscellaneous, productivity, shadcn, ui-ux-resources",
+      "suggestion": "Prioritize discovery for underrepresented categories."
+    },
+    {
+      "priority": "low",
+      "category": "collections",
+      "issue": "5 collections have fewer than 5 resources",
+      "suggestion": "Expand or consolidate sparse collections."
+    }
+  ]
+}

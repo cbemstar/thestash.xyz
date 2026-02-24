@@ -62,8 +62,22 @@ You must not:
 
 ---
 
+## Ad Settings Preview: "Application error" or blank preview
+
+If the **Ad Settings → Preview** shows "Application error: a client-side exception has occurred" or a blank preview while the live site loads fine in a normal tab, the preview loads your site inside a **cross-origin iframe**. In that context, `localStorage` (and similar APIs) can throw, which can crash the client bundle and show the generic error.
+
+This project mitigates that by:
+
+- Guarding all `localStorage` access in client components (e.g. view-mode preference) in try/catch or the safe-storage helper.
+- Using root and global error boundaries (`app/error.tsx`, `app/global-error.tsx`) so any uncaught client error shows a minimal fallback page instead of a blank "Application error", so the preview can still display something.
+
+Also ensure **NEXT_PUBLIC_ADSENSE_CLIENT_ID** matches the client ID shown in AdSense "Get code" (e.g. `ca-pub-9235700263244498`). If the script on your site uses a different ID, AdSense may show "Get code" and the preview may not behave as expected.
+
+---
+
 ## Summary
 
 - **“Site down or unavailable”** = Google couldn’t load your site (reachability/error), not a content policy violation.
 - Fix: correct URL, site up and returning 200, no password/protection blocking Googlebot, then request review.
+- **Ad Settings Preview error**: usually client code throwing in iframe (e.g. localStorage); this repo guards storage and uses error boundaries.
 - This repo: root layout is resilient to Sanity failure; robots.txt allows Googlebot; privacy policy, about, and ads.txt are in place for policy compliance once the site is reachable.

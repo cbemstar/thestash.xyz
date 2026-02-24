@@ -25,10 +25,28 @@ interface MicroExpanderProps
   isLoading?: boolean;
 }
 
+/** Breakpoint (px) below which expand-on-hover is disabled to avoid layout shift. */
+const EXPAND_MIN_WIDTH = 640;
+
+function useCanExpand(): boolean {
+  const [canExpand, setCanExpand] = React.useState(false);
+
+  React.useEffect(() => {
+    const mql = window.matchMedia(`(min-width: ${EXPAND_MIN_WIDTH}px)`);
+    const handler = () => setCanExpand(mql.matches);
+    handler();
+    mql.addEventListener('change', handler);
+    return () => mql.removeEventListener('change', handler);
+  }, []);
+
+  return canExpand;
+}
+
 /**
  * A micro-interaction button that expands from a circular icon to a pill shape
  * containing text upon hover. It handles loading states by reverting to the
  * circular shape and displaying a spinner.
+ * Expansion is disabled below 640px viewport to prevent layout shift on small screens.
  */
 const MicroExpander = React.forwardRef<HTMLButtonElement, MicroExpanderProps>(
   (
@@ -44,6 +62,7 @@ const MicroExpander = React.forwardRef<HTMLButtonElement, MicroExpanderProps>(
     ref
   ) => {
     const [isHovered, setIsHovered] = React.useState(false);
+    const canExpand = useCanExpand();
 
     const containerVariants: Variants = {
       initial: { width: '48px' },
@@ -80,11 +99,13 @@ const MicroExpander = React.forwardRef<HTMLButtonElement, MicroExpanderProps>(
       onClick?.(e);
     };
 
+    const shouldExpand = isHovered && canExpand;
+
     return (
       <motion.button
         ref={ref}
         className={cn(
-          'relative flex h-12 items-center overflow-hidden rounded-full',
+          'relative flex h-12 items-center overflow-hidden rounded-full shrink-0',
           'whitespace-nowrap font-medium text-sm uppercase tracking-wide',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
           isLoading && 'cursor-not-allowed',
@@ -92,7 +113,7 @@ const MicroExpander = React.forwardRef<HTMLButtonElement, MicroExpanderProps>(
           className
         )}
         initial='initial'
-        animate={isLoading ? 'loading' : isHovered ? 'hover' : 'initial'}
+        animate={isLoading ? 'loading' : shouldExpand ? 'hover' : 'initial'}
         variants={containerVariants}
         transition={{ type: 'spring', stiffness: 150, damping: 20, mass: 0.8 }}
         onMouseEnter={() => setIsHovered(true)}

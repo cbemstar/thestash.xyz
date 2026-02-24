@@ -1,0 +1,177 @@
+name: SEO Route Integrity
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/seo-route-integrity.yml"
+      - "docs/seo-keyword-to-url-map.md"
+      - "src/app/**"
+      - "src/components/**"
+      - "lib/**"
+      - "scripts/audit-seo-routes.mjs"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/seo-route-integrity.yml"
+      - "docs/seo-keyword-to-url-map.md"
+      - "src/app/**"
+      - "src/components/**"
+      - "lib/**"
+      - "scripts/audit-seo-routes.mjs"
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Base URL for live-site audit"
+        required: false
+        default: "https://thestash.xyz"
+  schedule:
+    - cron: "0 9 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-route-integrity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  local-build-audit:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build app
+        run: npm run build
+
+      - name: Start app
+        run: |
+          npm run start -- --hostname 127.0.0.1 --port 3000 > /tmp/next-start.log 2>&1 &
+          echo $! > /tmp/next-start.pid
+
+      - name: Wait for app
+        run: |
+          for i in {1..90}; do
+            if curl -fsS http://127.0.0.1:3000 >/dev/null; then
+              echo "App is ready."
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "App failed to start in time."
+          cat /tmp/next-start.log || true
+          exit 1
+
+      - name: Run route integrity audit (local)
+        run: npm run seo:audit:routes -- --base-url http://127.0.0.1:3000 --output /tmp/seo-route-audit-local.json
+
+      - name: Publish local audit summary
+        if: always()
+        run: |
+          if [ ! -f /tmp/seo-route-audit-local.json ]; then
+            exit 0
+          fi
+          node -e '
+            const fs = require("node:fs");
+            const report = JSON.parse(fs.readFileSync("/tmp/seo-route-audit-local.json", "utf8"));
+            const t = report.totals || {};
+            const lines = [
+              "## SEO route audit (local build)",
+              `- Base URL: ${report.baseUrl}`,
+              `- Audited URLs: ${t.audited ?? 0}`,
+              `- Status failures: ${t.statusFailures ?? 0}`,
+              `- Canonical failures: ${t.canonicalFailures ?? 0}`,
+              `- Missing canonical: ${t.missingCanonical ?? 0}`,
+              `- Noindex failures: ${t.noindexFailures ?? 0}`,
+              `- Duplicate canonical groups: ${t.duplicateCanonicalGroups ?? 0}`,
+              `- Reverse redirect failures: ${t.reverseRedirectFailures ?? 0}`,
+              `- Missing from sitemap: ${t.sitemapMissing ?? 0}`,
+              ""
+            ];
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n"));
+          '
+
+      - name: Upload local audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-route-audit-local
+          path: |
+            /tmp/seo-route-audit-local.json
+            /tmp/next-start.log
+          if-no-files-found: warn
+
+      - name: Stop app
+        if: always()
+        run: |
+          if [ -f /tmp/next-start.pid ]; then
+            kill "$(cat /tmp/next-start.pid)" || true
+          fi
+
+  live-site-audit:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run route integrity audit (live site)
+        run: |
+          BASE_URL="https://thestash.xyz"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.base_url }}" ]; then
+            BASE_URL="${{ github.event.inputs.base_url }}"
+          fi
+          echo "Auditing ${BASE_URL}"
+          node scripts/audit-seo-routes.mjs --base-url "${BASE_URL}" --output /tmp/seo-route-audit-live.json
+
+      - name: Publish live audit summary
+        if: always()
+        run: |
+          if [ ! -f /tmp/seo-route-audit-live.json ]; then
+            exit 0
+          fi
+          node -e '
+            const fs = require("node:fs");
+            const report = JSON.parse(fs.readFileSync("/tmp/seo-route-audit-live.json", "utf8"));
+            const t = report.totals || {};
+            const lines = [
+              "## SEO route audit (live site)",
+              `- Base URL: ${report.baseUrl}`,
+              `- Audited URLs: ${t.audited ?? 0}`,
+              `- Status failures: ${t.statusFailures ?? 0}`,
+              `- Canonical failures: ${t.canonicalFailures ?? 0}`,
+              `- Missing canonical: ${t.missingCanonical ?? 0}`,
+              `- Noindex failures: ${t.noindexFailures ?? 0}`,
+              `- Duplicate canonical groups: ${t.duplicateCanonicalGroups ?? 0}`,
+              `- Reverse redirect failures: ${t.reverseRedirectFailures ?? 0}`,
+              `- Missing from sitemap: ${t.sitemapMissing ?? 0}`,
+              ""
+            ];
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n"));
+          '
+
+      - name: Upload live audit artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-route-audit-live
+          path: /tmp/seo-route-audit-live.json
+          if-no-files-found: warn

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Authority Content Engine"
+  short_description: "Create high-authority SEO content workflows"
+  default_prompt: "Use $authority-content-engine to create a high-authority content brief and draft for [topic]."

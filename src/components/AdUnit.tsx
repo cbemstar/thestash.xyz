@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { getAdConsent } from "./CookieConsent";
 
@@ -28,19 +28,46 @@ export function AdUnit({
 }: AdUnitProps) {
   const pathname = usePathname();
   const ref = useRef<HTMLModElement>(null);
+  const [isUnfilled, setIsUnfilled] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined" || !ref.current) return;
+
+    const node = ref.current;
+    setIsUnfilled(false);
+
+    const syncStatus = () => {
+      const status = node.getAttribute("data-ad-status");
+      if (status === "filled") {
+        setIsUnfilled(false);
+      } else if (status === "unfilled") {
+        setIsUnfilled(true);
+      }
+    };
+
+    const observer = new MutationObserver(syncStatus);
+    observer.observe(node, {
+      attributes: true,
+      attributeFilter: ["data-ad-status"],
+    });
+
     try {
       ((window as unknown as { adsbygoogle: unknown[] }).adsbygoogle =
         (window as unknown as { adsbygoogle: unknown[] }).adsbygoogle || []).push({});
     } catch {
       // Ignore
     }
+
+    syncStatus();
+
+    return () => {
+      observer.disconnect();
+    };
   }, [pathname]);
 
   const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
   if (!clientId) return null;
+  if (isUnfilled) return null;
 
   return (
     <div className={className} key={pathname}>
@@ -53,7 +80,6 @@ export function AdUnit({
         data-full-width-responsive="true"
         {...(propNpa ?? getAdConsent() === "reject" ? { "data-npa": "1" } : {})}
         style={{ display: "block" }}
-        data-ad-status="unfilled"
         aria-hidden
       />
     </div>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Chunking Optimizer"
+  short_description: "Optimize blog chunks for AI snippets and SEO"
+  default_prompt: "Use $content-chunking-optimizer to audit and improve this article with answer-first, self-contained chunks."

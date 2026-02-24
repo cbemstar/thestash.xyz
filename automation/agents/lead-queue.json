@@ -1,0 +1,75 @@
+[
+  {
+    "url": "https://github.com/greatscott/enveil",
+    "title": "Show HN: enveil – hide your .env secrets from prAIng eyes",
+    "description": "Show HN: enveil – hide your .env secrets from prAIng eyes (185 points on Hacker News)",
+    "source": "Hacker News",
+    "score": 185,
+    "category": "ai-tools",
+    "sourceDomain": "github.com",
+    "discoveredAt": "2026-02-24T20:49:24.529Z",
+    "relevanceScore": 4
+  },
+  {
+    "url": "https://github.com/yjeanrenaud/yj_nearbyglasses",
+    "title": "Nearby Glasses",
+    "description": "Nearby Glasses (105 points on Hacker News)",
+    "source": "Hacker News",
+    "score": 105,
+    "category": "development-tools",
+    "sourceDomain": "github.com",
+    "discoveredAt": "2026-02-24T20:49:24.529Z",
+    "relevanceScore": 2
+  },
+  {
+    "url": "https://keepandroidopen.org/open-letter",
+    "title": "Open Letter to Google on Mandatory Developer Registration for App Distribution",
+    "description": "Open Letter to Google on Mandatory Developer Registration for App Distribution (264 points on Hacker News)",
+    "source": "Hacker News",
+    "score": 264,
+    "category": "development-tools",
+    "sourceDomain": "keepandroidopen.org",
+    "discoveredAt": "2026-02-24T20:49:24.529Z",
+    "relevanceScore": 2
+  },
+  {
+    "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle",
+    "title": "Samsung Upcycle Promise",
+    "description": "Samsung Upcycle Promise (151 points on Hacker News)",
+    "source": "Hacker News",
+    "score": 151,
+    "category": "development-tools",
+    "sourceDomain": "xda-developers.com",
+    "discoveredAt": "2026-02-24T20:49:24.529Z",
+    "relevanceScore": 2
+  },
+  {
+    "url": "https://github.com/vignesh07/babyshark",
+    "title": "Show HN: Babyshark – Wireshark made easy (terminal UI for PCAPs)",
+    "description": "Show HN: Babyshark – Wireshark made easy (terminal UI for PCAPs) (96 points on Hacker News)",
+    "source": "Hacker News",
+    "score": 96,
+    "category": "development-tools",
+    "sourceDomain": "github.com",
+    "discoveredAt": "2026-02-24T07:32:33.452Z",
+    "relevanceScore": 2
+  },
+  {
+    "url": "https://simonwillison.net/guides/agentic-engineering-patterns/code-is-cheap",
+    "title": "Writing code is cheap now",
+    "description": "Writing code is cheap now (84 points on Hacker News)",
+    "source": "Hacker News",
+    "score": 84,
+    "category": "ai-tools",
+    "sourceDomain": "simonwillison.net",
+    "discoveredAt": "2026-02-24T04:14:09.147Z",
+    "relevanceScore": 2
+  },
+  {
+    "url": "https://cline.dev",
+    "title": "Cline",
+    "description": "Autonomous coding agent",
+    "source": "AI Tools Watch",
+    "category": "ai-tools"
+  }
+]

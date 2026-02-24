@@ -1,0 +1,1823 @@
+[
+  {
+    "timestamp": "2026-02-23T19:34:56.380Z",
+    "agentId": "test-agent",
+    "taskId": "task-001",
+    "actionType": "tool_call",
+    "target": "web_fetch",
+    "metadata": {
+      "url": "https://example.com"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T19:41:33.198Z",
+    "agentId": "test",
+    "taskId": null,
+    "actionType": "test",
+    "target": "test",
+    "metadata": null,
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T20:16:23.505Z",
+    "agentId": "publisher",
+    "taskId": "article-1771877783505",
+    "actionType": "started",
+    "target": "publishArticle",
+    "metadata": {
+      "title": "Top 15 Developer Tools to Boost Your Workflow in 2026",
+      "slug": "top-15-developer-tools-to-boost-your-workflow-in-2026-2026"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T20:16:25.774Z",
+    "agentId": "publisher",
+    "taskId": "article-1771877785773",
+    "actionType": "db_write",
+    "target": "sanity.create:article",
+    "metadata": {
+      "id": "U4edcnaVtwgLzgBHjVgKHJ",
+      "title": "Top 15 Developer Tools to Boost Your Workflow in 2026"
+    },
+    "durationMs": 2268,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:36:51.823Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882611823",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - memovai/mimiclaw: MimiClaw: Run OpenClaw on a $5 chip. No OS(Linux). No Node.js. No Mac mini. No Raspberry Pi.",
+      "url": "https://github.com/memovai/mimiclaw"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:36:54.414Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882611823",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "U4edcnaVtwgLzgBHjW8gVd",
+      "title": "GitHub - memovai/mimiclaw: MimiClaw: Run OpenClaw on a $5 chip. No OS(Linux). No Node.js. No Mac mini. No Raspberry Pi."
+    },
+    "durationMs": 2591,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:36:54.415Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882614415",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - PeonPing/peon-ping: Warcraft III Peon voice notifications (+ more!) for Claude Code, Codex, IDEs, and any AI ag",
+      "url": "https://github.com/peonping/peon-ping"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:36:56.008Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882614415",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMYuz90",
+      "title": "GitHub - PeonPing/peon-ping: Warcraft III Peon voice notifications (+ more!) for Claude Code, Codex, IDEs, and any AI ag"
+    },
+    "durationMs": 1593,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:36:56.009Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882616009",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - excalidraw/excalidraw-mcp: Fast and streamable Excalidraw MCP App",
+      "url": "https://github.com/excalidraw/excalidraw-mcp"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:36:59.072Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882616009",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMYuzF0",
+      "title": "GitHub - excalidraw/excalidraw-mcp: Fast and streamable Excalidraw MCP App"
+    },
+    "durationMs": 3063,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:36:59.073Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882619073",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - anthropics/claudes-c-compiler: Claude Opus 4.6 wrote a dependency-free C compiler in Rust, with backends target",
+      "url": "https://github.com/anthropics/claudes-c-compiler"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:00.442Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882619073",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMYuzJ0",
+      "title": "GitHub - anthropics/claudes-c-compiler: Claude Opus 4.6 wrote a dependency-free C compiler in Rust, with backends target"
+    },
+    "durationMs": 1369,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:00.443Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882620443",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - Conway-Research/automaton: The first AI that can earn its own existence, replicate, and evolve — without needin",
+      "url": "https://github.com/conway-research/automaton"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:02.031Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882620443",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMYuzN0",
+      "title": "GitHub - Conway-Research/automaton: The first AI that can earn its own existence, replicate, and evolve — without needin"
+    },
+    "durationMs": 1588,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:02.032Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882622032",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - Veirt/weathr: a terminal weather app with ascii animation",
+      "url": "https://github.com/veirt/weathr"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:03.458Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882622032",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMYuzV0",
+      "title": "GitHub - Veirt/weathr: a terminal weather app with ascii animation"
+    },
+    "durationMs": 1426,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:03.459Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882623458",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - op7418/CodePilot: A native desktop GUI for Claude Code — chat, code, and manage projects visually. Built with E",
+      "url": "https://github.com/op7418/codepilot"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:05.465Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882623458",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "ut2BTkhBrFCaQG40AJiCrP",
+      "title": "GitHub - op7418/CodePilot: A native desktop GUI for Claude Code — chat, code, and manage projects visually. Built with E"
+    },
+    "durationMs": 2006,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:05.466Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882625465",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - AlexsJones/llmfit: 157 models. 30 providers. One command to find what runs on your hardware.",
+      "url": "https://github.com/alexsjones/llmfit"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:07.077Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882625465",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "U4edcnaVtwgLzgBHjW8jxt",
+      "title": "GitHub - AlexsJones/llmfit: 157 models. 30 providers. One command to find what runs on your hardware."
+    },
+    "durationMs": 1612,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:07.078Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882627078",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "GitHub - JeffBezanson/femtolisp: a lightweight, robust, scheme-like lisp implementation",
+      "url": "https://github.com/jeffbezanson/femtolisp"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:09.557Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882627078",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "U4edcnaVtwgLzgBHjW8kIn",
+      "title": "GitHub - JeffBezanson/femtolisp: a lightweight, robust, scheme-like lisp implementation"
+    },
+    "durationMs": 2479,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:09.558Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882629557",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "Loops - Short videos. Your community. Your rules.",
+      "url": "https://joinloops.org"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T21:37:11.131Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771882629557",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "ut2BTkhBrFCaQG40AJiDZF",
+      "title": "Loops - Short videos. Your community. Your rules."
+    },
+    "durationMs": 1574,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T22:40:08.693Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771886408693",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "visual-explainer",
+      "url": "https://github.com/nicobailon/visual-explainer"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T22:40:11.787Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771886408693",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "ut2BTkhBrFCaQG40AJoZba",
+      "title": "visual-explainer"
+    },
+    "durationMs": 3094,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T22:40:11.789Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771886411789",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "react-doctor",
+      "url": "https://github.com/millionco/react-doctor"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T22:40:13.373Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771886411789",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMYxhJ0",
+      "title": "react-doctor"
+    },
+    "durationMs": 1584,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T22:40:13.374Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771886413374",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "sowbot &#8211; The Open AgBot",
+      "url": "https://sowbot.co.uk"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-23T22:40:15.735Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771886413374",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "U4edcnaVtwgLzgBHjWMtOX",
+      "title": "sowbot &#8211; The Open AgBot"
+    },
+    "durationMs": 2361,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:26:19.136Z",
+    "agentId": "research",
+    "taskId": "research-1771903579135",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:26:43.963Z",
+    "agentId": "research",
+    "taskId": "research-1771903579135",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 18,
+      "queued": 24,
+      "createdByCategory": {
+        "ai-tools": 10,
+        "development-tools": 7,
+        "coding": 1
+      },
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 24828,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:26:50.778Z",
+    "agentId": "writer",
+    "taskId": "writer-1771903610778",
+    "actionType": "started",
+    "target": "writer.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:26:51.669Z",
+    "agentId": "writer",
+    "taskId": "writer-1771903610778",
+    "actionType": "completed",
+    "target": "writer.pipeline",
+    "metadata": {
+      "slug": "best-productivity-tools-for-teams-2026-decision-guide",
+      "category": "productivity",
+      "contentTier": "tier1",
+      "candidates": 10,
+      "sources": 13,
+      "playbookVersion": "2026-02-24.1",
+      "bodyMetrics": {
+        "wordCount": 2200,
+        "headingCount": 39,
+        "listItemCount": 95,
+        "linkCount": 15
+      }
+    },
+    "durationMs": 891,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:44:07.074Z",
+    "agentId": "curator",
+    "taskId": "curator-1771904647074",
+    "actionType": "started",
+    "target": "curator.pipeline",
+    "metadata": {
+      "autoApproveReviewed": false,
+      "publishApproved": false,
+      "includeBlogs": false,
+      "maxPublish": 0
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:44:22.489Z",
+    "agentId": "research",
+    "taskId": "research-1771904662488",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:44:48.666Z",
+    "agentId": "research",
+    "taskId": "research-1771904662488",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 21,
+      "queued": 24,
+      "createdByCategory": {
+        "ai-tools": 10,
+        "development-tools": 10,
+        "coding": 1
+      },
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 26177,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:44:48.676Z",
+    "agentId": "curator",
+    "taskId": "curator-1771904647074",
+    "actionType": "completed",
+    "target": "curator.pipeline",
+    "metadata": {
+      "runId": "curator-1771904647074",
+      "scoutLeads": 3,
+      "validated": 21,
+      "reviewed": 22,
+      "autoApproved": 0,
+      "published": 0,
+      "publishFailed": 0,
+      "durationMs": 41602
+    },
+    "durationMs": 41602,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:44:58.510Z",
+    "agentId": "curator",
+    "taskId": "curator-1771904698510",
+    "actionType": "started",
+    "target": "curator.pipeline",
+    "metadata": {
+      "autoApproveReviewed": false,
+      "publishApproved": false,
+      "includeBlogs": false,
+      "maxPublish": 0
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:45:15.849Z",
+    "agentId": "research",
+    "taskId": "research-1771904715848",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:45:40.148Z",
+    "agentId": "research",
+    "taskId": "research-1771904715848",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 21,
+      "queued": 24,
+      "createdByCategory": {
+        "ai-tools": 10,
+        "development-tools": 10,
+        "coding": 1
+      },
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 24299,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:45:40.154Z",
+    "agentId": "curator",
+    "taskId": "curator-1771904698510",
+    "actionType": "completed",
+    "target": "curator.pipeline",
+    "metadata": {
+      "runId": "curator-1771904698510",
+      "scoutLeads": 0,
+      "validated": 21,
+      "reviewed": 0,
+      "autoApproved": 0,
+      "published": 0,
+      "publishFailed": 0,
+      "durationMs": 41642
+    },
+    "durationMs": 41642,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:50:43.974Z",
+    "agentId": "curator",
+    "taskId": "curator-1771905043971",
+    "actionType": "started",
+    "target": "curator.pipeline",
+    "metadata": {
+      "autoApproveReviewed": true,
+      "publishApproved": true,
+      "includeBlogs": true,
+      "maxPublish": 25
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:50:59.108Z",
+    "agentId": "research",
+    "taskId": "research-1771905059108",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:25.263Z",
+    "agentId": "research",
+    "taskId": "research-1771905059108",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 21,
+      "queued": 24,
+      "createdByCategory": {
+        "ai-tools": 10,
+        "development-tools": 10,
+        "coding": 1
+      },
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 26155,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:25.271Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905085271",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "vscode-dark-islands",
+      "url": "https://github.com/bwya77/vscode-dark-islands"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:27.011Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905085271",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "ut2BTkhBrFCaQG40AK880M",
+      "title": "vscode-dark-islands"
+    },
+    "durationMs": 1739,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:27.012Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905087011",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "clawrouter",
+      "url": "https://github.com/blockrunai/clawrouter"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:28.291Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905087011",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "ut2BTkhBrFCaQG40AK88CX",
+      "title": "clawrouter"
+    },
+    "durationMs": 1279,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:28.292Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905088291",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "tinyclaw",
+      "url": "https://github.com/tinyagi/tinyclaw"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:29.940Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905088291",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5VP0",
+      "title": "tinyclaw"
+    },
+    "durationMs": 1649,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:29.941Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905089941",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "portless",
+      "url": "https://github.com/vercel-labs/portless"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:31.301Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905089941",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "ut2BTkhBrFCaQG40AK88R9",
+      "title": "portless"
+    },
+    "durationMs": 1359,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:31.301Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905091301",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "zeroclaw",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:32.961Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905091301",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "U4edcnaVtwgLzgBHjX2LeH",
+      "title": "zeroclaw"
+    },
+    "durationMs": 1660,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:32.962Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905092962",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "clawwork",
+      "url": "https://github.com/hkuds/clawwork"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:34.357Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905092962",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5Vf0",
+      "title": "clawwork"
+    },
+    "durationMs": 1394,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:34.358Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905094357",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "ironclaw",
+      "url": "https://github.com/nearai/ironclaw"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:35.984Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905094357",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5Vj0",
+      "title": "ironclaw"
+    },
+    "durationMs": 1627,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:35.985Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905095984",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "picoclaw",
+      "url": "https://github.com/sipeed/picoclaw"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:38.340Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905095984",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5Vp0",
+      "title": "picoclaw"
+    },
+    "durationMs": 2356,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:38.341Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905098340",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "awesome-openclaw-usecases",
+      "url": "https://github.com/hesamsheikh/awesome-openclaw-usecases"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:40.356Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905098340",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5Vt0",
+      "title": "awesome-openclaw-usecases"
+    },
+    "durationMs": 2016,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:40.357Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905100357",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "vouch",
+      "url": "https://github.com/mitchellh/vouch"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:42.001Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905100357",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5Vx0",
+      "title": "vouch"
+    },
+    "durationMs": 1643,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:42.002Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905102002",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "Cursor: The best way to code with AI",
+      "url": "https://cursor.sh"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:45.009Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905102002",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5W10",
+      "title": "Cursor: The best way to code with AI"
+    },
+    "durationMs": 3007,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:45.010Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905105010",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "Reply Logo",
+      "url": "https://windsurf.ai"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:46.410Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905105010",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5W50",
+      "title": "Reply Logo"
+    },
+    "durationMs": 1400,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:46.411Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905106410",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "pgdog",
+      "url": "https://github.com/pgdogdev/pgdog"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:48.388Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905106410",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "U4edcnaVtwgLzgBHjX2Old",
+      "title": "pgdog"
+    },
+    "durationMs": 1977,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:48.389Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905108388",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "Americans are destroying Flock surveillance cameras | TechCrunch",
+      "url": "https://techcrunch.com/2026/02/23/americans-are-destroying-flock-surveillance-cameras"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:50.085Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905108388",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5WB0",
+      "title": "Americans are destroying Flock surveillance cameras | TechCrunch"
+    },
+    "durationMs": 1696,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:50.086Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905110085",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "Elsevier Shuts Down Its Finance Journal Citation Cartel",
+      "url": "https://www.chrisbrunet.com/p/elsevier-shuts-down-its-finance-journal"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:52.413Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905110085",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "ut2BTkhBrFCaQG40AK898z",
+      "title": "Elsevier Shuts Down Its Finance Journal Citation Cartel"
+    },
+    "durationMs": 2328,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:52.414Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905112414",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "Home Page",
+      "url": "https://magicalmushroom.com/index"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:54.048Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905112414",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5WF0",
+      "title": "Home Page"
+    },
+    "durationMs": 1634,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:54.049Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905114048",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "R. S. Doiel, Software Engineer/Analyst &mdash; Robert's ramblings",
+      "url": "https://rsdoiel.github.io/blog/2026/02/21/a_simple_web_we_own.html"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:55.422Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905114048",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5WJ0",
+      "title": "R. S. Doiel, Software Engineer/Analyst &mdash; Robert's ramblings"
+    },
+    "durationMs": 1373,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:55.423Z",
+    "agentId": "publisher",
+    "taskId": "article-1771905115423",
+    "actionType": "started",
+    "target": "publishArticle",
+    "metadata": {
+      "title": "Best Productivity Tools for Teams (2026 Decision Guide)",
+      "slug": "best-productivity-tools-for-teams-2026-decision-guide"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:57.459Z",
+    "agentId": "publisher",
+    "taskId": "article-1771905115423",
+    "actionType": "db_write",
+    "target": "sanity.create:article",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5WN0",
+      "title": "Best Productivity Tools for Teams (2026 Decision Guide)"
+    },
+    "durationMs": 2036,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:57.460Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905117460",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "companion",
+      "url": "https://github.com/the-vibe-company/companion"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:59.521Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905117460",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5WX0",
+      "title": "companion"
+    },
+    "durationMs": 2060,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:51:59.522Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905119522",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "code-review-expert",
+      "url": "https://github.com/sanyuan0704/code-review-expert"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:52:01.098Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905119522",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5Wg0",
+      "title": "code-review-expert"
+    },
+    "durationMs": 1576,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:52:01.100Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905121099",
+    "actionType": "started",
+    "target": "publishResource",
+    "metadata": {
+      "title": "go-concurrent-map-bench",
+      "url": "https://github.com/puzpuzpuz/go-concurrent-map-bench"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:52:03.471Z",
+    "agentId": "publisher",
+    "taskId": "resource-1771905121099",
+    "actionType": "db_write",
+    "target": "sanity.create:resource",
+    "metadata": {
+      "id": "hwNpAZwjhdUfjmvJMZ5Wt0",
+      "title": "go-concurrent-map-bench"
+    },
+    "durationMs": 2371,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:52:03.472Z",
+    "agentId": "curator",
+    "taskId": "curator-1771905043971",
+    "actionType": "completed",
+    "target": "curator.pipeline",
+    "metadata": {
+      "runId": "curator-1771905043971",
+      "scoutLeads": 0,
+      "validated": 21,
+      "reviewed": 0,
+      "autoApproved": 21,
+      "published": 21,
+      "publishFailed": 0,
+      "durationMs": 79501
+    },
+    "durationMs": 79501,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:58:22.118Z",
+    "agentId": "research",
+    "taskId": "research-1771905502117",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T03:58:33.776Z",
+    "agentId": "research",
+    "taskId": "research-1771905502117",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 8,
+      "queued": 11,
+      "createdByCategory": {
+        "development-tools": 5,
+        "ai-tools": 2,
+        "coding": 1
+      },
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 11658,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:02:38.655Z",
+    "agentId": "research",
+    "taskId": "research-1771905758655",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:02:43.872Z",
+    "agentId": "research",
+    "taskId": "research-1771905758655",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 0,
+      "queued": 3,
+      "createdByCategory": {},
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 5216,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:13:45.885Z",
+    "agentId": "scout",
+    "taskId": "scout-1771906425885",
+    "actionType": "blocked",
+    "target": "scout.pipeline",
+    "metadata": {
+      "stage": "start",
+      "reason": "test stop checkpoint",
+      "requestedAt": "2026-02-24T04:13:38.881Z",
+      "requestedBy": "cli"
+    },
+    "durationMs": null,
+    "status": "blocked",
+    "error": "test stop checkpoint",
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:14:39.854Z",
+    "agentId": "curator",
+    "taskId": "curator-1771906479853",
+    "actionType": "started",
+    "target": "curator.pipeline",
+    "metadata": {
+      "autoApproveReviewed": false,
+      "publishApproved": false,
+      "includeBlogs": false,
+      "maxPublish": 0
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:14:39.855Z",
+    "agentId": "curator",
+    "taskId": "curator-1771906479853",
+    "actionType": "message",
+    "target": "stage:scout",
+    "metadata": null,
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:14:55.091Z",
+    "agentId": "curator",
+    "taskId": "curator-1771906479853",
+    "actionType": "message",
+    "target": "stage:research",
+    "metadata": {
+      "scoutLeads": 0
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:14:55.094Z",
+    "agentId": "research",
+    "taskId": "research-1771906495093",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:15:01.340Z",
+    "agentId": "research",
+    "taskId": "research-1771906495093",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 0,
+      "queued": 2,
+      "createdByCategory": {},
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 6246,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:15:01.343Z",
+    "agentId": "curator",
+    "taskId": "curator-1771906479853",
+    "actionType": "message",
+    "target": "stage:editor",
+    "metadata": {
+      "validated": 0
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:15:01.344Z",
+    "agentId": "curator",
+    "taskId": "curator-1771906479853",
+    "actionType": "completed",
+    "target": "curator.pipeline",
+    "metadata": {
+      "runId": "curator-1771906479853",
+      "scoutLeads": 0,
+      "validated": 0,
+      "reviewed": 0,
+      "autoApproved": 0,
+      "published": 0,
+      "publishFailed": 0,
+      "durationMs": 21491
+    },
+    "durationMs": 21491,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:15:43.365Z",
+    "agentId": "research",
+    "taskId": "research-1771906543364",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:15:43.366Z",
+    "agentId": "research",
+    "taskId": "research-1771906543364",
+    "actionType": "blocked",
+    "target": "research.pipeline",
+    "metadata": {
+      "stage": "initialization",
+      "reason": "dashboard-stop-test",
+      "requestedAt": "2026-02-24T04:15:43.209Z",
+      "requestedBy": "test"
+    },
+    "durationMs": null,
+    "status": "blocked",
+    "error": "dashboard-stop-test",
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T04:15:43.366Z",
+    "agentId": "research",
+    "taskId": "research-failed-1771906543366",
+    "actionType": "failed",
+    "target": "research.pipeline",
+    "metadata": null,
+    "durationMs": null,
+    "status": "failed",
+    "error": "dashboard-stop-test",
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T07:32:17.551Z",
+    "agentId": "orchestrator",
+    "taskId": "orchestrator-daily-1771918337550",
+    "actionType": "started",
+    "target": "orchestrator.daily",
+    "metadata": null,
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T07:32:33.760Z",
+    "agentId": "research",
+    "taskId": "research-1771918353759",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T07:32:54.570Z",
+    "agentId": "research",
+    "taskId": "research-1771918353759",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 1,
+      "queued": 3,
+      "createdByCategory": {
+        "development-tools": 1
+      },
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 20810,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T07:32:54.875Z",
+    "agentId": "writer",
+    "taskId": "writer-1771918374875",
+    "actionType": "started",
+    "target": "writer.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T07:32:57.252Z",
+    "agentId": "writer",
+    "taskId": "writer-1771918374875",
+    "actionType": "completed",
+    "target": "writer.pipeline",
+    "metadata": {
+      "slug": "best-productivity-tools-for-teams-2026-decision-guide-2",
+      "category": "productivity",
+      "contentTier": "tier1",
+      "candidates": 10,
+      "sources": 13,
+      "playbookVersion": "2026-02-24.1",
+      "bodyMetrics": {
+        "wordCount": 2200,
+        "headingCount": 39,
+        "listItemCount": 95,
+        "linkCount": 15
+      }
+    },
+    "durationMs": 2377,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T07:32:57.563Z",
+    "agentId": "orchestrator",
+    "taskId": "orchestrator-daily-1771918337550",
+    "actionType": "completed",
+    "target": "orchestrator.daily",
+    "metadata": {
+      "scoutLeads": 1,
+      "validatedLeads": 1,
+      "reviewedItems": 2,
+      "readyForApproval": 2,
+      "needsRevision": 0
+    },
+    "durationMs": null,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T07:34:30.139Z",
+    "agentId": "orchestrator",
+    "taskId": "orchestrator-weekly-1771918470138",
+    "actionType": "started",
+    "target": "orchestrator.weekly",
+    "metadata": null,
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T20:49:07.739Z",
+    "agentId": "orchestrator",
+    "taskId": "orchestrator-daily-1771966147738",
+    "actionType": "started",
+    "target": "orchestrator.daily",
+    "metadata": null,
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T20:49:24.835Z",
+    "agentId": "research",
+    "taskId": "research-1771966164834",
+    "actionType": "started",
+    "target": "research.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T20:49:48.151Z",
+    "agentId": "research",
+    "taskId": "research-1771966164834",
+    "actionType": "completed",
+    "target": "research.pipeline",
+    "metadata": {
+      "validated": 5,
+      "queued": 7,
+      "createdByCategory": {
+        "ai-tools": 1,
+        "development-tools": 4
+      },
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": 23317,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T20:49:48.458Z",
+    "agentId": "writer",
+    "taskId": "writer-1771966188457",
+    "actionType": "started",
+    "target": "writer.pipeline",
+    "metadata": {
+      "playbookVersion": "2026-02-24.1"
+    },
+    "durationMs": null,
+    "status": "running",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T20:49:49.259Z",
+    "agentId": "writer",
+    "taskId": "writer-1771966188457",
+    "actionType": "completed",
+    "target": "writer.pipeline",
+    "metadata": {
+      "slug": "best-productivity-tools-for-teams-2026-decision-guide-2",
+      "category": "productivity",
+      "contentTier": "tier1",
+      "candidates": 10,
+      "sources": 13,
+      "playbookVersion": "2026-02-24.1",
+      "bodyMetrics": {
+        "wordCount": 2200,
+        "headingCount": 39,
+        "listItemCount": 95,
+        "linkCount": 15
+      }
+    },
+    "durationMs": 801,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  },
+  {
+    "timestamp": "2026-02-24T20:49:49.567Z",
+    "agentId": "orchestrator",
+    "taskId": "orchestrator-daily-1771966147738",
+    "actionType": "completed",
+    "target": "orchestrator.daily",
+    "metadata": {
+      "scoutLeads": 4,
+      "validatedLeads": 5,
+      "reviewedItems": 5,
+      "readyForApproval": 5,
+      "needsRevision": 0
+    },
+    "durationMs": null,
+    "status": "completed",
+    "error": null,
+    "agentMessage": null
+  }
+]

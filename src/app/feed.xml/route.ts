@@ -1,9 +1,9 @@
 import { sanityClient, isSanityConfigured } from "@/lib/sanity.client";
-import { allResourcesQuery } from "@/lib/sanity.queries";
+import { allResourcesLiteQuery } from "@/lib/sanity.queries";
 import { getResourceSlug } from "@/lib/slug";
 import type { Resource } from "@/types/resource";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
 function escapeXml(s: string): string {
   return s
@@ -16,7 +16,7 @@ function escapeXml(s: string): string {
 
 export async function GET() {
   const resources: Resource[] = isSanityConfigured()
-    ? (await sanityClient.fetch<Resource[]>(allResourcesQuery)) ?? []
+    ? (await sanityClient.fetch<Resource[]>(allResourcesLiteQuery)) ?? []
     : [];
 
   const items = resources

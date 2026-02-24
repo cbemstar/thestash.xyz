@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-02-16T23:42:19.790Z",
+  "inputPath": "/Users/karan/.codex/worktrees/5a1f/thestash.xyz/automation/discovery-candidates.json",
+  "counts": {
+    "total": 8,
+    "published": 0,
+    "deadLink": 0,
+    "duplicate": 8,
+    "invalid": 0,
+    "error": 0
+  },
+  "items": [
+    {
+      "title": "sK1 2.0",
+      "url": "https://sk1project.net/sk1/",
+      "category": "design-tools",
+      "slug": "sk1-2-0",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:15.742Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "gitui",
+      "url": "https://github.com/gitui-org/gitui",
+      "category": "development-tools",
+      "slug": "gitui",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:16.550Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "Open Color",
+      "url": "https://yeun.github.io/open-color/",
+      "category": "ui-ux-resources",
+      "slug": "open-color",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:16.848Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "Refs.gallery",
+      "url": "https://refs.gallery/",
+      "category": "inspiration",
+      "slug": "refs-gallery",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:17.555Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "Dify",
+      "url": "https://dify.ai/",
+      "category": "ai-tools",
+      "slug": "dify",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:17.762Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "Kimai",
+      "url": "https://www.kimai.org/",
+      "category": "productivity",
+      "slug": "kimai",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:18.692Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "Learn X in Y Minutes",
+      "url": "https://learnxinyminutes.com/",
+      "category": "learning-resources",
+      "slug": "learn-x-in-y-minutes",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:18.778Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    },
+    {
+      "title": "MrDoc",
+      "url": "https://mrdoc.io/",
+      "category": "miscellaneous",
+      "slug": "mrdoc",
+      "status": "duplicate",
+      "reason": "url exists",
+      "linkStatus": "alive",
+      "linkCheck": {
+        "checkedAt": "2026-02-16T23:42:19.790Z",
+        "httpStatus": 200,
+        "error": null
+      }
+    }
+  ]
+}

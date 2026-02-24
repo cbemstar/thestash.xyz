@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@sanity/client";
+import { randomUUID } from "node:crypto";
 import { slugify } from "@/lib/slug";
+import { submitIndexNowUrls } from "@/lib/indexnow";
+import { BASE_URL } from "@/lib/site-url";
+import { detectKeywordCollision } from "@/lib/content-governance";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
@@ -34,7 +38,23 @@ type Body = {
   slug?: string;
   tags?: string[];
   featured?: boolean;
+  alternatives?: string[];
+  bestFor?: string[];
+  notFor?: string[];
 };
+
+function normalizeComparableUrl(value: string): string {
+  try {
+    const parsed = new URL(value.trim());
+    parsed.hash = "";
+    parsed.search = "";
+    let output = parsed.toString().toLowerCase();
+    if (output.endsWith("/")) output = output.slice(0, -1);
+    return output;
+  } catch {
+    return value.trim().toLowerCase();
+  }
+}
 
 function isValidUrl(s: string): boolean {
   try {
@@ -43,6 +63,15 @@ function isValidUrl(s: string): boolean {
   } catch {
     return false;
   }
+}
+
+function sanitizeStringArray(value: unknown, maxItems: number = 10): string[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((item): item is string => typeof item === "string")
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, maxItems);
 }
 
 export async function POST(request: NextRequest) {
@@ -70,7 +99,18 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { url, title, description, category, slug, tags, featured } = body;
+  const {
+    url,
+    title,
+    description,
+    category,
+    slug,
+    tags,
+    featured,
+    alternatives,
+    bestFor,
+    notFor,
+  } = body;
 
   if (!url || !isValidUrl(url)) {
     return NextResponse.json(
@@ -107,6 +147,73 @@ export async function POST(request: NextRequest) {
 
   const resolvedSlug =
     slug && /^[a-z0-9-]+$/.test(slug) ? slug : slugify(title);
+  const normalizedIncomingUrl = normalizeComparableUrl(url);
+
+  const existingDuplicate = await sanityClient.fetch<{
+    _id: string;
+    title: string;
+    slug: string;
+    url: string;
+  } | null>(
+    `*[_type == "resource" && (slug == $slug || lower(title) == $title || lower(url) == $url)][0]{
+      _id,
+      title,
+      slug,
+      "url": coalesce(url, "")
+    }`,
+    {
+      slug: resolvedSlug,
+      title: title.trim().toLowerCase(),
+      url: normalizedIncomingUrl,
+    }
+  );
+  if (existingDuplicate) {
+    return NextResponse.json(
+      {
+        error: "Resource collision: title, slug, or URL already exists.",
+        conflict: {
+          id: existingDuplicate._id,
+          title: existingDuplicate.title,
+          slug: existingDuplicate.slug,
+          url: existingDuplicate.url,
+        },
+      },
+      { status: 409 }
+    );
+  }
+
+  const keywordCollision = detectKeywordCollision(title.trim(), resolvedSlug);
+  if (keywordCollision) {
+    return NextResponse.json(
+      {
+        error:
+          "Resource blocked due to canonical keyword collision. Pick a more specific title or align with the mapped canonical URL.",
+        collision: keywordCollision,
+      },
+      { status: 409 }
+    );
+  }
+
+  const bestForClean = sanitizeStringArray(bestFor, 12);
+  const notForClean = sanitizeStringArray(notFor, 12);
+  const alternativeSlugs = sanitizeStringArray(alternatives, 20)
+    .filter((candidate) => /^[a-z0-9-]+$/.test(candidate))
+    .filter((candidate) => candidate !== resolvedSlug);
+
+  let alternativeRefs: Array<{ _type: "reference"; _ref: string }> = [];
+  if (alternativeSlugs.length > 0) {
+    const existingAlternatives = await sanityClient.fetch<Array<{ _id: string; slug: string }>>(
+      `*[_type == "resource" && slug in $slugs]{ _id, slug }`,
+      { slugs: alternativeSlugs }
+    );
+    const idsBySlug = new Map(
+      (existingAlternatives ?? []).map((item) => [item.slug, item._id])
+    );
+    alternativeRefs = alternativeSlugs
+      .map((candidate) => idsBySlug.get(candidate))
+      .filter((id): id is string => Boolean(id))
+      .map((id) => ({ _type: "reference", _ref: id }));
+  }
 
   const doc = {
     _type: "resource",
@@ -116,6 +223,19 @@ export async function POST(request: NextRequest) {
     description: description.trim(),
     category,
     tags: Array.isArray(tags) ? tags.filter((t) => typeof t === "string") : [],
+    ...(alternativeRefs.length > 0 ? { alternatives: alternativeRefs } : {}),
+    ...(bestForClean.length > 0 ? { bestFor: bestForClean } : {}),
+    ...(notForClean.length > 0 ? { notFor: notForClean } : {}),
+    contentTier: "tier3",
+    refreshCadenceDays: 90,
+    factCheckStatus: "needs-review",
+    changeLog: [
+      {
+        _key: randomUUID(),
+        summary: "Initial publish via /api/resources.",
+        changedAt: new Date().toISOString(),
+      },
+    ],
     featured: Boolean(featured),
     createdAt: new Date().toISOString(),
   };
@@ -130,11 +250,26 @@ export async function POST(request: NextRequest) {
       },
     ]);
     const publishedId = created._id.replace(/^drafts\./, "");
+    const publishedUrl = `${BASE_URL}/${resolvedSlug}`;
+
+    const indexNowResult = await submitIndexNowUrls(
+      [publishedUrl, `${BASE_URL}/collections`, `${BASE_URL}/category/${category}`],
+      { timeoutMs: 6000 }
+    );
+    if (!indexNowResult.ok) {
+      console.warn("IndexNow submit failed:", indexNowResult.message);
+    }
+
     return NextResponse.json({
       ok: true,
       id: publishedId,
       slug: resolvedSlug,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz"}/${resolvedSlug}`,
+      url: publishedUrl,
+      indexNow: {
+        ok: indexNowResult.ok,
+        status: indexNowResult.status,
+        message: indexNowResult.message,
+      },
     });
   } catch (err) {
     console.error("Sanity create failed:", err);

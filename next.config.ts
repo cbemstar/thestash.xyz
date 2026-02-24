@@ -5,6 +5,16 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["radix-ui", "@radix-ui/react-icons"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "header", key: "host", value: "thestash.xyz" }],
+        destination: "https://www.thestash.xyz/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [{ source: "/ads.txt", destination: "/api/ads-txt" }];
   },
@@ -19,6 +29,26 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "survey.stackoverflow.co",
+        pathname: "/2025/charts/**",
+      },
+      {
+        protocol: "https",
+        hostname: "github.blog",
+        pathname: "/wp-content/uploads/**",
+      },
+      {
+        protocol: "https",
+        hostname: "dora.dev",
+        pathname: "/research/**",
+      },
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+        pathname: "/gweb-uniblog-publish-prod/images/**",
       },
     ],
   },

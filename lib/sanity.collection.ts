@@ -3,6 +3,7 @@ import {
   allCollectionsQuery,
   collectionBySlugQuery,
   collectionsContainingResourceQuery,
+  totalCollectionCountQuery,
 } from "@/lib/sanity.queries";
 import { getCollectionSlug } from "@/lib/slug";
 import type { Collection } from "@/types/collection";
@@ -30,6 +31,12 @@ export async function getAllCollectionSlugs(): Promise<string[]> {
   const collections = await sanityClient.fetch<Collection[]>(allCollectionsQuery);
   if (!collections?.length) return [];
   return collections.map((c) => getCollectionSlug(c));
+}
+
+/** Total number of collections (for footer stats). */
+export async function getCollectionCount(): Promise<number> {
+  if (!isSanityConfigured()) return 0;
+  return (await sanityClient.fetch<number>(totalCollectionCountQuery)) ?? 0;
 }
 
 export type CollectionRef = { _id: string; title: string; slug?: string };

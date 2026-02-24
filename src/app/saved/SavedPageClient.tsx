@@ -7,6 +7,7 @@ import { AppNav } from "@/components/AppNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ResourceGrid } from "@/components/ResourceGrid";
 import { useSavedResources } from "@/hooks/useSavedResources";
+import { useVoteBatch } from "@/hooks/useVoteBatch";
 import { getResourceSlug } from "@/lib/slug";
 import type { Resource } from "@/types/resource";
 
@@ -17,6 +18,11 @@ interface SavedPageClientProps {
 export function SavedPageClient({ resources }: SavedPageClientProps) {
   const router = useRouter();
   const { savedSlugs, isSaved, toggleSaved } = useSavedResources();
+
+  const voteSlugs = savedSlugs.slice(0, 100);
+  const { voteFor, setUpvote, setDownvote, upvotes, downvotes } = useVoteBatch(voteSlugs);
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thestash.xyz";
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -79,9 +85,16 @@ export function SavedPageClient({ resources }: SavedPageClientProps) {
             </h2>
             <ResourceGrid
               resources={savedResources}
-              initialCount={savedResources.length}
+              pageSize={Math.max(savedResources.length, 18)}
+              showPageSizeSelector={false}
               isSaved={isSaved}
               onSaveToggle={toggleSaved}
+              voteFor={voteFor}
+              onUpvote={setUpvote}
+              onDownvote={setDownvote}
+              upvotes={upvotes}
+              downvotes={downvotes}
+              baseUrl={baseUrl}
               onTagClick={handleTagClick}
               onCategoryClick={handleCategoryClick}
             />

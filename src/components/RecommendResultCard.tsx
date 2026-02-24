@@ -9,7 +9,6 @@ import { getPricingLabel, getAdoptionLabel } from "@/lib/recommender";
 import { truncateAtWordBoundary } from "@/lib/utils";
 import { Pill } from "./kibo-ui/pill";
 import { SaveButton } from "./SaveButton";
-import type { Resource } from "@/types/resource";
 import type { ScoredResource } from "@/lib/recommender";
 
 interface RecommendResultCardProps {
@@ -31,7 +30,7 @@ export function RecommendResultCard({ scored, isSaved, onSaveToggle }: Recommend
   const { resource, reasons } = scored;
   const slug = getResourceSlug(resource);
   const iconSource = resource.icon?.asset?._ref
-    ? urlFor(resource.icon).width(80).height(80).url()
+    ? urlFor(resource.icon).width(160).height(160).url()
     : faviconForUrl(resource.url);
   const shortDescription = truncateAtWordBoundary(resource.description, 100);
   const blurb = resource.recommenderBlurb?.trim();
@@ -73,8 +72,12 @@ export function RecommendResultCard({ scored, isSaved, onSaveToggle }: Recommend
             {resource.title}
           </h2>
           {/* Category and metadata on next line, left-aligned */}
-          <div className="mt-1.5 flex flex-wrap items-center gap-2">
-            <Pill variant="secondary" className="text-xs font-medium uppercase tracking-wider">
+          <div className="mt-1.5 flex min-w-0 flex-wrap items-center gap-2">
+            <Pill
+              variant="secondary"
+              className="max-w-full shrink truncate text-xs font-medium uppercase tracking-wider"
+              title={getCategoryLabel(resource.category)}
+            >
               {getCategoryLabel(resource.category)}
             </Pill>
             {pricingLabel && (

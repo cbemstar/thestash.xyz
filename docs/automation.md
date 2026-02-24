@@ -29,6 +29,9 @@ You can add resources to The Stash automatically from n8n, Make, clawd.bot, or a
 | `slug`       | string   | No       | URL path (e.g. `figma`). Auto-generated from title if omitted. |
 | `tags`       | string[] | No       | e.g. `["ai", "api"]` |
 | `featured`   | boolean  | No       | Default `false` |
+| `alternatives` | string[] | No     | Resource slugs to reference as alternatives (e.g. `["cursor","windsurf"]`). |
+| `bestFor`    | string[] | No       | Bullets for who should choose the tool. |
+| `notFor`     | string[] | No       | Bullets for who should avoid the tool. |
 
 **Example:**
 
@@ -40,6 +43,9 @@ You can add resources to The Stash automatically from n8n, Make, clawd.bot, or a
   "category": "design-tools",
   "slug": "figma",
   "tags": ["design", "prototyping"],
+  "alternatives": ["framer", "webflow"],
+  "bestFor": ["Product design teams", "Design systems"],
+  "notFor": ["Offline-only workflows"],
   "featured": false
 }
 ```
@@ -88,3 +94,22 @@ Using the same API and optional `WEBHOOK_SECRET` keeps the flow secure and consi
 - Each resource has its own page with `generateMetadata` (title, description, Open Graph, Twitter, canonical).
 - JSON-LD `SoftwareApplication` is output on the resource page for rich results.
 - For “AI-optimized” content, the enrichment step (AI node) should produce a clear, factual description and consistent category/tags so the listing is useful for both users and crawlers.
+
+## Agent playbooks (automation pipeline)
+
+For the internal multi-agent pipeline that mirrors manual deep research + authority writing style, see:
+
+- `docs/agent-research-and-writing-playbooks.md`
+
+## Real-time monitoring and stop control
+
+- Live stream (CLI): `npm run agent:watch`
+- Filter stream: `npm run agent:watch -- --agent=research --status=running`
+- Request graceful stop for running agents/pipelines:
+  `npm run agent:stop -- "manual QA hold"`
+- Clear stop request:
+  `npm run agent:resume`
+
+When using the dashboard (`/agents-dashboard`):
+- Open the **Live events** tab to watch each agent action in real time.
+- Use **Request stop** to halt running agents at the next checkpoint.

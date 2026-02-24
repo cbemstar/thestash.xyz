@@ -11,7 +11,7 @@ import {
 } from "@/lib/resume-data";
 import type { Metadata } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
+import { BASE_URL } from "@/lib/site-url";
 
 const RESUME_URL = process.env.NEXT_PUBLIC_RESUME_URL ?? "/karan-kumar-resume.pdf";
 

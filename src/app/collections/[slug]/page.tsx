@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_URL } from "@/lib/site-url";
 import { getCollectionBySlug, getAllCollectionSlugs, getAllCollections } from "@/lib/sanity.collection";
+import { sanityClient, isSanityConfigured } from "@/lib/sanity.client";
+import { resourceCountsByCategoryQuery } from "@/lib/sanity.queries";
+import { COLLECTION_SLUG_TO_CATEGORY } from "@/lib/collections-seo";
 import { urlFor } from "@/lib/sanity.image";
 import { getResourceSlug, getCollectionSlug } from "@/lib/slug";
 import { getCollectionCoverImageUrl } from "@/lib/collection-images";
@@ -11,8 +15,6 @@ import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 import { ResourceGrid } from "@/components/ResourceGrid";
 import type { Collection } from "@/types/collection";
 import type { Metadata } from "next";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thestash.xyz";
 
 function CollectionItemListJsonLd({
   collection,
@@ -71,13 +73,25 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const collection = await getCollectionBySlug(slug);
+  const [collection, categoryCounts] = await Promise.all([
+    getCollectionBySlug(slug),
+    isSanityConfigured()
+      ? (sanityClient.fetch<Record<string, number>>(
+          resourceCountsByCategoryQuery
+        ) ?? ({} as Record<string, number>))
+      : ({} as Record<string, number>),
+  ]);
   if (!collection) return { title: "Not found" };
 
   const title = `${collection.title} | Collections | The Stash`;
+  const category = COLLECTION_SLUG_TO_CATEGORY[slug];
+  const resourceCount =
+    category && categoryCounts[category] != null
+      ? categoryCounts[category]!
+      : collection.resourceCount ?? collection.resources?.length ?? 0;
   const description =
     collection.description ||
-    `Curated list: ${collection.title}. ${collection.resources?.length ?? 0} resources.`;
+    `Curated list: ${collection.title}. ${resourceCount} resources.`;
   const canonical = `${BASE_URL}/collections/${slug}`;
   const ogImageUrl = `${BASE_URL}/api/og?${new URLSearchParams({
     title: collection.title,
@@ -107,13 +121,23 @@ export default async function CollectionPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const [collection, allCollections] = await Promise.all([
+  const [collection, allCollections, categoryCounts] = await Promise.all([
     getCollectionBySlug(slug),
     getAllCollections(),
+    isSanityConfigured()
+      ? (sanityClient.fetch<Record<string, number>>(
+          resourceCountsByCategoryQuery
+        ) ?? ({} as Record<string, number>))
+      : ({} as Record<string, number>),
   ]);
   if (!collection) notFound();
 
   const resources = collection.resources ?? [];
+  const category = COLLECTION_SLUG_TO_CATEGORY[slug];
+  const resourceCount =
+    category && categoryCounts[category] != null
+      ? categoryCounts[category]!
+      : collection.resourceCount ?? resources.length;
   const moreCollections = (allCollections ?? [])
     .filter((c) => getCollectionSlug(c) !== slug)
     .slice(0, 3);
@@ -167,7 +191,7 @@ export default async function CollectionPage({
               {collection.description}
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              {resources.length} resource{resources.length !== 1 ? "s" : ""}
+              {resourceCount} resource{resourceCount !== 1 ? "s" : ""}
               {" · "}
               <Link href="/" className="text-foreground underline underline-offset-2 hover:text-primary transition-colors drop-shadow-sm">
                 All resources
@@ -195,7 +219,11 @@ export default async function CollectionPage({
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {moreCollections.map((c) => {
                 const cSlug = getCollectionSlug(c);
-                const count = c.resources?.length ?? 0;
+                const cCategory = COLLECTION_SLUG_TO_CATEGORY[cSlug];
+                const count =
+                  cCategory && categoryCounts[cCategory] != null
+                    ? categoryCounts[cCategory]!
+                    : c.resourceCount ?? c.resources?.length ?? 0;
                 const moreCoverUrl = c.coverImage?.asset?._ref
                   ? urlFor(c.coverImage).width(400).height(200).url()
                   : getCollectionCoverImageUrl(cSlug);

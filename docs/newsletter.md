@@ -7,6 +7,17 @@ The site’s “Get updates” form posts to `/api/subscribe`, which adds the co
 - `POST /api/subscribe` sends the email to Loops: it calls **Create contact** (`POST /v1/contacts/create`) first so the “Contact added” trigger fires (welcome email). If the contact already exists (409), it falls back to **Update contact** (`PUT /v1/contacts/update`).
 - Set `LOOPS_API_KEY` in your env (get it in [Loops → Settings](https://app.loops.so/settings)).
 - If your Loop uses **Contact added to list**, set `LOOPS_MAILING_LIST_ID` to that list ID (see Lists in the Loops dashboard); otherwise **Contact added** works without it.
+- `POST /api/subscribe` now requires a valid **Google reCAPTCHA v3** token (action: `newsletter_subscribe`) in production.
+
+Required env for captcha:
+
+- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`
+- `RECAPTCHA_SECRET_KEY`
+
+Optional hardening:
+
+- `RECAPTCHA_MIN_SCORE` (default `0.7`)
+- `RECAPTCHA_ALLOWED_HOSTNAMES` (comma-separated, e.g. `www.thestash.xyz,thestash.xyz`)
 
 ## 2. Send the confirmation email (do this in Loops)
 

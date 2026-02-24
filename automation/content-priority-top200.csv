@@ -1,0 +1,201 @@
+rank,contentTier,title,category,url,totalScore,searchDemandScore,businessRelevanceScore,decisionPotentialScore,freshnessVolatilityScore
+1,tier1,Raydian,ai-tools,https://raydian.dev,71,21,25,10,15
+2,tier1,Hubspot Webflow App,development-tools,https://webflow.com/apps/detail/hubspot,69,25,24,7,13
+3,tier1,ChatArena,ai-tools,https://chatarena.ai,67,21,25,6,15
+4,tier1,Context7,ai-tools,https://context7.com,67,18,25,9,15
+5,tier1,Octoparse,ai-tools,https://www.octoparse.com,67,18,25,9,15
+6,tier1,Conductor,ai-tools,https://www.conductor.build,66,14,25,12,15
+7,tier1,Everything Claude Code Plugin,ai-tools,https://github.com/affaan-m/everything-claude-code,66,17,25,9,15
+8,tier1,find-skills skill,ai-tools,https://www.nocodesupply.co/item/find-skills-skill,66,17,25,9,15
+9,tier1,Finsweet Extension Webflow App,development-tools,https://webflow.com/apps/detail/finsweet-extension,66,25,24,4,13
+10,tier1,Miriad,ai-tools,https://miriad.systems,66,14,25,12,15
+11,tier1,rams,ai-tools,https://www.rams.ai,66,17,25,9,15
+12,tier1,Workway,ai-tools,https://workway.co,66,14,25,12,15
+13,tier1,Streamlit,ai-tools,https://streamlit.io,65,21,25,4,15
+14,tier1,Ballpark,ai-tools,https://www.ballpark.ing,64,10,25,14,15
+15,tier1,The Agent Skills Directory,ai-tools,https://skills.sh/trending,64,17,25,7,15
+16,tier1,Claude Code Skills Hub,ai-tools,https://claudecodeplugins.io,63,14,25,9,15
+17,tier1,Composio,ai-tools,https://composio.dev,63,14,25,9,15
+18,tier1,Letta,ai-tools,https://www.letta.com,63,14,25,9,15
+19,tier1,Ralph Wiggum,ai-tools,https://ralph-wiggum.ai,63,14,25,9,15
+20,tier1,UI Skills,ai-tools,https://www.ui-skills.com,63,14,25,9,15
+21,tier1,Webflow VS Code Extension,webflow,https://github.com/Webflow-Examples/webflow-vscode-extension,63,28,18,7,10
+22,tier1,divs Webflow component library,design-tools,https://divs.idreezus.com,62,25,22,4,11
+23,tier1,Fly,development-tools,https://fly.io,62,21,24,4,13
+24,tier1,Gemini,ai-tools,https://ai.google.dev,62,18,25,4,15
+25,tier1,Give Claude Code an external monitor,ai-tools,https://github.com/dvdsgl/claude-canvas,62,13,25,9,15
+26,tier1,Hubspot Webflow App,shadcn,https://webflow.com/apps/detail/hubspot,62,25,19,7,11
+27,tier1,Hubspot Webflow App,coding,https://webflow.com/apps/detail/hubspot,62,25,20,7,10
+28,tier1,Hubspot Webflow App,github,https://webflow.com/apps/detail/hubspot,62,25,20,7,10
+29,tier1,LangChain,ai-tools,https://www.langchain.com,62,18,25,4,15
+30,tier1,LM Studio,ai-tools,https://lmstudio.ai,62,18,25,4,15
+31,tier1,MagicPath,ai-tools,https://www.magicpath.ai,62,18,25,4,15
+32,tier1,Note API Connector,development-tools,https://noteapiconnector.com,62,17,24,7,14
+33,tier1,React Email,development-tools,https://react.email,62,17,24,7,14
+34,tier1,VS Code,ai-tools,https://code.visualstudio.com,62,18,25,4,15
+35,tier1,Bubble,ai-tools,https://bubble.io,61,17,25,4,15
+36,tier1,Cline,ai-tools,https://cline.bot,61,17,25,4,15
+37,tier1,ConsoleX,ai-tools,https://consolex.ai,61,10,25,11,15
+38,tier1,Hubspot Webflow App,productivity,https://webflow.com/apps/detail/hubspot,61,25,20,7,9
+39,tier1,Hubspot Webflow App,javascript,https://webflow.com/apps/detail/hubspot,61,25,19,7,10
+40,tier1,LangFuse,ai-tools,https://langfuse.com,61,14,25,7,15
+41,tier1,Ledger Brandbook,ai-tools,https://brand.ledger.com,61,17,25,4,15
+42,tier1,Lovable,ai-tools,https://lovable.dev,61,17,25,4,15
+43,tier1,Pablo,ai-tools,https://pablo.design,61,14,25,7,15
+44,tier1,Walrus,ai-tools,https://www.walrus.xyz,61,17,25,4,15
+45,tier1,BlogSync,ai-tools,https://blogsync.io,60,10,25,10,15
+46,tier1,Hubspot Webflow App,webflow,https://webflow.com/apps/detail/hubspot,60,25,18,7,10
+47,tier1,Playwright,development-tools,https://playwright.dev,60,14,24,9,13
+48,tier1,Temporal,development-tools,https://temporal.io,60,14,24,9,13
+49,tier1,Webflow AI Translator App,webflow,https://github.com/Webflow-Examples/webflow-ai-translator-app,60,22,18,9,11
+50,tier1,Webflow Calendar App,webflow,https://github.com/Webflow-Examples/webflow-calendar-app,60,25,18,7,10
+51,tier2,Finsweet Extension Webflow App,shadcn,https://webflow.com/apps/detail/finsweet-extension,59,25,19,4,11
+52,tier2,Finsweet Extension Webflow App,coding,https://webflow.com/apps/detail/finsweet-extension,59,25,20,4,10
+53,tier2,Finsweet Extension Webflow App,github,https://webflow.com/apps/detail/finsweet-extension,59,25,20,4,10
+54,tier2,Happy Hues,design-tools,https://www.happyhues.co,59,22,22,4,11
+55,tier2,Hubspot Webflow App,languages,https://webflow.com/apps/detail/hubspot,59,25,18,7,9
+56,tier2,in progress works,ai-tools,https://www.inprogress.works,59,10,25,9,15
+57,tier2,textarea.my,ai-tools,https://github.com/antonmedv/textarea,59,10,25,9,15
+58,tier2,VS Code,development-tools,https://code.visualstudio.com,59,18,24,4,13
+59,tier2,Anthropic Claude API,ai-tools,https://docs.anthropic.com,58,14,25,4,15
+60,tier2,Bolt,ai-tools,https://bolt.new,58,14,25,4,15
+61,tier2,Chainlit,ai-tools,https://chainlit.io,58,14,25,4,15
+62,tier2,Codrops Creative Hub,development-tools,https://tympanus.net/codrops/hub,58,17,24,4,13
+63,tier2,Cody,ai-tools,https://sourcegraph.com/cody,58,14,25,4,15
+64,tier2,CookieFlow,development-tools,https://www.reform.digital/tools/cookieflow,58,17,24,4,13
+65,tier2,Devin,ai-tools,https://devin.ai,58,14,25,4,15
+66,tier2,Finsweet Extension Webflow App,productivity,https://webflow.com/apps/detail/finsweet-extension,58,25,20,4,9
+67,tier2,Finsweet Extension Webflow App,javascript,https://webflow.com/apps/detail/finsweet-extension,58,25,19,4,10
+68,tier2,GoCodeo,ai-tools,https://www.gocodeo.com,58,14,25,4,15
+69,tier2,Hugging Face,ai-tools,https://huggingface.co,58,14,25,4,15
+70,tier2,LlamaIndex,ai-tools,https://www.llamaindex.ai,58,14,25,4,15
+71,tier2,Next.js,ai-tools,https://nextjs.org,58,14,25,4,15
+72,tier2,OpenAI API,ai-tools,https://platform.openai.com/docs,58,14,25,4,15
+73,tier2,Puck,development-tools,https://puckeditor.com,58,17,24,4,13
+74,tier2,Vercel,ai-tools,https://vercel.com,58,14,25,4,15
+75,tier2,Vercel AI SDK,ai-tools,https://sdk.vercel.ai,58,14,25,4,15
+76,tier2,Vercel AI SDK RSC,ai-tools,https://sdk.vercel.ai/docs/ai-sdk-ui/overview,58,14,25,4,15
+77,tier2,Can I use,ai-tools,https://caniuse.com,57,10,25,7,15
+78,tier2,divs Webflow component library,webflow,https://divs.idreezus.com,57,25,18,4,10
+79,tier2,Efecto,ai-tools,https://efecto.app,57,10,25,7,15
+80,tier2,GitHub,ai-tools,https://github.com,57,10,25,7,15
+81,tier2,Lighthouse CI,development-tools,https://github.com/GoogleChrome/lighthouse-ci,57,14,24,6,13
+82,tier2,Mocku,ai-tools,https://mocku.co,57,10,25,7,15
+83,tier2,Netlify,ai-tools,https://www.netlify.com,57,10,25,7,15
+84,tier2,Open WebUI,ai-tools,https://openwebui.com,57,10,25,7,15
+85,tier2,Pencil,ai-tools,https://pencil.dev,57,10,25,7,15
+86,tier2,Regexer,ai-tools,https://regexer.dev,57,13,25,4,15
+87,tier2,Reve,ai-tools,https://app.reve.com,57,10,25,7,15
+88,tier2,Supabase,ai-tools,https://supabase.com,57,10,25,7,15
+89,tier2,Vizcom,ai-tools,https://www.vizcom.ai,57,10,25,7,15
+90,tier2,Weavy,ai-tools,https://www.weavy.ai,57,10,25,7,15
+91,tier2,Webflow App UI Kit 2.0,webflow,https://developers.webflow.com/code-sdks/ui-kit,57,25,18,4,10
+92,tier2,Webflow Create App,webflow,https://github.com/Webflow-Examples/webflow-create-app,57,25,18,4,10
+93,tier2,webflow-app-hot-reload,webflow,https://www.npmjs.com/package/@xatom/wf-app-hot-reload,57,25,18,4,10
+94,tier2,Finsweet Extension Webflow App,languages,https://webflow.com/apps/detail/finsweet-extension,56,25,18,4,9
+95,tier2,Msty,ai-tools,https://msty.app,56,10,25,6,15
+96,tier2,Puppeteer,development-tools,https://pptr.dev,56,10,24,9,13
+97,tier2,Scribe,design-tools,https://scribehow.com,56,17,22,6,11
+98,tier2,Sweep,ai-tools,https://sweep.dev,56,10,25,6,15
+99,tier2,Deno,development-tools,https://deno.com,55,14,24,4,13
+100,tier2,Directus,development-tools,https://directus.io,55,14,24,4,13
+101,tier2,divs Webflow component library,ui-ux-resources,https://divs.idreezus.com,55,25,18,4,8
+102,tier2,Docker,development-tools,https://www.docker.com,55,14,24,4,13
+103,tier2,Fly,shadcn,https://fly.io,55,21,19,4,11
+104,tier2,Fly,coding,https://fly.io,55,21,20,4,10
+105,tier2,Fly,github,https://fly.io,55,21,20,4,10
+106,tier2,Httpie,development-tools,https://httpie.io,55,14,24,4,13
+107,tier2,Hubspot Webflow App,learning-resources,https://webflow.com/apps/detail/hubspot,55,25,16,7,7
+108,tier2,Hugeicons Webflow App,design-tools,https://webflow.com/apps/detail/hugeicons,55,18,22,4,11
+109,tier2,K6,development-tools,https://k6.io,55,14,24,4,13
+110,tier2,Lighthouse,development-tools,https://developer.chrome.com/docs/lighthouse,55,14,24,4,13
+111,tier2,LogRocket,development-tools,https://logrocket.com,55,14,24,4,13
+112,tier2,Next.js,development-tools,https://nextjs.org,55,14,24,4,13
+113,tier2,Note API Connector,shadcn,https://noteapiconnector.com,55,17,19,7,12
+114,tier2,Note API Connector,coding,https://noteapiconnector.com,55,17,20,7,11
+115,tier2,Note API Connector,github,https://noteapiconnector.com,55,17,20,7,11
+116,tier2,Payload CMS,development-tools,https://payloadcms.com,55,14,24,4,13
+117,tier2,Photopea,design-tools,https://www.photopea.com,55,18,22,4,11
+118,tier2,React Email,shadcn,https://react.email,55,17,19,7,12
+119,tier2,React Email,coding,https://react.email,55,17,20,7,11
+120,tier2,React Email,github,https://react.email,55,17,20,7,11
+121,tier2,Resend,development-tools,https://resend.com,55,14,24,4,13
+122,tier2,Sentry,development-tools,https://sentry.io,55,14,24,4,13
+123,tier2,Vercel,development-tools,https://vercel.com,55,14,24,4,13
+124,tier2,WebAIM,design-tools,https://webaim.org,55,17,22,4,12
+125,tier2,Webflow Designer API,webflow,https://developers.webflow.com/designer/reference,55,14,18,12,11
+126,tier2,Aider,ai-tools,https://aider.dev,54,10,25,4,15
+127,tier2,Amazon Q,ai-tools,https://aws.amazon.com/q,54,10,25,4,15
+128,tier2,Brainfish,ai-tools,https://www.brainfishai.com,54,10,25,4,15
+129,tier2,Can I use,development-tools,https://caniuse.com,54,10,24,7,13
+130,tier2,Claude,ai-tools,https://claude.ai,54,10,25,4,15
+131,tier2,Copilot Workspaces,ai-tools,https://githubnext.com/projects/copilot-workspace,54,10,25,4,15
+132,tier2,Cursor,ai-tools,https://www.cursor.com,54,10,25,4,15
+133,tier2,Design Systems Repo,design-tools,https://designsystemsrepo.com,54,17,22,4,11
+134,tier2,Flint,ai-tools,https://www.tryflint.com,54,10,25,4,15
+135,tier2,Fly,productivity,https://fly.io,54,21,20,4,9
+136,tier2,Fly,javascript,https://fly.io,54,21,19,4,10
+137,tier2,Galileo AI,ai-tools,https://www.usegalileo.ai,54,10,25,4,15
+138,tier2,GitHub,development-tools,https://github.com,54,10,24,7,13
+139,tier2,GitHub Copilot,ai-tools,https://github.com/features/copilot,54,10,25,4,15
+140,tier2,Goodfire AI,ai-tools,https://www.goodfire.ai,54,10,25,4,15
+141,tier2,Google Colab,ai-tools,https://colab.research.google.com,54,10,25,4,15
+142,tier2,GPT4All,ai-tools,https://www.nomic.ai/gpt4all,54,10,25,4,15
+143,tier2,Groq,ai-tools,https://groq.com,54,10,25,4,15
+144,tier2,Happy Hues,webflow,https://www.happyhues.co,54,22,18,4,10
+145,tier2,Hygraph,development-tools,https://hygraph.com,54,10,24,7,13
+146,tier2,Linear,ai-tools,https://linear.app,54,10,25,4,15
+147,tier2,Literal AI,ai-tools,https://literalai.com,54,10,25,4,15
+148,tier2,Lunacy,design-tools,https://icons8.com/lunacy,54,14,22,7,11
+149,tier2,Muse,ai-tools,https://www.musesoftware.ai,54,10,25,4,15
+150,tier2,Netlify,development-tools,https://www.netlify.com,54,10,24,7,13
+151,tier2,Nielsen Norman Group,design-tools,https://www.nngroup.com,54,17,22,4,11
+152,tier2,Note API Connector,productivity,https://noteapiconnector.com,54,17,20,7,10
+153,tier2,Note API Connector,javascript,https://noteapiconnector.com,54,17,19,7,11
+154,tier2,npm,ai-tools,https://www.npmjs.com,54,10,25,4,15
+155,tier2,Ollama,ai-tools,https://ollama.com,54,10,25,4,15
+156,tier2,OpenAI Whisper,ai-tools,https://openai.com/research/whisper,54,10,25,4,15
+157,tier2,Postman,ai-tools,https://www.postman.com,54,10,25,4,15
+158,tier2,Prisma,development-tools,https://www.prisma.io,54,10,24,7,13
+159,tier2,Programming Helper,ai-tools,https://www.programming-helper.com,54,10,25,4,15
+160,tier2,React Email,productivity,https://react.email,54,17,20,7,10
+161,tier2,React Email,javascript,https://react.email,54,17,19,7,11
+162,tier2,Replicate,ai-tools,https://replicate.com,54,10,25,4,15
+163,tier2,Replit Agent,ai-tools,https://replit.com/ai,54,10,25,4,15
+164,tier2,SafetyKit,ai-tools,https://www.safetykit.com,54,10,25,4,15
+165,tier2,Sanity AI,ai-tools,https://www.sanity.io,54,10,25,4,15
+166,tier2,SF Symbols,design-tools,https://developer.apple.com/sf-symbols,54,17,22,4,11
+167,tier2,shadcn/ui,ai-tools,https://ui.shadcn.com,54,10,25,4,15
+168,tier2,Skarlo,ai-tools,https://skarlo.co,54,10,25,4,15
+169,tier2,Slack,productivity,https://slack.com,54,14,20,11,9
+170,tier2,Solidroad,ai-tools,https://www.solidroad.com,54,10,25,4,15
+171,tier2,Supabase,development-tools,https://supabase.com,54,10,24,7,13
+172,tier2,Superplan,ai-tools,https://www.superplan.ai,54,10,25,4,15
+173,tier2,Tabnine,ai-tools,https://www.tabnine.com,54,10,25,4,15
+174,tier2,Tailwind CSS,ai-tools,https://tailwindcss.com,54,10,25,4,15
+175,tier2,Together AI,ai-tools,https://www.together.ai,54,10,25,4,15
+176,tier2,TypeScript,ai-tools,https://www.typescriptlang.org,54,10,25,4,15
+177,tier2,v0,ai-tools,https://v0.dev,54,10,25,4,15
+178,tier2,Vite,ai-tools,https://vitejs.dev,54,10,25,4,15
+179,tier2,Webflow App Monorepo,webflow,https://github.com/Webflow-Examples/webflow-app-monorepo,54,22,18,4,10
+180,tier2,Whisper.cpp,ai-tools,https://github.com/ggerganov/whisper.cpp,54,10,25,4,15
+181,tier2,Windsurf,ai-tools,https://codeium.com/windsurf,54,10,25,4,15
+182,tier2,You.com,ai-tools,https://you.com,54,10,25,4,15
+183,tier2,Hubspot Webflow App,html,https://webflow.com/apps/detail/hubspot,53,25,15,7,6
+184,tier2,Playwright,shadcn,https://playwright.dev,53,14,19,9,11
+185,tier2,Playwright,coding,https://playwright.dev,53,14,20,9,10
+186,tier2,Playwright,github,https://playwright.dev,53,14,20,9,10
+187,tier2,Temporal,coding,https://temporal.io,53,14,20,9,10
+188,tier2,Temporal,github,https://temporal.io,53,14,20,9,10
+189,tier2,Figma Plugins,design-tools,https://www.figma.com/community/plugins,52,10,22,9,11
+190,tier2,Finsweet Extension Webflow App,learning-resources,https://webflow.com/apps/detail/finsweet-extension,52,25,16,4,7
+191,tier2,Fly,languages,https://fly.io,52,21,18,4,9
+192,tier2,Happy Hues,ui-ux-resources,https://www.happyhues.co,52,22,18,4,8
+193,tier2,JetBrains Mono,design-tools,https://www.jetbrains.com/lp/mono,52,14,22,4,12
+194,tier2,Note API Connector,languages,https://noteapiconnector.com,52,17,18,7,10
+195,tier2,Playwright,productivity,https://playwright.dev,52,14,20,9,9
+196,tier2,Playwright,javascript,https://playwright.dev,52,14,19,9,10
+197,tier2,React Email,languages,https://react.email,52,17,18,7,10
+198,tier2,Realtime Colors,design-tools,https://realtimecolors.com,52,10,22,9,11
+199,tier2,Strapi,development-tools,https://strapi.io,52,10,24,4,14
+200,tier2,Tailwind CSS,development-tools,https://tailwindcss.com,52,10,24,4,14

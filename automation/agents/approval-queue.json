@@ -1,0 +1,2961 @@
+[
+  {
+    "queueId": "47221424-5c90-47e4-9173-b25676243e00",
+    "type": "resource",
+    "data": {
+      "url": "https://github.com/vignesh07/babyshark",
+      "title": "babyshark",
+      "slug": "babyshark",
+      "description": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark",
+      "category": "development-tools",
+      "tags": [
+        "development-tools",
+        "design"
+      ],
+      "bestFor": [
+        "Developers shipping production code",
+        "Teams standardizing tooling across projects"
+      ],
+      "notFor": [
+        "Non-technical users with no engineering support"
+      ],
+      "alternatives": [],
+      "body": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "05cd47ee-0372-4223-afea-39b40312fe7a",
+          "label": "babyshark official site",
+          "url": "https://github.com/vignesh07/babyshark"
+        }
+      ],
+      "source": "Hacker News",
+      "sourceDomain": "github.com",
+      "image": "https://opengraph.githubassets.com/c518c87213a74ec540615f635bcef349be474bfb5c16e2b05cee1ea0605c1ae2/vignesh07/babyshark",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-24.1",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-24T07:32:53.115Z"
+      },
+      "lastReviewedAt": "2026-02-24T07:32:54.486Z",
+      "validatedAt": "2026-02-24T07:32:54.486Z"
+    },
+    "submittedAt": "2026-02-24T07:32:54.568Z",
+    "status": "approved",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-24T07:32:57.558Z"
+    },
+    "needsApproval": true,
+    "approvedAt": "2026-02-24T07:33:05.678Z"
+  },
+  {
+    "queueId": "6c97a20b-9f96-4d50-b9dd-3753b3825c2b",
+    "type": "blog",
+    "data": {
+      "_type": "article",
+      "title": "Best Productivity Tools for Teams (2026 Decision Guide)",
+      "slug": "best-productivity-tools-for-teams-2026-decision-guide-2",
+      "excerpt": "Productivity Tools shortlist with fact/inference/recommendation framing, explicit tradeoffs, and source-backed implementation guidance for 2026.",
+      "primaryKeyword": "productivity tools for teams",
+      "intentStage": "decision",
+      "contentTier": "tier1",
+      "body": [
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Quick answer (2026-02-24): which productivity tools options should teams shortlist now?"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Shortlist tools that show clear implementation signals, predictable maintenance burden, and explicit integration paths. Productivity tooling only works when it makes coordination clearer than the process it replaces. This guide is decision-first and optimized for high-intent evaluation workflows."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Quick verdict by scenario"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): No single productivity tools option consistently wins every workflow. Teams generally perform better with workflow-specific primary tools and one fallback path."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Choose Publer first when delivery teams with clear implementation ownership and measurable rollout goals."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Choose Braze first when delivery teams with clear implementation ownership and measurable rollout goals."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Choose ConvertKit first when delivery teams with clear implementation ownership and measurable rollout goals."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Choose Planable first when delivery teams with clear implementation ownership and measurable rollout goals."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Choose ActiveCampaign first when delivery teams with clear implementation ownership and measurable rollout goals."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: A primary-plus-fallback operating model usually reduces continuity risk when pricing, policy, or reliability conditions change."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Internal paths: "
+            },
+            {
+              "_type": "span",
+              "text": "/category/productivity",
+              "marks": [
+                "link-c592e486"
+              ]
+            },
+            {
+              "_type": "span",
+              "text": " | "
+            },
+            {
+              "_type": "span",
+              "text": "/latest",
+              "marks": [
+                "link-816daf8e"
+              ]
+            },
+            {
+              "_type": "span",
+              "text": " | "
+            },
+            {
+              "_type": "span",
+              "text": "/collections",
+              "marks": [
+                "link-d9ba86a8"
+              ]
+            },
+            {
+              "_type": "span",
+              "text": " | "
+            },
+            {
+              "_type": "span",
+              "text": "/compare",
+              "marks": [
+                "link-5a8c7ed4"
+              ]
+            },
+            {
+              "_type": "span",
+              "text": " | "
+            },
+            {
+              "_type": "span",
+              "text": "/alternatives",
+              "marks": [
+                "link-d4a34dd3"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-c592e486",
+              "href": "/category/productivity"
+            },
+            {
+              "_type": "link",
+              "_key": "link-816daf8e",
+              "href": "/latest"
+            },
+            {
+              "_type": "link",
+              "_key": "link-d9ba86a8",
+              "href": "/collections"
+            },
+            {
+              "_type": "link",
+              "_key": "link-5a8c7ed4",
+              "href": "/compare"
+            },
+            {
+              "_type": "link",
+              "_key": "link-d4a34dd3",
+              "href": "/alternatives"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Related guides: "
+            },
+            {
+              "_type": "span",
+              "text": "/collections",
+              "marks": [
+                "link-64885b71"
+              ]
+            },
+            {
+              "_type": "span",
+              "text": " | "
+            },
+            {
+              "_type": "span",
+              "text": "/compare",
+              "marks": [
+                "link-f71fe1aa"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-64885b71",
+              "href": "/collections"
+            },
+            {
+              "_type": "link",
+              "_key": "link-f71fe1aa",
+              "href": "/compare"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Authority brief and decision context"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Search intent is decision-stage evaluation for productivity tools with near-term implementation pressure."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Reader job-to-be-done: choose a tool that improves delivery speed without adding unbounded operational complexity."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Primary failure risk: selecting a tool on feature demos alone and discovering integration friction after rollout."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Topic coverage map for productivity tools"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Decision-stage content is most useful when it spans architecture, adoption, governance, economics, and execution risk rather than only feature snapshots."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration risk and rollout sequencing"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance and ownership model"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Cost visibility and procurement controls"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Migration and rollback planning"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Operational reliability and incident handling"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Training and adoption design"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Measurement model and KPI alignment"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Long-term maintainability"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Market evidence and visuals (2026-02-24)"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): The visuals below are sourced from first-party benchmark reports to anchor this productivity tools evaluation in external evidence, not opinion alone."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Stack Overflow - Developer Survey 2025 (AI)"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2025-07-29): Annual developer sentiment dataset covering AI adoption, trust, and workflow impact."
+            }
+          ]
+        },
+        {
+          "_type": "sourcedImage",
+          "_key": "833fb92f-9192-491d-8346-cc87b22f08a0",
+          "imageUrl": "https://survey.stackoverflow.co/2025/charts/stackoverflow-dev-survey-2025-ai-sentiment-and-usage-ai-select-social.png",
+          "alt": "Stack Overflow 2025 chart showing developer AI usage and sentiment distribution.",
+          "caption": "Stack Overflow benchmark visual used for editorial context.",
+          "sourceLabel": "Stack Overflow: Developer Survey 2025 (AI)",
+          "sourceUrl": "https://survey.stackoverflow.co/2025/ai",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "_type": "infographic",
+          "_key": "cd4a806a-ebe1-440d-bdb1-91e97a77eb3b",
+          "variant": "grid",
+          "title": "Stack Overflow key signals",
+          "stats": [
+            {
+              "label": "Developers using/planning AI",
+              "value": "84%",
+              "subtext": "Stack Overflow 2025"
+            },
+            {
+              "label": "Pros using AI daily",
+              "value": "51%",
+              "subtext": "Stack Overflow 2025"
+            },
+            {
+              "label": "Pros distrusting AI accuracy",
+              "value": "46%",
+              "subtext": "Stack Overflow 2025"
+            }
+          ],
+          "sourceLabel": "Stack Overflow report",
+          "sourceUrl": "https://survey.stackoverflow.co/2025/ai"
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "GitHub - Octoverse 2025"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2025-11-06): State-of-development report tracking developer growth and AI project adoption."
+            }
+          ]
+        },
+        {
+          "_type": "sourcedImage",
+          "_key": "542f67a6-4999-4215-8373-13fa3965d385",
+          "imageUrl": "https://github.blog/wp-content/uploads/2025/11/Octoverse-2025-top-metrics.png?resize=1024%2C576",
+          "alt": "GitHub Octoverse 2025 top metrics graphic.",
+          "caption": "GitHub benchmark visual used for editorial context.",
+          "sourceLabel": "GitHub: Octoverse 2025",
+          "sourceUrl": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "_type": "infographic",
+          "_key": "74304288-04b1-488e-b649-67724218dd9d",
+          "variant": "grid",
+          "title": "GitHub key signals",
+          "stats": [
+            {
+              "label": "Developers on GitHub",
+              "value": "180M+",
+              "subtext": "Global contributor base"
+            },
+            {
+              "label": "AI projects on GitHub",
+              "value": "4.3M",
+              "subtext": "Octoverse 2025"
+            },
+            {
+              "label": "New developer joins",
+              "value": "1/sec",
+              "subtext": "Throughout 2025"
+            }
+          ],
+          "sourceLabel": "GitHub report",
+          "sourceUrl": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/"
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Google Cloud / DORA - DORA Report 2025"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2025-01-01): Software delivery research on AI usage, platform engineering maturity, and delivery performance."
+            }
+          ]
+        },
+        {
+          "_type": "sourcedImage",
+          "_key": "586e10e1-91fb-4117-9453-1980249d9fdc",
+          "imageUrl": "https://dora.dev/research/shared/dora-report-2025/images/hero-mobile.png",
+          "alt": "DORA Report 2025 hero visual.",
+          "caption": "Google Cloud / DORA benchmark visual used for editorial context.",
+          "sourceLabel": "Google Cloud / DORA: DORA Report 2025",
+          "sourceUrl": "https://dora.dev/research/2025/dora-report/",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "_type": "infographic",
+          "_key": "1064e740-6e99-4c39-9304-1af37ff1849c",
+          "variant": "grid",
+          "title": "Google Cloud / DORA key signals",
+          "stats": [
+            {
+              "label": "Professionals using AI daily work",
+              "value": "90%",
+              "subtext": "DORA 2025"
+            },
+            {
+              "label": "Organizations with internal dev platform",
+              "value": "90%",
+              "subtext": "DORA 2025"
+            },
+            {
+              "label": "Organizations with platform team",
+              "value": "76%",
+              "subtext": "DORA 2025"
+            }
+          ],
+          "sourceLabel": "Google Cloud / DORA report",
+          "sourceUrl": "https://dora.dev/research/2025/dora-report/"
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Evaluation criteria used in this draft"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Implementation effort and migration risk"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration depth across existing stack"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Time-to-value for first production workflow"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance controls and auditability"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Long-term maintenance overhead and roadmap clarity"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Commercial risk (pricing volatility and lock-in)"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Evidence quality and source freshness for every critical claim"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Operational readiness: ownership, onboarding, and incident response expectations"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Security/compliance mapping completeness before scaled rollout"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Internal link policy: include /collections, /compare, /alternatives, /latest in every decision guide."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Productivity Tools candidates and tradeoff analysis"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "1. Publer"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Publer positions itself as follows: Social publishing tool for multi-channel scheduling, content recycling, and team approvals."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, Publer is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot Publer in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Fits developer-first execution paths without heavy UI overhead"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Better coordination potential for multi-role delivery teams"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://publer.io",
+              "marks": [
+                "link-99b8aaee"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-99b8aaee",
+              "href": "https://publer.io"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "2. Braze"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Braze positions itself as follows: Customer engagement platform for coordinated messaging across email, push, and in-app."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, Braze is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot Braze in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://www.braze.com",
+              "marks": [
+                "link-c44b3552"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-c44b3552",
+              "href": "https://www.braze.com"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "3. ConvertKit"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): ConvertKit positions itself as follows: Email marketing platform for creators with automations, audience segmentation, and forms."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, ConvertKit is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot ConvertKit in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://convertkit.com",
+              "marks": [
+                "link-42def4ac"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-42def4ac",
+              "href": "https://convertkit.com"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "4. Planable"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Planable positions itself as follows: Content collaboration workspace for social calendars, approvals, and stakeholder feedback."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, Planable is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot Planable in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Better coordination potential for multi-role delivery teams"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://planable.io",
+              "marks": [
+                "link-16ffc2ba"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-16ffc2ba",
+              "href": "https://planable.io"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "5. ActiveCampaign"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): ActiveCampaign positions itself as follows: Marketing automation and CRM workflows for email campaigns and customer journeys."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, ActiveCampaign is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot ActiveCampaign in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://www.activecampaign.com",
+              "marks": [
+                "link-77b581bb"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-77b581bb",
+              "href": "https://www.activecampaign.com"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "6. CoSchedule"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): CoSchedule positions itself as follows: Marketing calendar suite for campaign planning, task orchestration, and publishing."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, CoSchedule is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot CoSchedule in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://coschedule.com",
+              "marks": [
+                "link-8a3b33d0"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-8a3b33d0",
+              "href": "https://coschedule.com"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "7. Iterable"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Iterable positions itself as follows: Cross-channel lifecycle marketing platform for personalized customer messaging."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, Iterable is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot Iterable in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://iterable.com",
+              "marks": [
+                "link-1fce1e07"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-1fce1e07",
+              "href": "https://iterable.com"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "8. Metricool"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Metricool positions itself as follows: Social media and ad analytics platform for scheduling content and tracking campaign performance."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Based on current metadata signals, Metricool is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Pilot Metricool in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source URL: "
+            },
+            {
+              "_type": "span",
+              "text": "https://metricool.com",
+              "marks": [
+                "link-e8c0f43d"
+              ]
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link-e8c0f43d",
+              "href": "https://metricool.com"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Integration and deployment reality checks"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Most rollout failures occur at the integration layer (ownership gaps, weak fallback behavior, and missing review controls), not at the prompt layer."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Define task-level prompt contracts for production-impacting workflows before enabling broad usage."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Require human approval gates for changes that can affect production reliability, security, or billing."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Log model/provider metadata for accepted outputs so review decisions are auditable."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Maintain one fallback path and test failover behavior before full-team rollout."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Role-based recommendation paths"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Engineering leaders"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Engineering leaders typically optimize for reliability, maintainability, and time-to-value under delivery pressure."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: For productivity tools, run scoped pilots with explicit rollback criteria and weekly instrumentation reviews before org-wide rollout."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Product and ops owners"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Product and operations owners benefit most when tools reduce coordination overhead and shorten feedback loops between teams."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Require a clear owner, onboarding plan, and adoption rubric before approving expanded spend."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Security and governance stakeholders"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Security teams generally need evidence of policy controls, access boundaries, and data handling paths before sign-off."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Complete a policy mapping checklist and document unresolved gaps prior to production rollout."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Execution plan and operating checklist"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Days 1-30: baseline and pilot design"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Define baseline metrics (cycle time, defect escape rate, adoption rate, and support load)."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Run one bounded production pilot with clear success and rollback thresholds."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Capture integration blockers, manual workarounds, and security questions in one backlog."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Days 31-60: controlled expansion"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Expand to a second workflow only after first-pilot KPIs show measurable improvement."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Harden onboarding docs, usage guardrails, and incident playbooks from pilot learnings."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Review commercial terms against projected usage to avoid surprise spend growth."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Days 61-90: governance and scale readiness"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Formalize ownership model, review cadence, and escalation paths for critical failures."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Document migration path and fallback plan if pricing, roadmap, or reliability changes materially."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Publish adoption scorecard and decision log for leadership visibility."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Cost model: optimize accepted outcomes, not raw prompt spend"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-23): Low per-call pricing can still create higher total cost if acceptance rates are weak and review/rework overhead grows."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Cost per accepted implementation change"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Cost per resolved debugging incident"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Prompt-to-merge cycle time"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Human rework time per accepted output"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Acceptance ratio by workflow domain"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Source quality and citation policy"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): This draft prioritizes first-party product documentation, official benchmark reports, and attributed visuals from high-authority domains."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Every embedded visual includes alt text, source label, and source URL attribution."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Time-sensitive statements use absolute dates and should be re-verified before publication."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Unattributed social claims and low-authority aggregators are excluded from decision-critical sections."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Policy: Use first-party docs, official benchmark reports, and attributed visuals for decision-critical claims. Re-verify time-sensitive claims before publication."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Common mistakes to avoid"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Selecting one tool globally before workflow-level validation."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Approving rollout without baseline metrics and explicit success/failure thresholds."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Ignoring fallback strategy and continuity planning for provider shifts."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Comparing token pricing only, without tracking acceptance quality and rework overhead."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Running pilots without assigning clear owner accountability and governance controls."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Where recommendations can fail"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Failure mode: no baseline metrics before pilot, making improvement claims unverifiable."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Failure mode: rollout to entire org before validating integration reliability in one workflow."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Failure mode: procurement decision made without ownership for maintenance and onboarding."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "listItem": "bullet",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Failure mode: ignoring migration plan if pricing or roadmap changes materially."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Implementation sequence (30/60/90 days)"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Days 1-30 should define baseline metrics and run one scoped pilot with weekly review checkpoints."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Days 31-60 should expand to a second workflow only if pilot metrics improve and rollback path remains viable."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Days 61-90 should formalize governance, training, and cost controls before wider rollout."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Final recommendation"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Teams that treat tool selection as an operational decision, not a novelty decision, usually see better long-term outcomes."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: Publish this shortlist with sourced visuals, explicit tradeoff notes, and a freshness timestamp, then rerun validation before every major content refresh."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Methodology and source freshness"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Sources in this draft are first-party links captured during the current research cycle."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-24): Time-sensitive claims should be re-verified on 2026-02-24 before publication, including benchmark visuals and cited metrics."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [
+            {
+              "_type": "span",
+              "text": "FAQ"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Is there one universal winner in productivity tools?"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "No. Recommendation: assign primary tools by workflow domain, then keep one fallback option for continuity."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Should we standardize on one option for every team?"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Inference: Standardizing too early can reduce adaptability. Most organizations perform better with a controlled primary-plus-fallback model."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "How often should this comparison be refreshed?"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fact (2026-02-23): Re-validate quarterly, and also after major product updates, pricing changes, or policy shifts."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What should we measure during pilot evaluation?"
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Recommendation: measure accepted output quality, rework time, cycle-time impact, and governance fit by workflow."
+            }
+          ]
+        }
+      ],
+      "category": "productivity",
+      "tags": [
+        "productivity",
+        "productivity tools guide",
+        "tool evaluation",
+        "implementation checklist",
+        "decision framework",
+        "2026",
+        "publer",
+        "braze",
+        "convertkit",
+        "planable",
+        "activecampaign",
+        "coschedule"
+      ],
+      "sources": [
+        {
+          "_key": "a85369fa-ceaa-426f-842f-27a5c0237ec3",
+          "label": "Publer official site",
+          "url": "https://publer.io"
+        },
+        {
+          "_key": "dcba63fe-d9d0-4283-a62c-799dbedb48e5",
+          "label": "Braze official site",
+          "url": "https://www.braze.com"
+        },
+        {
+          "_key": "f4bfbe3c-20cf-4054-9dfd-7caf4e2f4593",
+          "label": "ConvertKit official site",
+          "url": "https://convertkit.com"
+        },
+        {
+          "_key": "c353dcca-143f-4ea8-8927-6f7e3be18475",
+          "label": "Planable official site",
+          "url": "https://planable.io"
+        },
+        {
+          "_key": "1f119e1c-aa96-45ff-b57b-dacf912d6789",
+          "label": "ActiveCampaign official site",
+          "url": "https://www.activecampaign.com"
+        },
+        {
+          "_key": "4e803a27-4dc0-4da6-baeb-3729e4a59f33",
+          "label": "CoSchedule official site",
+          "url": "https://coschedule.com"
+        },
+        {
+          "_key": "81fe692f-f20c-4cb1-b071-d7a956262f03",
+          "label": "Iterable official site",
+          "url": "https://iterable.com"
+        },
+        {
+          "_key": "493b3c26-ac53-4690-a1ae-d5881e5c5373",
+          "label": "Metricool official site",
+          "url": "https://metricool.com"
+        },
+        {
+          "_key": "ecec597e-ea8d-487c-b7bf-2df280932264",
+          "label": "Loomly official site",
+          "url": "https://www.loomly.com"
+        },
+        {
+          "_key": "95296f06-2aef-4a2b-b61d-02a517b996ea",
+          "label": "MailerLite official site",
+          "url": "https://www.mailerlite.com"
+        },
+        {
+          "_key": "6eb62494-1099-4843-a81c-1bb9537ce941",
+          "label": "Stack Overflow: Developer Survey 2025 (AI)",
+          "url": "https://survey.stackoverflow.co/2025/ai"
+        },
+        {
+          "_key": "71a5ad96-a5bb-4f2d-92a5-71da80af3646",
+          "label": "GitHub: Octoverse 2025",
+          "url": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1"
+        },
+        {
+          "_key": "395fac15-ea4f-40f4-b128-1b83ef835af4",
+          "label": "Google Cloud / DORA: DORA Report 2025",
+          "url": "https://dora.dev/research/2025/dora-report"
+        }
+      ],
+      "relatedResources": [
+        {
+          "_type": "reference",
+          "_ref": "d5d6e4cf-7b16-4dbd-87f7-160b701c7ae0"
+        },
+        {
+          "_type": "reference",
+          "_ref": "cdf33167-fdbb-48df-9c57-7803e9db68da"
+        },
+        {
+          "_type": "reference",
+          "_ref": "afe6dce8-f207-4211-b21d-7d3f33c3db0c"
+        },
+        {
+          "_type": "reference",
+          "_ref": "9defb15e-2054-4a00-adbd-1c7e416438f9"
+        },
+        {
+          "_type": "reference",
+          "_ref": "7396dcca-8fc7-4faf-88a9-42bc82f55d99"
+        },
+        {
+          "_type": "reference",
+          "_ref": "677182d1-022f-4424-b8b7-f1648aec7e75"
+        }
+      ],
+      "primaryResource": {
+        "_type": "reference",
+        "_ref": "d5d6e4cf-7b16-4dbd-87f7-160b701c7ae0"
+      },
+      "author": "The Stash Editorial Team",
+      "publishedAt": "2026-02-24T20:49:49.253Z",
+      "lastReviewedAt": "2026-02-24T20:49:49.253Z",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "authorityBrief": {
+        "searchIntent": "Decision-stage readers evaluating productivity tools for implementation in the next quarter",
+        "primaryKeyword": "productivity tools for teams",
+        "safeHarborKeywords": [
+          "productivity tools comparison",
+          "productivity tools alternatives",
+          "productivity tools for startup teams",
+          "productivity tools implementation checklist",
+          "productivity tools security checklist",
+          "productivity tools rollout plan"
+        ],
+        "readerJob": "Select a tool with clear adoption upside and bounded operational risk.",
+        "failureRisks": [
+          "No baseline metrics for evaluation",
+          "Insufficient integration validation",
+          "Undefined rollback path"
+        ],
+        "evaluationCriteria": [
+          "Implementation effort and migration risk",
+          "Integration depth across existing stack",
+          "Time-to-value for first production workflow",
+          "Governance controls and auditability",
+          "Long-term maintenance overhead and roadmap clarity",
+          "Commercial risk (pricing volatility and lock-in)"
+        ],
+        "evidencePlan": "Prioritize first-party product URLs, benchmark reports, and attributed visuals (Stack Overflow Developer Survey 2025 (AI); GitHub Octoverse 2025; Google Cloud / DORA DORA Report 2025).",
+        "internalLinks": [
+          "/category/productivity",
+          "/collections",
+          "/latest",
+          "/compare",
+          "/alternatives",
+          "/collections",
+          "/compare"
+        ],
+        "differentiation": "Combines answer-first verdicts, source-attributed visuals, explicit fact/inference/recommendation framing, and execution checklists.",
+        "freshnessDate": "2026-02-24",
+        "shortlistedTools": [
+          "Publer",
+          "Braze",
+          "ConvertKit",
+          "Planable",
+          "ActiveCampaign",
+          "CoSchedule",
+          "Iterable",
+          "Metricool"
+        ],
+        "citationPolicy": "Use first-party docs, official benchmark reports, and attributed visuals for decision-critical claims. Re-verify time-sensitive claims before publication."
+      }
+    },
+    "submittedAt": "2026-02-24T20:49:49.256Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 96,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "slug",
+        "excerpt",
+        "primaryKeyword",
+        "intentStage",
+        "body",
+        "body-metrics words=2326 headings=39 listItems=95 links=15 infographics=3 sourcedImages=3",
+        "infographics",
+        "sourced-images",
+        "visual-attribution",
+        "freshness-date",
+        "non-generic-phrasing",
+        "repetition-check",
+        "tags",
+        "primary-resource",
+        "author",
+        "published-at",
+        "quick-verdict-section",
+        "faq-section",
+        "implementation-section",
+        "source-domain-diversity",
+        "source-authority",
+        "authority-brief"
+      ],
+      "reviewedAt": "2026-02-24T20:49:49.565Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "c6d9e61b-2c44-419e-928c-17f1626b490d",
+    "type": "resource",
+    "data": {
+      "url": "https://github.com/greatscott/enveil",
+      "title": "enveil",
+      "slug": "enveil",
+      "description": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil",
+      "category": "ai-tools",
+      "tags": [
+        "ai-tools",
+        "ai",
+        "devtools"
+      ],
+      "bestFor": [
+        "Engineering teams adopting AI-assisted workflows",
+        "Developers who need faster iteration loops"
+      ],
+      "notFor": [
+        "Teams with strict data residency constraints and no approved exception process"
+      ],
+      "alternatives": [],
+      "body": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "8432dc52-54af-4ccb-832a-074fa4566f20",
+          "label": "enveil official site",
+          "url": "https://github.com/greatscott/enveil"
+        }
+      ],
+      "source": "Hacker News",
+      "sourceDomain": "github.com",
+      "image": "https://opengraph.githubassets.com/df8351ad038c5034dccdb369bf7e5f7c2df824ea26b4d02a88c3c4dd49e5ce85/GreatScott/enveil",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-24.1",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-24T20:49:26.731Z"
+      },
+      "lastReviewedAt": "2026-02-24T20:49:28.164Z",
+      "validatedAt": "2026-02-24T20:49:28.164Z"
+    },
+    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-24T20:49:49.566Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "80f580ca-8820-40ae-9679-ab3013910c12",
+    "type": "resource",
+    "data": {
+      "url": "https://github.com/yjeanrenaud/yj_nearbyglasses",
+      "title": "yj_nearbyglasses",
+      "slug": "yj-nearbyglasses",
+      "description": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses",
+      "category": "development-tools",
+      "tags": [
+        "development-tools"
+      ],
+      "bestFor": [
+        "Developers shipping production code",
+        "Teams standardizing tooling across projects"
+      ],
+      "notFor": [
+        "Non-technical users with no engineering support"
+      ],
+      "alternatives": [],
+      "body": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "037ce31b-0216-4f55-9606-1f7171b3bc82",
+          "label": "yj_nearbyglasses official site",
+          "url": "https://github.com/yjeanrenaud/yj_nearbyglasses"
+        }
+      ],
+      "source": "Hacker News",
+      "sourceDomain": "github.com",
+      "image": "https://opengraph.githubassets.com/ef70170ae9bbd8314706a4ec4a5ae7a45722bdcf1f972ad4366ba20667ab1aec/yjeanrenaud/yj_nearbyglasses",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-24.1",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-24T20:49:41.214Z"
+      },
+      "lastReviewedAt": "2026-02-24T20:49:42.305Z",
+      "validatedAt": "2026-02-24T20:49:42.305Z"
+    },
+    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-24T20:49:49.566Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "9950e4f6-23fc-4566-bb30-5155b3b151a7",
+    "type": "resource",
+    "data": {
+      "url": "https://keepandroidopen.org/open-letter",
+      "title": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution",
+      "slug": "an-open-letter-to-google-regarding-mandatory-developer-registration-for-android-app-distribution",
+      "description": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution",
+      "category": "development-tools",
+      "tags": [
+        "development-tools",
+        "devtools"
+      ],
+      "bestFor": [
+        "Developers shipping production code",
+        "Teams standardizing tooling across projects"
+      ],
+      "notFor": [
+        "Non-technical users with no engineering support"
+      ],
+      "alternatives": [],
+      "body": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "61e82d78-380d-488e-b818-137715dbc111",
+          "label": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution official site",
+          "url": "https://keepandroidopen.org/open-letter"
+        }
+      ],
+      "source": "Hacker News",
+      "sourceDomain": "keepandroidopen.org",
+      "image": "https://keepandroidopen.org/img/altered-deal.png",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-24.1",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-24T20:49:42.387Z"
+      },
+      "lastReviewedAt": "2026-02-24T20:49:43.145Z",
+      "validatedAt": "2026-02-24T20:49:43.145Z"
+    },
+    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-24T20:49:49.566Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "6c033765-efb7-4d6b-9ea6-0582f9b78795",
+    "type": "resource",
+    "data": {
+      "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle",
+      "title": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up",
+      "slug": "samsung-039-s-galaxy-upcycle-promised-to-make-old-phones-useful-then-won-an-award-for-giving-up",
+      "description": "Your old phone could have been so much more.",
+      "category": "development-tools",
+      "tags": [
+        "development-tools"
+      ],
+      "bestFor": [
+        "Developers shipping production code",
+        "Teams standardizing tooling across projects"
+      ],
+      "notFor": [
+        "Non-technical users with no engineering support"
+      ],
+      "alternatives": [],
+      "body": "Your old phone could have been so much more. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "055149d3-c382-4556-9514-81b918443466",
+          "label": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up official site",
+          "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle"
+        }
+      ],
+      "source": "Hacker News",
+      "sourceDomain": "xda-developers.com",
+      "image": "https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2026/02/galaxy-upcycling-1.jpg?w=1600&amp;h=900&amp;fit=crop",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-24.1",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-24T20:49:43.226Z"
+      },
+      "lastReviewedAt": "2026-02-24T20:49:46.955Z",
+      "validatedAt": "2026-02-24T20:49:46.955Z"
+    },
+    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-24T20:49:49.566Z"
+    },
+    "needsApproval": true
+  }
+]

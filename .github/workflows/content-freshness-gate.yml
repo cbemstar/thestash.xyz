@@ -1,0 +1,104 @@
+name: Content Freshness Gate
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/content-freshness-gate.yml"
+      - "lib/content-freshness.ts"
+      - "lib/content-tier.ts"
+      - "src/app/api/content/freshness/route.ts"
+      - "scripts/check-content-freshness-gate.mjs"
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Base URL for freshness gate"
+        required: false
+        default: "https://thestash.xyz"
+  schedule:
+    - cron: "0 14 * * 5"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: content-freshness-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  freshness-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      MAX_TIER1_RESOURCE_STALE: "0"
+      MAX_TIER2_RESOURCE_STALE: "25"
+      MAX_TIER1_ARTICLE_STALE: "0"
+      MAX_TIER2_ARTICLE_STALE: "10"
+      MAX_TIER1_RESOURCE_MISSING: "35"
+      MAX_TIER2_RESOURCE_MISSING: "52"
+      MAX_TIER1_ARTICLE_MISSING: "0"
+      MAX_TIER2_ARTICLE_MISSING: "20"
+      MIN_WEEKLY_COMPLETION_RATE: "70"
+      MIN_TIERED_RESOURCES: "80"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run freshness threshold gate
+        run: |
+          BASE_URL="https://thestash.xyz"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.base_url }}" ]; then
+            BASE_URL="${{ github.event.inputs.base_url }}"
+          fi
+          echo "Running freshness gate against ${BASE_URL}"
+          node scripts/check-content-freshness-gate.mjs \
+            --base-url "${BASE_URL}" \
+            --output /tmp/content-freshness-gate.json
+
+      - name: Publish freshness summary
+        if: always()
+        run: |
+          if [ ! -f /tmp/content-freshness-gate.json ]; then
+            echo "No freshness gate output found." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          node -e '
+            const fs = require("node:fs");
+            const report = JSON.parse(fs.readFileSync("/tmp/content-freshness-gate.json", "utf8"));
+            const m = report.metrics || {};
+            const stale = m.stale || {};
+            const missing = m.missing || {};
+            const violations = Array.isArray(report.violations) ? report.violations : [];
+            const lines = [
+              "## Content freshness gate",
+              `- Source: ${report.source}`,
+              `- Result: ${report.passed ? "PASS" : "FAIL"}`,
+              `- Tiered resources: ${m.tieredResources ?? 0}`,
+              `- Weekly completion rate: ${m.weeklyCompletionRate ?? 0}%`,
+              `- Stale resources (tier1/tier2): ${(stale.tier1Resources ?? 0)}/${(stale.tier2Resources ?? 0)}`,
+              `- Stale articles (tier1/tier2): ${(stale.tier1Articles ?? 0)}/${(stale.tier2Articles ?? 0)}`,
+              `- Missing resource docs (tier1/tier2): ${(missing.tier1Resources ?? 0)}/${(missing.tier2Resources ?? 0)}`,
+              `- Missing article docs (tier1/tier2): ${(missing.tier1Articles ?? 0)}/${(missing.tier2Articles ?? 0)}`,
+              ""
+            ];
+            if (violations.length > 0) {
+              lines.push("### Violations");
+              for (const violation of violations) lines.push(`- ${violation}`);
+              lines.push("");
+            }
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n"));
+          '
+
+      - name: Upload freshness artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-freshness-gate
+          path: /tmp/content-freshness-gate.json
+          if-no-files-found: warn

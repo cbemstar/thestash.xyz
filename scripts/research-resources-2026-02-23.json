@@ -1,0 +1,416 @@
+[
+  {
+    "title": "Hootsuite",
+    "url": "https://www.hootsuite.com",
+    "description": "Social media management platform for scheduling, monitoring, and team collaboration across channels.",
+    "category": "productivity",
+    "tags": ["marketing", "social-media", "scheduling", "analytics"],
+    "marketing": true
+  },
+  {
+    "title": "Buffer",
+    "url": "https://buffer.com",
+    "description": "Plan and publish social posts, measure engagement, and coordinate content calendars.",
+    "category": "productivity",
+    "tags": ["marketing", "social-media", "publishing", "calendar"],
+    "marketing": true
+  },
+  {
+    "title": "Sprout Social",
+    "url": "https://sproutsocial.com",
+    "description": "Social publishing, listening, analytics, and customer care workflows for marketing teams.",
+    "category": "productivity",
+    "tags": ["marketing", "social-listening", "analytics", "social-media"],
+    "marketing": true
+  },
+  {
+    "title": "Later",
+    "url": "https://later.com",
+    "description": "Visual social scheduler focused on Instagram, TikTok, LinkedIn, and creator workflows.",
+    "category": "productivity",
+    "tags": ["marketing", "social-media", "content", "creator"],
+    "marketing": true
+  },
+  {
+    "title": "Beehiiv",
+    "url": "https://www.beehiiv.com",
+    "description": "Newsletter platform for publishing, growth referrals, audience segmentation, and monetization.",
+    "category": "productivity",
+    "tags": ["marketing", "newsletter", "email", "growth"],
+    "marketing": true
+  },
+  {
+    "title": "Customer.io",
+    "url": "https://customer.io",
+    "description": "Messaging automation platform for email, push, SMS, and lifecycle campaigns.",
+    "category": "productivity",
+    "tags": ["marketing", "automation", "lifecycle", "messaging"],
+    "marketing": true
+  },
+  {
+    "title": "Klaviyo",
+    "url": "https://www.klaviyo.com",
+    "description": "Email and SMS marketing automation with ecommerce segmentation and revenue attribution.",
+    "category": "productivity",
+    "tags": ["marketing", "email", "sms", "ecommerce"],
+    "marketing": true
+  },
+
+  {
+    "title": "HubSpot Academy",
+    "url": "https://academy.hubspot.com",
+    "description": "Free certification courses on inbound marketing, CRM, SEO, and content strategy.",
+    "category": "learning-resources",
+    "tags": ["marketing", "learning", "certification", "inbound"],
+    "marketing": true
+  },
+  {
+    "title": "Semrush Academy",
+    "url": "https://www.semrush.com/academy/",
+    "description": "SEO, PPC, and digital marketing courses taught by practitioners.",
+    "category": "learning-resources",
+    "tags": ["marketing", "seo", "ppc", "learning"],
+    "marketing": true
+  },
+  {
+    "title": "Demand Curve",
+    "url": "https://www.demandcurve.com",
+    "description": "Growth playbooks and training for early-stage startups and product-led teams.",
+    "category": "learning-resources",
+    "tags": ["marketing", "growth", "playbooks", "startup"],
+    "marketing": true
+  },
+  {
+    "title": "CXL Institute",
+    "url": "https://cxl.com/institute/",
+    "description": "Advanced conversion optimization, analytics, and experimentation courses.",
+    "category": "learning-resources",
+    "tags": ["marketing", "cro", "experimentation", "analytics"],
+    "marketing": true
+  },
+  {
+    "title": "Copyhackers",
+    "url": "https://copyhackers.com",
+    "description": "Practical copywriting training for landing pages, emails, and conversion funnels.",
+    "category": "learning-resources",
+    "tags": ["marketing", "copywriting", "conversion", "landing-pages"],
+    "marketing": true
+  },
+  {
+    "title": "Backlinko",
+    "url": "https://backlinko.com",
+    "description": "In-depth SEO tutorials, link-building frameworks, and search growth guides.",
+    "category": "learning-resources",
+    "tags": ["marketing", "seo", "backlinks", "content"],
+    "marketing": true
+  },
+  {
+    "title": "Growth.Design",
+    "url": "https://growth.design",
+    "description": "Case-study-based UX and behavioral psychology lessons for product growth.",
+    "category": "learning-resources",
+    "tags": ["marketing", "ux", "psychology", "growth"],
+    "marketing": true
+  },
+
+  {
+    "title": "Baymard Institute",
+    "url": "https://baymard.com",
+    "description": "UX research benchmarks and ecommerce usability guidelines.",
+    "category": "ui-ux-resources",
+    "tags": ["ux", "research", "usability", "ecommerce"],
+    "marketing": false
+  },
+  {
+    "title": "UX Archive",
+    "url": "https://www.uxarchive.app",
+    "description": "Mobile UX pattern library with real user-flow breakdowns by app.",
+    "category": "ui-ux-resources",
+    "tags": ["ux", "mobile", "patterns", "research"],
+    "marketing": false
+  },
+  {
+    "title": "UI Sources",
+    "url": "https://uisources.com",
+    "description": "Curated UI interaction examples for onboarding, pricing, and conversion flows.",
+    "category": "ui-ux-resources",
+    "tags": ["ui", "patterns", "inspiration", "conversion"],
+    "marketing": true
+  },
+  {
+    "title": "UXTools",
+    "url": "https://uxtools.co",
+    "description": "Directory of UX research, design, and testing tools with side-by-side comparisons.",
+    "category": "ui-ux-resources",
+    "tags": ["ux", "tools", "directory", "testing"],
+    "marketing": false
+  },
+
+  {
+    "title": "Codewars",
+    "url": "https://www.codewars.com",
+    "description": "Practice coding kata challenges across languages with community solutions.",
+    "category": "coding",
+    "tags": ["coding", "practice", "challenges", "community"],
+    "marketing": false
+  },
+  {
+    "title": "LeetCode",
+    "url": "https://leetcode.com",
+    "description": "Interview-focused coding problems and contests for software engineers.",
+    "category": "coding",
+    "tags": ["coding", "interview", "algorithms", "practice"],
+    "marketing": false
+  },
+  {
+    "title": "HackerRank",
+    "url": "https://www.hackerrank.com",
+    "description": "Coding assessments, skill tracks, and interview preparation challenges.",
+    "category": "coding",
+    "tags": ["coding", "assessment", "interview", "practice"],
+    "marketing": false
+  },
+  {
+    "title": "Project Euler",
+    "url": "https://projecteuler.net",
+    "description": "Math and algorithm problems that improve problem-solving through code.",
+    "category": "coding",
+    "tags": ["coding", "algorithms", "math", "problem-solving"],
+    "marketing": false
+  },
+
+  {
+    "title": "GitHub CLI",
+    "url": "https://cli.github.com",
+    "description": "Official GitHub command-line tool for PRs, issues, releases, and workflows.",
+    "category": "github",
+    "tags": ["github", "cli", "workflow", "dev-tools"],
+    "marketing": false
+  },
+  {
+    "title": "GitHub Desktop",
+    "url": "https://desktop.github.com",
+    "description": "Desktop Git client from GitHub for commits, branches, and pull requests.",
+    "category": "github",
+    "tags": ["github", "git", "desktop", "workflow"],
+    "marketing": false
+  },
+  {
+    "title": "GitHub Skills",
+    "url": "https://skills.github.com",
+    "description": "Hands-on courses that teach GitHub, Actions, and collaborative development.",
+    "category": "github",
+    "tags": ["github", "learning", "actions", "collaboration"],
+    "marketing": false
+  },
+  {
+    "title": "GitHub Education",
+    "url": "https://education.github.com",
+    "description": "Student and educator program with verified benefits and developer tools.",
+    "category": "github",
+    "tags": ["github", "education", "students", "learning"],
+    "marketing": false
+  },
+
+  {
+    "title": "HTML5 Boilerplate",
+    "url": "https://html5boilerplate.com",
+    "description": "Front-end template for resilient HTML, CSS, and JavaScript projects.",
+    "category": "html",
+    "tags": ["html", "template", "frontend", "boilerplate"],
+    "marketing": false
+  },
+  {
+    "title": "HTML Reference",
+    "url": "https://htmlreference.io",
+    "description": "Visual reference guide for HTML elements and usage examples.",
+    "category": "html",
+    "tags": ["html", "reference", "docs", "frontend"],
+    "marketing": false
+  },
+  {
+    "title": "HTMLHint",
+    "url": "https://htmlhint.com",
+    "description": "HTML linter that catches structural and standards issues in markup.",
+    "category": "html",
+    "tags": ["html", "linting", "quality", "frontend"],
+    "marketing": false
+  },
+
+  {
+    "title": "Every Layout",
+    "url": "https://every-layout.dev",
+    "description": "CSS layout methodology focused on composable, robust layout primitives.",
+    "category": "css",
+    "tags": ["css", "layout", "frontend", "design-system"],
+    "marketing": false
+  },
+  {
+    "title": "Utopia",
+    "url": "https://utopia.fyi",
+    "description": "Fluid typography and spacing calculators for modern responsive CSS systems.",
+    "category": "css",
+    "tags": ["css", "typography", "responsive", "design-tokens"],
+    "marketing": false
+  },
+  {
+    "title": "Open Props",
+    "url": "https://open-props.style",
+    "description": "Ready-to-use CSS custom property tokens for colors, spacing, and motion.",
+    "category": "css",
+    "tags": ["css", "tokens", "variables", "design-system"],
+    "marketing": false
+  },
+
+  {
+    "title": "ESBuild",
+    "url": "https://esbuild.github.io",
+    "description": "Extremely fast JavaScript and TypeScript bundler built in Go.",
+    "category": "javascript",
+    "tags": ["javascript", "bundler", "typescript", "build"],
+    "marketing": false
+  },
+  {
+    "title": "Rollup",
+    "url": "https://rollupjs.org",
+    "description": "Module bundler optimized for JavaScript libraries and tree-shaking.",
+    "category": "javascript",
+    "tags": ["javascript", "bundler", "libraries", "build"],
+    "marketing": false
+  },
+  {
+    "title": "Biome",
+    "url": "https://biomejs.dev",
+    "description": "Fast formatter and linter for JavaScript, TypeScript, and JSON projects.",
+    "category": "javascript",
+    "tags": ["javascript", "linting", "formatting", "tooling"],
+    "marketing": false
+  },
+
+  {
+    "title": "Go by Example",
+    "url": "https://gobyexample.com",
+    "description": "Hands-on introduction to Go with runnable code snippets and explanations.",
+    "category": "languages",
+    "tags": ["go", "languages", "learning", "examples"],
+    "marketing": false
+  },
+  {
+    "title": "Rust by Example",
+    "url": "https://doc.rust-lang.org/rust-by-example/",
+    "description": "Official Rust examples that teach syntax and concepts through code.",
+    "category": "languages",
+    "tags": ["rust", "languages", "learning", "examples"],
+    "marketing": false
+  },
+  {
+    "title": "Elixir School",
+    "url": "https://elixirschool.com",
+    "description": "Community-driven lessons for learning Elixir and the Phoenix ecosystem.",
+    "category": "languages",
+    "tags": ["elixir", "languages", "learning", "phoenix"],
+    "marketing": false
+  },
+
+  {
+    "title": "Wized",
+    "url": "https://wized.com",
+    "description": "No-code logic layer for building dynamic web apps with Webflow frontends.",
+    "category": "webflow",
+    "tags": ["webflow", "no-code", "apps", "logic"],
+    "marketing": false
+  },
+  {
+    "title": "Finsweet Attributes",
+    "url": "https://finsweet.com/attributes",
+    "description": "Attribute-based enhancements that add advanced behavior to Webflow sites.",
+    "category": "webflow",
+    "tags": ["webflow", "finsweet", "attributes", "frontend"],
+    "marketing": false
+  },
+  {
+    "title": "Webflow Marketplace",
+    "url": "https://webflow.com/marketplace",
+    "description": "Official marketplace for Webflow templates, libraries, and experts.",
+    "category": "webflow",
+    "tags": ["webflow", "templates", "marketplace", "resources"],
+    "marketing": false
+  },
+
+  {
+    "title": "KokonutUI",
+    "url": "https://kokonutui.com",
+    "description": "Premium-ready components built with Tailwind CSS and shadcn/ui patterns.",
+    "category": "shadcn",
+    "tags": ["shadcn", "components", "tailwind", "ui"],
+    "marketing": false
+  },
+  {
+    "title": "Aceternity UI Pro",
+    "url": "https://pro.aceternity.com",
+    "description": "Advanced shadcn and Tailwind component blocks with polished animations.",
+    "category": "shadcn",
+    "tags": ["shadcn", "components", "tailwind", "animations"],
+    "marketing": false
+  },
+
+  {
+    "title": "Curated Design",
+    "url": "https://www.curated.design",
+    "description": "Gallery of high-quality landing pages and product website inspiration.",
+    "category": "inspiration",
+    "tags": ["inspiration", "landing-pages", "design", "marketing"],
+    "marketing": true
+  },
+
+  {
+    "title": "SparkToro",
+    "url": "https://sparktoro.com",
+    "description": "Audience research platform for discovering where communities pay attention online.",
+    "category": "miscellaneous",
+    "tags": ["marketing", "audience-research", "seo", "growth"],
+    "marketing": true
+  },
+  {
+    "title": "Exploding Topics",
+    "url": "https://explodingtopics.com",
+    "description": "Trend discovery tool that surfaces fast-growing topics before they peak.",
+    "category": "miscellaneous",
+    "tags": ["marketing", "trends", "research", "content"],
+    "marketing": true
+  },
+
+  {
+    "title": "AdCreative.ai",
+    "url": "https://www.adcreative.ai",
+    "description": "AI platform for generating ad creatives, copy variants, and campaign assets.",
+    "category": "ai-tools",
+    "tags": ["ai", "marketing", "ads", "creative"],
+    "marketing": true
+  },
+  {
+    "title": "Jasper",
+    "url": "https://www.jasper.ai",
+    "description": "AI writing assistant for brand content, campaigns, and marketing workflows.",
+    "category": "ai-tools",
+    "tags": ["ai", "marketing", "copywriting", "content"],
+    "marketing": true
+  },
+
+  {
+    "title": "Infisical",
+    "url": "https://infisical.com",
+    "description": "Open-source secrets management platform for developers and production teams.",
+    "category": "development-tools",
+    "tags": ["development", "secrets", "security", "devops"],
+    "marketing": false
+  },
+  {
+    "title": "Creatie",
+    "url": "https://creatie.ai",
+    "description": "Collaborative design tool for wireframes, UI mockups, and prototyping.",
+    "category": "design-tools",
+    "tags": ["design", "ui", "prototyping", "collaboration"],
+    "marketing": false
+  }
+]

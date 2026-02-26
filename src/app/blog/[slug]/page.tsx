@@ -12,10 +12,7 @@ import { BlogInlineConversionCta } from "@/components/BlogInlineConversionCta";
 import { OnThisPageNav } from "@/components/OnThisPageNav";
 import { WalineComments } from "@/components/WalineComments";
 import type { Article } from "@/types/article";
-import {
-  evaluateArticleTierQuality,
-  shouldNoindexFromTierQuality,
-} from "@/lib/content-tier";
+import { evaluateArticleTierQuality } from "@/lib/content-tier";
 import {
   buildHeadingIdByBlockKey,
   countArticleVisuals,
@@ -119,9 +116,7 @@ export async function generateMetadata({
       description,
       images: [heroImageUrl || ogImageUrl],
     },
-    robots: shouldNoindexFromTierQuality(quality)
-      ? { index: false, follow: false }
-      : { index: true, follow: true },
+    robots: { index: true, follow: true },
   };
 }
 

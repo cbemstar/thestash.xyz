@@ -610,6 +610,12 @@ function buildUtilityOutput(
     slug === "sitemap-validator" ||
     slug === "sitemap-generator" ||
     slug === "sitemap-url-extractor" ||
+    slug === "sitemap-urls-comparison" ||
+    slug === "sitemap-split-merger" ||
+    slug === "sitemap-analytics-insights" ||
+    slug === "sitemap-index-generator" ||
+    slug === "sitemap-to-robots-txt-generator" ||
+    slug === "sitemap-frequency-analyzer" ||
     slug === "website-url-extractor"
   ) {
     return buildSitemapOutput(tool.title, input, context);
@@ -734,9 +740,25 @@ function runGenerator(
     };
   }
 
-  if (tool.slug === "ai-faq-generator") {
+  if (
+    tool.slug === "ai-faq-generator" ||
+    tool.slug === "website-faq-generator" ||
+    tool.slug === "pdf-to-faq-generator" ||
+    tool.slug === "webpage-to-faq-generator" ||
+    tool.slug === "docx-to-faq-generator" ||
+    tool.slug === "html-to-faq-generator" ||
+    tool.slug === "google-docs-to-faq-generator" ||
+    tool.slug === "notion-to-faq-generator"
+  ) {
     return {
       output: buildFaqOutput(normalizedInput, context, outputLength),
+      warnings: [],
+    };
+  }
+
+  if (tool.slug === "customer-service-script-generator") {
+    return {
+      output: buildReplyDraft(tool.title, normalizedInput, context, tone, outputLength),
       warnings: [],
     };
   }

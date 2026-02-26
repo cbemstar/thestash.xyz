@@ -6,6 +6,9 @@
  */
 
 import { randomUUID } from 'node:crypto';
+import { spawn } from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
 import { logEvent } from './event-logger.mjs';
 import { assertRunAllowed } from './runtime-control.mjs';
 import {
@@ -28,11 +31,10 @@ const RESEARCH_PLAYBOOK_FILE = './automation/agents/resource-research-playbook.j
 const RESEARCH_REPORT_FILE = './automation/agents/research-report.json';
 
 const DEFAULT_RESEARCH_PLAYBOOK = {
-  version: '2026-02-24.1',
+  version: '2026-02-26.2',
   categoryPriority: [
     'ui-ux-resources',
     'coding',
-    'github',
     'html',
     'css',
     'javascript',
@@ -45,21 +47,24 @@ const DEFAULT_RESEARCH_PLAYBOOK = {
     'development-tools',
     'design-tools',
     'inspiration',
+    'github',
     'miscellaneous',
   ],
   marketingSignals: [
     'marketing',
     'growth',
     'seo',
-    'newsletter',
     'email',
-    'social',
-    'ppc',
-    'ads',
+    'newsletter',
     'content',
+    'social',
+    'ads',
+    'ppc',
     'campaign',
+    'lead-gen',
+    'conversion',
   ],
-  blockedHosts: ['reddit.com', 'x.com', 'twitter.com', 'facebook.com', 'instagram.com'],
+  blockedHosts: ['reddit.com', 'x.com', 'twitter.com', 'facebook.com', 'instagram.com', 'tiktok.com'],
   nonToolHosts: [
     'techcrunch.com',
     'substack.com',
@@ -69,7 +74,32 @@ const DEFAULT_RESEARCH_PLAYBOOK = {
     'chrisbrunet.com',
     'rsdoiel.github.io',
     'magicalmushroom.com',
+    'hackernoon.com',
+    'towardsdatascience.com',
+    'thenewstack.io',
+    'venturebeat.com',
+    'theverge.com',
+    'wired.com',
   ],
+  allowedResourceTypes: [
+    'app',
+    'website',
+    'utility',
+    'tool',
+    'library',
+    'framework',
+    'component',
+    'directory',
+    'template',
+    'course',
+    'snippet',
+    'other',
+  ],
+  disallowedResourceTypes: ['article', 'blog', 'video', 'newsletter', 'tip', 'podcast', 'person'],
+  sourcePriority: ['NoCodeSupply', 'Futurepedia', 'Product Hunt Feed', 'Hacker News', 'GitHub Search'],
+  scoutPolicy: {
+    maxGithubShare: 0.15,
+  },
 };
 
 const BLOCKED_HOST_PATTERNS = [
@@ -114,6 +144,10 @@ const NON_TOOL_TITLE_PATTERNS = [
 ];
 
 const LOW_SIGNAL_GITHUB_REPO_PATTERNS = [/^awesome-/i, /bench$/i, /benchmark/i, /usecases?$/i];
+const LOW_SIGNAL_GITHUB_PATH_PATTERNS = [
+  /\/(issues|pulls|pull|discussions|wiki|blob|tree|commits|actions)(\/|$)/i,
+  /\/(topics|orgs|users)(\/|$)/i,
+];
 
 const TOOL_SIGNAL_PATTERN =
   /\b(tool|app|platform|software|api|sdk|framework|library|cli|plugin|extension|editor|assistant|automation|open[- ]source|template|component|kit|docs?)\b/i;
@@ -129,10 +163,37 @@ const TAG_KEYWORDS = {
   devtools: /(developer|devtool|ide|editor|repository|framework|library)/i,
   'no-code': /(no-code|nocode)/i,
 };
+const TAG_STOPWORDS = new Set([
+  'tool',
+  'tools',
+  'app',
+  'apps',
+  'software',
+  'platform',
+  'official',
+  'site',
+  'other',
+  'directory',
+]);
+const VALID_INDUSTRIES = new Set([
+  'e-commerce',
+  'saas',
+  'content',
+  'community',
+  'developer',
+  'marketing',
+  'general',
+]);
 
 function loadResearchPlaybook() {
   const fromDisk = loadJson(RESEARCH_PLAYBOOK_FILE, null);
   if (!fromDisk || typeof fromDisk !== 'object') return DEFAULT_RESEARCH_PLAYBOOK;
+  const sourcePriority = asArray(fromDisk?.scoutPolicy?.sourcePriority).length > 0
+    ? asArray(fromDisk.scoutPolicy.sourcePriority)
+    : asArray(fromDisk.sourcePriority).length > 0
+      ? asArray(fromDisk.sourcePriority)
+      : DEFAULT_RESEARCH_PLAYBOOK.sourcePriority;
+
   return {
     ...DEFAULT_RESEARCH_PLAYBOOK,
     ...fromDisk,
@@ -148,6 +209,17 @@ function loadResearchPlaybook() {
     nonToolHosts: asArray(fromDisk.nonToolHosts).length > 0
       ? asArray(fromDisk.nonToolHosts)
       : DEFAULT_RESEARCH_PLAYBOOK.nonToolHosts,
+    allowedResourceTypes: asArray(fromDisk.allowedResourceTypes).length > 0
+      ? asArray(fromDisk.allowedResourceTypes)
+      : DEFAULT_RESEARCH_PLAYBOOK.allowedResourceTypes,
+    disallowedResourceTypes: asArray(fromDisk.disallowedResourceTypes).length > 0
+      ? asArray(fromDisk.disallowedResourceTypes)
+      : DEFAULT_RESEARCH_PLAYBOOK.disallowedResourceTypes,
+    sourcePriority,
+    scoutPolicy:
+      fromDisk.scoutPolicy && typeof fromDisk.scoutPolicy === 'object'
+        ? { ...DEFAULT_RESEARCH_PLAYBOOK.scoutPolicy, ...fromDisk.scoutPolicy }
+        : DEFAULT_RESEARCH_PLAYBOOK.scoutPolicy,
   };
 }
 
@@ -159,29 +231,105 @@ function sanitizeText(value, max = 260) {
   return String(value || '').replace(/\s+/g, ' ').trim().slice(0, max);
 }
 
-function classifyCategory(url, title, description) {
-  const text = `${url} ${title} ${description}`.toLowerCase();
+function uniqStrings(value, limit = 24) {
+  const out = [];
+  const seen = new Set();
+  for (const row of asArray(value)) {
+    const normalized = sanitizeText(row, 60).toLowerCase();
+    if (!normalized || seen.has(normalized)) continue;
+    seen.add(normalized);
+    out.push(normalized);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
 
+function normalizeResourceType(type) {
+  const value = sanitizeText(type, 40).toLowerCase();
+  if (!value) return 'other';
+  if (/(^|\b)app(\b|$)/.test(value)) return 'app';
+  if (/(^|\b)website(\b|$)/.test(value)) return 'website';
+  if (/(^|\b)utility(\b|$)/.test(value)) return 'utility';
+  if (/(^|\b)tool(\b|$)/.test(value)) return 'tool';
+  if (/(^|\b)library(\b|$)/.test(value)) return 'library';
+  if (/(^|\b)framework(\b|$)/.test(value)) return 'framework';
+  if (/(^|\b)component(\b|$)/.test(value)) return 'component';
+  if (/(^|\b)directory(\b|$)/.test(value)) return 'directory';
+  if (/(^|\b)template(\b|$)/.test(value)) return 'template';
+  if (/(^|\b)course(\b|$)/.test(value)) return 'course';
+  if (/(^|\b)snippet(\b|$)/.test(value)) return 'snippet';
+  if (/(^|\b)article(\b|$)/.test(value)) return 'article';
+  if (/(^|\b)video(\b|$)/.test(value)) return 'video';
+  if (/(^|\b)tip(\b|$)/.test(value)) return 'tip';
+  if (/(^|\b)blog(\b|$)/.test(value)) return 'blog';
+  if (/(^|\b)newsletter(\b|$)/.test(value)) return 'newsletter';
+  if (/(^|\b)podcast(\b|$)/.test(value)) return 'podcast';
+  if (/(^|\b)person(\b|$)/.test(value)) return 'person';
+  return 'other';
+}
+
+function isDisallowedResourceType(type, playbook) {
+  const normalized = normalizeResourceType(type);
+  const disallowed = new Set(uniqStrings(playbook.disallowedResourceTypes, 40));
+  const allowed = new Set(uniqStrings(playbook.allowedResourceTypes, 40));
+  if (disallowed.has(normalized)) return true;
+  if (allowed.size > 0 && !allowed.has(normalized)) return true;
+  return false;
+}
+
+function classifyCategory({ url, title, description, resourceType, sourceCollection, sourceTags }) {
+  const tags = uniqStrings(sourceTags, 30);
+  const text = `${url} ${title} ${description} ${tags.join(' ')}`.toLowerCase();
+  const type = normalizeResourceType(resourceType);
+  const collection = String(sourceCollection || '').toLowerCase();
+
+  if (collection === 'learn' || type === 'course') return 'learning-resources';
+  if (collection === 'inspo') return 'inspiration';
+  if (collection === 'code' || ['library', 'framework', 'snippet'].includes(type)) return 'coding';
+  if (['component', 'template'].includes(type)) return 'ui-ux-resources';
+
+  if (/(marketing|seo|email|social|campaign|copywriting|content-marketing)/.test(text)) {
+    return /(ai|llm|gpt|agent|automation)/.test(text) ? 'ai-tools' : 'productivity';
+  }
   if (/(ai|llm|gpt|copilot|agent|prompt|model)/.test(text)) return 'ai-tools';
-  if (/(figma|design|sketch|adobe|prototype|wireframe)/.test(text)) return 'design-tools';
+  if (/(figma|design|sketch|adobe|prototype|wireframe|framer)/.test(text)) return 'design-tools';
   if (/(component|ui kit|icon|tailwind|shadcn|radix)/.test(text)) return 'ui-ux-resources';
   if (/(webflow)/.test(text)) return 'webflow';
   if (/(learn|tutorial|course|docs|documentation|guide)/.test(text)) return 'learning-resources';
-  if (/(productivity|task|notes|workflow|project management)/.test(text)) return 'productivity';
+  if (/(productivity|task|notes|workflow|project management|automation)/.test(text)) {
+    return 'productivity';
+  }
   if (/(inspiration|showcase|gallery|portfolio|dribbble|awwwards)/.test(text)) return 'inspiration';
-  if (/(html|css|javascript|typescript|react|vue|svelte)/.test(text)) return 'coding';
+  if (/(^|\s)html(\s|$)/.test(text)) return 'html';
+  if (/(^|\s)css(\s|$)/.test(text)) return 'css';
+  if (/(javascript|typescript|react|vue|svelte|node\.js)/.test(text)) return 'javascript';
+  if (/(python|go|rust|kotlin|swift|scala|haskell|clojure|java)/.test(text)) return 'languages';
+  if (/(github\.com)/.test(text)) return 'github';
   return 'development-tools';
 }
 
-function generateTags(title, description, category) {
+function sanitizeTag(value) {
+  const tag = sanitizeText(value, 40)
+    .toLowerCase()
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  if (!tag || tag.length < 2 || tag.length > 32 || TAG_STOPWORDS.has(tag)) return '';
+  return tag;
+}
+
+function generateTags({ title, description, category, resourceType, sourceTags }) {
   const text = `${title} ${description}`;
-  const tags = new Set([category]);
+  const tags = new Set([sanitizeTag(category), sanitizeTag(resourceType)]);
 
   for (const [tag, pattern] of Object.entries(TAG_KEYWORDS)) {
-    if (pattern.test(text)) tags.add(tag);
+    if (pattern.test(text)) tags.add(sanitizeTag(tag));
   }
 
-  return [...tags].slice(0, 8);
+  for (const tag of uniqStrings(sourceTags, 16)) {
+    tags.add(sanitizeTag(tag));
+  }
+
+  return [...tags].filter(Boolean).slice(0, 10);
 }
 
 function generateBestForNotFor(category) {
@@ -289,50 +437,102 @@ function matchesHostList(hostname, values) {
   });
 }
 
-function hasStrongToolSignal(url, title, description) {
+function hasStrongToolSignal({ url, title, description, resourceType, sourceTags }) {
   const hostname = getHostname(url);
-  if (hostname === 'github.com') {
-    const parts = getPathname(url).split('/').filter(Boolean);
-    return parts.length >= 2;
+  const pathname = getPathname(url);
+  const type = normalizeResourceType(resourceType);
+  const tags = uniqStrings(sourceTags, 12);
+
+  if (['article', 'blog', 'newsletter', 'video', 'tip', 'podcast', 'person'].includes(type)) {
+    return false;
   }
-  return TOOL_SIGNAL_PATTERN.test(`${title || ''} ${description || ''} ${url || ''}`);
+  if (
+    ['app', 'tool', 'library', 'framework', 'component', 'directory', 'utility', 'course', 'snippet'].includes(
+      type
+    )
+  ) {
+    return true;
+  }
+  if (type === 'website') {
+    return TOOL_SIGNAL_PATTERN.test(`${title || ''} ${description || ''} ${tags.join(' ')}`);
+  }
+
+  if (hostname === 'github.com') {
+    const parts = pathname.split('/').filter(Boolean);
+    if (parts.length < 2) return false;
+    if (LOW_SIGNAL_GITHUB_PATH_PATTERNS.some((pattern) => pattern.test(pathname))) return false;
+    return true;
+  }
+
+  const tagText = tags.join(' ');
+  return TOOL_SIGNAL_PATTERN.test(`${title || ''} ${description || ''} ${url || ''} ${tagText}`);
 }
 
-function detectLowQualityReason(url, title, description, playbook) {
+function detectLowQualityReason(lead, playbook) {
+  const url = lead?.url;
+  const title = lead?.title;
+  const description = lead?.description;
+  const resourceType = lead?.resourceType;
+  const sourceTags = lead?.sourceTags;
+  const sourceCollection = String(lead?.sourceCollection || '').toLowerCase();
+  const disallowedCollections = uniqStrings(
+    playbook?.scoutPolicy?.disallowedNoCodeSupplyCollections,
+    8
+  );
+
   const hostname = getHostname(url);
   const pathname = getPathname(url);
   const titleText = String(title || '');
-  const fullText = `${title || ''} ${description || ''}`.toLowerCase();
+  const fullText = `${title || ''} ${description || ''} ${asArray(sourceTags).join(' ')}`.toLowerCase();
 
+  if (isDisallowedResourceType(resourceType, playbook)) return 'disallowed_resource_type';
+  if (sourceCollection && disallowedCollections.includes(sourceCollection)) {
+    return 'disallowed_source_collection';
+  }
   if (NON_TOOL_HOST_PATTERNS.some((pattern) => pattern.test(hostname))) return 'non_tool_host';
   if (matchesHostList(hostname, playbook.nonToolHosts)) return 'playbook_non_tool_host';
   if (NON_TOOL_TITLE_PATTERNS.some((pattern) => pattern.test(titleText))) return 'non_tool_title';
 
-  const hasToolSignal = hasStrongToolSignal(url, title, description);
+  const hasToolSignal = hasStrongToolSignal({ url, title, description, resourceType, sourceTags });
+  if (sourceCollection === 'inspo' && normalizeResourceType(resourceType) === 'website' && !hasToolSignal) {
+    return 'inspo_non_tool_site';
+  }
   if (NON_TOOL_PATH_PATTERNS.some((pattern) => pattern.test(pathname)) && !hasToolSignal) {
     return 'article_like_path';
   }
 
   if (hostname === 'github.com') {
-    const repoName = getPathname(url).split('/').filter(Boolean)[1] || '';
+    const segments = pathname.split('/').filter(Boolean);
+    const repoName = segments[1] || '';
     if (LOW_SIGNAL_GITHUB_REPO_PATTERNS.some((pattern) => pattern.test(repoName))) {
       return 'low_signal_repo';
     }
+    if (LOW_SIGNAL_GITHUB_PATH_PATTERNS.some((pattern) => pattern.test(pathname))) {
+      return 'low_signal_github_path';
+    }
   }
 
-  if (!hasToolSignal && /\b(news|opinion|camera|cartel|adopts rust|weblog|ramblings)\b/i.test(fullText)) {
+  if (
+    !hasToolSignal &&
+    /\b(news|opinion|analysis|review|camera|cartel|adopts rust|weblog|ramblings|newsletter|announces?)\b/i.test(
+      fullText
+    )
+  ) {
     return 'not_tool_signal';
   }
 
+  if (!hasToolSignal && countWords(description) < 5) return 'thin_description';
   return '';
 }
 
-function isBlockedLead(url, playbook) {
+function isBlockedLead(lead, playbook) {
+  const url = typeof lead === 'string' ? lead : lead?.url;
   const hostname = getHostname(url);
   if (!hostname) return true;
   if (BLOCKED_HOST_PATTERNS.some((pattern) => pattern.test(hostname))) return true;
   if (matchesHostList(hostname, playbook.blockedHosts)) return true;
   if (matchesHostList(hostname, playbook.nonToolHosts)) return true;
+  if (isDisallowedResourceType(lead?.resourceType, playbook)) return true;
   return false;
 }
 
@@ -341,6 +541,46 @@ function isMarketingLead({ title, description, tags }, playbook) {
   return asArray(playbook.marketingSignals).some((token) =>
     text.includes(String(token || '').toLowerCase())
   );
+}
+
+function normalizeIndustry(value) {
+  const token = sanitizeText(value, 60).toLowerCase();
+  if (!token) return '';
+  if (/(marketing|growth|seo|ads|ppc|campaign|email|social|lead-gen|leadgen|copywriting)/.test(token)) {
+    return 'marketing';
+  }
+  if (/(developer|development|engineering|devops|programming|coding|api|sdk)/.test(token)) {
+    return 'developer';
+  }
+  if (/(saas|software-as-a-service)/.test(token)) return 'saas';
+  if (/(ecommerce|e-commerce|shopify|store|retail)/.test(token)) return 'e-commerce';
+  if (/(community|creator|forum|social network)/.test(token)) return 'community';
+  if (/(content|cms|publishing|newsletter|blogging|blog)/.test(token)) return 'content';
+  if (/(general|all|other)/.test(token)) return 'general';
+  return '';
+}
+
+function deriveIndustries({ sourceIndustries, sourceTags, title, description, marketing }) {
+  const tokens = uniqStrings([
+    ...asArray(sourceIndustries),
+    ...asArray(sourceTags),
+    title || '',
+    description || '',
+  ], 30);
+  const industries = [];
+  const seen = new Set();
+
+  for (const token of tokens) {
+    const normalized = normalizeIndustry(token);
+    if (!normalized || seen.has(normalized) || !VALID_INDUSTRIES.has(normalized)) continue;
+    seen.add(normalized);
+    industries.push(normalized);
+    if (industries.length >= 4) break;
+  }
+
+  if (marketing && !seen.has('marketing')) industries.push('marketing');
+  if (industries.length === 0 && marketing) industries.push('marketing');
+  return industries.slice(0, 4);
 }
 
 async function loadCategoryCounts(sanity) {
@@ -355,12 +595,32 @@ async function loadCategoryCounts(sanity) {
 }
 
 function scoreLeadPriority(lead, categoryCounts, playbook) {
-  const category = String(lead?.category || classifyCategory(lead?.url, lead?.title, lead?.description));
+  const category = String(
+    lead?.category ||
+      classifyCategory({
+        url: lead?.url,
+        title: lead?.title,
+        description: lead?.description,
+        resourceType: lead?.resourceType,
+        sourceCollection: lead?.sourceCollection,
+        sourceTags: lead?.sourceTags,
+      })
+  );
   const allCounts = Object.values(categoryCounts);
   const maxCount = allCounts.length > 0 ? Math.max(...allCounts) : 0;
   const currentCount = categoryCounts[category] || 0;
   const scarcityBoost = Math.max(maxCount - currentCount, 0);
-  const sourceBoost = /github search|product hunt/i.test(String(lead?.source || '')) ? 2 : 0;
+  const source = String(lead?.source || '').toLowerCase();
+  let sourceBoost = 0;
+  if (source.includes('nocodesupply')) sourceBoost += 3;
+  else if (source.includes('futurepedia')) sourceBoost += 2.5;
+  else if (source.includes('product hunt')) sourceBoost += 1.5;
+  else if (source.includes('hacker news')) sourceBoost += 1;
+  else if (source.includes('github')) sourceBoost -= 1.5;
+
+  if (isDisallowedResourceType(lead?.resourceType, playbook)) sourceBoost -= 10;
+  if (NON_TOOL_PATH_PATTERNS.some((pattern) => pattern.test(getPathname(lead?.url)))) sourceBoost -= 3;
+
   const priorityRank = asArray(playbook.categoryPriority).indexOf(category);
   const rankBoost =
     priorityRank === -1
@@ -368,7 +628,12 @@ function scoreLeadPriority(lead, categoryCounts, playbook) {
       : Math.max(asArray(playbook.categoryPriority).length - priorityRank, 1) * 0.2;
   return {
     category,
-    score: Number(lead?.relevanceScore || 0) + scarcityBoost * 0.35 + sourceBoost + rankBoost,
+    score:
+      Number(lead?.relevanceScore || 0) +
+      scarcityBoost * 0.35 +
+      sourceBoost +
+      rankBoost +
+      (lead?.sourceCollection === 'learn' && category === 'learning-resources' ? 0.8 : 0),
   };
 }
 
@@ -421,6 +686,37 @@ async function validateUrl(url) {
     result.error = error.message;
     return result;
   }
+}
+
+/** When Node fetch says invalid (403/timeout/SSL), retry with Scrapling if script exists. Set USE_SCRAPLING_FALLBACK=0 to disable. */
+async function validateUrlWithScraplingFallback(url) {
+  const result = await validateUrl(url);
+  if (result.valid) return result;
+
+  const scriptPath = path.join(process.cwd(), 'scripts', 'check_url_scrapling.py');
+  const fallbackEnabled = process.env.USE_SCRAPLING_FALLBACK !== '0' && fs.existsSync(scriptPath);
+  if (!fallbackEnabled) return result;
+
+  return new Promise((resolve) => {
+    const proc = spawn('python3', [scriptPath, url, '--stealth'], {
+      stdio: ['ignore', 'pipe', 'pipe'],
+      cwd: process.cwd(),
+    });
+    proc.on('close', (code) => {
+      if (code === 0) {
+        resolve({
+          ...result,
+          valid: true,
+          status: 200,
+          method: 'Scrapling',
+          error: null,
+        });
+      } else {
+        resolve(result);
+      }
+    });
+    proc.on('error', () => resolve(result));
+  });
 }
 
 function extractMeta(html) {
@@ -531,7 +827,14 @@ export async function runResearchAgent() {
     const normalized = normalizeUrl(lead?.url || '');
     if (!normalized || seenQueueUrls.has(normalized)) continue;
     seenQueueUrls.add(normalized);
-    queue.push({ ...lead, url: normalized });
+    queue.push({
+      ...lead,
+      url: normalized,
+      resourceType: normalizeResourceType(lead?.resourceType),
+      sourceTags: uniqStrings(lead?.sourceTags, 16),
+      sourceIndustries: uniqStrings(lead?.sourceIndustries, 16),
+      sourceCollection: sanitizeText(lead?.sourceCollection || '', 24).toLowerCase(),
+    });
   }
 
   const prioritizedQueue = queue
@@ -565,8 +868,11 @@ export async function runResearchAgent() {
       stage: 'validate-lead',
     });
 
-    if (!lead.url || !lead.title) continue;
-    if (isBlockedLead(lead.url, playbook)) {
+    if (!lead.url || !lead.title) {
+      skippedReasons.missing += 1;
+      continue;
+    }
+    if (isBlockedLead(lead, playbook)) {
       skippedReasons.blocked += 1;
       continue;
     }
@@ -581,7 +887,7 @@ export async function runResearchAgent() {
       continue;
     }
 
-    const validation = await validateUrl(lead.url);
+    const validation = await validateUrlWithScraplingFallback(lead.url);
     validationStatuses.push({
       url: lead.url,
       status: validation.status,
@@ -599,13 +905,35 @@ export async function runResearchAgent() {
     const title = cleanInferredTitle(lead.url, inferredTitle);
     const description = sanitizeText(page.description || lead.description || `${title} tool overview.`, 260);
 
-    const lowQualityReason = detectLowQualityReason(lead.url, title, description, playbook);
+    const normalizedType = normalizeResourceType(lead.resourceType);
+    const sourceTags = uniqStrings(lead.sourceTags, 16);
+    const sourceIndustries = uniqStrings(lead.sourceIndustries, 16);
+    const sourceCollection = sanitizeText(lead.sourceCollection || '', 24).toLowerCase();
+
+    const lowQualityReason = detectLowQualityReason(
+      {
+        ...lead,
+        url: lead.url,
+        title,
+        description,
+        resourceType: normalizedType,
+        sourceTags,
+      },
+      playbook
+    );
     if (!title || lowQualityReason) {
       skippedReasons.lowQuality += 1;
       continue;
     }
 
-    const category = classifyCategory(lead.url, title, description);
+    const category = classifyCategory({
+      url: lead.url,
+      title,
+      description,
+      resourceType: normalizedType,
+      sourceCollection,
+      sourceTags,
+    });
 
     const slug = slugify(title);
     if (!slug || existingIndex.slugSet.has(slug)) {
@@ -615,10 +943,27 @@ export async function runResearchAgent() {
 
     const sourceDomain = getHostname(lead.url);
     const bestNot = generateBestForNotFor(category);
-    const generatedTags = generateTags(title, description, category);
+    const generatedTags = generateTags({
+      title,
+      description,
+      category,
+      resourceType: normalizedType,
+      sourceTags,
+    });
     const marketing = isMarketingLead(
-      { title, description, tags: generatedTags },
+      { title, description, tags: [...generatedTags, ...sourceTags] },
       playbook
+    );
+    const industries = deriveIndustries({
+      sourceIndustries,
+      sourceTags,
+      title,
+      description,
+      marketing,
+    });
+    const tags = uniqStrings(
+      marketing ? [...generatedTags, ...sourceTags, 'marketing'] : [...generatedTags, ...sourceTags],
+      12
     );
 
     const enriched = {
@@ -627,8 +972,9 @@ export async function runResearchAgent() {
       slug,
       description,
       category,
-      tags: marketing ? [...new Set([...generatedTags, 'marketing'])] : generatedTags,
-      ...(marketing ? { industries: ['marketing'] } : {}),
+      resourceType: normalizedType,
+      tags,
+      ...(industries.length > 0 ? { industries } : {}),
       bestFor: bestNot.bestFor,
       notFor: bestNot.notFor,
       alternatives: generateAlternatives(title),
@@ -642,6 +988,9 @@ export async function runResearchAgent() {
       ],
       source: lead.source || 'unknown',
       sourceDomain,
+      sourceCollection,
+      sourceTags,
+      sourceIndustries,
       image: page.image,
       contentTier: 'tier3',
       refreshCadenceDays: 90,
@@ -651,6 +1000,7 @@ export async function runResearchAgent() {
         validationMethod: validation.method,
         validationStatus: validation.status,
         fetchedAt: validation.validatedAt,
+        lowQualityReason: null,
       },
       lastReviewedAt: new Date().toISOString(),
       validatedAt: new Date().toISOString(),
@@ -667,9 +1017,12 @@ export async function runResearchAgent() {
   enqueueValidatedResources(validated);
 
   const createdByCategory = {};
+  const createdBySource = {};
   for (const row of validated) {
     const key = String(row.category || 'unknown');
     createdByCategory[key] = (createdByCategory[key] || 0) + 1;
+    const sourceKey = String(row.source || 'unknown');
+    createdBySource[sourceKey] = (createdBySource[sourceKey] || 0) + 1;
   }
 
   const report = {
@@ -681,6 +1034,7 @@ export async function runResearchAgent() {
     validated: validated.length,
     skippedReasons,
     createdByCategory,
+    createdBySource,
     validationStatuses: validationStatuses.slice(0, 120),
     durationMs: Date.now() - startedAt,
   };
@@ -695,6 +1049,7 @@ export async function runResearchAgent() {
       validated: validated.length,
       queued: queue.length,
       createdByCategory,
+      createdBySource,
       playbookVersion: playbook.version,
     },
     durationMs: Date.now() - startedAt,

@@ -1,29 +1,756 @@
 {
-  "runId": "research-1771966164834",
-  "generatedAt": "2026-02-24T20:49:48.151Z",
-  "playbookVersion": "2026-02-24.1",
-  "queued": 7,
-  "prioritized": 7,
-  "validated": 5,
+  "runId": "research-1772143115162",
+  "generatedAt": "2026-02-26T22:08:35.481Z",
+  "playbookVersion": "2026-02-26.2",
+  "queued": 107,
+  "prioritized": 107,
+  "validated": 27,
   "skippedReasons": {
     "missing": 0,
-    "blocked": 0,
+    "blocked": 1,
     "duplicate": 0,
-    "invalid": 0,
-    "slugConflict": 1,
-    "lowQuality": 1
+    "invalid": 18,
+    "slugConflict": 4,
+    "lowQuality": 57
   },
   "createdByCategory": {
-    "ai-tools": 1,
-    "development-tools": 4
+    "ai-tools": 5,
+    "design-tools": 3,
+    "ui-ux-resources": 13,
+    "learning-resources": 2,
+    "coding": 4
+  },
+  "createdBySource": {
+    "NoCodeSupply": 27
   },
   "validationStatuses": [
     {
-      "url": "https://github.com/greatscott/enveil",
+      "url": "https://chat.openai.com/g/g-gumycukin-vikas-scripting-helper",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.figma.com/community/file/1116642834384860183",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://textfx.withgoogle.com",
       "status": 200,
       "method": "HEAD",
       "valid": true,
       "error": null
+    },
+    {
+      "url": "https://www.figma.com/community/plugin/1326990370920029683",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://reallygoodemails.com",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://brandfetch.com",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://supportdept.io/bubble-bootcamp",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.usecloudpress.com/integrations/export-google-docs-to-webflow",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.udemy.com/course/converting-webflow-into-angular-245-using-freeformjs",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.tambien-courses.com",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.react.doctor",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://ds.shadcn.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://requery.dev",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://gist.github.com/nocodesupplyco/05a71b745877a8bee3cb725fd9919a3d",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://gist.github.com/nocodesupplyco/ab47e7189bea9e5cb3902605226c9fe9",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://creator.supply",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://sizzy.app",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://bubble.pxf.io/oqzvgm",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.relumeipsum.com",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.phind.com",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://easlo.gumroad.com/l/vdbko",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://canonic.dev",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.hiophelia.com",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.bettyblocks.com",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.fable.app",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.gridup.io",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.outerbase.com",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://iconists.lemonsqueezy.com/checkout",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://ui8.net/vectorly-space/products/ultimate-notion-icons",
+      "status": 200,
+      "method": "GET",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://framer.components.io",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://tome.app",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.bezel.it",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.milieugrotesque.com/typefaces",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "This operation was aborted"
+    },
+    {
+      "url": "https://www.shapr3d.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://instaprice.app",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://shop.rinconelloinc.com/checkout/buy/7891b349-cdc3-4087-9f69-6fa0fd719b52",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.thepricer.co",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.hedrick.io/resource/system",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://sharptype.co/typefaces",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.insta.gallery",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.streamlinehq.com/pricing",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://displaay.net/typeface/saans-collection",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://webflow.com/made-in-webflow/website/teenage-engineering-button",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.hvdfonts.com/fonts",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.notionsecondbrain.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://vmdanilov.gumroad.com/l/optimage",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://powersave.pro",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.jace.ai",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://adventofprompt.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.failory.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.modden.co",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.sciventures.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.ai.io",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.eunjeongyoo.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.tryeraser.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://perplexity.supply",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.cortex.io",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.divblockers.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.cobosrl.co",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://hype.co",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://withcompound.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.pendulum.asia",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.outsite.co",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.taxgpt.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.dasglas.haus",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.gemnote.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.breeonanechole.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.tonemaki.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.opendue.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.hartmanncapital.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://lamatic.ai",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.flowmads.io",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.siena.film",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://loox.app/lost-in-space",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.lakera.ai",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.dive.club",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.zenithvc.se",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://horizons.alvaria.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.studiofew.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.ramonabizbac.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.splinegroup.ca",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://dmirty.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://splashthat.com",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.oharchitecture.com.au",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.meetava.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://heykuba.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.lukenetti.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://fellows.ted.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.happyvalleyfarms.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.funsize.co",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.deso.org",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.dvele.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.descript.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.digitalwerk.agency/en",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.wtf.style",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.reshapebiotech.com",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.vintagevoyagedesign.com/fonts",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.figma.com/community/plugin/1164118094004004837",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://figmaplugins.design",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://framer.supply",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.offgrid-design.co",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.dessn.ai",
+      "status": 200,
+      "method": "HEAD",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://displaay.net/typefaces/retail",
+      "status": 200,
+      "method": "Scrapling",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://www.agentpages.ai",
+      "status": 0,
+      "method": "HEAD->GET",
+      "valid": false,
+      "error": "fetch failed"
     },
     {
       "url": "https://simonwillison.net/guides/agentic-engineering-patterns/code-is-cheap",
@@ -38,35 +765,7 @@
       "method": "GET",
       "valid": true,
       "error": null
-    },
-    {
-      "url": "https://github.com/yjeanrenaud/yj_nearbyglasses",
-      "status": 200,
-      "method": "HEAD",
-      "valid": true,
-      "error": null
-    },
-    {
-      "url": "https://keepandroidopen.org/open-letter",
-      "status": 200,
-      "method": "HEAD",
-      "valid": true,
-      "error": null
-    },
-    {
-      "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle",
-      "status": 200,
-      "method": "HEAD",
-      "valid": true,
-      "error": null
-    },
-    {
-      "url": "https://github.com/vignesh07/babyshark",
-      "status": 200,
-      "method": "HEAD",
-      "valid": true,
-      "error": null
     }
   ],
-  "durationMs": 23317
+  "durationMs": 600319
 }

@@ -1,59 +1,103 @@
 [
   {
-    "queueId": "47221424-5c90-47e4-9173-b25676243e00",
+    "queueId": "9f8b55dd-1b0c-46dc-bedd-c4003127027e",
     "type": "resource",
     "data": {
-      "url": "https://github.com/vignesh07/babyshark",
-      "title": "babyshark",
-      "slug": "babyshark",
-      "description": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark",
-      "category": "development-tools",
+      "url": "https://textfx.withgoogle.com",
+      "title": "TextFX",
+      "slug": "textfx",
+      "description": "TextFX",
+      "category": "ui-ux-resources",
+      "resourceType": "utility",
       "tags": [
-        "development-tools",
-        "design"
+        "ui-ux-resources",
+        "utility",
+        "content",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "conversion",
+        "cookie",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
       ],
       "bestFor": [
-        "Developers shipping production code",
-        "Teams standardizing tooling across projects"
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
       ],
-      "notFor": [
-        "Non-technical users with no engineering support"
-      ],
+      "notFor": [],
       "alternatives": [],
-      "body": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "body": "TextFX Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
       "sources": [
         {
-          "_key": "05cd47ee-0372-4223-afea-39b40312fe7a",
-          "label": "babyshark official site",
-          "url": "https://github.com/vignesh07/babyshark"
+          "_key": "8b5e7250-0f7f-409c-aaae-1b27474cd257",
+          "label": "TextFX official site",
+          "url": "https://textfx.withgoogle.com"
         }
       ],
-      "source": "Hacker News",
-      "sourceDomain": "github.com",
-      "image": "https://opengraph.githubassets.com/c518c87213a74ec540615f635bcef349be474bfb5c16e2b05cee1ea0605c1ae2/vignesh07/babyshark",
+      "source": "NoCodeSupply",
+      "sourceDomain": "textfx.withgoogle.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "content",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "conversion",
+        "cookie"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
       "contentTier": "tier3",
       "refreshCadenceDays": 90,
       "factCheckStatus": "needs-review",
       "researchMethod": {
-        "playbookVersion": "2026-02-24.1",
+        "playbookVersion": "2026-02-26.2",
         "validationMethod": "HEAD",
         "validationStatus": 200,
-        "fetchedAt": "2026-02-24T07:32:53.115Z"
+        "fetchedAt": "2026-02-26T10:06:47.030Z",
+        "lowQualityReason": null
       },
-      "lastReviewedAt": "2026-02-24T07:32:54.486Z",
-      "validatedAt": "2026-02-24T07:32:54.486Z"
+      "lastReviewedAt": "2026-02-26T10:06:47.976Z",
+      "validatedAt": "2026-02-26T10:06:47.976Z"
     },
-    "submittedAt": "2026-02-24T07:32:54.568Z",
-    "status": "approved",
+    "submittedAt": "2026-02-26T10:09:38.037Z",
+    "status": "needs_revision",
     "review": {
-      "valid": true,
-      "score": 68,
-      "issues": [],
+      "valid": false,
+      "score": 60,
+      "issues": [
+        "description must be 10..260 characters"
+      ],
       "warnings": [],
       "passed": [
         "title",
         "url",
-        "description",
         "category",
         "slug",
         "body-depth",
@@ -61,2653 +105,35 @@
         "refresh-cadence",
         "fact-check"
       ],
-      "reviewedAt": "2026-02-24T07:32:57.558Z"
+      "reviewedAt": "2026-02-26T10:09:38.052Z"
     },
-    "needsApproval": true,
-    "approvedAt": "2026-02-24T07:33:05.678Z"
+    "needsApproval": false
   },
   {
-    "queueId": "6c97a20b-9f96-4d50-b9dd-3753b3825c2b",
-    "type": "blog",
-    "data": {
-      "_type": "article",
-      "title": "Best Productivity Tools for Teams (2026 Decision Guide)",
-      "slug": "best-productivity-tools-for-teams-2026-decision-guide-2",
-      "excerpt": "Productivity Tools shortlist with fact/inference/recommendation framing, explicit tradeoffs, and source-backed implementation guidance for 2026.",
-      "primaryKeyword": "productivity tools for teams",
-      "intentStage": "decision",
-      "contentTier": "tier1",
-      "body": [
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Quick answer (2026-02-24): which productivity tools options should teams shortlist now?"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Shortlist tools that show clear implementation signals, predictable maintenance burden, and explicit integration paths. Productivity tooling only works when it makes coordination clearer than the process it replaces. This guide is decision-first and optimized for high-intent evaluation workflows."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Quick verdict by scenario"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): No single productivity tools option consistently wins every workflow. Teams generally perform better with workflow-specific primary tools and one fallback path."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Choose Publer first when delivery teams with clear implementation ownership and measurable rollout goals."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Choose Braze first when delivery teams with clear implementation ownership and measurable rollout goals."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Choose ConvertKit first when delivery teams with clear implementation ownership and measurable rollout goals."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Choose Planable first when delivery teams with clear implementation ownership and measurable rollout goals."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Choose ActiveCampaign first when delivery teams with clear implementation ownership and measurable rollout goals."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: A primary-plus-fallback operating model usually reduces continuity risk when pricing, policy, or reliability conditions change."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Internal paths: "
-            },
-            {
-              "_type": "span",
-              "text": "/category/productivity",
-              "marks": [
-                "link-c592e486"
-              ]
-            },
-            {
-              "_type": "span",
-              "text": " | "
-            },
-            {
-              "_type": "span",
-              "text": "/latest",
-              "marks": [
-                "link-816daf8e"
-              ]
-            },
-            {
-              "_type": "span",
-              "text": " | "
-            },
-            {
-              "_type": "span",
-              "text": "/collections",
-              "marks": [
-                "link-d9ba86a8"
-              ]
-            },
-            {
-              "_type": "span",
-              "text": " | "
-            },
-            {
-              "_type": "span",
-              "text": "/compare",
-              "marks": [
-                "link-5a8c7ed4"
-              ]
-            },
-            {
-              "_type": "span",
-              "text": " | "
-            },
-            {
-              "_type": "span",
-              "text": "/alternatives",
-              "marks": [
-                "link-d4a34dd3"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-c592e486",
-              "href": "/category/productivity"
-            },
-            {
-              "_type": "link",
-              "_key": "link-816daf8e",
-              "href": "/latest"
-            },
-            {
-              "_type": "link",
-              "_key": "link-d9ba86a8",
-              "href": "/collections"
-            },
-            {
-              "_type": "link",
-              "_key": "link-5a8c7ed4",
-              "href": "/compare"
-            },
-            {
-              "_type": "link",
-              "_key": "link-d4a34dd3",
-              "href": "/alternatives"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Related guides: "
-            },
-            {
-              "_type": "span",
-              "text": "/collections",
-              "marks": [
-                "link-64885b71"
-              ]
-            },
-            {
-              "_type": "span",
-              "text": " | "
-            },
-            {
-              "_type": "span",
-              "text": "/compare",
-              "marks": [
-                "link-f71fe1aa"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-64885b71",
-              "href": "/collections"
-            },
-            {
-              "_type": "link",
-              "_key": "link-f71fe1aa",
-              "href": "/compare"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Authority brief and decision context"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Search intent is decision-stage evaluation for productivity tools with near-term implementation pressure."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Reader job-to-be-done: choose a tool that improves delivery speed without adding unbounded operational complexity."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Primary failure risk: selecting a tool on feature demos alone and discovering integration friction after rollout."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Topic coverage map for productivity tools"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Decision-stage content is most useful when it spans architecture, adoption, governance, economics, and execution risk rather than only feature snapshots."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration risk and rollout sequencing"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance and ownership model"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Cost visibility and procurement controls"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Migration and rollback planning"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Operational reliability and incident handling"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Training and adoption design"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Measurement model and KPI alignment"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Long-term maintainability"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Market evidence and visuals (2026-02-24)"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): The visuals below are sourced from first-party benchmark reports to anchor this productivity tools evaluation in external evidence, not opinion alone."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Stack Overflow - Developer Survey 2025 (AI)"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2025-07-29): Annual developer sentiment dataset covering AI adoption, trust, and workflow impact."
-            }
-          ]
-        },
-        {
-          "_type": "sourcedImage",
-          "_key": "833fb92f-9192-491d-8346-cc87b22f08a0",
-          "imageUrl": "https://survey.stackoverflow.co/2025/charts/stackoverflow-dev-survey-2025-ai-sentiment-and-usage-ai-select-social.png",
-          "alt": "Stack Overflow 2025 chart showing developer AI usage and sentiment distribution.",
-          "caption": "Stack Overflow benchmark visual used for editorial context.",
-          "sourceLabel": "Stack Overflow: Developer Survey 2025 (AI)",
-          "sourceUrl": "https://survey.stackoverflow.co/2025/ai",
-          "width": 1600,
-          "height": 900
-        },
-        {
-          "_type": "infographic",
-          "_key": "cd4a806a-ebe1-440d-bdb1-91e97a77eb3b",
-          "variant": "grid",
-          "title": "Stack Overflow key signals",
-          "stats": [
-            {
-              "label": "Developers using/planning AI",
-              "value": "84%",
-              "subtext": "Stack Overflow 2025"
-            },
-            {
-              "label": "Pros using AI daily",
-              "value": "51%",
-              "subtext": "Stack Overflow 2025"
-            },
-            {
-              "label": "Pros distrusting AI accuracy",
-              "value": "46%",
-              "subtext": "Stack Overflow 2025"
-            }
-          ],
-          "sourceLabel": "Stack Overflow report",
-          "sourceUrl": "https://survey.stackoverflow.co/2025/ai"
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "GitHub - Octoverse 2025"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2025-11-06): State-of-development report tracking developer growth and AI project adoption."
-            }
-          ]
-        },
-        {
-          "_type": "sourcedImage",
-          "_key": "542f67a6-4999-4215-8373-13fa3965d385",
-          "imageUrl": "https://github.blog/wp-content/uploads/2025/11/Octoverse-2025-top-metrics.png?resize=1024%2C576",
-          "alt": "GitHub Octoverse 2025 top metrics graphic.",
-          "caption": "GitHub benchmark visual used for editorial context.",
-          "sourceLabel": "GitHub: Octoverse 2025",
-          "sourceUrl": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/",
-          "width": 1600,
-          "height": 900
-        },
-        {
-          "_type": "infographic",
-          "_key": "74304288-04b1-488e-b649-67724218dd9d",
-          "variant": "grid",
-          "title": "GitHub key signals",
-          "stats": [
-            {
-              "label": "Developers on GitHub",
-              "value": "180M+",
-              "subtext": "Global contributor base"
-            },
-            {
-              "label": "AI projects on GitHub",
-              "value": "4.3M",
-              "subtext": "Octoverse 2025"
-            },
-            {
-              "label": "New developer joins",
-              "value": "1/sec",
-              "subtext": "Throughout 2025"
-            }
-          ],
-          "sourceLabel": "GitHub report",
-          "sourceUrl": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/"
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Google Cloud / DORA - DORA Report 2025"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2025-01-01): Software delivery research on AI usage, platform engineering maturity, and delivery performance."
-            }
-          ]
-        },
-        {
-          "_type": "sourcedImage",
-          "_key": "586e10e1-91fb-4117-9453-1980249d9fdc",
-          "imageUrl": "https://dora.dev/research/shared/dora-report-2025/images/hero-mobile.png",
-          "alt": "DORA Report 2025 hero visual.",
-          "caption": "Google Cloud / DORA benchmark visual used for editorial context.",
-          "sourceLabel": "Google Cloud / DORA: DORA Report 2025",
-          "sourceUrl": "https://dora.dev/research/2025/dora-report/",
-          "width": 1600,
-          "height": 900
-        },
-        {
-          "_type": "infographic",
-          "_key": "1064e740-6e99-4c39-9304-1af37ff1849c",
-          "variant": "grid",
-          "title": "Google Cloud / DORA key signals",
-          "stats": [
-            {
-              "label": "Professionals using AI daily work",
-              "value": "90%",
-              "subtext": "DORA 2025"
-            },
-            {
-              "label": "Organizations with internal dev platform",
-              "value": "90%",
-              "subtext": "DORA 2025"
-            },
-            {
-              "label": "Organizations with platform team",
-              "value": "76%",
-              "subtext": "DORA 2025"
-            }
-          ],
-          "sourceLabel": "Google Cloud / DORA report",
-          "sourceUrl": "https://dora.dev/research/2025/dora-report/"
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Evaluation criteria used in this draft"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Implementation effort and migration risk"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration depth across existing stack"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Time-to-value for first production workflow"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance controls and auditability"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Long-term maintenance overhead and roadmap clarity"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Commercial risk (pricing volatility and lock-in)"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Evidence quality and source freshness for every critical claim"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Operational readiness: ownership, onboarding, and incident response expectations"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Security/compliance mapping completeness before scaled rollout"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Internal link policy: include /collections, /compare, /alternatives, /latest in every decision guide."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Productivity Tools candidates and tradeoff analysis"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "1. Publer"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Publer positions itself as follows: Social publishing tool for multi-channel scheduling, content recycling, and team approvals."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, Publer is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot Publer in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Fits developer-first execution paths without heavy UI overhead"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Better coordination potential for multi-role delivery teams"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://publer.io",
-              "marks": [
-                "link-99b8aaee"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-99b8aaee",
-              "href": "https://publer.io"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "2. Braze"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Braze positions itself as follows: Customer engagement platform for coordinated messaging across email, push, and in-app."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, Braze is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot Braze in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://www.braze.com",
-              "marks": [
-                "link-c44b3552"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-c44b3552",
-              "href": "https://www.braze.com"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "3. ConvertKit"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): ConvertKit positions itself as follows: Email marketing platform for creators with automations, audience segmentation, and forms."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, ConvertKit is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot ConvertKit in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://convertkit.com",
-              "marks": [
-                "link-42def4ac"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-42def4ac",
-              "href": "https://convertkit.com"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "4. Planable"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Planable positions itself as follows: Content collaboration workspace for social calendars, approvals, and stakeholder feedback."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, Planable is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot Planable in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Better coordination potential for multi-role delivery teams"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://planable.io",
-              "marks": [
-                "link-16ffc2ba"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-16ffc2ba",
-              "href": "https://planable.io"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "5. ActiveCampaign"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): ActiveCampaign positions itself as follows: Marketing automation and CRM workflows for email campaigns and customer journeys."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, ActiveCampaign is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot ActiveCampaign in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://www.activecampaign.com",
-              "marks": [
-                "link-77b581bb"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-77b581bb",
-              "href": "https://www.activecampaign.com"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "6. CoSchedule"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): CoSchedule positions itself as follows: Marketing calendar suite for campaign planning, task orchestration, and publishing."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, CoSchedule is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot CoSchedule in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://coschedule.com",
-              "marks": [
-                "link-8a3b33d0"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-8a3b33d0",
-              "href": "https://coschedule.com"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "7. Iterable"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Iterable positions itself as follows: Cross-channel lifecycle marketing platform for personalized customer messaging."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, Iterable is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot Iterable in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://iterable.com",
-              "marks": [
-                "link-1fce1e07"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-1fce1e07",
-              "href": "https://iterable.com"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "8. Metricool"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Metricool positions itself as follows: Social media and ad analytics platform for scheduling content and tracking campaign performance."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Based on current metadata signals, Metricool is likely to perform best when teams that need measurable throughput improvements in active delivery cycles."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Pilot Metricool in one live workflow first, then scale only if adoption metrics and defect rates improve against baseline."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Strength: Potential to reduce repetitive tasks if guardrails are defined early"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Constraint: Documentation depth is not obvious from first-pass signals"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration check: Confirm whether automation hooks exist or if workarounds are needed."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Governance check: Define access controls, data-retention boundaries, and audit expectations before launch."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Not ideal for: Teams that cannot support process changes during the evaluation window."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source URL: "
-            },
-            {
-              "_type": "span",
-              "text": "https://metricool.com",
-              "marks": [
-                "link-e8c0f43d"
-              ]
-            }
-          ],
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "link-e8c0f43d",
-              "href": "https://metricool.com"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Integration and deployment reality checks"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Most rollout failures occur at the integration layer (ownership gaps, weak fallback behavior, and missing review controls), not at the prompt layer."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Define task-level prompt contracts for production-impacting workflows before enabling broad usage."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Require human approval gates for changes that can affect production reliability, security, or billing."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Log model/provider metadata for accepted outputs so review decisions are auditable."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Maintain one fallback path and test failover behavior before full-team rollout."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Role-based recommendation paths"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Engineering leaders"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Engineering leaders typically optimize for reliability, maintainability, and time-to-value under delivery pressure."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: For productivity tools, run scoped pilots with explicit rollback criteria and weekly instrumentation reviews before org-wide rollout."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Product and ops owners"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Product and operations owners benefit most when tools reduce coordination overhead and shorten feedback loops between teams."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Require a clear owner, onboarding plan, and adoption rubric before approving expanded spend."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Security and governance stakeholders"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Security teams generally need evidence of policy controls, access boundaries, and data handling paths before sign-off."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Complete a policy mapping checklist and document unresolved gaps prior to production rollout."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Execution plan and operating checklist"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Days 1-30: baseline and pilot design"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Define baseline metrics (cycle time, defect escape rate, adoption rate, and support load)."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Run one bounded production pilot with clear success and rollback thresholds."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Capture integration blockers, manual workarounds, and security questions in one backlog."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Days 31-60: controlled expansion"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Expand to a second workflow only after first-pilot KPIs show measurable improvement."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Harden onboarding docs, usage guardrails, and incident playbooks from pilot learnings."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Review commercial terms against projected usage to avoid surprise spend growth."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Days 61-90: governance and scale readiness"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Formalize ownership model, review cadence, and escalation paths for critical failures."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Document migration path and fallback plan if pricing, roadmap, or reliability changes materially."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Publish adoption scorecard and decision log for leadership visibility."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Cost model: optimize accepted outcomes, not raw prompt spend"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-23): Low per-call pricing can still create higher total cost if acceptance rates are weak and review/rework overhead grows."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Cost per accepted implementation change"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Cost per resolved debugging incident"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Prompt-to-merge cycle time"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Human rework time per accepted output"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Acceptance ratio by workflow domain"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Source quality and citation policy"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): This draft prioritizes first-party product documentation, official benchmark reports, and attributed visuals from high-authority domains."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Every embedded visual includes alt text, source label, and source URL attribution."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Time-sensitive statements use absolute dates and should be re-verified before publication."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Unattributed social claims and low-authority aggregators are excluded from decision-critical sections."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Policy: Use first-party docs, official benchmark reports, and attributed visuals for decision-critical claims. Re-verify time-sensitive claims before publication."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Common mistakes to avoid"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Selecting one tool globally before workflow-level validation."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Approving rollout without baseline metrics and explicit success/failure thresholds."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Ignoring fallback strategy and continuity planning for provider shifts."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Comparing token pricing only, without tracking acceptance quality and rework overhead."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Running pilots without assigning clear owner accountability and governance controls."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Where recommendations can fail"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Failure mode: no baseline metrics before pilot, making improvement claims unverifiable."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Failure mode: rollout to entire org before validating integration reliability in one workflow."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Failure mode: procurement decision made without ownership for maintenance and onboarding."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "listItem": "bullet",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Failure mode: ignoring migration plan if pricing or roadmap changes materially."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Implementation sequence (30/60/90 days)"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Days 1-30 should define baseline metrics and run one scoped pilot with weekly review checkpoints."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Days 31-60 should expand to a second workflow only if pilot metrics improve and rollback path remains viable."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Days 61-90 should formalize governance, training, and cost controls before wider rollout."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Final recommendation"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Teams that treat tool selection as an operational decision, not a novelty decision, usually see better long-term outcomes."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: Publish this shortlist with sourced visuals, explicit tradeoff notes, and a freshness timestamp, then rerun validation before every major content refresh."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Methodology and source freshness"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Sources in this draft are first-party links captured during the current research cycle."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-24): Time-sensitive claims should be re-verified on 2026-02-24 before publication, including benchmark visuals and cited metrics."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [
-            {
-              "_type": "span",
-              "text": "FAQ"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Is there one universal winner in productivity tools?"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "No. Recommendation: assign primary tools by workflow domain, then keep one fallback option for continuity."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Should we standardize on one option for every team?"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Inference: Standardizing too early can reduce adaptability. Most organizations perform better with a controlled primary-plus-fallback model."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "How often should this comparison be refreshed?"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Fact (2026-02-23): Re-validate quarterly, and also after major product updates, pricing changes, or policy shifts."
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "h3",
-          "children": [
-            {
-              "_type": "span",
-              "text": "What should we measure during pilot evaluation?"
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [
-            {
-              "_type": "span",
-              "text": "Recommendation: measure accepted output quality, rework time, cycle-time impact, and governance fit by workflow."
-            }
-          ]
-        }
-      ],
-      "category": "productivity",
-      "tags": [
-        "productivity",
-        "productivity tools guide",
-        "tool evaluation",
-        "implementation checklist",
-        "decision framework",
-        "2026",
-        "publer",
-        "braze",
-        "convertkit",
-        "planable",
-        "activecampaign",
-        "coschedule"
-      ],
-      "sources": [
-        {
-          "_key": "a85369fa-ceaa-426f-842f-27a5c0237ec3",
-          "label": "Publer official site",
-          "url": "https://publer.io"
-        },
-        {
-          "_key": "dcba63fe-d9d0-4283-a62c-799dbedb48e5",
-          "label": "Braze official site",
-          "url": "https://www.braze.com"
-        },
-        {
-          "_key": "f4bfbe3c-20cf-4054-9dfd-7caf4e2f4593",
-          "label": "ConvertKit official site",
-          "url": "https://convertkit.com"
-        },
-        {
-          "_key": "c353dcca-143f-4ea8-8927-6f7e3be18475",
-          "label": "Planable official site",
-          "url": "https://planable.io"
-        },
-        {
-          "_key": "1f119e1c-aa96-45ff-b57b-dacf912d6789",
-          "label": "ActiveCampaign official site",
-          "url": "https://www.activecampaign.com"
-        },
-        {
-          "_key": "4e803a27-4dc0-4da6-baeb-3729e4a59f33",
-          "label": "CoSchedule official site",
-          "url": "https://coschedule.com"
-        },
-        {
-          "_key": "81fe692f-f20c-4cb1-b071-d7a956262f03",
-          "label": "Iterable official site",
-          "url": "https://iterable.com"
-        },
-        {
-          "_key": "493b3c26-ac53-4690-a1ae-d5881e5c5373",
-          "label": "Metricool official site",
-          "url": "https://metricool.com"
-        },
-        {
-          "_key": "ecec597e-ea8d-487c-b7bf-2df280932264",
-          "label": "Loomly official site",
-          "url": "https://www.loomly.com"
-        },
-        {
-          "_key": "95296f06-2aef-4a2b-b61d-02a517b996ea",
-          "label": "MailerLite official site",
-          "url": "https://www.mailerlite.com"
-        },
-        {
-          "_key": "6eb62494-1099-4843-a81c-1bb9537ce941",
-          "label": "Stack Overflow: Developer Survey 2025 (AI)",
-          "url": "https://survey.stackoverflow.co/2025/ai"
-        },
-        {
-          "_key": "71a5ad96-a5bb-4f2d-92a5-71da80af3646",
-          "label": "GitHub: Octoverse 2025",
-          "url": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1"
-        },
-        {
-          "_key": "395fac15-ea4f-40f4-b128-1b83ef835af4",
-          "label": "Google Cloud / DORA: DORA Report 2025",
-          "url": "https://dora.dev/research/2025/dora-report"
-        }
-      ],
-      "relatedResources": [
-        {
-          "_type": "reference",
-          "_ref": "d5d6e4cf-7b16-4dbd-87f7-160b701c7ae0"
-        },
-        {
-          "_type": "reference",
-          "_ref": "cdf33167-fdbb-48df-9c57-7803e9db68da"
-        },
-        {
-          "_type": "reference",
-          "_ref": "afe6dce8-f207-4211-b21d-7d3f33c3db0c"
-        },
-        {
-          "_type": "reference",
-          "_ref": "9defb15e-2054-4a00-adbd-1c7e416438f9"
-        },
-        {
-          "_type": "reference",
-          "_ref": "7396dcca-8fc7-4faf-88a9-42bc82f55d99"
-        },
-        {
-          "_type": "reference",
-          "_ref": "677182d1-022f-4424-b8b7-f1648aec7e75"
-        }
-      ],
-      "primaryResource": {
-        "_type": "reference",
-        "_ref": "d5d6e4cf-7b16-4dbd-87f7-160b701c7ae0"
-      },
-      "author": "The Stash Editorial Team",
-      "publishedAt": "2026-02-24T20:49:49.253Z",
-      "lastReviewedAt": "2026-02-24T20:49:49.253Z",
-      "refreshCadenceDays": 90,
-      "factCheckStatus": "needs-review",
-      "authorityBrief": {
-        "searchIntent": "Decision-stage readers evaluating productivity tools for implementation in the next quarter",
-        "primaryKeyword": "productivity tools for teams",
-        "safeHarborKeywords": [
-          "productivity tools comparison",
-          "productivity tools alternatives",
-          "productivity tools for startup teams",
-          "productivity tools implementation checklist",
-          "productivity tools security checklist",
-          "productivity tools rollout plan"
-        ],
-        "readerJob": "Select a tool with clear adoption upside and bounded operational risk.",
-        "failureRisks": [
-          "No baseline metrics for evaluation",
-          "Insufficient integration validation",
-          "Undefined rollback path"
-        ],
-        "evaluationCriteria": [
-          "Implementation effort and migration risk",
-          "Integration depth across existing stack",
-          "Time-to-value for first production workflow",
-          "Governance controls and auditability",
-          "Long-term maintenance overhead and roadmap clarity",
-          "Commercial risk (pricing volatility and lock-in)"
-        ],
-        "evidencePlan": "Prioritize first-party product URLs, benchmark reports, and attributed visuals (Stack Overflow Developer Survey 2025 (AI); GitHub Octoverse 2025; Google Cloud / DORA DORA Report 2025).",
-        "internalLinks": [
-          "/category/productivity",
-          "/collections",
-          "/latest",
-          "/compare",
-          "/alternatives",
-          "/collections",
-          "/compare"
-        ],
-        "differentiation": "Combines answer-first verdicts, source-attributed visuals, explicit fact/inference/recommendation framing, and execution checklists.",
-        "freshnessDate": "2026-02-24",
-        "shortlistedTools": [
-          "Publer",
-          "Braze",
-          "ConvertKit",
-          "Planable",
-          "ActiveCampaign",
-          "CoSchedule",
-          "Iterable",
-          "Metricool"
-        ],
-        "citationPolicy": "Use first-party docs, official benchmark reports, and attributed visuals for decision-critical claims. Re-verify time-sensitive claims before publication."
-      }
-    },
-    "submittedAt": "2026-02-24T20:49:49.256Z",
-    "status": "reviewed",
-    "review": {
-      "valid": true,
-      "score": 96,
-      "issues": [],
-      "warnings": [],
-      "passed": [
-        "title",
-        "slug",
-        "excerpt",
-        "primaryKeyword",
-        "intentStage",
-        "body",
-        "body-metrics words=2326 headings=39 listItems=95 links=15 infographics=3 sourcedImages=3",
-        "infographics",
-        "sourced-images",
-        "visual-attribution",
-        "freshness-date",
-        "non-generic-phrasing",
-        "repetition-check",
-        "tags",
-        "primary-resource",
-        "author",
-        "published-at",
-        "quick-verdict-section",
-        "faq-section",
-        "implementation-section",
-        "source-domain-diversity",
-        "source-authority",
-        "authority-brief"
-      ],
-      "reviewedAt": "2026-02-24T20:49:49.565Z"
-    },
-    "needsApproval": true
-  },
-  {
-    "queueId": "c6d9e61b-2c44-419e-928c-17f1626b490d",
+    "queueId": "445cf7b8-333b-4c91-ba46-9a1ee1ac5e6d",
     "type": "resource",
     "data": {
-      "url": "https://github.com/greatscott/enveil",
-      "title": "enveil",
-      "slug": "enveil",
-      "description": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil",
+      "url": "https://chat.openai.com/g/g-gumycukin-vikas-scripting-helper",
+      "title": "Vikas&#x27; Airtable Scripting Custom GPT",
+      "slug": "vikas-x27-airtable-scripting-custom-gpt",
+      "description": "Vikas&#x27; Airtable Scripting Custom GPT resource",
       "category": "ai-tools",
+      "resourceType": "utility",
       "tags": [
         "ai-tools",
+        "utility",
         "ai",
-        "devtools"
+        "extending",
+        "javascript",
+        "llm",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments"
+      ],
+      "industries": [
+        "community"
       ],
       "bestFor": [
         "Engineering teams adopting AI-assisted workflows",
@@ -2717,30 +143,60 @@
         "Teams with strict data residency constraints and no approved exception process"
       ],
       "alternatives": [],
-      "body": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "body": "Vikas&#x27; Airtable Scripting Custom GPT resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
       "sources": [
         {
-          "_key": "8432dc52-54af-4ccb-832a-074fa4566f20",
-          "label": "enveil official site",
-          "url": "https://github.com/greatscott/enveil"
+          "_key": "784b540a-8484-4fe8-a659-8e6b799fad81",
+          "label": "Vikas&#x27; Airtable Scripting Custom GPT official site",
+          "url": "https://chat.openai.com/g/g-gumycukin-vikas-scripting-helper"
         }
       ],
-      "source": "Hacker News",
-      "sourceDomain": "github.com",
-      "image": "https://opengraph.githubassets.com/df8351ad038c5034dccdb369bf7e5f7c2df824ea26b4d02a88c3c4dd49e5ce85/GreatScott/enveil",
+      "source": "NoCodeSupply",
+      "sourceDomain": "chat.openai.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "extending",
+        "javascript",
+        "llm",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
       "contentTier": "tier3",
       "refreshCadenceDays": 90,
       "factCheckStatus": "needs-review",
       "researchMethod": {
-        "playbookVersion": "2026-02-24.1",
-        "validationMethod": "HEAD",
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
         "validationStatus": 200,
-        "fetchedAt": "2026-02-24T20:49:26.731Z"
+        "fetchedAt": "2026-02-26T21:58:37.855Z",
+        "lowQualityReason": null
       },
-      "lastReviewedAt": "2026-02-24T20:49:28.164Z",
-      "validatedAt": "2026-02-24T20:49:28.164Z"
+      "lastReviewedAt": "2026-02-26T21:59:15.635Z",
+      "validatedAt": "2026-02-26T21:59:15.635Z"
     },
-    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "submittedAt": "2026-02-26T22:08:35.480Z",
     "status": "reviewed",
     "review": {
       "valid": true,
@@ -2758,54 +214,97 @@
         "refresh-cadence",
         "fact-check"
       ],
-      "reviewedAt": "2026-02-24T20:49:49.566Z"
+      "reviewedAt": "2026-02-26T22:08:35.500Z"
     },
     "needsApproval": true
   },
   {
-    "queueId": "80f580ca-8820-40ae-9679-ab3013910c12",
+    "queueId": "02765a0b-da71-4c38-8653-f0231b15504c",
     "type": "resource",
     "data": {
-      "url": "https://github.com/yjeanrenaud/yj_nearbyglasses",
-      "title": "yj_nearbyglasses",
-      "slug": "yj-nearbyglasses",
-      "description": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses",
-      "category": "development-tools",
+      "url": "https://www.figma.com/community/file/1116642834384860183",
+      "title": "250 (500) Logos of Tech Products",
+      "slug": "250-500-logos-of-tech-products",
+      "description": "250 (500) Logos of Tech Products resource",
+      "category": "design-tools",
+      "resourceType": "directory",
       "tags": [
-        "development-tools"
+        "design-tools",
+        "svg",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
       ],
       "bestFor": [
-        "Developers shipping production code",
-        "Teams standardizing tooling across projects"
+        "Product designers building interface systems",
+        "Cross-functional teams collaborating on UI"
       ],
       "notFor": [
-        "Non-technical users with no engineering support"
+        "Users who only need basic image editing"
       ],
       "alternatives": [],
-      "body": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "body": "250 (500) Logos of Tech Products resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
       "sources": [
         {
-          "_key": "037ce31b-0216-4f55-9606-1f7171b3bc82",
-          "label": "yj_nearbyglasses official site",
-          "url": "https://github.com/yjeanrenaud/yj_nearbyglasses"
+          "_key": "39ee656b-3e77-40f7-8fd1-3bb6cdcac8e8",
+          "label": "250 (500) Logos of Tech Products official site",
+          "url": "https://www.figma.com/community/file/1116642834384860183"
         }
       ],
-      "source": "Hacker News",
-      "sourceDomain": "github.com",
-      "image": "https://opengraph.githubassets.com/ef70170ae9bbd8314706a4ec4a5ae7a45722bdcf1f972ad4366ba20667ab1aec/yjeanrenaud/yj_nearbyglasses",
+      "source": "NoCodeSupply",
+      "sourceDomain": "figma.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "svg",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
       "contentTier": "tier3",
       "refreshCadenceDays": 90,
       "factCheckStatus": "needs-review",
       "researchMethod": {
-        "playbookVersion": "2026-02-24.1",
-        "validationMethod": "HEAD",
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
         "validationStatus": 200,
-        "fetchedAt": "2026-02-24T20:49:41.214Z"
+        "fetchedAt": "2026-02-26T21:59:15.718Z",
+        "lowQualityReason": null
       },
-      "lastReviewedAt": "2026-02-24T20:49:42.305Z",
-      "validatedAt": "2026-02-24T20:49:42.305Z"
+      "lastReviewedAt": "2026-02-26T21:59:28.808Z",
+      "validatedAt": "2026-02-26T21:59:28.808Z"
     },
-    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "submittedAt": "2026-02-26T22:08:35.480Z",
     "status": "reviewed",
     "review": {
       "valid": true,
@@ -2823,55 +322,113 @@
         "refresh-cadence",
         "fact-check"
       ],
-      "reviewedAt": "2026-02-24T20:49:49.566Z"
+      "reviewedAt": "2026-02-26T22:08:35.500Z"
     },
     "needsApproval": true
   },
   {
-    "queueId": "9950e4f6-23fc-4566-bb30-5155b3b151a7",
+    "queueId": "fc2afc16-3227-4c38-8f3c-e7affb83a4a0",
     "type": "resource",
     "data": {
-      "url": "https://keepandroidopen.org/open-letter",
-      "title": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution",
-      "slug": "an-open-letter-to-google-regarding-mandatory-developer-registration-for-android-app-distribution",
-      "description": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution",
-      "category": "development-tools",
+      "url": "https://www.figma.com/community/plugin/1326990370920029683",
+      "title": "Figma to Replit Plugin",
+      "slug": "figma-to-replit-plugin",
+      "description": "Figma to Replit Plugin resource",
+      "category": "design-tools",
+      "resourceType": "utility",
       "tags": [
-        "development-tools",
-        "devtools"
+        "design-tools",
+        "utility",
+        "design",
+        "design-system",
+        "workflow",
+        "3d",
+        "api",
+        "accessibility",
+        "aesthetic",
+        "agency",
+        "analytics",
+        "animation"
+      ],
+      "industries": [
+        "saas",
+        "community",
+        "developer"
       ],
       "bestFor": [
-        "Developers shipping production code",
-        "Teams standardizing tooling across projects"
+        "Product designers building interface systems",
+        "Cross-functional teams collaborating on UI"
       ],
       "notFor": [
-        "Non-technical users with no engineering support"
+        "Users who only need basic image editing"
       ],
-      "alternatives": [],
-      "body": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "alternatives": [
+        "framer",
+        "penpot",
+        "sketch"
+      ],
+      "body": "Figma to Replit Plugin resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
       "sources": [
         {
-          "_key": "61e82d78-380d-488e-b818-137715dbc111",
-          "label": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution official site",
-          "url": "https://keepandroidopen.org/open-letter"
+          "_key": "ce50d190-e380-481b-8fa7-4e3dd3973ec0",
+          "label": "Figma to Replit Plugin official site",
+          "url": "https://www.figma.com/community/plugin/1326990370920029683"
         }
       ],
-      "source": "Hacker News",
-      "sourceDomain": "keepandroidopen.org",
-      "image": "https://keepandroidopen.org/img/altered-deal.png",
+      "source": "NoCodeSupply",
+      "sourceDomain": "figma.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "design-system",
+        "workflow",
+        "3d",
+        "api",
+        "accessibility",
+        "aesthetic",
+        "agency",
+        "analytics",
+        "animation",
+        "app",
+        "assets",
+        "audio",
+        "authentication",
+        "automation",
+        "backend",
+        "brand-guide"
+      ],
+      "sourceIndustries": [
+        "saas",
+        "no-code",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating"
+      ],
+      "image": "",
       "contentTier": "tier3",
       "refreshCadenceDays": 90,
       "factCheckStatus": "needs-review",
       "researchMethod": {
-        "playbookVersion": "2026-02-24.1",
-        "validationMethod": "HEAD",
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
         "validationStatus": 200,
-        "fetchedAt": "2026-02-24T20:49:42.387Z"
+        "fetchedAt": "2026-02-26T21:59:30.330Z",
+        "lowQualityReason": null
       },
-      "lastReviewedAt": "2026-02-24T20:49:43.145Z",
-      "validatedAt": "2026-02-24T20:49:43.145Z"
+      "lastReviewedAt": "2026-02-26T21:59:42.136Z",
+      "validatedAt": "2026-02-26T21:59:42.136Z"
     },
-    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "submittedAt": "2026-02-26T22:08:35.480Z",
     "status": "reviewed",
     "review": {
       "valid": true,
@@ -2889,54 +446,98 @@
         "refresh-cadence",
         "fact-check"
       ],
-      "reviewedAt": "2026-02-24T20:49:49.566Z"
+      "reviewedAt": "2026-02-26T22:08:35.500Z"
     },
     "needsApproval": true
   },
   {
-    "queueId": "6c033765-efb7-4d6b-9ea6-0582f9b78795",
+    "queueId": "5e802b08-beb0-4ad6-9abf-797b61e18f26",
     "type": "resource",
     "data": {
-      "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle",
-      "title": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up",
-      "slug": "samsung-039-s-galaxy-upcycle-promised-to-make-old-phones-useful-then-won-an-award-for-giving-up",
-      "description": "Your old phone could have been so much more.",
-      "category": "development-tools",
+      "url": "https://reallygoodemails.com",
+      "title": "Really Good Email",
+      "slug": "really-good-email",
+      "description": "Really Good Email resource",
+      "category": "ai-tools",
+      "resourceType": "directory",
       "tags": [
-        "development-tools"
+        "ai-tools",
+        "ai",
+        "email",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "marketing",
+        "content"
       ],
       "bestFor": [
-        "Developers shipping production code",
-        "Teams standardizing tooling across projects"
+        "Engineering teams adopting AI-assisted workflows",
+        "Developers who need faster iteration loops"
       ],
       "notFor": [
-        "Non-technical users with no engineering support"
+        "Teams with strict data residency constraints and no approved exception process"
       ],
       "alternatives": [],
-      "body": "Your old phone could have been so much more. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "body": "Really Good Email resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
       "sources": [
         {
-          "_key": "055149d3-c382-4556-9514-81b918443466",
-          "label": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up official site",
-          "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle"
+          "_key": "0105ecd6-3e8e-4244-b83c-819969838520",
+          "label": "Really Good Email official site",
+          "url": "https://reallygoodemails.com"
         }
       ],
-      "source": "Hacker News",
-      "sourceDomain": "xda-developers.com",
-      "image": "https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2026/02/galaxy-upcycling-1.jpg?w=1600&amp;h=900&amp;fit=crop",
+      "source": "NoCodeSupply",
+      "sourceDomain": "reallygoodemails.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "email",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
       "contentTier": "tier3",
       "refreshCadenceDays": 90,
       "factCheckStatus": "needs-review",
       "researchMethod": {
-        "playbookVersion": "2026-02-24.1",
-        "validationMethod": "HEAD",
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
         "validationStatus": 200,
-        "fetchedAt": "2026-02-24T20:49:43.226Z"
+        "fetchedAt": "2026-02-26T21:59:42.216Z",
+        "lowQualityReason": null
       },
-      "lastReviewedAt": "2026-02-24T20:49:46.955Z",
-      "validatedAt": "2026-02-24T20:49:46.955Z"
+      "lastReviewedAt": "2026-02-26T21:59:49.433Z",
+      "validatedAt": "2026-02-26T21:59:49.433Z"
     },
-    "submittedAt": "2026-02-24T20:49:48.149Z",
+    "submittedAt": "2026-02-26T22:08:35.480Z",
     "status": "reviewed",
     "review": {
       "valid": true,
@@ -2954,7 +555,2442 @@
         "refresh-cadence",
         "fact-check"
       ],
-      "reviewedAt": "2026-02-24T20:49:49.566Z"
+      "reviewedAt": "2026-02-26T22:08:35.500Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "572e01d9-2c1b-4e0b-8bdc-232a24ab03e4",
+    "type": "resource",
+    "data": {
+      "url": "https://brandfetch.com",
+      "title": "Brandfetch",
+      "slug": "brandfetch",
+      "description": "Brandfetch resource",
+      "category": "learning-resources",
+      "resourceType": "directory",
+      "tags": [
+        "learning-resources",
+        "assets",
+        "brand-guide",
+        "gallery",
+        "3d",
+        "api",
+        "accessibility",
+        "aesthetic",
+        "agency",
+        "analytics",
+        "animation",
+        "app"
+      ],
+      "industries": [
+        "community",
+        "general",
+        "developer"
+      ],
+      "bestFor": [
+        "Developers upskilling into new stacks",
+        "Self-directed learners who prefer structured paths"
+      ],
+      "notFor": [
+        "Advanced specialists looking only for niche research papers"
+      ],
+      "alternatives": [],
+      "body": "Brandfetch resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "539ad4c3-acdd-451a-b754-8b02ddc20672",
+          "label": "Brandfetch official site",
+          "url": "https://brandfetch.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "brandfetch.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "assets",
+        "brand-guide",
+        "gallery",
+        "3d",
+        "api",
+        "accessibility",
+        "aesthetic",
+        "agency",
+        "analytics",
+        "animation",
+        "app",
+        "audio",
+        "authentication",
+        "automation",
+        "backend",
+        "cms"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T21:59:49.515Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T21:59:55.365Z",
+      "validatedAt": "2026-02-26T21:59:55.365Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.500Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "468ef5a7-22d5-41e7-9383-232327e9eaaf",
+    "type": "resource",
+    "data": {
+      "url": "https://www.udemy.com/course/converting-webflow-into-angular-245-using-freeformjs",
+      "title": "Converting Webflow into Angular",
+      "slug": "converting-webflow-into-angular",
+      "description": "Converting Webflow into Angular resource",
+      "category": "learning-resources",
+      "resourceType": "course",
+      "tags": [
+        "learning-resources",
+        "course",
+        "custom-code",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Developers upskilling into new stacks",
+        "Self-directed learners who prefer structured paths"
+      ],
+      "notFor": [
+        "Advanced specialists looking only for niche research papers"
+      ],
+      "alternatives": [
+        "framer",
+        "wordpress",
+        "wix"
+      ],
+      "body": "Converting Webflow into Angular resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "1e8afbfc-e540-400c-af84-6cf959b16835",
+          "label": "Converting Webflow into Angular official site",
+          "url": "https://www.udemy.com/course/converting-webflow-into-angular-245-using-freeformjs"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "udemy.com",
+      "sourceCollection": "learn",
+      "sourceTags": [
+        "custom-code",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:01.830Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:11.935Z",
+      "validatedAt": "2026-02-26T22:00:11.935Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "3d11e8b0-7cf9-48bd-a965-8d7f43d1527b",
+    "type": "resource",
+    "data": {
+      "url": "https://ds.shadcn.com",
+      "title": "shadcn/designer - Components for building design tools like Framer, Canva, and more.",
+      "slug": "shadcn-designer-components-for-building-design-tools-like-framer-canva-and-more",
+      "description": "Components for building design tools like Framer, Canva, and more.",
+      "category": "coding",
+      "resourceType": "library",
+      "tags": [
+        "coding",
+        "library",
+        "design",
+        "javascript",
+        "web-apps",
+        "extending",
+        "design-system",
+        "components",
+        "charts",
+        "click",
+        "color-palettes"
+      ],
+      "industries": [
+        "community"
+      ],
+      "bestFor": [
+        "Developers looking for practical code references",
+        "Teams aligning on frontend best practices"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Components for building design tools like Framer, Canva, and more. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "0f3d8537-91c2-4000-9e62-4b85ac08c2bc",
+          "label": "shadcn/designer - Components for building design tools like Framer, Canva, and more. official site",
+          "url": "https://ds.shadcn.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "ds.shadcn.com",
+      "sourceCollection": "code",
+      "sourceTags": [
+        "javascript",
+        "web-apps",
+        "extending",
+        "design-system",
+        "components",
+        "charts",
+        "click",
+        "color-palettes"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "dev-tools",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "https://ds.shadcn.com/opengraph-image.jpg",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:16.214Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:17.062Z",
+      "validatedAt": "2026-02-26T22:00:17.062Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "67f7c92b-5538-411e-8e6b-f58eabf8c8fb",
+    "type": "resource",
+    "data": {
+      "url": "https://requery.dev",
+      "title": "requery-js",
+      "slug": "requery-js",
+      "description": "requery-js resource",
+      "category": "coding",
+      "resourceType": "library",
+      "tags": [
+        "coding",
+        "library",
+        "javascript",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Developers looking for practical code references",
+        "Teams aligning on frontend best practices"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "requery-js resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "e405d99c-fa58-487c-9edc-36b9173e3343",
+          "label": "requery-js official site",
+          "url": "https://requery.dev"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "requery.dev",
+      "sourceCollection": "code",
+      "sourceTags": [
+        "javascript",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "dev-tools",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:17.143Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:19.668Z",
+      "validatedAt": "2026-02-26T22:00:19.668Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "18ba0824-6607-49d4-9352-bf0a91f08ac8",
+    "type": "resource",
+    "data": {
+      "url": "https://gist.github.com/nocodesupplyco/05a71b745877a8bee3cb725fd9919a3d",
+      "title": "Dark/Light Mode Favicon · GitHub",
+      "slug": "dark-light-mode-favicon-github",
+      "description": "Dark/Light Mode Favicon. GitHub Gist: instantly share code, notes, and snippets.",
+      "category": "coding",
+      "resourceType": "snippet",
+      "tags": [
+        "coding",
+        "snippet",
+        "html",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Developers looking for practical code references",
+        "Teams aligning on frontend best practices"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Dark/Light Mode Favicon. GitHub Gist: instantly share code, notes, and snippets. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "6b13b132-1ffe-41ef-9c7f-a48261f8e6d5",
+          "label": "Dark/Light Mode Favicon · GitHub official site",
+          "url": "https://gist.github.com/nocodesupplyco/05a71b745877a8bee3cb725fd9919a3d"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "gist.github.com",
+      "sourceCollection": "code",
+      "sourceTags": [
+        "html",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:19.750Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:21.229Z",
+      "validatedAt": "2026-02-26T22:00:21.229Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "8be9e4ea-72a7-4588-a05a-5d2ae1d7e798",
+    "type": "resource",
+    "data": {
+      "url": "https://gist.github.com/nocodesupplyco/ab47e7189bea9e5cb3902605226c9fe9",
+      "title": "Swipe Webflow Tabs · GitHub",
+      "slug": "swipe-webflow-tabs-github",
+      "description": "Swipe Webflow Tabs. GitHub Gist: instantly share code, notes, and snippets.",
+      "category": "coding",
+      "resourceType": "snippet",
+      "tags": [
+        "coding",
+        "snippet",
+        "javascript",
+        "tabs",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Developers looking for practical code references",
+        "Teams aligning on frontend best practices"
+      ],
+      "notFor": [],
+      "alternatives": [
+        "framer",
+        "wordpress",
+        "wix"
+      ],
+      "body": "Swipe Webflow Tabs. GitHub Gist: instantly share code, notes, and snippets. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "52aae292-a3e6-42a2-8cf3-9a78e01331de",
+          "label": "Swipe Webflow Tabs · GitHub official site",
+          "url": "https://gist.github.com/nocodesupplyco/ab47e7189bea9e5cb3902605226c9fe9"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "gist.github.com",
+      "sourceCollection": "code",
+      "sourceTags": [
+        "javascript",
+        "tabs",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "no-code",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:21.311Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:22.625Z",
+      "validatedAt": "2026-02-26T22:00:22.625Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "6e5c0e86-3c78-45c0-aff2-cec15b90d6d2",
+    "type": "resource",
+    "data": {
+      "url": "https://www.relumeipsum.com",
+      "title": "Relume Ipsum",
+      "slug": "relume-ipsum",
+      "description": "Relume Ipsum resource",
+      "category": "ui-ux-resources",
+      "resourceType": "utility",
+      "tags": [
+        "ui-ux-resources",
+        "utility",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Relume Ipsum resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "34ac714b-0d61-4185-8e6c-b6fe7ed2993e",
+          "label": "Relume Ipsum official site",
+          "url": "https://www.relumeipsum.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "relumeipsum.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:29.314Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:37.103Z",
+      "validatedAt": "2026-02-26T22:00:37.103Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "6ac44ffe-b971-44b5-966e-5a4a8c3fcf4f",
+    "type": "resource",
+    "data": {
+      "url": "https://www.phind.com",
+      "title": "Phind",
+      "slug": "phind",
+      "description": "Phind resource",
+      "category": "ui-ux-resources",
+      "resourceType": "app",
+      "tags": [
+        "ui-ux-resources",
+        "custom-code",
+        "search",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components"
+      ],
+      "industries": [
+        "community"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Phind resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "c38f8cd6-4dfc-413e-9a7f-455b2049940f",
+          "label": "Phind official site",
+          "url": "https://www.phind.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "phind.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "custom-code",
+        "search",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components"
+      ],
+      "sourceIndustries": [
+        "technology",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:37.185Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:40.247Z",
+      "validatedAt": "2026-02-26T22:00:40.247Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "fcec8992-3749-4b5d-8eaf-0dab0e90acca",
+    "type": "resource",
+    "data": {
+      "url": "https://easlo.gumroad.com/l/vdbko",
+      "title": "Creator Roadmap",
+      "slug": "creator-roadmap",
+      "description": "Creator Roadmap resource",
+      "category": "ui-ux-resources",
+      "resourceType": "template",
+      "tags": [
+        "ui-ux-resources",
+        "template",
+        "docs",
+        "how-to",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components"
+      ],
+      "industries": [
+        "community"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Creator Roadmap resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "4f26ecfb-ef31-4eb1-8f1d-7991c5fa1fa8",
+          "label": "Creator Roadmap official site",
+          "url": "https://easlo.gumroad.com/l/vdbko"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "easlo.gumroad.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "docs",
+        "how-to",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:40.329Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:45.268Z",
+      "validatedAt": "2026-02-26T22:00:45.268Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "71c4961d-aa1e-48ac-9dff-3232967973ff",
+    "type": "resource",
+    "data": {
+      "url": "https://www.hiophelia.com",
+      "title": "Ophelia",
+      "slug": "ophelia",
+      "description": "Ophelia resource",
+      "category": "ui-ux-resources",
+      "resourceType": "utility",
+      "tags": [
+        "ui-ux-resources",
+        "utility",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Ophelia resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "fd601986-93cd-41c7-9f32-19dfbc4dfc70",
+          "label": "Ophelia official site",
+          "url": "https://www.hiophelia.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "hiophelia.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "no-code",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:49.389Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:00:53.107Z",
+      "validatedAt": "2026-02-26T22:00:53.107Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "22e16ca0-d0e8-4c51-8e76-492934a53709",
+    "type": "resource",
+    "data": {
+      "url": "https://www.bettyblocks.com",
+      "title": "Betty Blocks",
+      "slug": "betty-blocks",
+      "description": "Betty Blocks resource",
+      "category": "ui-ux-resources",
+      "resourceType": "app",
+      "tags": [
+        "ui-ux-resources",
+        "web-apps",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Betty Blocks resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "50bedeb6-6cab-4515-9ba0-356c13583c49",
+          "label": "Betty Blocks official site",
+          "url": "https://www.bettyblocks.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "bettyblocks.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "web-apps",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:00:53.188Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:01:03.842Z",
+      "validatedAt": "2026-02-26T22:01:03.842Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "78a24661-94e0-4851-982d-b6ec25edaa95",
+    "type": "resource",
+    "data": {
+      "url": "https://tome.app",
+      "title": "Tome",
+      "slug": "tome",
+      "description": "Tome resource",
+      "category": "ui-ux-resources",
+      "resourceType": "app",
+      "tags": [
+        "ui-ux-resources",
+        "docs",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Tome resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "cc724ba0-b888-4d09-97a7-0898a746f8c1",
+          "label": "Tome official site",
+          "url": "https://tome.app"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "tome.app",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "docs",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "no-code",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:02:32.290Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:02:36.162Z",
+      "validatedAt": "2026-02-26T22:02:36.162Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "4408bf38-cd42-471c-9de3-e247219a5d19",
+    "type": "resource",
+    "data": {
+      "url": "https://www.shapr3d.com",
+      "title": "3D CAD for designing manufacturing-ready models | Shapr3D",
+      "slug": "3d-cad-for-designing-manufacturing-ready-models-shapr3d",
+      "description": "Shapr3D resource",
+      "category": "ai-tools",
+      "resourceType": "app",
+      "tags": [
+        "ai-tools",
+        "ai",
+        "design",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Engineering teams adopting AI-assisted workflows",
+        "Developers who need faster iteration loops"
+      ],
+      "notFor": [
+        "Teams with strict data residency constraints and no approved exception process"
+      ],
+      "alternatives": [],
+      "body": "Shapr3D resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "260bf232-76a4-4be7-a6bf-7352094889ac",
+          "label": "3D CAD for designing manufacturing-ready models | Shapr3D official site",
+          "url": "https://www.shapr3d.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "shapr3d.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:04:09.169Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:04:09.988Z",
+      "validatedAt": "2026-02-26T22:04:09.988Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "899e0019-dc19-49e1-93a4-7a9b8bb432d9",
+    "type": "resource",
+    "data": {
+      "url": "https://instaprice.app",
+      "title": "instaprice",
+      "slug": "instaprice",
+      "description": "Instaprice is the pricing calculator for freelance projects. Charge the right amount, every time. Create quotes in seconds",
+      "category": "ui-ux-resources",
+      "resourceType": "utility",
+      "tags": [
+        "ui-ux-resources",
+        "utility",
+        "project-management",
+        "pricing",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Instaprice is the pricing calculator for freelance projects. Charge the right amount, every time. Create quotes in seconds Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "9e76fd40-b451-4941-aa0d-cc1d36588a80",
+          "label": "instaprice official site",
+          "url": "https://instaprice.app"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "instaprice.app",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "project-management",
+        "pricing",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/chargethismuch.appspot.com/o/assets%2FOpengraph-instaprice-3.jpg?alt=media&token=75a8c726-ebf0-4f94-ba50-4fdc2cbb57dc",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:04:10.070Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:04:11.943Z",
+      "validatedAt": "2026-02-26T22:04:11.943Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "72fdb4a4-1f8d-44c7-897b-8b3151112d1d",
+    "type": "resource",
+    "data": {
+      "url": "https://www.hedrick.io/resource/system",
+      "title": "The Webflow Project System 2.0",
+      "slug": "the-webflow-project-system-2-0",
+      "description": "The Webflow Project System 2.0 resource",
+      "category": "ui-ux-resources",
+      "resourceType": "template",
+      "tags": [
+        "ui-ux-resources",
+        "template",
+        "project-management",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [
+        "framer",
+        "wordpress",
+        "wix"
+      ],
+      "body": "The Webflow Project System 2.0 resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "49110c41-851e-4053-ac90-96df9fc3e840",
+          "label": "The Webflow Project System 2.0 official site",
+          "url": "https://www.hedrick.io/resource/system"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "hedrick.io",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "project-management",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:04:27.764Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:04:33.043Z",
+      "validatedAt": "2026-02-26T22:04:33.043Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "466fc292-bb75-4e38-a30d-d1747d489ff6",
+    "type": "resource",
+    "data": {
+      "url": "https://webflow.com/made-in-webflow/website/teenage-engineering-button",
+      "title": "Teenage Engineering Button Cloneable - Webflow",
+      "slug": "teenage-engineering-button-cloneable-webflow",
+      "description": "Inspired by Teenage Engineering products.",
+      "category": "ui-ux-resources",
+      "resourceType": "component",
+      "tags": [
+        "ui-ux-resources",
+        "component",
+        "design-system",
+        "components",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "developer",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [
+        "framer",
+        "wordpress",
+        "wix"
+      ],
+      "body": "Inspired by Teenage Engineering products. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "2b511bf8-ca85-4426-a612-fe1f64c4ffde",
+          "label": "Teenage Engineering Button Cloneable - Webflow official site",
+          "url": "https://webflow.com/made-in-webflow/website/teenage-engineering-button"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "webflow.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "design-system",
+        "components",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:04:55.993Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:04:59.010Z",
+      "validatedAt": "2026-02-26T22:04:59.010Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "d00486c6-7365-4943-b7d3-04ed53d0295f",
+    "type": "resource",
+    "data": {
+      "url": "https://www.hvdfonts.com/fonts",
+      "title": "Retail Fonts | HvD Fonts",
+      "slug": "retail-fonts-hvd-fonts",
+      "description": "We are HvD Fonts – a type foundry for high quality, original retail fonts as well as nice custom font solutions.",
+      "category": "ai-tools",
+      "resourceType": "other",
+      "tags": [
+        "ai-tools",
+        "ai",
+        "typeface",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "e-commerce",
+        "marketing"
+      ],
+      "bestFor": [
+        "Engineering teams adopting AI-assisted workflows",
+        "Developers who need faster iteration loops"
+      ],
+      "notFor": [
+        "Teams with strict data residency constraints and no approved exception process"
+      ],
+      "alternatives": [],
+      "body": "We are HvD Fonts – a type foundry for high quality, original retail fonts as well as nice custom font solutions. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "4e8329d4-83ee-4e99-9c3c-2f00ecb06a06",
+          "label": "Retail Fonts | HvD Fonts official site",
+          "url": "https://www.hvdfonts.com/fonts"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "hvdfonts.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "typeface",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:04:59.092Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:05:02.825Z",
+      "validatedAt": "2026-02-26T22:05:02.826Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "2a467d89-0069-4772-ab70-f5195518f296",
+    "type": "resource",
+    "data": {
+      "url": "https://www.notionsecondbrain.com",
+      "title": "Second Brain Template",
+      "slug": "second-brain-template",
+      "description": "Turn Notion into your second brain to organize your tasks, projects, goals, notes, and more—all in one place.",
+      "category": "ui-ux-resources",
+      "resourceType": "template",
+      "tags": [
+        "ui-ux-resources",
+        "template",
+        "ai",
+        "productivity",
+        "process",
+        "database",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Turn Notion into your second brain to organize your tasks, projects, goals, notes, and more—all in one place. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "c5f288a0-edc0-4d8a-8a23-d193428870ab",
+          "label": "Second Brain Template official site",
+          "url": "https://www.notionsecondbrain.com"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "notionsecondbrain.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "process",
+        "database",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "project-management",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "https://framerusercontent.com/images/lAwpq7KZjVvOBwv4flJpkj2Pzw.png",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:05:02.907Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:05:03.626Z",
+      "validatedAt": "2026-02-26T22:05:03.626Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "b94ab7b0-a123-4644-9f41-61a3fec57099",
+    "type": "resource",
+    "data": {
+      "url": "https://vmdanilov.gumroad.com/l/optimage",
+      "title": "Optimage 3",
+      "slug": "optimage-3",
+      "description": "Optimage is a novel image optimization tool to automatically reduce file size of your images, videos and documents by up to 90% without losing quality.Support Optimage to continue using it without limits. You will get a license key to register Optimage on any",
+      "category": "ui-ux-resources",
+      "resourceType": "utility",
+      "tags": [
+        "ui-ux-resources",
+        "utility",
+        "devtools",
+        "optimize",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "general",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Optimage is a novel image optimization tool to automatically reduce file size of your images, videos and documents by up to 90% without losing quality.Support Optimage to continue using it without limits. You will get a license key to register Optimage on any Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "88a19905-c2e8-4b42-82be-dec2b08621e7",
+          "label": "Optimage 3 official site",
+          "url": "https://vmdanilov.gumroad.com/l/optimage"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "vmdanilov.gumroad.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "optimize",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental",
+        "dev-tools"
+      ],
+      "image": "https://public-files.gumroad.com/zom6r77m5jamyesz11g8swxl0pi9",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:05:03.707Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:05:05.540Z",
+      "validatedAt": "2026-02-26T22:05:05.540Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "4f4af8c0-06e3-4906-b2fb-59379d7c64b9",
+    "type": "resource",
+    "data": {
+      "url": "https://powersave.pro",
+      "title": "Powersave | Save ASAP to anywhere",
+      "slug": "powersave-save-asap-to-anywhere",
+      "description": "Save ASAP to anywhere. Save more, categorize &amp; analyze as you browse.",
+      "category": "ui-ux-resources",
+      "resourceType": "utility",
+      "tags": [
+        "ui-ux-resources",
+        "utility",
+        "extending",
+        "database",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Design systems teams",
+        "Frontend developers building reusable UI patterns"
+      ],
+      "notFor": [],
+      "alternatives": [],
+      "body": "Save ASAP to anywhere. Save more, categorize &amp; analyze as you browse. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "336acf9b-e8cf-4407-a862-7ff71e76a842",
+          "label": "Powersave | Save ASAP to anywhere official site",
+          "url": "https://powersave.pro"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "powersave.pro",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "extending",
+        "database",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content"
+      ],
+      "sourceIndustries": [
+        "ai",
+        "dev-tools",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "creative",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "https://powersave.pro/og-image.png",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:05:05.622Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:05:06.953Z",
+      "validatedAt": "2026-02-26T22:05:06.953Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "af6c9c2a-10a1-4712-99f5-19e7268f0497",
+    "type": "resource",
+    "data": {
+      "url": "https://www.figma.com/community/plugin/1164118094004004837",
+      "title": "Photopea for Figma",
+      "slug": "photopea-for-figma",
+      "description": "Photopea for Figma resource",
+      "category": "design-tools",
+      "resourceType": "utility",
+      "tags": [
+        "design-tools",
+        "utility",
+        "design",
+        "editor",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion",
+        "marketing"
+      ],
+      "industries": [
+        "saas",
+        "community",
+        "content",
+        "marketing"
+      ],
+      "bestFor": [
+        "Product designers building interface systems",
+        "Cross-functional teams collaborating on UI"
+      ],
+      "notFor": [
+        "Users who only need basic image editing"
+      ],
+      "alternatives": [
+        "framer",
+        "penpot",
+        "sketch"
+      ],
+      "body": "Photopea for Figma resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "9d84a0f2-c227-4b7a-bbd1-4e45e29c151b",
+          "label": "Photopea for Figma official site",
+          "url": "https://www.figma.com/community/plugin/1164118094004004837"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "figma.com",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "editor",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "components",
+        "content",
+        "conversion"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "photography",
+        "saas",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "collaboration",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating"
+      ],
+      "image": "",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "Scrapling",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:06:27.587Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:06:33.464Z",
+      "validatedAt": "2026-02-26T22:06:33.464Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.501Z"
+    },
+    "needsApproval": true
+  },
+  {
+    "queueId": "0b7b9c44-e620-4c9e-aa1c-2d7da7badb4e",
+    "type": "resource",
+    "data": {
+      "url": "https://www.dessn.ai",
+      "title": "Dessn - Design in production",
+      "slug": "dessn-design-in-production",
+      "description": "Design and prototype in your own codebase. No coding required. Dessn lets product teams design features directly in production.",
+      "category": "ai-tools",
+      "resourceType": "app",
+      "tags": [
+        "ai-tools",
+        "design",
+        "design-system",
+        "components",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "content",
+        "marketing"
+      ],
+      "industries": [
+        "community",
+        "content",
+        "developer",
+        "marketing"
+      ],
+      "bestFor": [
+        "Engineering teams adopting AI-assisted workflows",
+        "Developers who need faster iteration loops"
+      ],
+      "notFor": [
+        "Teams with strict data residency constraints and no approved exception process"
+      ],
+      "alternatives": [],
+      "body": "Design and prototype in your own codebase. No coding required. Dessn lets product teams design features directly in production. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+      "sources": [
+        {
+          "_key": "21706d49-90d0-4cbe-b566-2dc9909cc700",
+          "label": "Dessn - Design in production official site",
+          "url": "https://www.dessn.ai"
+        }
+      ],
+      "source": "NoCodeSupply",
+      "sourceDomain": "dessn.ai",
+      "sourceCollection": "tools",
+      "sourceTags": [
+        "design-system",
+        "components",
+        "workflow",
+        "charts",
+        "click",
+        "color-palettes",
+        "comments",
+        "content"
+      ],
+      "sourceIndustries": [
+        "creative",
+        "dev-tools",
+        "collaboration",
+        "ai",
+        "advertising",
+        "agriculture",
+        "apparel",
+        "architecture",
+        "beauty",
+        "community",
+        "construction",
+        "crypto",
+        "customer-service",
+        "data-management",
+        "dating",
+        "dental"
+      ],
+      "image": "https://dessn.ai/og.webp",
+      "contentTier": "tier3",
+      "refreshCadenceDays": 90,
+      "factCheckStatus": "needs-review",
+      "researchMethod": {
+        "playbookVersion": "2026-02-26.2",
+        "validationMethod": "HEAD",
+        "validationStatus": 200,
+        "fetchedAt": "2026-02-26T22:06:42.385Z",
+        "lowQualityReason": null
+      },
+      "lastReviewedAt": "2026-02-26T22:06:43.920Z",
+      "validatedAt": "2026-02-26T22:06:43.920Z"
+    },
+    "submittedAt": "2026-02-26T22:08:35.480Z",
+    "status": "reviewed",
+    "review": {
+      "valid": true,
+      "score": 68,
+      "issues": [],
+      "warnings": [],
+      "passed": [
+        "title",
+        "url",
+        "description",
+        "category",
+        "slug",
+        "body-depth",
+        "sources",
+        "refresh-cadence",
+        "fact-check"
+      ],
+      "reviewedAt": "2026-02-26T22:08:35.502Z"
     },
     "needsApproval": true
   }

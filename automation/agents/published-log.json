@@ -1,295 +1,1602 @@
 [
   {
-    "queueId": "957ab83c-2a98-4b7d-bbac-89a532e8080b",
+    "queueId": "2e3d2f40-69ba-4935-8990-158559ca0d2b",
     "type": "resource",
-    "title": "vscode-dark-islands",
+    "title": "Logggos — Well-Designed Logos for Your Inspiration",
     "success": true,
-    "id": "ut2BTkhBrFCaQG40AK880M",
-    "publishedAt": "2026-02-24T03:51:27.011Z"
+    "id": "LiDzUsEmNQUMGwDJmVfsZJ",
+    "publishedAt": "2026-02-26T20:49:14.613Z"
   },
   {
-    "queueId": "9c40bd60-e709-4b0f-a485-708eb46d9476",
+    "queueId": "e498a921-374f-4b6e-8a68-65ccd5ed573c",
     "type": "resource",
-    "title": "clawrouter",
+    "title": "Webflow CSS Tools",
     "success": true,
-    "id": "ut2BTkhBrFCaQG40AK88CX",
-    "publishedAt": "2026-02-24T03:51:28.291Z"
+    "id": "LiDzUsEmNQUMGwDJmVfupd",
+    "publishedAt": "2026-02-26T20:49:19.108Z"
   },
   {
-    "queueId": "26166b00-0f95-4c8c-90a5-5c0b385ee47c",
+    "queueId": "d53c17e6-62a1-44a3-9d8f-87c798aee457",
     "type": "resource",
-    "title": "tinyclaw",
+    "title": "The Ultimate Webflow Toolkit by BRIX Agency",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5VP0",
-    "publishedAt": "2026-02-24T03:51:29.941Z"
+    "id": "7mmVVoRV3ddMcbCpYSOVyb",
+    "publishedAt": "2026-02-26T20:49:22.628Z"
   },
   {
-    "queueId": "d4779ef7-eff5-4f78-a59b-b7d5c9b2b7e0",
+    "queueId": "1acde9cd-31fe-4c69-8d71-a09796615da4",
     "type": "resource",
-    "title": "portless",
+    "title": "Webflow | Foxy.io",
     "success": true,
-    "id": "ut2BTkhBrFCaQG40AK88R9",
-    "publishedAt": "2026-02-24T03:51:31.301Z"
+    "id": "LiDzUsEmNQUMGwDJmVfy21",
+    "publishedAt": "2026-02-26T20:49:26.240Z"
   },
   {
-    "queueId": "46915f91-8cf7-40cd-825d-30ffafbd650e",
+    "queueId": "0aa07c6e-13e0-4405-a365-54c62bc1b500",
     "type": "resource",
-    "title": "zeroclaw",
+    "title": "Learn Flexbox with Webflow",
     "success": true,
-    "id": "U4edcnaVtwgLzgBHjX2LeH",
-    "publishedAt": "2026-02-24T03:51:32.962Z"
+    "id": "7mmVVoRV3ddMcbCpYSOXaW",
+    "publishedAt": "2026-02-26T20:49:29.659Z"
   },
   {
-    "queueId": "b3aaa323-6de0-4338-805c-911447580196",
+    "queueId": "9217ccbb-0bdb-4222-8cd8-84295fe103d9",
     "type": "resource",
-    "title": "clawwork",
+    "title": "Three.js – JavaScript 3D Library",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5Vf0",
-    "publishedAt": "2026-02-24T03:51:34.357Z"
+    "id": "7mmVVoRV3ddMcbCpYSOYKC",
+    "publishedAt": "2026-02-26T20:49:32.171Z"
   },
   {
-    "queueId": "b0d35726-dc63-4124-81e4-2012a346541a",
+    "queueId": "d59b39b6-cfcd-4b1a-8deb-9d5bf7271d25",
     "type": "resource",
-    "title": "ironclaw",
+    "title": "Control Webflow Anchor Link Smooth Scroll · GitHub",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5Vj0",
-    "publishedAt": "2026-02-24T03:51:35.984Z"
+    "id": "7mmVVoRV3ddMcbCpYSOYpb",
+    "publishedAt": "2026-02-26T20:49:35.674Z"
   },
   {
-    "queueId": "ab5ec72f-4498-4cc9-b3d9-d8dd59460a00",
+    "queueId": "4eac0a4a-c4a9-4e94-90a5-f8dca08d13bb",
     "type": "resource",
-    "title": "picoclaw",
+    "title": "Splide - The lightweight, flexible and accessible slider/carousel",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5Vp0",
-    "publishedAt": "2026-02-24T03:51:38.340Z"
+    "id": "7mmVVoRV3ddMcbCpYSOZL0",
+    "publishedAt": "2026-02-26T20:49:38.697Z"
   },
   {
-    "queueId": "02e48134-cf63-4577-8b50-36b74a506599",
+    "queueId": "ee2a13f3-120a-4cde-8721-39569dfd985f",
     "type": "resource",
-    "title": "awesome-openclaw-usecases",
+    "title": "Anything - AI app builder",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5Vt0",
-    "publishedAt": "2026-02-24T03:51:40.357Z"
+    "id": "LiDzUsEmNQUMGwDJmVg2iL",
+    "publishedAt": "2026-02-26T20:49:41.678Z"
   },
   {
-    "queueId": "38227bbd-e3af-42cb-9183-507ebac45c55",
+    "queueId": "e933c6c1-d58f-4203-bda0-f44c6cac052e",
     "type": "resource",
-    "title": "vouch",
+    "title": "CMS Card Slider + Custom Nav and Filter - Webflow",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5Vx0",
-    "publishedAt": "2026-02-24T03:51:42.002Z"
+    "id": "7mmVVoRV3ddMcbCpYSOaa5",
+    "publishedAt": "2026-02-26T20:49:44.209Z"
   },
   {
-    "queueId": "7472e397-7848-464b-9807-de67dd5c9a93",
+    "queueId": "5a529820-fae2-4ff9-8865-c3471a4c6d18",
     "type": "resource",
-    "title": "Cursor: The best way to code with AI",
+    "title": "Ahrefs Webmaster Tools: Free SEO Tools to Grow Your Site",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5W10",
-    "publishedAt": "2026-02-24T03:51:45.010Z"
+    "id": "IQjw7sfu3syL3ZkfIzdZq4",
+    "publishedAt": "2026-02-26T20:49:46.702Z"
   },
   {
-    "queueId": "c90fdff9-1e72-4f9e-9d80-d46afabccd8c",
+    "queueId": "9e24e367-55f1-49c5-af1d-8c13c867ffc1",
     "type": "resource",
-    "title": "Reply Logo",
+    "title": "Nav.Supply",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5W50",
-    "publishedAt": "2026-02-24T03:51:46.410Z"
+    "id": "IQjw7sfu3syL3ZkfIzdaNk",
+    "publishedAt": "2026-02-26T20:49:48.256Z"
   },
   {
-    "queueId": "4b99d481-22d2-4198-b226-d51a05708b8e",
+    "queueId": "a96dbf1a-cc2b-47dc-bbad-9c663afc07eb",
     "type": "resource",
-    "title": "pgdog",
+    "title": "The #1 Directory for Vibe Coded Apps | MakerPad",
     "success": true,
-    "id": "U4edcnaVtwgLzgBHjX2Old",
-    "publishedAt": "2026-02-24T03:51:48.388Z"
+    "id": "IQjw7sfu3syL3ZkfIzdbT6",
+    "publishedAt": "2026-02-26T20:49:51.246Z"
   },
   {
-    "queueId": "d602d8ae-0bd7-454e-95c2-35a25800a672",
+    "queueId": "2f89a19c-16a4-4a9d-9fde-3d2a7bf8dab7",
     "type": "resource",
-    "title": "Americans are destroying Flock surveillance cameras | TechCrunch",
+    "title": "Presentation software for fast-moving teams | Pitch",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5WB0",
-    "publishedAt": "2026-02-24T03:51:50.085Z"
+    "id": "7mmVVoRV3ddMcbCpYSOcEr",
+    "publishedAt": "2026-02-26T20:49:53.724Z"
   },
   {
-    "queueId": "2e77b1e0-5018-487f-93b7-324fea6c1385",
+    "queueId": "5999adbc-95bf-44b0-a5be-9ec1af996999",
     "type": "resource",
-    "title": "Elsevier Shuts Down Its Finance Journal Citation Cartel",
+    "title": "just-bash",
     "success": true,
-    "id": "ut2BTkhBrFCaQG40AK898z",
-    "publishedAt": "2026-02-24T03:51:52.414Z"
+    "id": "IQjw7sfu3syL3ZkfIzddmE",
+    "publishedAt": "2026-02-26T20:49:55.258Z"
   },
   {
-    "queueId": "be5397b7-9587-44c2-963d-53d8ee991086",
+    "queueId": "f302519c-7871-4adb-b7b3-05803809f8d3",
     "type": "resource",
-    "title": "Home Page",
+    "title": "Jitter · A fast and simple motion design tool on the web",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5WF0",
-    "publishedAt": "2026-02-24T03:51:54.048Z"
+    "id": "LiDzUsEmNQUMGwDJmVg8nl",
+    "publishedAt": "2026-02-26T20:49:57.740Z"
   },
   {
-    "queueId": "cc42265f-688f-4d7b-8406-dc46927ecbe1",
+    "queueId": "7b3b1090-86a6-450f-8849-e2869476af0a",
     "type": "resource",
-    "title": "R. S. Doiel, Software Engineer/Analyst &mdash; Robert's ramblings",
+    "title": "LottieFiles for Figma - Elevate Your Designs &amp; Create Animations with Figma to Lottie",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5WJ0",
-    "publishedAt": "2026-02-24T03:51:55.423Z"
+    "id": "IQjw7sfu3syL3ZkfIzdf8Q",
+    "publishedAt": "2026-02-26T20:49:59.790Z"
   },
   {
-    "queueId": "921f956f-b492-4253-80aa-ee704fbf96a1",
+    "queueId": "dba8416f-a240-4358-a87c-25fc68d5431b",
+    "type": "resource",
+    "title": "Spline AI 3D Generation – The power of AI for the 3rd dimension.",
+    "success": true,
+    "id": "IQjw7sfu3syL3ZkfIzdg19",
+    "publishedAt": "2026-02-26T20:50:01.368Z"
+  },
+  {
+    "queueId": "2dae51b7-a69f-4110-9b41-0ef0d6741e55",
+    "type": "resource",
+    "title": "Midjourney",
+    "success": true,
+    "id": "IQjw7sfu3syL3ZkfIzdgUc",
+    "publishedAt": "2026-02-26T20:50:02.825Z"
+  },
+  {
+    "queueId": "f877b65c-0113-4359-86c3-86f88daa385a",
+    "type": "resource",
+    "title": "Stacker | Software that's as unique as your business",
+    "success": true,
+    "id": "LiDzUsEmNQUMGwDJmVHbjJ",
+    "publishedAt": "2026-02-26T19:45:07.162Z"
+  },
+  {
+    "queueId": "c50e2069-91f9-4b14-b841-37aa30fdcfb1",
+    "type": "resource",
+    "title": "Attio: Ask more from CRM",
+    "success": true,
+    "id": "IQjw7sfu3syL3ZkfIzItJT",
+    "publishedAt": "2026-02-26T19:45:09.691Z"
+  },
+  {
+    "queueId": "07363eec-a984-461f-9117-e0af70172e9b",
+    "type": "resource",
+    "title": "Finsweet Table - The Ultimate Table Generator for Webflow",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzjYMu",
+    "publishedAt": "2026-02-26T18:41:14.122Z"
+  },
+  {
+    "queueId": "ce43f3c0-cdab-42fb-9a15-876e3e5fb799",
+    "type": "resource",
+    "title": "Set URL From Tab Change · GitHub",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciyROn",
+    "publishedAt": "2026-02-26T18:41:17.262Z"
+  },
+  {
+    "queueId": "dd44008e-07fe-410f-95a7-8e4254c5ae4e",
+    "type": "resource",
+    "title": "Load or Nest Content From Another Page · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8sK18",
+    "publishedAt": "2026-02-26T18:41:20.213Z"
+  },
+  {
+    "queueId": "ac2fed9e-6e6b-4320-bc17-b97e9716e5ae",
+    "type": "resource",
+    "title": "Ben&#x27;s Bites | Ben Tossell | Substack",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8sKGW",
+    "publishedAt": "2026-02-26T18:41:22.233Z"
+  },
+  {
+    "queueId": "4618691e-a34c-48e1-afab-76c7085ec679",
+    "type": "resource",
+    "title": "Prismic: Headless Page Builder for Next.js, Nuxt &amp; SvelteKit",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzjbUt",
+    "publishedAt": "2026-02-26T18:41:24.760Z"
+  },
+  {
+    "queueId": "7d9f1809-e94d-4561-9c4c-991e348f6481",
+    "type": "resource",
+    "title": "Stellar — Blazing fast design sprints",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzjcax",
+    "publishedAt": "2026-02-26T18:41:27.809Z"
+  },
+  {
+    "queueId": "9ea75419-d833-445b-942d-4af6c00acac1",
+    "type": "resource",
+    "title": "Super Mega Webflow Pack",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciyTl0",
+    "publishedAt": "2026-02-26T18:41:30.240Z"
+  },
+  {
+    "queueId": "7777c03e-b1ff-446d-a45d-93757f87adfd",
+    "type": "resource",
+    "title": "Localfonts",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzjdFn",
+    "publishedAt": "2026-02-26T18:41:32.786Z"
+  },
+  {
+    "queueId": "0bd18489-10e0-4614-a765-97c958f0ed06",
+    "type": "resource",
+    "title": "OpusClip: #1 AI video clipping and editing tool",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciyUaN",
+    "publishedAt": "2026-02-26T18:41:35.342Z"
+  },
+  {
+    "queueId": "7a9001e8-1d78-4618-b6d6-9b2dbbec02d4",
+    "type": "resource",
+    "title": "Screen Studio — Professional screen recorder for macOS",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciyVLn",
+    "publishedAt": "2026-02-26T18:41:38.280Z"
+  },
+  {
+    "queueId": "19365fa2-404d-4c04-97e6-a095626f7cc7",
+    "type": "resource",
+    "title": "financial-services-plugins",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8sLTk",
+    "publishedAt": "2026-02-26T18:41:40.868Z"
+  },
+  {
+    "queueId": "b5a6f388-cfdd-4209-95ae-b25dfc4a91d3",
+    "type": "resource",
+    "title": "1000 inspiring websites, curated by Supercreative",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciyWQy",
+    "publishedAt": "2026-02-26T18:41:42.314Z"
+  },
+  {
+    "queueId": "00578d09-4e95-4c9c-8a12-bdc1207f83ff",
+    "type": "resource",
+    "title": "The daily framer drop",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzjfYj",
+    "publishedAt": "2026-02-26T18:41:43.832Z"
+  },
+  {
+    "queueId": "f61e1820-ffba-4500-bd92-a9be42e8af12",
+    "type": "resource",
+    "title": "Open Source Endowment — World&#39;s First Endowment Fund for OSS",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciyXa6",
+    "publishedAt": "2026-02-26T18:41:45.833Z"
+  },
+  {
+    "queueId": "3d21f7a9-880a-43f2-be2f-68da8a71213c",
+    "type": "resource",
+    "title": "Cap — Beautiful screen recordings, owned by you.",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8pRBs",
+    "publishedAt": "2026-02-26T17:37:38.256Z"
+  },
+  {
+    "queueId": "39e15c7f-8190-479a-b972-ac378f7a90a9",
+    "type": "resource",
+    "title": "The Home of No-Code",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8pRHr",
+    "publishedAt": "2026-02-26T17:37:40.262Z"
+  },
+  {
+    "queueId": "82bd6bfd-c3fb-44cc-b14b-2f9761d4d8e1",
+    "type": "resource",
+    "title": "Get a $10 credit for Fathom Analytics, the privacy-focused website analytics company - Fathom Analytics",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzYIyv",
+    "publishedAt": "2026-02-26T17:37:43.308Z"
+  },
+  {
+    "queueId": "ce206cf8-8cec-4cdf-9a57-516efbadc6e7",
+    "type": "resource",
+    "title": "AI-first automation for every team · Activepieces",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8pRTp",
+    "publishedAt": "2026-02-26T17:37:45.934Z"
+  },
+  {
+    "queueId": "8f7e48cb-67e7-464a-bbb7-c06f3d87cd9d",
+    "type": "resource",
+    "title": "Webflow and Shopify, connected! | Smootify.io",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8pRbW",
+    "publishedAt": "2026-02-26T17:37:47.841Z"
+  },
+  {
+    "queueId": "108d8365-2b8d-495d-989f-a66f20411d54",
+    "type": "resource",
+    "title": "‎Google Gemini",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciXIu7",
+    "publishedAt": "2026-02-26T16:34:09.164Z"
+  },
+  {
+    "queueId": "752e3307-374d-4f09-afe3-6ef8b6ba4bfe",
+    "type": "resource",
+    "title": "Flow",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8lwxR",
+    "publishedAt": "2026-02-26T16:34:12.328Z"
+  },
+  {
+    "queueId": "3372de01-9379-4859-89f1-e4c342d5784c",
+    "type": "resource",
+    "title": "Fluid Builder App - Webflow Apps &amp; Integrations",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciXKJ3",
+    "publishedAt": "2026-02-26T16:34:15.384Z"
+  },
+  {
+    "queueId": "309e3c1f-c7ea-4889-b921-44932615e014",
+    "type": "resource",
+    "title": "Fluid Builder",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8lxT4",
+    "publishedAt": "2026-02-26T16:34:18.525Z"
+  },
+  {
+    "queueId": "9a1e593a-680c-46b8-a257-d3807e5697c9",
+    "type": "resource",
+    "title": "Custom code framework for webflow | xAtom",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzKlvD",
+    "publishedAt": "2026-02-26T16:34:22.196Z"
+  },
+  {
+    "queueId": "596221e3-fc60-4b41-a987-f98fa82daa0c",
+    "type": "resource",
+    "title": "Detect Spanish Language and Redirect · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8ly27",
+    "publishedAt": "2026-02-26T16:34:25.361Z"
+  },
+  {
+    "queueId": "b8769cd9-0149-4095-9f32-538665e1411e",
+    "type": "resource",
+    "title": "Get UTM Parameter Source From URL · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8lyFn",
+    "publishedAt": "2026-02-26T16:34:28.368Z"
+  },
+  {
+    "queueId": "cdc92f0c-adea-4127-8d0c-74fbfe74b330",
+    "type": "resource",
+    "title": "webflow-delete-cms-items",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzKnqK",
+    "publishedAt": "2026-02-26T16:34:31.956Z"
+  },
+  {
+    "queueId": "29574189-412f-4bfe-bdbc-5b5f360cf965",
+    "type": "resource",
+    "title": "Gumloop | AI Automation Framework",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCzKoOM",
+    "publishedAt": "2026-02-26T16:34:33.409Z"
+  },
+  {
+    "queueId": "4d5b23b7-b40a-4913-a29e-e89336a5134d",
+    "type": "resource",
+    "title": "Ycode website builder and CMS",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciXQzy",
+    "publishedAt": "2026-02-26T16:34:35.390Z"
+  },
+  {
+    "queueId": "94b01b4a-7b48-4e17-a267-070e169225c5",
+    "type": "resource",
+    "title": "Un-common Components for shadcn/ui | Skiper UI",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciXRhR",
+    "publishedAt": "2026-02-26T16:34:37.981Z"
+  },
+  {
+    "queueId": "2aec0494-26ac-439f-89d9-842cfb11323f",
+    "type": "resource",
+    "title": "ai-randomness",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciXSH0",
+    "publishedAt": "2026-02-26T16:34:40.407Z"
+  },
+  {
+    "queueId": "49e85b52-f4ab-4f73-8b45-09973ea5638c",
+    "type": "resource",
+    "title": "HyperFramer - A curated collection of Framer resources, encompassing tutorials, tips, tricks, remix links, expert direct",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8lyoq",
+    "publishedAt": "2026-02-26T16:34:42.008Z"
+  },
+  {
+    "queueId": "5ebce64a-4280-42e4-80fa-08fe4d7c82fc",
+    "type": "resource",
+    "title": "Boxicons - High Quality Web Icons",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8lyyF",
+    "publishedAt": "2026-02-26T16:34:43.425Z"
+  },
+  {
+    "queueId": "e0325bca-83d8-4b2b-ae42-be7965868af0",
+    "type": "resource",
+    "title": "Databar.ai | Automate data collection without code",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8lz9M",
+    "publishedAt": "2026-02-26T16:34:45.434Z"
+  },
+  {
+    "queueId": "af59f3ab-4d52-440b-9479-9318b389c8cd",
+    "type": "resource",
+    "title": "Line Height Trim",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8icJ7",
+    "publishedAt": "2026-02-26T15:30:01.346Z"
+  },
+  {
+    "queueId": "76017d9e-f384-4a03-a606-b960e89bcfe5",
+    "type": "resource",
+    "title": "Small Medium Large – A Controlled Webflow Component Framework",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCz6QWk",
+    "publishedAt": "2026-02-26T15:30:05.519Z"
+  },
+  {
+    "queueId": "70eb1544-43a1-4a87-aa9a-f7939f78e7e2",
+    "type": "resource",
+    "title": "Build Powerful Web Apps With Free Webflow Power-Ups | MemberScripts by Memberstack | Memberstack",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCz6RZP",
+    "publishedAt": "2026-02-26T15:30:09.216Z"
+  },
+  {
+    "queueId": "42011458-e87a-4a6c-9355-a5f5f834f9e9",
+    "type": "resource",
+    "title": "Set canonical to match pagination if using Webflow pagination · GitHub",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciFi4G",
+    "publishedAt": "2026-02-26T15:30:12.094Z"
+  },
+  {
+    "queueId": "39856fb1-1353-46e5-b28b-01d37b2f1258",
+    "type": "resource",
+    "title": "NoCodeAPI &ndash; The easiest way to connect APIs without code",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCz6SmH",
+    "publishedAt": "2026-02-26T15:30:14.429Z"
+  },
+  {
+    "queueId": "6cec6ac2-5f5a-4185-8c8c-20633812994d",
+    "type": "resource",
+    "title": "Socks UI | Accessible Components",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciFjHL",
+    "publishedAt": "2026-02-26T15:30:17.408Z"
+  },
+  {
+    "queueId": "4552b3f9-e7c0-47ec-85df-8514c321916a",
+    "type": "resource",
+    "title": "Overrrides - Framer Component &amp; Override Library",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCz6Tej",
+    "publishedAt": "2026-02-26T15:30:20.394Z"
+  },
+  {
+    "queueId": "a2f92459-eb1b-45e4-b501-13423fa66488",
+    "type": "resource",
+    "title": "Fastgen - Build scalable backends and automations",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCz6TsL",
+    "publishedAt": "2026-02-26T15:30:22.130Z"
+  },
+  {
+    "queueId": "bfbc3a94-ccb1-4b8f-8294-aff0bf0e4d2b",
+    "type": "resource",
+    "title": "Homepage - Access Guide",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciFkgH",
+    "publishedAt": "2026-02-26T15:30:24.476Z"
+  },
+  {
+    "queueId": "11775a20-42da-41d8-9580-71cfeeee900f",
+    "type": "resource",
+    "title": "Sevalla® - Cloud Application Platform. Deploy Apps in Minutes.",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8idAy",
+    "publishedAt": "2026-02-26T15:30:26.484Z"
+  },
+  {
+    "queueId": "7853a1a9-1b1d-4184-affa-41144ef5aab5",
+    "type": "resource",
+    "title": "Whalesync: Two-Way Sync Your Data in Minutes",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciFlFq",
+    "publishedAt": "2026-02-26T15:30:28.157Z"
+  },
+  {
+    "queueId": "b6eae0b4-71d7-40c6-9da5-b5b8768b3eb0",
+    "type": "resource",
+    "title": "Outseta | Membership Management Software",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciFmL1",
+    "publishedAt": "2026-02-26T15:30:30.437Z"
+  },
+  {
+    "queueId": "1af25108-0edb-4d3d-96ed-70b1edf4d2e4",
+    "type": "resource",
+    "title": "ION - AI-Powered Landing Pages at Scale",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8idY3",
+    "publishedAt": "2026-02-26T15:30:32.445Z"
+  },
+  {
+    "queueId": "91058af9-34ab-4243-95e3-9a1d84e539ee",
+    "type": "resource",
+    "title": "Softgen - AI Web App Builder",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8ciFmua",
+    "publishedAt": "2026-02-26T15:30:34.205Z"
+  },
+  {
+    "queueId": "48a47edd-d4ae-45f2-ad4d-abb71fb2593d",
+    "type": "resource",
+    "title": "BONT® - Freelance Web Design Academy - V1 — Free Golden Canon Grid course for Web Designers",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chwNe5",
+    "publishedAt": "2026-02-26T14:25:51.459Z"
+  },
+  {
+    "queueId": "fe2703d7-6a7a-425f-a767-981cf9e9034c",
+    "type": "resource",
+    "title": "Webflow Expert Course | New 2025!",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyowi3",
+    "publishedAt": "2026-02-26T14:25:55.395Z"
+  },
+  {
+    "queueId": "1e3ecae5-4537-480f-9610-5293ffd54046",
+    "type": "resource",
+    "title": "Webflow Slider Navigate w/ Arrow Keys · GitHub",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chwPIp",
+    "publishedAt": "2026-02-26T14:25:59.048Z"
+  },
+  {
+    "queueId": "340a0947-174e-469d-a08c-be13398f13be",
+    "type": "resource",
+    "title": "splt.js • A lightweight text splitter",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8eEFR",
+    "publishedAt": "2026-02-26T14:26:01.418Z"
+  },
+  {
+    "queueId": "30749cd9-de3d-4bf9-9108-b26d77ef7ba5",
+    "type": "resource",
+    "title": "Only run some javascript when the browser is 767px or smaller. · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8eEXO",
+    "publishedAt": "2026-02-26T14:26:04.431Z"
+  },
+  {
+    "queueId": "7a1780a9-9721-4e25-b20f-a1ccb56c4c7c",
+    "type": "resource",
+    "title": "Set Text to Today&#39;s Date · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8eEkD",
+    "publishedAt": "2026-02-26T14:26:06.436Z"
+  },
+  {
+    "queueId": "898c335c-be62-4198-90b3-4fa5733c493b",
+    "type": "resource",
+    "title": "Simple Countdown Timer in Seconds · GitHub",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chwQpf",
+    "publishedAt": "2026-02-26T14:26:09.508Z"
+  },
+  {
+    "queueId": "a7ff4966-2bce-4be6-b379-e408f865f4a3",
+    "type": "resource",
+    "title": "Alice - Your Personal AI Assistant App",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyozBC",
+    "publishedAt": "2026-02-26T14:26:11.099Z"
+  },
+  {
+    "queueId": "f7c19254-b07c-43bf-8526-9cdd8d41250b",
+    "type": "resource",
+    "title": "Relume — Pricing Plans",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyozjE",
+    "publishedAt": "2026-02-26T14:26:13.477Z"
+  },
+  {
+    "queueId": "0223556f-d41b-4300-8db6-a13f196b04ef",
+    "type": "resource",
+    "title": "Replo - Sell Anything, Faster",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chwSIY",
+    "publishedAt": "2026-02-26T14:26:16.466Z"
+  },
+  {
+    "queueId": "397d5c56-a344-4348-b479-f3c020db275d",
+    "type": "resource",
+    "title": "Video Editing and Screen Recording Software | ScreenFlow",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8eF5a",
+    "publishedAt": "2026-02-26T14:26:19.133Z"
+  },
+  {
+    "queueId": "091d2029-5d68-4479-8756-75da75cb26f5",
+    "type": "resource",
+    "title": "Build Custom AI Business Apps, Portals &amp; Internal Tools with No Code | Softr",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyp0w6",
+    "publishedAt": "2026-02-26T14:26:21.484Z"
+  },
+  {
+    "queueId": "87c3254b-2d9e-4dbb-a1cd-c07599917fea",
+    "type": "resource",
+    "title": "DronaHQ | Enterprise platform to build apps and agents faster",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyp1aw",
+    "publishedAt": "2026-02-26T14:26:23.489Z"
+  },
+  {
+    "queueId": "e9b3582f-95e6-4fe8-8ed5-d5aa0603c103",
+    "type": "resource",
+    "title": "Linguana - Automatic website translation and multilingual SEO",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8eFOO",
+    "publishedAt": "2026-02-26T14:26:25.539Z"
+  },
+  {
+    "queueId": "41d7be5f-e338-4246-86d4-2cdff2117fa4",
+    "type": "resource",
+    "title": "Awesome Webflow Resources | Webflow Premium Templates | Udesly.com",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chwUyW",
+    "publishedAt": "2026-02-26T14:26:27.503Z"
+  },
+  {
+    "queueId": "2c39dab0-4b39-43b8-8b33-690fd3f6f2a9",
+    "type": "resource",
+    "title": "Paytable",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyp1yl",
+    "publishedAt": "2026-02-26T14:26:29.571Z"
+  },
+  {
+    "queueId": "80b09579-b7ee-4987-8bea-71d1deb92615",
+    "type": "resource",
+    "title": "FramerForms | Custom forms in Framer",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8eFdm",
+    "publishedAt": "2026-02-26T14:26:31.524Z"
+  },
+  {
+    "queueId": "134526cf-9eda-434d-a608-53b5ecf94b04",
+    "type": "resource",
+    "title": "Supply Family | Mockups, Fonts, Graphics, and more",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8eFjl",
+    "publishedAt": "2026-02-26T14:26:33.536Z"
+  },
+  {
+    "queueId": "012f3b07-dbc3-4649-bd5c-63898a5015d1",
+    "type": "resource",
+    "title": "Mailtolink.me | The Mailto Link Generator",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyp2kP",
+    "publishedAt": "2026-02-26T14:26:36.621Z"
+  },
+  {
+    "queueId": "699d8528-af4d-4aba-970a-33d2808ea0da",
+    "type": "resource",
+    "title": "Free Webflow Calculator (formerly CashYourFlow) | Tahi Studio",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCybqi8",
+    "publishedAt": "2026-02-26T13:21:37.440Z"
+  },
+  {
+    "queueId": "7af5648e-e3a3-424a-b3fa-f42247313e55",
+    "type": "resource",
+    "title": "Effect All Siblings on Hover With CSS · GitHub",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCybrhO",
+    "publishedAt": "2026-02-26T13:21:40.445Z"
+  },
+  {
+    "queueId": "4579f709-95b8-4c11-b524-a5298ad99ae7",
+    "type": "resource",
+    "title": "Social Share Links + Open Graph Meta Data · GitHub",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCybrv0",
+    "publishedAt": "2026-02-26T13:21:42.138Z"
+  },
+  {
+    "queueId": "ee6c473c-2abf-4489-9a36-9f9aca918f68",
+    "type": "resource",
+    "title": "Custom Text Underline Offset, Size and Color · GitHub",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi0Mj",
+    "publishedAt": "2026-02-26T13:21:45.467Z"
+  },
+  {
+    "queueId": "ae4f1dfd-f0b7-4f51-8985-7b929861c796",
+    "type": "resource",
+    "title": "ScrollyVideo.js",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCybsWR",
+    "publishedAt": "2026-02-26T13:21:47.941Z"
+  },
+  {
+    "queueId": "0d925c76-94b3-4431-9850-0455ac551964",
+    "type": "resource",
+    "title": "Nucleo – The Ultimate Icon Bundle",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCybsuG",
+    "publishedAt": "2026-02-26T13:21:49.493Z"
+  },
+  {
+    "queueId": "49c788eb-3368-4e04-bebc-326fb36a12af",
+    "type": "resource",
+    "title": "Asset Marketplace Template | Webflow Templates - Memberstack | Memberstack",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi1Nx",
+    "publishedAt": "2026-02-26T13:21:52.173Z"
+  },
+  {
+    "queueId": "5ee89000-5e48-4710-a593-cc8b27629d10",
+    "type": "resource",
+    "title": "Webflow Examples · GitHub",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi1lf",
+    "publishedAt": "2026-02-26T13:21:55.227Z"
+  },
+  {
+    "queueId": "63c65adc-36c1-411a-9164-b412c1c17374",
+    "type": "resource",
+    "title": "Relay.app: Build an AI team that works for you",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCybuly",
+    "publishedAt": "2026-02-26T13:21:56.992Z"
+  },
+  {
+    "queueId": "bad47f6e-e32e-4283-b7c9-eae7aeea7827",
+    "type": "resource",
+    "title": "The Scalable No-Code Backend: Xano",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi2qq",
+    "publishedAt": "2026-02-26T13:21:58.529Z"
+  },
+  {
+    "queueId": "7af73631-2ca6-4f6e-b6f5-c944be8d4932",
+    "type": "resource",
+    "title": "Nucode &#8211; No Code Maker Community",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi3EY",
+    "publishedAt": "2026-02-26T13:22:00.210Z"
+  },
+  {
+    "queueId": "11b8971d-b41e-4b2c-89af-0362455d55e7",
+    "type": "resource",
+    "title": "Flowbookings Pricing",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi3UM",
+    "publishedAt": "2026-02-26T13:22:02.042Z"
+  },
+  {
+    "queueId": "21163f13-08fc-4945-864d-5d721d643e57",
+    "type": "resource",
+    "title": "Readymag – the design tool for outstanding websites",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCybwCS",
+    "publishedAt": "2026-02-26T13:22:04.571Z"
+  },
+  {
+    "queueId": "87b6e2f7-8341-4883-9831-3e9480dfa218",
+    "type": "resource",
+    "title": "Website Headlines (dotcom)",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi43v",
+    "publishedAt": "2026-02-26T13:22:06.237Z"
+  },
+  {
+    "queueId": "49700b58-6e2e-436c-b717-9df7aaddd11f",
+    "type": "resource",
+    "title": "Mesh Gradients Generator by MagicPattern",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi4Va",
+    "publishedAt": "2026-02-26T13:22:08.556Z"
+  },
+  {
+    "queueId": "982d1759-4cdc-453a-a513-683f9385e205",
+    "type": "resource",
+    "title": "Find &amp; List Top Designer Tools | Curated By Ycode",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chi4xF",
+    "publishedAt": "2026-02-26T13:22:10.249Z"
+  },
+  {
+    "queueId": "30318f8e-ffc9-4d6e-a0cf-e680d3d89fb7",
+    "type": "resource",
+    "title": "No-Code Exits - Build & Sell Micro-Startups Without Code",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8b4po",
+    "publishedAt": "2026-02-26T13:22:12.059Z"
+  },
+  {
+    "queueId": "d048bd5d-2ad0-436c-bea7-acb34bab72bf",
+    "type": "resource",
+    "title": "Figma to HTML website Webflow plugin | Webflow",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyPltK",
+    "publishedAt": "2026-02-26T12:17:02.518Z"
+  },
+  {
+    "queueId": "d0a42c56-5690-42e5-b08e-80125e38315e",
+    "type": "resource",
+    "title": "Cursor Learn",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chUYxR",
+    "publishedAt": "2026-02-26T12:17:04.476Z"
+  },
+  {
+    "queueId": "b9eaebf2-9900-4349-9a24-3ea8e98c4b53",
+    "type": "resource",
+    "title": "Print a Specific Element w/ Button · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8Y3Es",
+    "publishedAt": "2026-02-26T12:17:06.195Z"
+  },
+  {
+    "queueId": "a12b89cf-215d-436b-b335-ba6f792609eb",
+    "type": "resource",
+    "title": "Hemingway Editor",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chUZmo",
+    "publishedAt": "2026-02-26T12:17:07.816Z"
+  },
+  {
+    "queueId": "14646458-1b10-4964-9dcc-d0df865966ba",
+    "type": "resource",
+    "title": "Keystroke Pro · Visualize Your Keypresses (macOS)",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyPmNx",
+    "publishedAt": "2026-02-26T12:17:10.206Z"
+  },
+  {
+    "queueId": "0c7b0bff-8992-455c-b649-2118e9df3952",
+    "type": "resource",
+    "title": "Swiper - The Most Modern Mobile Touch Slider",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8Y3P8",
+    "publishedAt": "2026-02-26T12:17:11.843Z"
+  },
+  {
+    "queueId": "8bce5a69-d98e-4a74-b1f9-c65d68f145a3",
+    "type": "resource",
+    "title": "Pricing — Iconic",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyPn6C",
+    "publishedAt": "2026-02-26T12:17:13.530Z"
+  },
+  {
+    "queueId": "05466661-81e3-4666-8cfe-bf0b86d61b34",
+    "type": "resource",
+    "title": "Basefront",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyPnU1",
+    "publishedAt": "2026-02-26T12:17:15.225Z"
+  },
+  {
+    "queueId": "22e6d1a3-e160-4fc9-884f-c6db2c27f89e",
+    "type": "resource",
+    "title": "People to Notion | Save LinkedIn &amp; Twitter Profiles with 1-click",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chUak5",
+    "publishedAt": "2026-02-26T12:17:17.240Z"
+  },
+  {
+    "queueId": "18a2246f-d2d5-4dd9-b1fd-4f5a0e5bf782",
+    "type": "resource",
+    "title": "Threedio – 3D Models, 3D Scenes for Motion Design",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8Y3gE",
+    "publishedAt": "2026-02-26T12:17:18.868Z"
+  },
+  {
+    "queueId": "7e96f52a-cb76-4a52-a839-a029a02e79d8",
+    "type": "resource",
+    "title": "Rebrand — Stellar visual identity inspiration",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8Y3nv",
+    "publishedAt": "2026-02-26T12:17:20.560Z"
+  },
+  {
+    "queueId": "f3568d8b-75ae-47e3-a752-ea4318431e57",
+    "type": "resource",
+    "title": "Autoplay Tabs w/ Play/Pause Button - Webflow",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chUbNb",
+    "publishedAt": "2026-02-26T12:17:22.556Z"
+  },
+  {
+    "queueId": "6577128a-5d24-4898-b8a5-f8cd673b5089",
+    "type": "resource",
+    "title": "Framer Overrides — Powerful Framer Code Overrides",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8Y42S",
+    "publishedAt": "2026-02-26T12:17:24.288Z"
+  },
+  {
+    "queueId": "e737c5d5-c62c-4871-b9db-e1d51a069c48",
+    "type": "resource",
+    "title": "B2B Search Optimization &amp; Marketing with AI | Webless",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chUc17",
+    "publishedAt": "2026-02-26T12:17:25.904Z"
+  },
+  {
+    "queueId": "b72530c1-82c4-48fb-8dd4-75c5a06e339a",
+    "type": "resource",
+    "title": "Clay | Go to market with unique data—and the ability to act on it",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8Y47a",
+    "publishedAt": "2026-02-26T12:17:27.585Z"
+  },
+  {
+    "queueId": "a6235b8b-7d32-47fc-aeaf-f5498e04d667",
+    "type": "resource",
+    "title": "Convert Box Shadows to Webflow - Simple Tool",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chDehG",
+    "publishedAt": "2026-02-26T11:13:13.757Z"
+  },
+  {
+    "queueId": "3b759364-deaf-4ca4-ab7e-591fff0c1c6f",
+    "type": "resource",
+    "title": "Click Something Based on ID in URL · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8UR2L",
+    "publishedAt": "2026-02-26T11:13:16.280Z"
+  },
+  {
+    "queueId": "01998bda-8b30-44eb-86c9-b201faa1ffc5",
+    "type": "resource",
+    "title": "CSS Scroll Snap · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8URCb",
+    "publishedAt": "2026-02-26T11:13:18.776Z"
+  },
+  {
+    "queueId": "2a3422fa-1e8e-4d0f-9f94-0265a4861f2e",
+    "type": "resource",
+    "title": "clipboard.js",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyAhvR",
+    "publishedAt": "2026-02-26T11:13:20.575Z"
+  },
+  {
+    "queueId": "35c64cc2-9f75-4469-98f6-b2603c7dff16",
+    "type": "resource",
+    "title": "The AI for Problem Solvers | Claude by Anthropic",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8URbO",
+    "publishedAt": "2026-02-26T11:13:23.801Z"
+  },
+  {
+    "queueId": "385c4a77-042a-43cc-a8dc-096922ed1d9b",
+    "type": "resource",
+    "title": "Dorik - AI Website Building Platform",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8URmV",
+    "publishedAt": "2026-02-26T11:13:25.315Z"
+  },
+  {
+    "queueId": "f79e9130-2beb-4426-863c-66890f02cd9d",
+    "type": "resource",
+    "title": "API for Automated Image and Video Generation - Bannerbear",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8URwl",
+    "publishedAt": "2026-02-26T11:13:27.809Z"
+  },
+  {
+    "queueId": "d781cdef-b0f3-48dd-8d0d-152d52e70917",
+    "type": "resource",
+    "title": "BOBATOTO : Mitra Situs Toto Togel Macau dan Toto Slot Terpercaya",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chDjDp",
+    "publishedAt": "2026-02-26T11:13:29.349Z"
+  },
+  {
+    "queueId": "90bd01ce-c11b-4bf3-a5dd-093e8764aff6",
+    "type": "resource",
+    "title": "Mona Sans &amp; Hubot Sans · GitHub",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCyAler",
+    "publishedAt": "2026-02-26T11:13:30.829Z"
+  },
+  {
+    "queueId": "a4c1bc07-9a40-461b-a192-8b990aeec75d",
+    "type": "resource",
+    "title": "EverArt",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8chDkwW",
+    "publishedAt": "2026-02-26T11:13:32.615Z"
+  },
+  {
+    "queueId": "17ad868d-8a3c-4f4c-b340-d0392be2dc9d",
+    "type": "resource",
+    "title": "Clean Styles App - Webflow Apps &amp; Integrations",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8R3R5",
+    "publishedAt": "2026-02-26T10:09:39.751Z"
+  },
+  {
+    "queueId": "3002a6d6-6c88-427b-94ff-98ce738ae4b0",
+    "type": "resource",
+    "title": "Google site tools for Webflow App - Webflow Apps &amp; Integrations",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8R3Xv",
+    "publishedAt": "2026-02-26T10:09:41.764Z"
+  },
+  {
+    "queueId": "0e402af0-3e4b-40ac-a81b-bbe06fc769a7",
+    "type": "resource",
+    "title": "Ultimate Webflow SEO Checklist | Free Download Guide",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxxpNJ",
+    "publishedAt": "2026-02-26T10:09:43.768Z"
+  },
+  {
+    "queueId": "585e5d74-7c60-493d-8174-fb6f6cf0fec7",
+    "type": "resource",
+    "title": "Bulk 301-Redirect Tool For Website Rebuilds — Rapid301",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgyOrK",
+    "publishedAt": "2026-02-26T10:09:45.411Z"
+  },
+  {
+    "queueId": "52ad823a-07ae-41ea-9847-111ae8e1555d",
+    "type": "resource",
+    "title": "Go Back to Previous Page Button · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8R4Ke",
+    "publishedAt": "2026-02-26T10:09:46.791Z"
+  },
+  {
+    "queueId": "24b07889-173f-47f1-8674-b4bbaf5d8f46",
+    "type": "resource",
+    "title": "Thenty | Membership sites in Framer",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8R4oZ",
+    "publishedAt": "2026-02-26T10:09:49.426Z"
+  },
+  {
+    "queueId": "f25169f3-7de9-4562-a78f-86c8150f1c01",
+    "type": "resource",
+    "title": "Add-a-Field Form - Webflow",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgyUP7",
+    "publishedAt": "2026-02-26T10:09:51.464Z"
+  },
+  {
+    "queueId": "4a1b2689-5517-45a5-8d50-8787d3963650",
+    "type": "resource",
+    "title": "The Biggest FREE Component &amp; Remix Library for Framer",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8R5Nc",
+    "publishedAt": "2026-02-26T10:09:52.815Z"
+  },
+  {
+    "queueId": "b3c429da-6e02-4759-83fc-3579e380acc3",
+    "type": "resource",
+    "title": "The best fonts pack you will ever need | French Type Design foundry 🔥 We design fonts for blazing hot projects!",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8R5VJ",
+    "publishedAt": "2026-02-26T10:09:54.453Z"
+  },
+  {
+    "queueId": "919e96f0-0893-4807-af86-33a7b23c49c9",
+    "type": "resource",
+    "title": "Chartbeat",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgyXyP",
+    "publishedAt": "2026-02-26T10:09:56.862Z"
+  },
+  {
+    "queueId": "57fee9ff-b86d-45b1-9fee-d96aaf48de3d",
+    "type": "resource",
+    "title": "Rize - Automatic Time Tracking for Agencies &amp; Freelancers",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgyaGf",
+    "publishedAt": "2026-02-26T10:09:58.870Z"
+  },
+  {
+    "queueId": "888af38e-63d4-4520-b73d-af55440df6cf",
+    "type": "resource",
+    "title": "Custom Slider with GSAP - Webflow",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8R6FT",
+    "publishedAt": "2026-02-26T10:10:01.723Z"
+  },
+  {
+    "queueId": "1b1a0a3c-0a4d-4ebd-9dc0-cb4bfaec3dce",
+    "type": "resource",
+    "title": "Weglot | Your solution for website translation and multilingual SEO",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxy0Lx",
+    "publishedAt": "2026-02-26T10:10:03.910Z"
+  },
+  {
+    "queueId": "1bf6aec8-c5b7-41fb-8d22-c4ba94ee8a64",
+    "type": "resource",
+    "title": "Lummi — Free AI Stock Images, Illustrations &amp; 3D",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgyi6i",
+    "publishedAt": "2026-02-26T10:10:06.959Z"
+  },
+  {
+    "queueId": "775cbd0c-34f5-4700-93c5-edc8d7575f29",
     "type": "blog",
-    "title": "Best Productivity Tools for Teams (2026 Decision Guide)",
+    "title": "Best UI/UX Resources for Teams (2026 Decision Guide)",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5WN0",
-    "publishedAt": "2026-02-24T03:51:57.460Z"
+    "id": "6GiUMtCG5KRVqgNOCxhJ3i",
+    "publishedAt": "2026-02-26T09:09:42.958Z"
   },
   {
-    "queueId": "5ca22caa-0528-47db-9aa4-68e37e3d1dde",
+    "queueId": "4e04ec62-bcb2-4de5-aa5f-6ba0df649b8b",
     "type": "resource",
-    "title": "companion",
+    "title": "Free Webflow Select Input Generator",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5WX0",
-    "publishedAt": "2026-02-24T03:51:59.522Z"
+    "id": "o3prJ2EvM0sUOVQ8cgetLZ",
+    "publishedAt": "2026-02-26T09:05:14.726Z"
   },
   {
-    "queueId": "a0475926-5bed-48b9-b1ef-bd55ffa97c74",
+    "queueId": "a4bb3190-e325-43b0-9481-636b2637f3e8",
     "type": "resource",
-    "title": "code-review-expert",
+    "title": "xSync by xAtom | A Chrome extension to prevent class and variable duplication when pasting in Webflow.",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5Wg0",
-    "publishedAt": "2026-02-24T03:52:01.099Z"
+    "id": "6GiUMtCG5KRVqgNOCxgR6L",
+    "publishedAt": "2026-02-26T09:05:17.715Z"
   },
   {
-    "queueId": "ea3920ae-27a3-4cbf-98c9-d00eb4792cb7",
+    "queueId": "05b8f89f-032b-40ee-84d8-4ed186a99e02",
     "type": "resource",
-    "title": "go-concurrent-map-bench",
+    "title": "GSAP in Webflow. FAST.",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMZ5Wt0",
-    "publishedAt": "2026-02-24T03:52:03.471Z"
+    "id": "izP8f6utTfVPjttAE8Mddh",
+    "publishedAt": "2026-02-26T09:05:21.733Z"
   },
   {
-    "queueId": "d8f22a59-9545-4b23-8676-6d94600ea521",
+    "queueId": "ada63b5f-473a-4fa5-879a-2e58348f54c3",
     "type": "resource",
-    "title": "visual-explainer",
+    "title": "Ultimate Airtable Course - Automate All The Things",
     "success": true,
-    "id": "ut2BTkhBrFCaQG40AJoZba",
-    "publishedAt": "2026-02-23T22:40:11.789Z"
+    "id": "izP8f6utTfVPjttAE8Mdt5",
+    "publishedAt": "2026-02-26T09:05:24.741Z"
   },
   {
-    "queueId": "1cb4cc8d-c282-4614-a6d1-fbfe5bd7d216",
+    "queueId": "318fb68c-7319-4b0d-b0b8-2eb4cddb9899",
     "type": "resource",
-    "title": "react-doctor",
+    "title": "Figma Brand Guide Template",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMYxhJ0",
-    "publishedAt": "2026-02-23T22:40:13.374Z"
+    "id": "o3prJ2EvM0sUOVQ8cgevG7",
+    "publishedAt": "2026-02-26T09:05:27.833Z"
   },
   {
-    "queueId": "50c3e1f8-bda0-42aa-b929-ad79188a9141",
+    "queueId": "64d73263-a719-4e7e-8f5a-ff0a4fbde24c",
     "type": "resource",
-    "title": "sowbot &#8211; The Open AgBot",
+    "title": "Shots - Create Amazing Mockups",
     "success": true,
-    "id": "U4edcnaVtwgLzgBHjWMtOX",
-    "publishedAt": "2026-02-23T22:40:15.735Z"
+    "id": "o3prJ2EvM0sUOVQ8cgew1X",
+    "publishedAt": "2026-02-26T09:05:30.791Z"
   },
   {
-    "queueId": "6971161c-a665-416d-9282-2fbba1d48a1f",
+    "queueId": "3abee879-395f-4e47-9eea-04d45b1e05cf",
     "type": "resource",
-    "title": "GitHub - memovai/mimiclaw: MimiClaw: Run OpenClaw on a $5 chip. No OS(Linux). No Node.js. No Mac mini. No Raspberry Pi.",
+    "title": "T.RICKS Hamburgers - Webflow",
     "success": true,
-    "id": "U4edcnaVtwgLzgBHjW8gVd",
-    "publishedAt": "2026-02-23T21:36:54.415Z"
+    "id": "6GiUMtCG5KRVqgNOCxgU7W",
+    "publishedAt": "2026-02-26T09:05:33.499Z"
   },
   {
-    "queueId": "0c202677-2807-40f1-a505-40568bfcb4cf",
+    "queueId": "9a28cddd-d0ec-4a07-bea6-807842bc7cf5",
     "type": "resource",
-    "title": "GitHub - PeonPing/peon-ping: Warcraft III Peon voice notifications (+ more!) for Claude Code, Codex, IDEs, and any AI ag",
+    "title": "Ruttl - Best Design Feedback Tool",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMYuz90",
-    "publishedAt": "2026-02-23T21:36:56.009Z"
+    "id": "o3prJ2EvM0sUOVQ8cgewur",
+    "publishedAt": "2026-02-26T09:05:35.792Z"
   },
   {
-    "queueId": "b0549afb-de39-439b-84bb-776bf251c472",
+    "queueId": "b793153f-6d7c-4a60-917a-b8ac2b04f19d",
     "type": "resource",
-    "title": "GitHub - excalidraw/excalidraw-mcp: Fast and streamable Excalidraw MCP App",
+    "title": "Finsweet Cookie Consent for Webflow",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMYuzF0",
-    "publishedAt": "2026-02-23T21:36:59.073Z"
+    "id": "6GiUMtCG5KRVqgNOCxgVAB",
+    "publishedAt": "2026-02-26T09:05:38.518Z"
   },
   {
-    "queueId": "6378b092-b9d5-4bcd-a2b3-0fdef99eec14",
+    "queueId": "56bb1e66-aa11-4e73-bc76-c3107bd4d2ba",
     "type": "resource",
-    "title": "GitHub - anthropics/claudes-c-compiler: Claude Opus 4.6 wrote a dependency-free C compiler in Rust, with backends target",
+    "title": "Fonts — Arillatype.Studio®",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMYuzJ0",
-    "publishedAt": "2026-02-23T21:37:00.443Z"
+    "id": "o3prJ2EvM0sUOVQ8cgeyRh",
+    "publishedAt": "2026-02-26T09:05:40.834Z"
   },
   {
-    "queueId": "848c1f7f-a0d5-45f4-864b-82f532bbcbc6",
+    "queueId": "e38d9cc1-edaf-404b-aef7-9f3a83ec5da7",
     "type": "resource",
-    "title": "GitHub - Conway-Research/automaton: The first AI that can earn its own existence, replicate, and evolve — without needin",
+    "title": "Pricing | FormyPro | Powerup your Webflow Forms",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMYuzN0",
-    "publishedAt": "2026-02-23T21:37:02.032Z"
+    "id": "o3prJ2EvM0sUOVQ8cgez9A",
+    "publishedAt": "2026-02-26T09:05:42.812Z"
   },
   {
-    "queueId": "a4ee6c05-abdb-4184-9346-326f23482489",
+    "queueId": "5aaf3916-2d20-47ff-9b79-d5e0d01e6d45",
     "type": "resource",
-    "title": "GitHub - Veirt/weathr: a terminal weather app with ascii animation",
+    "title": "Click to Copy to Clipboard · GitHub",
     "success": true,
-    "id": "hwNpAZwjhdUfjmvJMYuzV0",
-    "publishedAt": "2026-02-23T21:37:03.458Z"
+    "id": "o3prJ2EvM0sUOVQ8cgezOy",
+    "publishedAt": "2026-02-26T09:05:44.613Z"
   },
   {
-    "queueId": "4075e718-5356-4316-b950-72edfd50b614",
+    "queueId": "9c797541-a469-4dc7-8d30-233927a5814b",
     "type": "resource",
-    "title": "GitHub - op7418/CodePilot: A native desktop GUI for Claude Code — chat, code, and manage projects visually. Built with E",
+    "title": "Vev | No-code tool for interactive content",
     "success": true,
-    "id": "ut2BTkhBrFCaQG40AJiCrP",
-    "publishedAt": "2026-02-23T21:37:05.465Z"
+    "id": "izP8f6utTfVPjttAE8MfPy",
+    "publishedAt": "2026-02-26T09:05:46.825Z"
   },
   {
-    "queueId": "e4d884bd-d699-46ba-8788-e6774db1e15f",
+    "queueId": "4610faef-e4f5-464e-ad24-1294c34a9858",
     "type": "resource",
-    "title": "GitHub - AlexsJones/llmfit: 157 models. 30 providers. One command to find what runs on your hardware.",
+    "title": "2,000+ Website Section Designs - Hero, CTA, Pricing &amp; More | Unsection",
     "success": true,
-    "id": "U4edcnaVtwgLzgBHjW8jxt",
-    "publishedAt": "2026-02-23T21:37:07.078Z"
+    "id": "izP8f6utTfVPjttAE8Mfcn",
+    "publishedAt": "2026-02-26T09:05:48.834Z"
   },
   {
-    "queueId": "94b35323-2d92-4f44-a4a3-3fd552fd9c49",
+    "queueId": "53f79b71-1bc9-4bc8-aeaa-2f61afa1f39e",
     "type": "resource",
-    "title": "GitHub - JeffBezanson/femtolisp: a lightweight, robust, scheme-like lisp implementation",
+    "title": "Fonts · Klim Type Foundry",
     "success": true,
-    "id": "U4edcnaVtwgLzgBHjW8kIn",
-    "publishedAt": "2026-02-23T21:37:09.557Z"
+    "id": "6GiUMtCG5KRVqgNOCxgXWW",
+    "publishedAt": "2026-02-26T09:05:50.573Z"
   },
   {
-    "queueId": "73c521bd-d0d4-4dc9-a815-4d3b734c8509",
+    "queueId": "a734f128-81c7-4b5f-ba24-14ec3596eafe",
     "type": "resource",
-    "title": "Loops - Short videos. Your community. Your rules.",
+    "title": "Modulify – Fastest AI Website Builder for Webflow",
     "success": true,
-    "id": "ut2BTkhBrFCaQG40AJiDZF",
-    "publishedAt": "2026-02-23T21:37:11.132Z"
+    "id": "izP8f6utTfVPjttAE8MfxJ",
+    "publishedAt": "2026-02-26T09:05:53.851Z"
   },
   {
-    "type": "blog",
-    "title": "Top 15 Developer Tools to Boost Your Workflow in 2026",
+    "queueId": "9269ce71-9069-4733-a4b1-64dc0d2c5066",
+    "type": "resource",
+    "title": "OpenAI",
     "success": true,
-    "id": "U4edcnaVtwgLzgBHjVgKHJ",
-    "publishedAt": "2026-02-23T20:16:26.279Z"
+    "id": "izP8f6utTfVPjttAE8MgBq",
+    "publishedAt": "2026-02-26T09:05:56.867Z"
   },
   {
-    "type": "blog",
-    "title": "Essential Developer Tools for 2026",
+    "queueId": "71da3926-fb68-4012-80ae-eaf8e7869937",
+    "type": "resource",
+    "title": "DetailsPro: Design with SwiftUI, no coding required",
     "success": true,
-    "id": "QQaSvlA5uzDI90C9Xm1BWN",
-    "publishedAt": "2026-02-23T06:12:52.057Z"
+    "id": "izP8f6utTfVPjttAE8K4z4",
+    "publishedAt": "2026-02-26T08:00:29.715Z"
   },
   {
-    "type": "blog",
-    "title": "Top Learning Resources for Developers in 2026",
+    "queueId": "6f9602bf-5bbb-4285-93ea-f786326d1259",
+    "type": "resource",
+    "title": "Syncmate App - Webflow Apps &amp; Integrations",
     "success": true,
-    "id": "z0J35p6G35RGjbguBoaanK",
-    "publishedAt": "2026-02-23T06:12:52.057Z"
+    "id": "6GiUMtCG5KRVqgNOCxWeiu",
+    "publishedAt": "2026-02-26T08:00:33.862Z"
+  },
+  {
+    "queueId": "04e83c49-53ad-48d4-84b4-3c793e3b7803",
+    "type": "resource",
+    "title": "Puzzl.app for sale | Spaceship.com",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWf6j",
+    "publishedAt": "2026-02-26T08:00:35.505Z"
+  },
+  {
+    "queueId": "13ffcc16-fd29-4564-9494-fcd41a4a8c3b",
+    "type": "resource",
+    "title": "Wappler - The Visual Web App Creator",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWgkp",
+    "publishedAt": "2026-02-26T08:00:38.754Z"
+  },
+  {
+    "queueId": "37122bd7-076f-4e9d-a092-5b41de986da5",
+    "type": "resource",
+    "title": "Glyphy → Copy &amp; paste fancy fonts + cool symbols ☞✺✐™",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWgyR",
+    "publishedAt": "2026-02-26T08:00:40.010Z"
+  },
+  {
+    "queueId": "97a249fe-ead5-4164-9fcb-9fb7602a43a8",
+    "type": "resource",
+    "title": "Flowplay | Media Player Library for Webflow - No-Code",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8K5sd",
+    "publishedAt": "2026-02-26T08:00:41.897Z"
+  },
+  {
+    "queueId": "ecf7a8ed-aeb8-4abc-b4c5-0418563527a9",
+    "type": "resource",
+    "title": "Blender - The Free and Open Source 3D Creation Software — blender.org",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWi7u",
+    "publishedAt": "2026-02-26T08:00:43.776Z"
+  },
+  {
+    "queueId": "360b65b1-1764-478a-8972-4c1ba13630e3",
+    "type": "resource",
+    "title": "age-gate-overlay - Webflow",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWj7A",
+    "publishedAt": "2026-02-26T08:00:46.779Z"
+  },
+  {
+    "queueId": "686a220d-ede4-492b-bb49-c5cc83aeeaa2",
+    "type": "resource",
+    "title": "Deck.Gallery® — Beautifully designed decks, curated",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWjUz",
+    "publishedAt": "2026-02-26T08:00:48.890Z"
+  },
+  {
+    "queueId": "4e08f543-b007-4e26-9153-bac643fe266a",
+    "type": "resource",
+    "title": "Magic Animator - Animate in seconds",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8K61B",
+    "publishedAt": "2026-02-26T08:00:50.612Z"
+  },
+  {
+    "queueId": "e2ed8e5a-d11b-4102-b234-35929d624804",
+    "type": "resource",
+    "title": "Agentation",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8K6Aa",
+    "publishedAt": "2026-02-26T08:00:52.815Z"
+  },
+  {
+    "queueId": "f16e913d-9553-40e7-85be-5dc9d9b23431",
+    "type": "resource",
+    "title": "xmcp — The TypeScript MCP framework",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgSDzn",
+    "publishedAt": "2026-02-26T08:00:54.759Z"
+  },
+  {
+    "queueId": "c5c80984-96b9-4209-84a9-d97e2a7e6e66",
+    "type": "resource",
+    "title": "CSS Aspect Ratio · GitHub",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWkDE",
+    "publishedAt": "2026-02-26T08:00:55.840Z"
+  },
+  {
+    "queueId": "8267dd6d-2fda-4ef5-8699-1aee7ab47f85",
+    "type": "resource",
+    "title": "Custom Scrollbars · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8K6J8",
+    "publishedAt": "2026-02-26T08:00:57.857Z"
+  },
+  {
+    "queueId": "4c31b06b-7b0c-489f-bca3-fdaee4416d1b",
+    "type": "resource",
+    "title": "luxon - Immutable date wrapper",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWkQq",
+    "publishedAt": "2026-02-26T08:00:59.638Z"
+  },
+  {
+    "queueId": "b7d8388e-ff9b-46b5-a771-528f32e46c5b",
+    "type": "resource",
+    "title": "Navbar Gallery – Navigation Design Inspiration",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8K6YW",
+    "publishedAt": "2026-02-26T08:01:02.861Z"
+  },
+  {
+    "queueId": "68d01503-56a0-4eb0-8a7f-308a1e4d8737",
+    "type": "resource",
+    "title": "Ship Studio - Real Dev Tools. No Dev Intimidation.",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWkeS",
+    "publishedAt": "2026-02-26T08:01:04.773Z"
+  },
+  {
+    "queueId": "25a594e6-1f42-4dc5-b8a6-ecb2fe4b3988",
+    "type": "resource",
+    "title": "Granola — The AI notepad that helps you get the doing done",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8K6n3",
+    "publishedAt": "2026-02-26T08:01:05.890Z"
+  },
+  {
+    "queueId": "b53b62f1-2321-426f-8712-e8189ea8bc54",
+    "type": "resource",
+    "title": "brand.ai | AI for brand management",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxWks4",
+    "publishedAt": "2026-02-26T08:01:07.739Z"
+  },
+  {
+    "queueId": "1d8d23c7-a447-4886-8c22-b003c1dd6b06",
+    "type": "resource",
+    "title": "HTML Table Generator — Build and Style Tables",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxNynI",
+    "publishedAt": "2026-02-26T06:56:10.706Z"
+  },
+  {
+    "queueId": "1c2997de-ea71-494e-a3c0-7f0abbc629a8",
+    "type": "resource",
+    "title": "Chronicle: AI Presentation Maker for Professional Slides &amp; AI PPT",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I7IG",
+    "publishedAt": "2026-02-26T06:56:12.715Z"
+  },
+  {
+    "queueId": "ad59523a-cd71-4e80-b59a-c086ace04136",
+    "type": "resource",
+    "title": "Mockup Generator &amp; Animator 3D | Rotato",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I7OF",
+    "publishedAt": "2026-02-26T06:56:13.720Z"
+  },
+  {
+    "queueId": "de7a546e-4b1c-496b-8844-829d70f00b66",
+    "type": "resource",
+    "title": "GloriaFood Online Ordering: Free Online Ordering System for Restaurants",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgIXzJ",
+    "publishedAt": "2026-02-26T06:56:15.743Z"
+  },
+  {
+    "queueId": "2117aadf-4858-40da-a69e-5b3a8e3d21b9",
+    "type": "resource",
+    "title": "Dead Simple Sites — Minimal Web Design Inspiration &amp; Gallery",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I7Wn",
+    "publishedAt": "2026-02-26T06:56:17.825Z"
+  },
+  {
+    "queueId": "adc412e9-401a-4f0f-9c45-5a3bba8e403c",
+    "type": "resource",
+    "title": "A CMS that scales with you | CloudCannon",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxO0Ka",
+    "publishedAt": "2026-02-26T06:56:19.780Z"
+  },
+  {
+    "queueId": "b17d7d8c-451d-45ed-b5c8-82ddb8fa8d52",
+    "type": "resource",
+    "title": "Typedream: AI Website Builder",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxO0YC",
+    "publishedAt": "2026-02-26T06:56:21.753Z"
+  },
+  {
+    "queueId": "b86493bb-271d-438e-a84b-3514577bbc73",
+    "type": "resource",
+    "title": "MakerThrive | Vibe Coding Community for Creators",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I7nt",
+    "publishedAt": "2026-02-26T06:56:22.952Z"
+  },
+  {
+    "queueId": "48e0bbc5-1261-4a12-8740-a46cacd80117",
+    "type": "resource",
+    "title": "Framestack | Framer Component Library",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxO0w1",
+    "publishedAt": "2026-02-26T06:56:24.590Z"
+  },
+  {
+    "queueId": "83403109-3a1e-4c10-a8d0-e852f8c87f66",
+    "type": "resource",
+    "title": "Womp: Free 3D design software",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I7wR",
+    "publishedAt": "2026-02-26T06:56:25.789Z"
+  },
+  {
+    "queueId": "dfd30257-95c4-4fda-87fc-cb6904b0a812",
+    "type": "resource",
+    "title": "Departure Mono",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I7zr",
+    "publishedAt": "2026-02-26T06:56:27.842Z"
+  },
+  {
+    "queueId": "fa6a6764-e7b8-4418-930b-f84c96c5a9b7",
+    "type": "resource",
+    "title": "FeedSpring — The Social Feed Platform for Modern Websites",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I83H",
+    "publishedAt": "2026-02-26T06:56:29.798Z"
+  },
+  {
+    "queueId": "03e774ea-c731-4254-bcb7-391a31c0bcdf",
+    "type": "resource",
+    "title": "Convert CSS to Webflow Styles - Markflow - Markflow: Copy from anywhere - paste everywhere",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxO1oT",
+    "publishedAt": "2026-02-26T06:56:31.839Z"
+  },
+  {
+    "queueId": "3e74e843-2d9a-4e6b-be8c-210397943db0",
+    "type": "resource",
+    "title": "Convert Gradient CSS to Webflow - Simple Tool",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I86h",
+    "publishedAt": "2026-02-26T06:56:34.663Z"
+  },
+  {
+    "queueId": "54129b95-e3ad-4767-b3bf-de0f50f96a2a",
+    "type": "resource",
+    "title": "Airscript | Learn to use Airtable scripts",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I8A7",
+    "publishedAt": "2026-02-26T06:56:36.878Z"
+  },
+  {
+    "queueId": "b5887da1-dfc5-41a6-8235-97636e129c24",
+    "type": "resource",
+    "title": "Webflow CMS Previous/Next Buttons · GitHub",
+    "success": true,
+    "id": "o3prJ2EvM0sUOVQ8cgIaXN",
+    "publishedAt": "2026-02-26T06:56:39.705Z"
+  },
+  {
+    "queueId": "67e5d5f2-ad68-4750-b5a8-7c36bfdca123",
+    "type": "resource",
+    "title": "Highlight Text From Search Query · GitHub",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxO3SZ",
+    "publishedAt": "2026-02-26T06:56:42.869Z"
+  },
+  {
+    "queueId": "60dfa898-0ed0-4654-9a66-bfd89606d22d",
+    "type": "resource",
+    "title": "Hide Page From Google Search w/ Meta Tag · GitHub",
+    "success": true,
+    "id": "6GiUMtCG5KRVqgNOCxO3mz",
+    "publishedAt": "2026-02-26T06:56:44.952Z"
+  },
+  {
+    "queueId": "9b73a79d-4d7f-4f8a-95d5-294927ae33ed",
+    "type": "resource",
+    "title": "Pause/Reset Video Embed on Click · GitHub",
+    "success": true,
+    "id": "izP8f6utTfVPjttAE8I8XC",
+    "publishedAt": "2026-02-26T06:56:46.915Z"
   }
 ]

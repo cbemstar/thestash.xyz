@@ -28,6 +28,20 @@ const VALID_INDUSTRIES = new Set([
   'marketing',
   'general',
 ]);
+const VALID_RESOURCE_TYPES = new Set([
+  'app',
+  'website',
+  'utility',
+  'library',
+  'directory',
+  'article',
+  'tool',
+  'component',
+  'snippet',
+  'course',
+  'framework',
+  'other',
+]);
 
 function sanitizeStringArray(value, limit = 12) {
   return asArray(value)
@@ -35,6 +49,24 @@ function sanitizeStringArray(value, limit = 12) {
     .map((item) => item.trim())
     .filter(Boolean)
     .slice(0, limit);
+}
+
+function sanitizeTagArray(value, limit = 16) {
+  const seen = new Set();
+  const tags = [];
+  for (const row of asArray(value)) {
+    const normalized = String(row || '')
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9- ]+/g, ' ')
+      .replace(/\s+/g, '-')
+      .replace(/^-+|-+$/g, '');
+    if (!normalized || seen.has(normalized)) continue;
+    seen.add(normalized);
+    tags.push(normalized);
+    if (tags.length >= limit) break;
+  }
+  return tags;
 }
 
 function sanitizeSources(sources) {
@@ -69,16 +101,60 @@ function sanitizeReferenceArray(values, limit = 8) {
   return refs;
 }
 
+function normalizeIndustry(value) {
+  const token = String(value || '').trim().toLowerCase();
+  if (!token) return '';
+  if (/(marketing|growth|seo|ads|ppc|campaign|email|social|lead-gen|leadgen|copywriting)/.test(token)) {
+    return 'marketing';
+  }
+  if (/(developer|development|engineering|devops|programming|coding|api|sdk)/.test(token)) {
+    return 'developer';
+  }
+  if (/(saas|software-as-a-service)/.test(token)) return 'saas';
+  if (/(ecommerce|e-commerce|shopify|store|retail)/.test(token)) return 'e-commerce';
+  if (/(community|creator|forum|social network)/.test(token)) return 'community';
+  if (/(content|cms|publishing|newsletter|blogging|blog)/.test(token)) return 'content';
+  if (/(general|all|other)/.test(token)) return 'general';
+  return '';
+}
+
 function sanitizeIndustries(values) {
   const seen = new Set();
   const output = [];
   for (const value of asArray(values)) {
-    const normalized = String(value || '').trim().toLowerCase();
+    const normalized = normalizeIndustry(value) || String(value || '').trim().toLowerCase();
     if (!normalized || !VALID_INDUSTRIES.has(normalized) || seen.has(normalized)) continue;
     seen.add(normalized);
     output.push(normalized);
   }
   return output.slice(0, 6);
+}
+
+function normalizeResourceType(value) {
+  const token = String(value || '').trim().toLowerCase();
+  if (!token) return '';
+  if (/(^|\b)app(\b|$)/.test(token)) return 'app';
+  if (/(^|\b)website(\b|$)/.test(token)) return 'website';
+  if (/(^|\b)utility(\b|$)/.test(token)) return 'utility';
+  if (/(^|\b)tool(\b|$)/.test(token)) return 'tool';
+  if (/(^|\b)library(\b|$)/.test(token)) return 'library';
+  if (/(^|\b)framework(\b|$)/.test(token)) return 'framework';
+  if (/(^|\b)component(\b|$)/.test(token)) return 'component';
+  if (/(^|\b)directory(\b|$)/.test(token)) return 'directory';
+  if (/(^|\b)template(\b|$)/.test(token)) return 'other';
+  if (/(^|\b)course(\b|$)/.test(token)) return 'course';
+  if (/(^|\b)snippet(\b|$)/.test(token)) return 'snippet';
+  if (/(^|\b)article(\b|$)/.test(token)) return 'article';
+  if (/(^|\b)video(\b|$)/.test(token)) return 'other';
+  if (/(^|\b)blog(\b|$)/.test(token)) return 'article';
+  if (/(^|\b)newsletter(\b|$)/.test(token)) return 'other';
+  return 'other';
+}
+
+function sanitizeResourceType(value) {
+  const normalized = normalizeResourceType(value);
+  if (!normalized || !VALID_RESOURCE_TYPES.has(normalized)) return null;
+  return normalized;
 }
 
 async function resolveAlternativeRefs(sanity, alternatives) {
@@ -137,7 +213,20 @@ async function publishResource(sanity, resource) {
 
     const alternatives = await resolveAlternativeRefs(sanity, resource?.alternatives);
 
-    const industries = sanitizeIndustries(resource.industries);
+    const sourceTags = sanitizeTagArray(resource.sourceTags, 20);
+    const mergedTags = sanitizeTagArray(
+      [...asArray(resource.tags), ...sourceTags, resource.sourceCollection],
+      14
+    );
+    const industries = sanitizeIndustries([
+      ...asArray(resource.industries),
+      ...asArray(resource.sourceIndustries),
+    ]);
+    const sourceIndustries = sanitizeIndustries(resource.sourceIndustries);
+    const resourceType = sanitizeResourceType(resource.resourceType);
+    const sourceCollection = String(resource.sourceCollection || '').trim().toLowerCase();
+    const source = String(resource.source || '').trim();
+    const sourceDomain = String(resource.sourceDomain || '').trim().toLowerCase();
 
     const doc = {
       _type: 'resource',
@@ -146,7 +235,8 @@ async function publishResource(sanity, resource) {
       url,
       description: String(resource.description || '').trim().slice(0, 260),
       category: resource.category,
-      tags: sanitizeStringArray(resource.tags, 10),
+      ...(resourceType ? { resourceType } : {}),
+      tags: mergedTags,
       featured: Boolean(resource.featured),
       ...(industries.length > 0 ? { industries } : {}),
       bestFor: sanitizeStringArray(resource.bestFor, 8),
@@ -154,6 +244,11 @@ async function publishResource(sanity, resource) {
       ...(alternatives.length > 0 ? { alternatives } : {}),
       ...(resource.body ? { body: String(resource.body).trim() } : {}),
       ...(sanitizeSources(resource.sources).length > 0 ? { sources: sanitizeSources(resource.sources) } : {}),
+      ...(sourceCollection ? { sourceCollection } : {}),
+      ...(sourceTags.length > 0 ? { sourceTags } : {}),
+      ...(sourceIndustries.length > 0 ? { sourceIndustries } : {}),
+      ...(source ? { source } : {}),
+      ...(sourceDomain ? { sourceDomain } : {}),
       contentTier: resource.contentTier || 'tier3',
       refreshCadenceDays: Number.isInteger(resource.refreshCadenceDays) ? resource.refreshCadenceDays : 90,
       factCheckStatus: resource.factCheckStatus || 'needs-review',

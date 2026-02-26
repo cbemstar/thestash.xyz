@@ -95,7 +95,7 @@ export async function GET() {
     "Secondary links; omit if context window is limited.",
     "",
     `- [Full documentation (llms-full.txt)](${BASE_URL}/llms-full.txt): Complete content in one file for AI systems that prefer full context`,
-    `- [robots.txt](${BASE_URL}/robots.txt): Crawler access rules (all bots allowed except /studio/ and /api/)`,
+    `- [robots.txt](${BASE_URL}/robots.txt): Crawler access rules (all bots allowed, no restrictions)`,
     `- [Sitemap (XML)](${BASE_URL}/sitemap.xml): Full list of indexable URLs for crawlers`,
     `- [About](${BASE_URL}/about): About The Stash`,
     `- [Privacy](${BASE_URL}/privacy): Privacy and cookie policy`,

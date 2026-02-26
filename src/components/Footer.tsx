@@ -6,20 +6,35 @@ import { ThemeSwitcherNav } from "@/components/ThemeSwitcherNav";
 import TextPressure from "@/components/TextPressure";
 
 export type FooterType = { value: string; label: string };
+export type FooterLibraryItem = { slug: string; title: string };
 
 interface FooterProps {
   /** Tags to show in footer (e.g. top 28). Links to /tags/[tag]. */
   tags?: string[];
   /** Resource types with at least one resource. Links to /type/[value]. */
   types?: FooterType[];
+  /** All tools for footer library links. */
+  tools?: FooterLibraryItem[];
+  /** All calculators for footer library links. */
+  calculators?: FooterLibraryItem[];
   /** Total resource count for stats line. */
   resourceCount?: number;
   /** Total collection count for stats line. */
   collectionCount?: number;
 }
 
-export function Footer({ tags = [], types = [], resourceCount = 0, collectionCount = 0 }: FooterProps) {
+export function Footer({
+  tags = [],
+  types = [],
+  tools = [],
+  calculators = [],
+  resourceCount = 0,
+  collectionCount = 0,
+}: FooterProps) {
   const year = new Date().getFullYear();
+  const baseListClass = "grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground";
+  const columnListClass =
+    "grid max-h-64 grid-cols-1 gap-x-4 gap-y-1.5 overflow-x-hidden overflow-y-auto pr-2 text-sm text-muted-foreground sm:grid-cols-2";
 
   return (
     <footer className="border-t border-border bg-background/80 mt-auto" role="contentinfo">
@@ -29,11 +44,11 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
           className="grid grid-cols-1 items-start gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5"
           aria-label="Footer navigation"
         >
-          <div className="text-left w-fit">
+          <div className="min-w-0 text-left">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Browse
             </p>
-            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
+            <ul className={baseListClass}>
               <li>
                 <Link href="/" className="hover:text-foreground transition-colors">
                   Home
@@ -94,13 +109,23 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
                   Tags
                 </Link>
               </li>
+              <li>
+                <Link href="/feedback" className="hover:text-foreground transition-colors">
+                  Feedback
+                </Link>
+              </li>
+              <li>
+                <Link href="/roadmap" className="hover:text-foreground transition-colors">
+                  Roadmap
+                </Link>
+              </li>
             </ul>
           </div>
-          <div className="text-left w-fit">
+          <div className="min-w-0 text-left">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Industries
             </p>
-            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
+            <ul className={baseListClass}>
               {CATEGORIES.map((c) => (
                 <li key={c.value}>
                   <Link
@@ -114,11 +139,11 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
             </ul>
           </div>
           {types.length > 0 && (
-            <div className="text-left w-fit">
+            <div className="min-w-0 text-left">
               <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 Type
               </p>
-              <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
+              <ul className={baseListClass}>
                 {types.map((t) => (
                   <li key={t.value}>
                     <Link
@@ -132,11 +157,11 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
               </ul>
             </div>
           )}
-          <div className="text-left w-fit">
+          <div className="min-w-0 text-left">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Tags
             </p>
-            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
+            <ul className={columnListClass}>
               {tags.length === 0 ? (
                 <li>
                   <Link href="/tags" className="hover:text-foreground transition-colors">
@@ -146,17 +171,21 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
               ) : (
                 <>
                   {tags.map((tag) => (
-                    <li key={tag}>
+                    <li key={tag} className="min-w-0 overflow-hidden">
                       <Link
                         href={`/tags/${encodeURIComponent(tag)}`}
-                        className="hover:text-foreground transition-colors"
+                        className="block w-full truncate hover:text-foreground transition-colors"
+                        title={tag}
                       >
                         {tag}
                       </Link>
                     </li>
                   ))}
-                  <li>
-                    <Link href="/tags" className="hover:text-foreground transition-colors font-medium">
+                  <li className="min-w-0 overflow-hidden">
+                    <Link
+                      href="/tags"
+                      className="block w-full truncate hover:text-foreground transition-colors font-medium"
+                    >
                       All tags →
                     </Link>
                   </li>
@@ -164,11 +193,11 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
               )}
             </ul>
           </div>
-          <div className="text-left w-fit">
+          <div className="min-w-0 text-left">
             <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Participate
             </p>
-            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
+            <ul className={baseListClass}>
               <li>
                 <Link href="/submit" className="hover:text-foreground transition-colors">
                   Submit a resource
@@ -196,37 +225,51 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
               </li>
             </ul>
           </div>
-          <div className="text-left w-fit">
-            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              Legal
-            </p>
-            <ul className="grid justify-items-start gap-y-1.5 text-left text-sm text-muted-foreground">
-              <li>
-                <Link href="/privacy" className="hover:text-foreground transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy/settings" className="hover:text-foreground transition-colors">
-                  Privacy and cookie settings
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-foreground transition-colors">
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="text-left w-fit">
-            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              Theme
-            </p>
-            <div className="w-fit">
-              <ThemeSwitcherNav />
-            </div>
-          </div>
         </nav>
+        {(tools.length > 0 || calculators.length > 0) && (
+          <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2" aria-label="Tool and calculator libraries">
+            {tools.length > 0 && (
+              <div className="min-w-0 text-left">
+                <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Tools library
+                </p>
+                <ul className={columnListClass}>
+                  {tools.map((tool) => (
+                    <li key={tool.slug} className="min-w-0 overflow-hidden">
+                      <Link
+                        href={`/tools/${tool.slug}`}
+                        className="block w-full truncate hover:text-foreground transition-colors"
+                        title={tool.title}
+                      >
+                        {tool.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {calculators.length > 0 && (
+              <div className="min-w-0 text-left">
+                <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Calculators library
+                </p>
+                <ul className={columnListClass}>
+                  {calculators.map((calculator) => (
+                    <li key={calculator.slug} className="min-w-0 overflow-hidden">
+                      <Link
+                        href={`/calculators/${calculator.slug}`}
+                        className="block w-full truncate hover:text-foreground transition-colors"
+                        title={calculator.title}
+                      >
+                        {calculator.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
         {(resourceCount > 0 || collectionCount > 0) && (
           <p className="mt-6 text-center text-sm text-muted-foreground">
             {resourceCount.toLocaleString()} resources across {collectionCount.toLocaleString()} collections and counting. Updated weekly.
@@ -271,6 +314,40 @@ export function Footer({ tags = [], types = [], resourceCount = 0, collectionCou
             X
           </a>
         </p>
+        <div className="mt-8 border-t border-border/70 pt-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="min-w-0 text-left">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Legal
+              </p>
+              <ul className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/privacy" className="hover:text-foreground transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy/settings" className="hover:text-foreground transition-colors">
+                    Privacy and cookie settings
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="hover:text-foreground transition-colors">
+                    About
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="text-left sm:text-right">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Theme
+              </p>
+              <div className="mt-2 inline-flex">
+                <ThemeSwitcherNav />
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Large stylistic app name at the very bottom */}
         <div className="mt-12 flex items-center justify-center overflow-hidden pt-8 pb-2 text-left sm:mt-16 sm:pt-10 sm:pb-3">

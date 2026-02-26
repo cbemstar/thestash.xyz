@@ -1,5 +1,29 @@
 [
   {
+    "timestamp": "2026-02-26T09:09:13.191Z",
+    "playbookVersion": "2026-02-24.1",
+    "slug": "best-ui-ux-resources-for-teams-2026-decision-guide",
+    "title": "Best UI/UX Resources for Teams (2026 Decision Guide)",
+    "category": "ui-ux-resources",
+    "contentTier": "tier1",
+    "candidates": 10,
+    "sources": 13,
+    "relatedResources": 6,
+    "bodyMetrics": {
+      "wordCount": 2362,
+      "headingCount": 39,
+      "listItemCount": 94,
+      "linkCount": 15
+    },
+    "styleGoals": [
+      "answer-first opening",
+      "explicit tradeoff framing",
+      "implementation-first recommendations",
+      "clear role-based guidance",
+      "source-attributed evidence"
+    ]
+  },
+  {
     "timestamp": "2026-02-24T20:49:49.258Z",
     "playbookVersion": "2026-02-24.1",
     "slug": "best-productivity-tools-for-teams-2026-decision-guide-2",

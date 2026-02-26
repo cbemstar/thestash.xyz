@@ -200,10 +200,10 @@ export function EmailCapturePopup() {
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
         showCloseButton={false}
-        className="max-h-[92vh] w-[min(1120px,calc(100vw-2rem))] max-w-[min(1120px,calc(100vw-2rem))] overflow-hidden rounded-3xl border-border/70 bg-background p-0 shadow-[0_36px_120px_rgba(15,23,42,0.45)]"
+        className="flex max-h-[92vh] min-h-[min(600px,92vh)] w-[min(960px,calc(100vw-2rem))] max-w-[min(960px,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl border-border/70 bg-background p-0 shadow-[0_36px_120px_rgba(15,23,42,0.45)] sm:min-w-[min(640px,calc(100vw-2rem))] sm:min-h-[min(640px,90vh)] sm:max-h-[90vh]"
       >
-        <div className="grid md:grid-cols-[0.92fr_1.08fr] lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative h-48 border-b border-border/60 md:h-full md:min-h-[540px] md:border-b-0 md:border-r">
+        <div className="grid min-h-0 min-w-0 flex-1 grid-rows-[auto_1fr] md:grid-cols-[1fr_1fr] md:grid-rows-none md:min-h-[520px]">
+          <div className="relative h-48 min-w-0 shrink-0 border-b border-border/60 md:h-full md:min-h-0 md:border-b-0 md:border-r">
             <Image
               src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80"
               alt="Workspace desk with laptop and notebook."
@@ -222,7 +222,7 @@ export function EmailCapturePopup() {
             </div>
           </div>
 
-          <div className="relative p-5 sm:p-8 lg:p-10">
+          <div className="relative flex min-w-0 flex-col overflow-y-auto overflow-x-hidden p-6 sm:p-8 lg:p-10">
             <button
               type="button"
               onClick={() => closeAsDismissed("close_button")}
@@ -235,30 +235,30 @@ export function EmailCapturePopup() {
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-primary">
               Weekly Builder Brief
             </p>
-            <DialogTitle className="mt-3 pr-10 font-display text-2xl font-semibold leading-tight text-foreground sm:text-[2rem] lg:text-[2.2rem]">
+            <DialogTitle className="mt-3 min-w-0 pr-10 font-display text-2xl font-semibold leading-tight text-foreground sm:text-[2rem] lg:text-[2.2rem]">
               Get the exact tools worth trying each week.
             </DialogTitle>
-            <DialogDescription className="mt-3 max-w-[50ch] text-sm leading-relaxed text-muted-foreground sm:text-[0.98rem]">
+            <DialogDescription className="mt-3 min-w-0 text-sm leading-relaxed text-muted-foreground sm:text-[0.98rem] sm:leading-6">
               Every Monday, get a concise brief with hand-picked launches, practical use cases, and
               what to skip so you do not waste build time.
             </DialogDescription>
 
-            <ul className="mt-5 grid max-w-[540px] gap-2 text-sm text-foreground/90 sm:grid-cols-2">
-              <li className="rounded-lg border border-border/70 bg-muted/30 px-3 py-2">
+            <ul className="mt-5 grid w-full min-w-0 max-w-full gap-3 text-sm text-foreground/90 sm:grid-cols-2">
+              <li className="min-w-0 rounded-lg border border-border/70 bg-muted/30 px-4 py-2.5">
                 5-7 vetted tool picks
               </li>
-              <li className="rounded-lg border border-border/70 bg-muted/30 px-3 py-2">
+              <li className="min-w-0 rounded-lg border border-border/70 bg-muted/30 px-4 py-2.5">
                 Decision-ready comparisons
               </li>
-              <li className="rounded-lg border border-border/70 bg-muted/30 px-3 py-2">
+              <li className="min-w-0 rounded-lg border border-border/70 bg-muted/30 px-4 py-2.5">
                 Migration and alternatives notes
               </li>
-              <li className="rounded-lg border border-border/70 bg-muted/30 px-3 py-2">
+              <li className="min-w-0 rounded-lg border border-border/70 bg-muted/30 px-4 py-2.5">
                 3-minute read, once a week
               </li>
             </ul>
 
-            <form onSubmit={onSubmit} className="mt-7 max-w-[540px] space-y-3">
+            <form onSubmit={onSubmit} className="mt-7 w-full min-w-0 max-w-full space-y-3">
               <label htmlFor="email-capture-popup-input" className="sr-only">
                 Email address
               </label>
@@ -294,7 +294,7 @@ export function EmailCapturePopup() {
             </form>
 
             {isRecaptchaConfigured ? (
-              <p className="mt-3 text-[0.72rem] leading-relaxed text-muted-foreground">
+              <p className="mt-3 min-w-0 text-[0.72rem] leading-relaxed text-muted-foreground">
                 Protected by reCAPTCHA. Google{" "}
                 <a
                   href="https://policies.google.com/privacy"
@@ -322,7 +322,7 @@ export function EmailCapturePopup() {
                 id="email-capture-popup-message"
                 role="status"
                 aria-live="polite"
-                className={`mt-3 text-sm ${status === "success" ? "text-primary" : "text-destructive"}`}
+                className={`mt-3 min-w-0 text-sm ${status === "success" ? "text-primary" : "text-destructive"}`}
               >
                 {message}
               </p>

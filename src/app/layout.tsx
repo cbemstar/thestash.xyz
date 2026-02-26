@@ -15,6 +15,8 @@ import { EmailCapturePopup } from "@/components/EmailCapturePopup";
 import { Toaster } from "@/components/ui/sonner";
 import { getAllTags, getResourceTypesWithCounts, getResourceCount } from "@/lib/sanity.resource";
 import { getCollectionCount } from "@/lib/sanity.collection";
+import { getAllTools } from "@/lib/tools-catalog";
+import { getAllCalculators } from "@/lib/calculators-catalog";
 import "./globals.css";
 
 import { BASE_URL } from "@/lib/site-url";
@@ -68,6 +70,11 @@ export default async function RootLayout({
   // Resilient to Sanity timeout/failure so crawlers (e.g. Google AdSense) always get 200, not 500.
   let footerTags: string[] = [];
   let footerTypes: { value: string; label: string }[] = [];
+  const footerTools = getAllTools().map((tool) => ({ slug: tool.slug, title: tool.title }));
+  const footerCalculators = getAllCalculators().map((calculator) => ({
+    slug: calculator.slug,
+    title: calculator.title,
+  }));
   let resourceCount = 0;
   let collectionCount = 0;
   try {
@@ -181,7 +188,14 @@ export default async function RootLayout({
           <SafeLenisProvider>
             <div className="flex min-h-screen flex-col">
               <main className="flex-1">{children}</main>
-              <Footer tags={footerTags} types={footerTypes} resourceCount={resourceCount} collectionCount={collectionCount} />
+              <Footer
+                tags={footerTags}
+                types={footerTypes}
+                tools={footerTools}
+                calculators={footerCalculators}
+                resourceCount={resourceCount}
+                collectionCount={collectionCount}
+              />
             </div>
           </SafeLenisProvider>
           <CookieConsent />

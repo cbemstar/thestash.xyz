@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { spawn } = require('child_process');
 const { createClient } = require('@sanity/client');
 
 function loadEnvFile(filePath) {
@@ -86,6 +87,34 @@ async function checkUrlAlive(url) {
   } catch (err) {
     return { status: 'dead', error: err && err.name ? err.name : 'fetch-error' };
   }
+}
+
+/** When Node fetch says dead (e.g. 403/timeout/SSL), retry with Scrapling if script exists. Set USE_SCRAPLING_FALLBACK=0 to disable. */
+async function checkUrlAliveWithOptionalScraplingFallback(url) {
+  const result = await checkUrlAlive(url);
+  if (result.status === 'alive') return result;
+
+  const scriptPath = path.join(process.cwd(), 'scripts', 'check_url_scrapling.py');
+  const fallbackEnabled = process.env.USE_SCRAPLING_FALLBACK !== '0' && fs.existsSync(scriptPath);
+  if (!fallbackEnabled) return result;
+
+  return new Promise((resolve) => {
+    const proc = spawn(
+      'python3',
+      [scriptPath, url, '--stealth'],
+      { stdio: ['ignore', 'pipe', 'pipe'] }
+    );
+    let stderr = '';
+    proc.stderr?.on('data', (ch) => { stderr += ch; });
+    proc.on('close', (code) => {
+      if (code === 0) {
+        resolve({ status: 'alive', httpStatus: 200, scraplingFallback: true });
+      } else {
+        resolve({ ...result, scraplingStderr: stderr.trim() });
+      }
+    });
+    proc.on('error', () => resolve(result));
+  });
 }
 
 function ensureDir(dirPath) {
@@ -191,7 +220,7 @@ function validateCandidate(candidate) {
       continue;
     }
 
-    const linkCheck = await checkUrlAlive(candidate.url);
+    const linkCheck = await checkUrlAliveWithOptionalScraplingFallback(candidate.url);
     if (linkCheck.status === 'dead') {
       counts.deadLink += 1;
       results.push({

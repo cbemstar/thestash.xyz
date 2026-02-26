@@ -49,7 +49,8 @@ export function FilterBar({
 }: FilterBarProps) {
   const controlTriggerClass = cn(
     "browse-control-trigger",
-    "data-[size=default]:h-11 data-[placeholder]:text-stash-muted-text"
+    "data-[size=default]:h-11 data-[placeholder]:text-stash-muted-text",
+    "w-auto min-w-[9.75rem]"
   );
 
   return (
@@ -87,8 +88,8 @@ export function FilterBar({
         )}
       </div>
 
-      <div className="flex w-full min-w-0 flex-wrap items-center gap-2 sm:gap-3">
-        <div className="min-w-0 flex-[1_1_14rem] sm:flex-[0_1_11rem]">
+      <div className="flex w-full min-w-0 flex-wrap content-start items-center justify-start gap-2 sm:gap-3">
+        <div className="shrink-0">
           <label htmlFor="category-filter-trigger" className="sr-only">
             Filter by category
           </label>
@@ -117,7 +118,7 @@ export function FilterBar({
         </div>
 
         {onTimeFilterChange && (
-          <div className="min-w-0 flex-[1_1_10rem] sm:flex-[0_1_9rem]">
+          <div className="shrink-0">
             <label htmlFor="time-filter-trigger" className="sr-only">
               Filter by when added
             </label>
@@ -142,7 +143,7 @@ export function FilterBar({
         )}
 
         {onSortModeChange && (
-          <div className="min-w-0 flex-[1_1_10rem] sm:flex-[0_1_9rem]">
+          <div className="shrink-0">
             <label htmlFor="sort-filter-trigger" className="sr-only">
               Sort by
             </label>
@@ -165,7 +166,7 @@ export function FilterBar({
           </div>
         )}
 
-        <div className="flex min-w-0 flex-wrap items-center gap-2 sm:ml-auto">
+        <div className="flex shrink-0 flex-wrap content-start items-center justify-start gap-2">
           {hasActiveFilters && (
             <button
               type="button"

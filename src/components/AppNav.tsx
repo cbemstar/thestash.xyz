@@ -28,6 +28,7 @@ const desktopTabs: NavTab[] = [
   { title: "Submit", url: "/submit" },
   { title: "Blog", url: "/blog" },
   { title: "Tools", url: "/tools" },
+  { title: "Calculators", url: "/calculators" },
   {
     title: "Browse",
     items: [
@@ -38,6 +39,8 @@ const desktopTabs: NavTab[] = [
       { title: "Decision center", url: "/decision-center" },
       { title: "Ecosystems", url: "/ecosystems" },
       { title: "Category", url: "/category" },
+      { title: "Feedback", url: "/feedback" },
+      { title: "Roadmap", url: "/roadmap" },
     ],
   },
 ];
@@ -50,6 +53,7 @@ const mobileNavItems = [
   { title: "Submit", url: "/submit" },
   { title: "Blog", url: "/blog" },
   { title: "Tools", url: "/tools" },
+  { title: "Calculators", url: "/calculators" },
   { title: "Collections", url: "/collections" },
   { title: "Companies", url: "/companies" },
   { title: "Reports", url: "/reports" },
@@ -57,6 +61,8 @@ const mobileNavItems = [
   { title: "Decision center", url: "/decision-center" },
   { title: "Ecosystems", url: "/ecosystems" },
   { title: "Category", url: "/category" },
+  { title: "Feedback", url: "/feedback" },
+  { title: "Roadmap", url: "/roadmap" },
 ];
 
 export function AppNav() {

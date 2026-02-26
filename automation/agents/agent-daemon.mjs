@@ -7,6 +7,7 @@
  * Optional args:
  *   --interval-min=180
  *   --weekly-hours=168
+ *   --max-publish=0          (0/all/unlimited = no limit)
  *   --auto-approve-reviewed
  *   --publish-approved
  *   --include-blogs
@@ -14,6 +15,7 @@
  * Optional env:
  *   AGENT_INTERVAL_MIN
  *   AGENT_WEEKLY_HOURS
+ *   AGENT_MAX_PUBLISH
  *   AGENT_AUTO_APPROVE_REVIEWED=1
  *   AGENT_PUBLISH_APPROVED=1
  *   AGENT_INCLUDE_BLOGS=1
@@ -36,6 +38,21 @@ function parseNumberArg(argv, key, fallback) {
   return Number.isFinite(value) && value > 0 ? value : fallback;
 }
 
+function parseMaxPublishValue(rawValue, fallback) {
+  const raw = String(rawValue ?? '').trim().toLowerCase();
+  if (!raw) return fallback;
+  if (raw === 'all' || raw === 'unlimited' || raw === 'none') return 0;
+  const value = Number.parseInt(raw, 10);
+  return Number.isFinite(value) && value >= 0 ? value : fallback;
+}
+
+function parseMaxPublishArg(argv) {
+  const row = argv.find((arg) => arg.startsWith('--max-publish='));
+  if (!row) return null;
+  const raw = row.split('=').slice(1).join('=');
+  return parseMaxPublishValue(raw, null);
+}
+
 function hasFlag(argv, key) {
   return argv.includes(key);
 }
@@ -53,6 +70,9 @@ export async function runAgentDaemon() {
   const weeklyHours =
     parseNumberArg(args, '--weekly-hours', 0) ||
     Number.parseInt(process.env.AGENT_WEEKLY_HOURS || '168', 10);
+  const maxPublishArg = parseMaxPublishArg(args);
+  const maxPublish =
+    maxPublishArg ?? parseMaxPublishValue(process.env.AGENT_MAX_PUBLISH, 0);
 
   const autoApproveReviewed =
     hasFlag(args, '--auto-approve-reviewed') ||
@@ -75,14 +95,21 @@ export async function runAgentDaemon() {
   process.on('SIGTERM', stop);
 
   console.log(
-    `AGENT_DAEMON start intervalMin=${intervalMin} weeklyHours=${weeklyHours} autoApprove=${autoApproveReviewed} publish=${publishApproved} includeBlogs=${includeBlogs}`
+    `AGENT_DAEMON start intervalMin=${intervalMin} weeklyHours=${weeklyHours} maxPublish=${maxPublish} autoApprove=${autoApproveReviewed} publish=${publishApproved} includeBlogs=${includeBlogs}`
   );
   await logEvent({
     agentId: 'daemon',
     taskId,
     actionType: 'started',
     target: 'daemon.loop',
-    metadata: { intervalMin, weeklyHours, autoApproveReviewed, publishApproved, includeBlogs },
+    metadata: {
+      intervalMin,
+      weeklyHours,
+      maxPublish,
+      autoApproveReviewed,
+      publishApproved,
+      includeBlogs,
+    },
     status: 'running',
   });
 
@@ -107,6 +134,7 @@ export async function runAgentDaemon() {
           autoApproveReviewed,
           publishApproved,
           includeBlogs,
+          maxPublish,
         });
       } catch (error) {
         console.error(`AGENT_DAEMON curator cycle failed: ${error.message}`);

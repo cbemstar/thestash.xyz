@@ -69,7 +69,9 @@ export default function PrivacyPage() {
             <section>
               <h2 className="font-semibold text-foreground mb-2">4. Third-party advertising (Google AdSense)</h2>
               <p>
-                We use Google AdSense to display ads on The Stash. Google and its partners may use
+                We use Google AdSense to display ads on The Stash. As a result of ad serving,
+                third parties (including Google) may place and read cookies on your browser, or use
+                web beacons or IP addresses to collect information. Google and its partners may use
                 cookies and similar tech to show you relevant ads based on your interests and to
                 measure ad effectiveness. You can learn more and control how Google uses data for
                 advertising at{" "}
@@ -80,6 +82,15 @@ export default function PrivacyPage() {
                   className="text-foreground underline underline-offset-2 hover:text-primary"
                 >
                   Google’s advertising policy
+                </a>
+                {" "}and at{" "}
+                <a
+                  href="https://policies.google.com/technologies/partner-sites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground underline underline-offset-2 hover:text-primary"
+                >
+                  How Google uses data when you use our partners’ sites or apps
                 </a>
                 . For users in the European Economic Area (EEA), the UK, and Switzerland, we use
                 Google’s certified Consent Management Platform (CMP) to obtain your consent before

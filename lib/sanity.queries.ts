@@ -45,7 +45,7 @@ export const allResourcesQuery = groq`
     recommenderBlurb,
     exampleSites,
     caseStudy,
-    createdAt,
+    "createdAt": coalesce(createdAt, _createdAt),
     "icon": icon{
       ...,
       asset->
@@ -73,7 +73,7 @@ export const allResourcesLiteQuery = groq`
     recommenderBlurb,
     exampleSites,
     caseStudy,
-    createdAt,
+    "createdAt": coalesce(createdAt, _createdAt),
     "icon": icon{
       asset
     }
@@ -145,7 +145,7 @@ export const resourceBySlugQuery = groq`
     recommenderBlurb,
     exampleSites,
     caseStudy,
-    createdAt,
+    "createdAt": coalesce(createdAt, _createdAt),
     "icon": icon{
       ...,
       asset->
@@ -189,7 +189,7 @@ export const resourceAlternativesBySlugQuery = groq`
     category,
     resourceType,
     tags,
-    createdAt,
+    "createdAt": coalesce(createdAt, _createdAt),
     "icon": icon{
       ...,
       asset->
@@ -236,7 +236,7 @@ export const allCollectionsQuery = groq`
       resourceType,
       tags,
       featured,
-      createdAt,
+      "createdAt": coalesce(createdAt, _createdAt),
       "icon": icon{
         ...,
         asset->
@@ -258,7 +258,7 @@ export const recentResourcesQuery = groq`
     category,
     resourceType,
     tags,
-    createdAt,
+    "createdAt": coalesce(createdAt, _createdAt),
     "icon": icon{ ..., asset-> }
   }
 `;
@@ -316,7 +316,7 @@ export const resourcesByTypeQuery = groq`
     resourceType,
     tags,
     featured,
-    createdAt,
+    "createdAt": coalesce(createdAt, _createdAt),
     "icon": icon{ ..., asset-> }
   }
 `;

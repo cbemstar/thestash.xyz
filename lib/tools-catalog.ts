@@ -31,7 +31,13 @@ export type ToolDefinition = {
   inputSources: ToolInputSource[];
   fileAccept?: string;
   featured?: boolean;
-};
+  /** Show a progress bar while running (crawl, multi-URL fetch, sitemap traversal). */
+  showProgressBar?: boolean;
+  /** If set, show a "Max pages" control for crawl-based tools; value is the default. */
+  crawlerMaxPagesDefault?: number;
+  /** Typical duration range (seconds) for estimated wait; scaled by max pages for crawl tools. */
+  estimatedDurationSeconds?: { min: number; max: number };
+}
 
 type RawTool = {
   slug: string;
@@ -157,6 +163,38 @@ const RAW_TOOLS_BY_CATEGORY: Record<ToolCategorySlug, RawTool[]> = {
       slug: "ai-saas-brand-name-generator",
       title: "AI SaaS Brand Name Generator",
     },
+    {
+      slug: "customer-service-script-generator",
+      title: "Customer Service Script Generator",
+    },
+    {
+      slug: "website-faq-generator",
+      title: "Website FAQ Generator",
+    },
+    {
+      slug: "pdf-to-faq-generator",
+      title: "PDF to FAQ Generator",
+    },
+    {
+      slug: "webpage-to-faq-generator",
+      title: "Webpage to FAQ Generator",
+    },
+    {
+      slug: "docx-to-faq-generator",
+      title: "DOCX to FAQ Generator",
+    },
+    {
+      slug: "html-to-faq-generator",
+      title: "HTML to FAQ Generator",
+    },
+    {
+      slug: "google-docs-to-faq-generator",
+      title: "Google Docs to FAQ Generator",
+    },
+    {
+      slug: "notion-to-faq-generator",
+      title: "Notion to FAQ Generator",
+    },
   ],
   "ai-chat-data": [
     {
@@ -213,6 +251,30 @@ const RAW_TOOLS_BY_CATEGORY: Record<ToolCategorySlug, RawTool[]> = {
       slug: "email-signature-generator",
       title: "Email Signature Generator",
     },
+    {
+      slug: "sitemap-urls-comparison",
+      title: "Sitemap URLs Comparison",
+    },
+    {
+      slug: "sitemap-split-merger",
+      title: "Sitemap Split/Merger",
+    },
+    {
+      slug: "sitemap-analytics-insights",
+      title: "Sitemap Analytics & Insights",
+    },
+    {
+      slug: "sitemap-index-generator",
+      title: "Sitemap Index Generator",
+    },
+    {
+      slug: "sitemap-to-robots-txt-generator",
+      title: "Sitemap to Robots.txt Generator",
+    },
+    {
+      slug: "sitemap-frequency-analyzer",
+      title: "Sitemap Frequency Analyzer",
+    },
   ],
 };
 
@@ -244,6 +306,19 @@ const INPUT_SOURCE_OVERRIDES: Partial<Record<string, ToolInputSource[]>> = {
   "sitemap-generator": ["url", "text"],
   "sitemap-url-extractor": ["url", "text"],
   "website-url-extractor": ["url", "text"],
+  "sitemap-urls-comparison": ["url", "text"],
+  "sitemap-split-merger": ["url", "text"],
+  "sitemap-analytics-insights": ["url", "text"],
+  "sitemap-index-generator": ["url", "text"],
+  "sitemap-to-robots-txt-generator": ["url", "text"],
+  "sitemap-frequency-analyzer": ["url", "text"],
+  "website-faq-generator": ["url", "text"],
+  "webpage-to-faq-generator": ["url", "text"],
+  "pdf-to-faq-generator": ["file", "text"],
+  "docx-to-faq-generator": ["file", "text"],
+  "html-to-faq-generator": ["file", "text"],
+  "google-docs-to-faq-generator": ["url", "text"],
+  "notion-to-faq-generator": ["url", "text"],
 };
 
 const FILE_ACCEPT_OVERRIDES: Partial<Record<string, string>> = {
@@ -260,6 +335,10 @@ const FILE_ACCEPT_OVERRIDES: Partial<Record<string, string>> = {
   "ai-chat-with-your-word-document-data":
     ".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
   "ai-chatbot-conversation-analysis": ".txt,.csv,.json,.md",
+  "pdf-to-faq-generator": ".pdf,application/pdf",
+  "docx-to-faq-generator":
+    ".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "html-to-faq-generator": ".html,.htm,text/html",
 };
 
 const PRIMARY_PLACEHOLDER_OVERRIDES: Partial<Record<string, string>> = {
@@ -324,6 +403,34 @@ const PRIMARY_PLACEHOLDER_OVERRIDES: Partial<Record<string, string>> = {
     "Agents handled per month: 420\nDeflection rate target: 38\nAverage support cost per ticket: 7\nMonthly AI tooling cost: 950",
   "email-signature-generator":
     "Name: Karan Kumar\nRole: Founder, The Stash\nEmail: karan@example.com\nWebsite: https://www.thestash.xyz",
+  "sitemap-urls-comparison":
+    "Sitemap A URL (one per line or comma-separated):\nhttps://www.example.com/sitemap.xml\n\nSitemap B URL:\nhttps://www.example.com/sitemap-old.xml",
+  "sitemap-split-merger":
+    "Sitemap URL to split or merge, or paste XML. For merge, add multiple URLs (one per line).",
+  "sitemap-analytics-insights":
+    "https://www.thestash.xyz/sitemap.xml",
+  "sitemap-index-generator":
+    "One sitemap URL per line:\nhttps://www.example.com/sitemap-1.xml\nhttps://www.example.com/sitemap-2.xml",
+  "sitemap-to-robots-txt-generator":
+    "Sitemap URL(s), one per line. Optional: add Allow/Disallow rules in the secondary field.",
+  "sitemap-frequency-analyzer":
+    "https://www.thestash.xyz/sitemap.xml",
+  "customer-service-script-generator":
+    "Scenario: Customer asks for a refund after 30 days.\nContext: Policy allows refunds within 14 days. Generate a script that acknowledges, explains policy, and offers alternatives.",
+  "website-faq-generator":
+    "One website URL per line (up to 5):\nhttps://www.example.com\nhttps://www.example.com/about",
+  "pdf-to-faq-generator":
+    "Paste extracted PDF text here, or upload a PDF file to generate FAQs from the content.",
+  "webpage-to-faq-generator":
+    "https://www.example.com/page",
+  "docx-to-faq-generator":
+    "Paste document text here, or upload a .docx file to generate FAQs.",
+  "html-to-faq-generator":
+    "Paste HTML content or upload an .html file to generate FAQs.",
+  "google-docs-to-faq-generator":
+    "Paste content from Google Docs, or enter a public Google Docs URL.",
+  "notion-to-faq-generator":
+    "Paste Notion page content, or enter a public Notion page URL.",
 };
 
 const SECONDARY_PLACEHOLDER_OVERRIDES: Partial<Record<string, string>> = {
@@ -347,6 +454,53 @@ const FEATURED_SLUGS = new Set([
   "sitemap-checker",
   "chatbot-roi-calculator",
 ]);
+
+/** Tools that do crawl, multi-URL fetch, or sitemap traversal: show progress bar while running. */
+const SHOW_PROGRESS_BAR_SLUGS = new Set([
+  "website-url-extractor",
+  "sitemap-generator",
+  "sitemap-checker",
+  "sitemap-validator",
+  "sitemap-url-extractor",
+  "sitemap-urls-comparison",
+  "sitemap-analytics-insights",
+  "sitemap-split-merger",
+  "sitemap-frequency-analyzer",
+  "ai-chat-with-your-website-data",
+  "website-faq-generator",
+  "webpage-to-faq-generator",
+  "google-docs-to-faq-generator",
+  "notion-to-faq-generator",
+]);
+
+/** Crawl-based tools: show "Max pages" control; value is default. */
+const CRAWLER_MAX_PAGES_DEFAULTS: Partial<Record<string, number>> = {
+  "website-url-extractor": 120,
+  "sitemap-generator": 300,
+  "ai-chat-with-your-website-data": 20,
+};
+
+/**
+ * Typical duration range (min–max seconds) for progress-bar tools.
+ * Used for "Estimated: ~X–Y sec". For crawl tools, the workbench scales by max pages.
+ * Based on: network/processing is variable; showing a range is more honest than a single ETA.
+ */
+const ESTIMATED_DURATION_SECONDS: Partial<Record<string, { min: number; max: number }>> = {
+  "website-url-extractor": { min: 15, max: 120 },
+  "sitemap-generator": { min: 20, max: 180 },
+  "sitemap-checker": { min: 5, max: 45 },
+  "sitemap-validator": { min: 3, max: 30 },
+  "sitemap-url-extractor": { min: 5, max: 90 },
+  "sitemap-urls-comparison": { min: 10, max: 60 },
+  "sitemap-analytics-insights": { min: 8, max: 75 },
+  "sitemap-split-merger": { min: 10, max: 90 },
+  "sitemap-frequency-analyzer": { min: 3, max: 25 },
+  "ai-chat-with-your-website-data": { min: 10, max: 60 },
+  "website-faq-generator": { min: 8, max: 40 },
+  "webpage-to-faq-generator": { min: 3, max: 20 },
+  "google-docs-to-faq-generator": { min: 5, max: 25 },
+  "notion-to-faq-generator": { min: 5, max: 25 },
+};
 
 function defaultInputSources(category: ToolCategorySlug): ToolInputSource[] {
   if (category === "convert-to-markdown") return ["text"];
@@ -459,6 +613,9 @@ function toToolDefinition(category: ToolCategorySlug, tool: RawTool): ToolDefini
     inputSources,
     fileAccept: FILE_ACCEPT_OVERRIDES[tool.slug],
     featured: FEATURED_SLUGS.has(tool.slug),
+    showProgressBar: SHOW_PROGRESS_BAR_SLUGS.has(tool.slug),
+    crawlerMaxPagesDefault: CRAWLER_MAX_PAGES_DEFAULTS[tool.slug],
+    estimatedDurationSeconds: ESTIMATED_DURATION_SECONDS[tool.slug],
   };
 }
 

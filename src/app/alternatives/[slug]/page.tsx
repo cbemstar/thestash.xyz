@@ -227,9 +227,7 @@ export async function generateMetadata({
       title,
       description,
     },
-    robots: context.quality.pass
-      ? { index: true, follow: true }
-      : { index: false, follow: false },
+    robots: { index: true, follow: true },
   };
 }
 

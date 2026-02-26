@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Freshness and quality status for alternatives, comparisons, and use-case SEO pages.",
   alternates: { canonical: `${BASE_URL}/seo/review` },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default async function SeoReviewPage() {

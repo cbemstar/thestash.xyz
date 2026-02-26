@@ -38,8 +38,13 @@ export function FeaturedCarousel({
   downvotes,
   baseUrl,
 }: FeaturedCarouselProps) {
-  const featured = resources.filter((r) => r.featured).slice(0, 8);
-  const display = featured.length >= 4 ? featured : resources.slice(0, 6);
+  const display = [...resources]
+    .sort((a, b) => {
+      const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return bTime - aTime;
+    })
+    .slice(0, 8);
 
   if (display.length === 0) return null;
 
@@ -48,13 +53,13 @@ export function FeaturedCarousel({
       <div className="mb-5 flex flex-wrap items-end justify-start gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-stash-muted-text">
-            Highlights
+            Latest
           </p>
           <h2 id="featured-resources" className="mt-1 font-display text-xl font-semibold text-foreground">
-            {featured.length >= 4 ? "Featured resources" : "Recently added resources"}
+            Recently added resources
           </h2>
           <p className="mt-1 text-sm text-stash-muted-text">
-            Handpicked tools worth exploring now.
+            Newest additions from the directory.
           </p>
         </div>
         <Link

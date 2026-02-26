@@ -1,11 +1,10 @@
 {
-  "version": "2026-02-24.1",
+  "version": "2026-02-26.2",
   "description": "Resource discovery and validation playbook for The Stash automation agents.",
-  "objective": "Add net-new, source-validated resources while rebalancing underrepresented categories and preserving editorial quality.",
+  "objective": "Add net-new, source-validated resources with NoCodeSupply-style organization (type + industry + tags), balanced category coverage, and strict anti-blog quality controls.",
   "categoryPriority": [
     "ui-ux-resources",
     "coding",
-    "github",
     "html",
     "css",
     "javascript",
@@ -18,26 +17,30 @@
     "development-tools",
     "design-tools",
     "inspiration",
+    "github",
     "miscellaneous"
   ],
   "marketingSignals": [
     "marketing",
     "growth",
     "seo",
-    "newsletter",
     "email",
+    "newsletter",
+    "content",
     "social",
-    "ppc",
     "ads",
+    "ppc",
     "campaign",
-    "content"
+    "lead-gen",
+    "conversion"
   ],
   "blockedHosts": [
     "reddit.com",
     "x.com",
     "twitter.com",
     "facebook.com",
-    "instagram.com"
+    "instagram.com",
+    "tiktok.com"
   ],
   "nonToolHosts": [
     "techcrunch.com",
@@ -47,19 +50,76 @@
     "hashnode.com",
     "chrisbrunet.com",
     "rsdoiel.github.io",
-    "magicalmushroom.com"
+    "magicalmushroom.com",
+    "hackernoon.com",
+    "towardsdatascience.com",
+    "thenewstack.io",
+    "venturebeat.com",
+    "theverge.com",
+    "wired.com"
+  ],
+  "allowedResourceTypes": [
+    "app",
+    "website",
+    "utility",
+    "tool",
+    "library",
+    "framework",
+    "component",
+    "directory",
+    "template",
+    "course",
+    "snippet",
+    "other"
+  ],
+  "disallowedResourceTypes": [
+    "article",
+    "blog",
+    "video",
+    "newsletter",
+    "tip",
+    "podcast",
+    "person"
   ],
   "sourcePolicy": {
     "prefer": [
-      "official docs",
       "first-party product pages",
-      "official benchmark reports",
+      "official docs",
+      "curated directory item pages with outbound links",
       "maintained repositories"
     ],
     "avoid": [
       "forum-only threads",
-      "low-context social reposts",
-      "unattributed aggregators"
+      "news-only pages",
+      "personal blogs without a product",
+      "social reposts"
+    ]
+  },
+  "scoutPolicy": {
+    "sourcePriority": [
+      "NoCodeSupply",
+      "Futurepedia",
+      "Product Hunt Feed",
+      "Hacker News",
+      "GitHub Search"
+    ],
+    "maxNewLeads": 140,
+    "maxQueueSize": 1200,
+    "maxGithubShare": 0.15,
+    "maxGithubLeads": 16,
+    "minRelevanceScore": 2,
+    "noCodeSupplyItemSamples": 80,
+    "disallowedNoCodeSupplyCollections": [
+      "inspo"
+    ],
+    "rejectInspoWebsites": true,
+    "futurepediaToolSamples": 40,
+    "futurepediaCategories": [
+      "/ai-tools/productivity",
+      "/ai-tools/marketing",
+      "/ai-tools/code",
+      "/ai-tools/design",
+      "/ai-tools/workflow-automation"
     ]
   },
   "validation": {

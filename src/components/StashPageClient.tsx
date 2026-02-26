@@ -199,9 +199,14 @@ export function StashPageClient({ resources, collections }: StashPageClientProps
   }, [resources]);
 
   const carouselSlugs = useMemo(() => {
-    const featured = resources.filter((r) => r.featured).slice(0, 8);
-    const display = featured.length >= 4 ? featured : resources.slice(0, 6);
-    return display.map((r) => getResourceSlug(r));
+    const latest = [...resources]
+      .sort((a, b) => {
+        const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return bTime - aTime;
+      })
+      .slice(0, 8);
+    return latest.map((resource) => getResourceSlug(resource));
   }, [resources]);
 
   const voteSlugs = useMemo(

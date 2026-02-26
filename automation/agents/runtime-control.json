@@ -1,8 +1,8 @@
 {
   "stopRequested": false,
-  "requestedAt": "2026-02-24T04:15:43.209Z",
-  "requestedBy": "test",
-  "reason": "dashboard-stop-test",
-  "clearedAt": "2026-02-24T04:17:05.012Z",
-  "clearedBy": "cli"
+  "requestedAt": "2026-02-26T21:03:20.603Z",
+  "requestedBy": "setup",
+  "reason": "Integrating Scrapling into research agent",
+  "clearedAt": "2026-02-26T21:03:38.515Z",
+  "clearedBy": "setup"
 }

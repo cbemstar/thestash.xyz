@@ -3,6 +3,7 @@ import { AppNav } from "@/components/AppNav";
 import { BreadcrumbListJsonLd } from "@/components/BreadcrumbListJsonLd";
 import { FeatureHubScaffold } from "@/components/FeatureHubScaffold";
 import { ToolCard } from "@/components/ToolCard";
+import { ToolsItemListJsonLd } from "@/components/ToolsItemListJsonLd";
 import { ToolsDirectoryClient } from "@/components/ToolsDirectoryClient";
 import {
   getAllTools,
@@ -11,24 +12,24 @@ import {
 } from "@/lib/tools-catalog";
 import { BASE_URL } from "@/lib/site-url";
 
+const TOOLS_META_DESCRIPTION =
+  "Free tools for developers and designers: convert PDF to Markdown, DOCX to Markdown, check sitemaps, estimate chatbot ROI, optimize prompts, and more. No signup. Run in the browser.";
+
 export const metadata: Metadata = {
-  title: "Tools | The Stash",
-  description:
-    "Free practical tools by The Stash for markdown conversion, AI generation, chat-based analysis, and sitemap workflows.",
+  title: "Free Tools for Developers & Designers | The Stash",
+  description: TOOLS_META_DESCRIPTION,
   alternates: { canonical: `${BASE_URL}/tools` },
   openGraph: {
-    title: "Tools | The Stash",
-    description:
-      "Practical tools for markdown conversion, AI generation, chat with your data, and workflow utilities.",
+    title: "Free Tools for Developers & Designers | The Stash",
+    description: TOOLS_META_DESCRIPTION,
     url: `${BASE_URL}/tools`,
     siteName: "The Stash",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tools | The Stash",
-    description:
-      "Practical tools for markdown conversion, AI generation, chat with your data, and workflow utilities.",
+    title: "Free Tools for Developers & Designers | The Stash",
+    description: TOOLS_META_DESCRIPTION,
   },
 };
 
@@ -44,8 +45,9 @@ export default function ToolsPage() {
   return (
     <div className="min-h-screen">
       <BreadcrumbListJsonLd items={breadcrumbItems} />
+      <ToolsItemListJsonLd tools={allTools} />
       <AppNav />
-      <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-5xl overflow-x-hidden px-4 py-10 sm:px-6 lg:px-8">
         <FeatureHubScaffold
           breadcrumbs={[{ label: "The Stash", href: "/" }, { label: "Tools" }]}
           kicker="Free tool library"
@@ -62,6 +64,12 @@ export default function ToolsPage() {
             { href: "/reports", label: "Reports" },
           ]}
         >
+          <section className="mt-6 rounded-xl border border-border/80 bg-muted/20 p-4 text-sm text-muted-foreground sm:p-5" aria-label="How to use these tools">
+            <h2 className="sr-only">How to use these tools</h2>
+            <p>
+              Use these free tools to convert PDF to Markdown, DOCX to Markdown, check sitemaps, estimate chatbot ROI, generate prompts and FAQs, and chat with your documents. No signup required—paste input or upload a file, then run. Click &quot;Try with sample&quot; on any tool page to load example input.
+            </p>
+          </section>
           <section className="mt-8 section-panel sm:p-6">
             <h2 className="section-title">Featured tools</h2>
             <p className="section-copy">

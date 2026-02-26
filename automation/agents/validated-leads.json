@@ -1,14 +1,26 @@
 [
   {
-    "url": "https://github.com/greatscott/enveil",
-    "title": "enveil",
-    "slug": "enveil",
-    "description": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil",
+    "url": "https://chat.openai.com/g/g-gumycukin-vikas-scripting-helper",
+    "title": "Vikas&#x27; Airtable Scripting Custom GPT",
+    "slug": "vikas-x27-airtable-scripting-custom-gpt",
+    "description": "Vikas&#x27; Airtable Scripting Custom GPT resource",
     "category": "ai-tools",
+    "resourceType": "utility",
     "tags": [
       "ai-tools",
+      "utility",
       "ai",
-      "devtools"
+      "extending",
+      "javascript",
+      "llm",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments"
+    ],
+    "industries": [
+      "community"
     ],
     "bestFor": [
       "Engineering teams adopting AI-assisted workflows",
@@ -18,189 +30,2292 @@
       "Teams with strict data residency constraints and no approved exception process"
     ],
     "alternatives": [],
-    "body": "ENVeil: Hide .env secrets from prAIng eyes: secrets live in local encrypted stores (per project) and are injected directly into apps at runtime, never touching disk as plaintext. - GreatScott/enveil Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "body": "Vikas&#x27; Airtable Scripting Custom GPT resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
     "sources": [
       {
-        "_key": "8432dc52-54af-4ccb-832a-074fa4566f20",
-        "label": "enveil official site",
-        "url": "https://github.com/greatscott/enveil"
+        "_key": "784b540a-8484-4fe8-a659-8e6b799fad81",
+        "label": "Vikas&#x27; Airtable Scripting Custom GPT official site",
+        "url": "https://chat.openai.com/g/g-gumycukin-vikas-scripting-helper"
       }
     ],
-    "source": "Hacker News",
-    "sourceDomain": "github.com",
-    "image": "https://opengraph.githubassets.com/df8351ad038c5034dccdb369bf7e5f7c2df824ea26b4d02a88c3c4dd49e5ce85/GreatScott/enveil",
+    "source": "NoCodeSupply",
+    "sourceDomain": "chat.openai.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "extending",
+      "javascript",
+      "llm",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
     "contentTier": "tier3",
     "refreshCadenceDays": 90,
     "factCheckStatus": "needs-review",
     "researchMethod": {
-      "playbookVersion": "2026-02-24.1",
-      "validationMethod": "HEAD",
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
       "validationStatus": 200,
-      "fetchedAt": "2026-02-24T20:49:26.731Z"
+      "fetchedAt": "2026-02-26T21:58:37.855Z",
+      "lowQualityReason": null
     },
-    "lastReviewedAt": "2026-02-24T20:49:28.164Z",
-    "validatedAt": "2026-02-24T20:49:28.164Z"
+    "lastReviewedAt": "2026-02-26T21:59:15.635Z",
+    "validatedAt": "2026-02-26T21:59:15.635Z"
   },
   {
-    "url": "https://github.com/yjeanrenaud/yj_nearbyglasses",
-    "title": "yj_nearbyglasses",
-    "slug": "yj-nearbyglasses",
-    "description": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses",
-    "category": "development-tools",
+    "url": "https://www.figma.com/community/file/1116642834384860183",
+    "title": "250 (500) Logos of Tech Products",
+    "slug": "250-500-logos-of-tech-products",
+    "description": "250 (500) Logos of Tech Products resource",
+    "category": "design-tools",
+    "resourceType": "directory",
     "tags": [
-      "development-tools"
+      "design-tools",
+      "svg",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
     ],
     "bestFor": [
-      "Developers shipping production code",
-      "Teams standardizing tooling across projects"
+      "Product designers building interface systems",
+      "Cross-functional teams collaborating on UI"
     ],
     "notFor": [
-      "Non-technical users with no engineering support"
+      "Users who only need basic image editing"
     ],
     "alternatives": [],
-    "body": "attempting to detect smart glasses nearby and warn you - yjeanrenaud/yj_nearbyglasses Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "body": "250 (500) Logos of Tech Products resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
     "sources": [
       {
-        "_key": "037ce31b-0216-4f55-9606-1f7171b3bc82",
-        "label": "yj_nearbyglasses official site",
-        "url": "https://github.com/yjeanrenaud/yj_nearbyglasses"
+        "_key": "39ee656b-3e77-40f7-8fd1-3bb6cdcac8e8",
+        "label": "250 (500) Logos of Tech Products official site",
+        "url": "https://www.figma.com/community/file/1116642834384860183"
       }
     ],
-    "source": "Hacker News",
-    "sourceDomain": "github.com",
-    "image": "https://opengraph.githubassets.com/ef70170ae9bbd8314706a4ec4a5ae7a45722bdcf1f972ad4366ba20667ab1aec/yjeanrenaud/yj_nearbyglasses",
+    "source": "NoCodeSupply",
+    "sourceDomain": "figma.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "svg",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
     "contentTier": "tier3",
     "refreshCadenceDays": 90,
     "factCheckStatus": "needs-review",
     "researchMethod": {
-      "playbookVersion": "2026-02-24.1",
-      "validationMethod": "HEAD",
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
       "validationStatus": 200,
-      "fetchedAt": "2026-02-24T20:49:41.214Z"
+      "fetchedAt": "2026-02-26T21:59:15.718Z",
+      "lowQualityReason": null
     },
-    "lastReviewedAt": "2026-02-24T20:49:42.305Z",
-    "validatedAt": "2026-02-24T20:49:42.305Z"
+    "lastReviewedAt": "2026-02-26T21:59:28.808Z",
+    "validatedAt": "2026-02-26T21:59:28.808Z"
   },
   {
-    "url": "https://keepandroidopen.org/open-letter",
-    "title": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution",
-    "slug": "an-open-letter-to-google-regarding-mandatory-developer-registration-for-android-app-distribution",
-    "description": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution",
-    "category": "development-tools",
+    "url": "https://textfx.withgoogle.com",
+    "title": "TextFX",
+    "slug": "textfx",
+    "description": "TextFX",
+    "category": "ui-ux-resources",
+    "resourceType": "utility",
     "tags": [
-      "development-tools",
-      "devtools"
+      "ui-ux-resources",
+      "utility",
+      "content",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "conversion",
+      "cookie",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
     ],
     "bestFor": [
-      "Developers shipping production code",
-      "Teams standardizing tooling across projects"
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
     ],
-    "notFor": [
-      "Non-technical users with no engineering support"
-    ],
+    "notFor": [],
     "alternatives": [],
-    "body": "Open Letter to Google Regarding Mandatory Developer Registration for Third-Party App Distribution Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "body": "TextFX Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
     "sources": [
       {
-        "_key": "61e82d78-380d-488e-b818-137715dbc111",
-        "label": "An Open Letter to Google regarding Mandatory Developer Registration for Android App Distribution official site",
-        "url": "https://keepandroidopen.org/open-letter"
+        "_key": "ba33ef17-05aa-4d70-9639-9c2a0400d9a5",
+        "label": "TextFX official site",
+        "url": "https://textfx.withgoogle.com"
       }
     ],
-    "source": "Hacker News",
-    "sourceDomain": "keepandroidopen.org",
-    "image": "https://keepandroidopen.org/img/altered-deal.png",
+    "source": "NoCodeSupply",
+    "sourceDomain": "textfx.withgoogle.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "content",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "conversion",
+      "cookie"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
     "contentTier": "tier3",
     "refreshCadenceDays": 90,
     "factCheckStatus": "needs-review",
     "researchMethod": {
-      "playbookVersion": "2026-02-24.1",
+      "playbookVersion": "2026-02-26.2",
       "validationMethod": "HEAD",
       "validationStatus": 200,
-      "fetchedAt": "2026-02-24T20:49:42.387Z"
+      "fetchedAt": "2026-02-26T21:59:28.890Z",
+      "lowQualityReason": null
     },
-    "lastReviewedAt": "2026-02-24T20:49:43.145Z",
-    "validatedAt": "2026-02-24T20:49:43.145Z"
+    "lastReviewedAt": "2026-02-26T21:59:30.249Z",
+    "validatedAt": "2026-02-26T21:59:30.249Z"
   },
   {
-    "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle",
-    "title": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up",
-    "slug": "samsung-039-s-galaxy-upcycle-promised-to-make-old-phones-useful-then-won-an-award-for-giving-up",
-    "description": "Your old phone could have been so much more.",
-    "category": "development-tools",
+    "url": "https://www.figma.com/community/plugin/1326990370920029683",
+    "title": "Figma to Replit Plugin",
+    "slug": "figma-to-replit-plugin",
+    "description": "Figma to Replit Plugin resource",
+    "category": "design-tools",
+    "resourceType": "utility",
     "tags": [
-      "development-tools"
+      "design-tools",
+      "utility",
+      "design",
+      "design-system",
+      "workflow",
+      "3d",
+      "api",
+      "accessibility",
+      "aesthetic",
+      "agency",
+      "analytics",
+      "animation"
+    ],
+    "industries": [
+      "saas",
+      "community",
+      "developer"
     ],
     "bestFor": [
-      "Developers shipping production code",
-      "Teams standardizing tooling across projects"
+      "Product designers building interface systems",
+      "Cross-functional teams collaborating on UI"
     ],
     "notFor": [
-      "Non-technical users with no engineering support"
+      "Users who only need basic image editing"
     ],
-    "alternatives": [],
-    "body": "Your old phone could have been so much more. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "alternatives": [
+      "framer",
+      "penpot",
+      "sketch"
+    ],
+    "body": "Figma to Replit Plugin resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
     "sources": [
       {
-        "_key": "055149d3-c382-4556-9514-81b918443466",
-        "label": "Samsung&#039;s Galaxy Upcycle promised to make old phones useful, then won an award for giving up official site",
-        "url": "https://www.xda-developers.com/samsung-promised-make-old-phones-useful-galaxy-upcycle"
+        "_key": "ce50d190-e380-481b-8fa7-4e3dd3973ec0",
+        "label": "Figma to Replit Plugin official site",
+        "url": "https://www.figma.com/community/plugin/1326990370920029683"
       }
     ],
-    "source": "Hacker News",
-    "sourceDomain": "xda-developers.com",
-    "image": "https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2026/02/galaxy-upcycling-1.jpg?w=1600&amp;h=900&amp;fit=crop",
+    "source": "NoCodeSupply",
+    "sourceDomain": "figma.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "design-system",
+      "workflow",
+      "3d",
+      "api",
+      "accessibility",
+      "aesthetic",
+      "agency",
+      "analytics",
+      "animation",
+      "app",
+      "assets",
+      "audio",
+      "authentication",
+      "automation",
+      "backend",
+      "brand-guide"
+    ],
+    "sourceIndustries": [
+      "saas",
+      "no-code",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating"
+    ],
+    "image": "",
     "contentTier": "tier3",
     "refreshCadenceDays": 90,
     "factCheckStatus": "needs-review",
     "researchMethod": {
-      "playbookVersion": "2026-02-24.1",
-      "validationMethod": "HEAD",
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
       "validationStatus": 200,
-      "fetchedAt": "2026-02-24T20:49:43.226Z"
+      "fetchedAt": "2026-02-26T21:59:30.330Z",
+      "lowQualityReason": null
     },
-    "lastReviewedAt": "2026-02-24T20:49:46.955Z",
-    "validatedAt": "2026-02-24T20:49:46.955Z"
+    "lastReviewedAt": "2026-02-26T21:59:42.136Z",
+    "validatedAt": "2026-02-26T21:59:42.136Z"
   },
   {
-    "url": "https://github.com/vignesh07/babyshark",
-    "title": "babyshark",
-    "slug": "babyshark",
-    "description": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark",
-    "category": "development-tools",
+    "url": "https://reallygoodemails.com",
+    "title": "Really Good Email",
+    "slug": "really-good-email",
+    "description": "Really Good Email resource",
+    "category": "ai-tools",
+    "resourceType": "directory",
     "tags": [
-      "development-tools",
-      "design"
+      "ai-tools",
+      "ai",
+      "email",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "marketing",
+      "content"
     ],
     "bestFor": [
-      "Developers shipping production code",
-      "Teams standardizing tooling across projects"
+      "Engineering teams adopting AI-assisted workflows",
+      "Developers who need faster iteration loops"
     ],
     "notFor": [
-      "Non-technical users with no engineering support"
+      "Teams with strict data residency constraints and no approved exception process"
     ],
     "alternatives": [],
-    "body": "Flows-first PCAP TUI (case files, gorgeous UX). Do do do do. - vignesh07/babyshark Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "body": "Really Good Email resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
     "sources": [
       {
-        "_key": "36cc1796-c17f-468a-ac76-3e80a5923bb6",
-        "label": "babyshark official site",
-        "url": "https://github.com/vignesh07/babyshark"
+        "_key": "0105ecd6-3e8e-4244-b83c-819969838520",
+        "label": "Really Good Email official site",
+        "url": "https://reallygoodemails.com"
       }
     ],
-    "source": "Hacker News",
-    "sourceDomain": "github.com",
-    "image": "https://opengraph.githubassets.com/caa9a97869036cd84a87f823a0197cbcf6d9a62f54c2f07187df190327506d98/vignesh07/babyshark",
+    "source": "NoCodeSupply",
+    "sourceDomain": "reallygoodemails.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "email",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
     "contentTier": "tier3",
     "refreshCadenceDays": 90,
     "factCheckStatus": "needs-review",
     "researchMethod": {
-      "playbookVersion": "2026-02-24.1",
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T21:59:42.216Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T21:59:49.433Z",
+    "validatedAt": "2026-02-26T21:59:49.433Z"
+  },
+  {
+    "url": "https://brandfetch.com",
+    "title": "Brandfetch",
+    "slug": "brandfetch",
+    "description": "Brandfetch resource",
+    "category": "learning-resources",
+    "resourceType": "directory",
+    "tags": [
+      "learning-resources",
+      "assets",
+      "brand-guide",
+      "gallery",
+      "3d",
+      "api",
+      "accessibility",
+      "aesthetic",
+      "agency",
+      "analytics",
+      "animation",
+      "app"
+    ],
+    "industries": [
+      "community",
+      "general",
+      "developer"
+    ],
+    "bestFor": [
+      "Developers upskilling into new stacks",
+      "Self-directed learners who prefer structured paths"
+    ],
+    "notFor": [
+      "Advanced specialists looking only for niche research papers"
+    ],
+    "alternatives": [],
+    "body": "Brandfetch resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "539ad4c3-acdd-451a-b754-8b02ddc20672",
+        "label": "Brandfetch official site",
+        "url": "https://brandfetch.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "brandfetch.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "assets",
+      "brand-guide",
+      "gallery",
+      "3d",
+      "api",
+      "accessibility",
+      "aesthetic",
+      "agency",
+      "analytics",
+      "animation",
+      "app",
+      "audio",
+      "authentication",
+      "automation",
+      "backend",
+      "cms"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T21:59:49.515Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T21:59:55.365Z",
+    "validatedAt": "2026-02-26T21:59:55.365Z"
+  },
+  {
+    "url": "https://www.udemy.com/course/converting-webflow-into-angular-245-using-freeformjs",
+    "title": "Converting Webflow into Angular",
+    "slug": "converting-webflow-into-angular",
+    "description": "Converting Webflow into Angular resource",
+    "category": "learning-resources",
+    "resourceType": "course",
+    "tags": [
+      "learning-resources",
+      "course",
+      "custom-code",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Developers upskilling into new stacks",
+      "Self-directed learners who prefer structured paths"
+    ],
+    "notFor": [
+      "Advanced specialists looking only for niche research papers"
+    ],
+    "alternatives": [
+      "framer",
+      "wordpress",
+      "wix"
+    ],
+    "body": "Converting Webflow into Angular resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "1e8afbfc-e540-400c-af84-6cf959b16835",
+        "label": "Converting Webflow into Angular official site",
+        "url": "https://www.udemy.com/course/converting-webflow-into-angular-245-using-freeformjs"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "udemy.com",
+    "sourceCollection": "learn",
+    "sourceTags": [
+      "custom-code",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:01.830Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:11.935Z",
+    "validatedAt": "2026-02-26T22:00:11.935Z"
+  },
+  {
+    "url": "https://ds.shadcn.com",
+    "title": "shadcn/designer - Components for building design tools like Framer, Canva, and more.",
+    "slug": "shadcn-designer-components-for-building-design-tools-like-framer-canva-and-more",
+    "description": "Components for building design tools like Framer, Canva, and more.",
+    "category": "coding",
+    "resourceType": "library",
+    "tags": [
+      "coding",
+      "library",
+      "design",
+      "javascript",
+      "web-apps",
+      "extending",
+      "design-system",
+      "components",
+      "charts",
+      "click",
+      "color-palettes"
+    ],
+    "industries": [
+      "community"
+    ],
+    "bestFor": [
+      "Developers looking for practical code references",
+      "Teams aligning on frontend best practices"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Components for building design tools like Framer, Canva, and more. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "0f3d8537-91c2-4000-9e62-4b85ac08c2bc",
+        "label": "shadcn/designer - Components for building design tools like Framer, Canva, and more. official site",
+        "url": "https://ds.shadcn.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "ds.shadcn.com",
+    "sourceCollection": "code",
+    "sourceTags": [
+      "javascript",
+      "web-apps",
+      "extending",
+      "design-system",
+      "components",
+      "charts",
+      "click",
+      "color-palettes"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "dev-tools",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "https://ds.shadcn.com/opengraph-image.jpg",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
       "validationMethod": "HEAD",
       "validationStatus": 200,
-      "fetchedAt": "2026-02-24T20:49:47.036Z"
+      "fetchedAt": "2026-02-26T22:00:16.214Z",
+      "lowQualityReason": null
     },
-    "lastReviewedAt": "2026-02-24T20:49:48.064Z",
-    "validatedAt": "2026-02-24T20:49:48.064Z"
+    "lastReviewedAt": "2026-02-26T22:00:17.062Z",
+    "validatedAt": "2026-02-26T22:00:17.062Z"
+  },
+  {
+    "url": "https://requery.dev",
+    "title": "requery-js",
+    "slug": "requery-js",
+    "description": "requery-js resource",
+    "category": "coding",
+    "resourceType": "library",
+    "tags": [
+      "coding",
+      "library",
+      "javascript",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Developers looking for practical code references",
+      "Teams aligning on frontend best practices"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "requery-js resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "e405d99c-fa58-487c-9edc-36b9173e3343",
+        "label": "requery-js official site",
+        "url": "https://requery.dev"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "requery.dev",
+    "sourceCollection": "code",
+    "sourceTags": [
+      "javascript",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "dev-tools",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:17.143Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:19.668Z",
+    "validatedAt": "2026-02-26T22:00:19.668Z"
+  },
+  {
+    "url": "https://gist.github.com/nocodesupplyco/05a71b745877a8bee3cb725fd9919a3d",
+    "title": "Dark/Light Mode Favicon · GitHub",
+    "slug": "dark-light-mode-favicon-github",
+    "description": "Dark/Light Mode Favicon. GitHub Gist: instantly share code, notes, and snippets.",
+    "category": "coding",
+    "resourceType": "snippet",
+    "tags": [
+      "coding",
+      "snippet",
+      "html",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Developers looking for practical code references",
+      "Teams aligning on frontend best practices"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Dark/Light Mode Favicon. GitHub Gist: instantly share code, notes, and snippets. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "6b13b132-1ffe-41ef-9c7f-a48261f8e6d5",
+        "label": "Dark/Light Mode Favicon · GitHub official site",
+        "url": "https://gist.github.com/nocodesupplyco/05a71b745877a8bee3cb725fd9919a3d"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "gist.github.com",
+    "sourceCollection": "code",
+    "sourceTags": [
+      "html",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:19.750Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:21.229Z",
+    "validatedAt": "2026-02-26T22:00:21.229Z"
+  },
+  {
+    "url": "https://gist.github.com/nocodesupplyco/ab47e7189bea9e5cb3902605226c9fe9",
+    "title": "Swipe Webflow Tabs · GitHub",
+    "slug": "swipe-webflow-tabs-github",
+    "description": "Swipe Webflow Tabs. GitHub Gist: instantly share code, notes, and snippets.",
+    "category": "coding",
+    "resourceType": "snippet",
+    "tags": [
+      "coding",
+      "snippet",
+      "javascript",
+      "tabs",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Developers looking for practical code references",
+      "Teams aligning on frontend best practices"
+    ],
+    "notFor": [],
+    "alternatives": [
+      "framer",
+      "wordpress",
+      "wix"
+    ],
+    "body": "Swipe Webflow Tabs. GitHub Gist: instantly share code, notes, and snippets. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "52aae292-a3e6-42a2-8cf3-9a78e01331de",
+        "label": "Swipe Webflow Tabs · GitHub official site",
+        "url": "https://gist.github.com/nocodesupplyco/ab47e7189bea9e5cb3902605226c9fe9"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "gist.github.com",
+    "sourceCollection": "code",
+    "sourceTags": [
+      "javascript",
+      "tabs",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "no-code",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:21.311Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:22.625Z",
+    "validatedAt": "2026-02-26T22:00:22.625Z"
+  },
+  {
+    "url": "https://www.relumeipsum.com",
+    "title": "Relume Ipsum",
+    "slug": "relume-ipsum",
+    "description": "Relume Ipsum resource",
+    "category": "ui-ux-resources",
+    "resourceType": "utility",
+    "tags": [
+      "ui-ux-resources",
+      "utility",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Relume Ipsum resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "34ac714b-0d61-4185-8e6c-b6fe7ed2993e",
+        "label": "Relume Ipsum official site",
+        "url": "https://www.relumeipsum.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "relumeipsum.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:29.314Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:37.103Z",
+    "validatedAt": "2026-02-26T22:00:37.103Z"
+  },
+  {
+    "url": "https://www.phind.com",
+    "title": "Phind",
+    "slug": "phind",
+    "description": "Phind resource",
+    "category": "ui-ux-resources",
+    "resourceType": "app",
+    "tags": [
+      "ui-ux-resources",
+      "custom-code",
+      "search",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components"
+    ],
+    "industries": [
+      "community"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Phind resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "c38f8cd6-4dfc-413e-9a7f-455b2049940f",
+        "label": "Phind official site",
+        "url": "https://www.phind.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "phind.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "custom-code",
+      "search",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components"
+    ],
+    "sourceIndustries": [
+      "technology",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:37.185Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:40.247Z",
+    "validatedAt": "2026-02-26T22:00:40.247Z"
+  },
+  {
+    "url": "https://easlo.gumroad.com/l/vdbko",
+    "title": "Creator Roadmap",
+    "slug": "creator-roadmap",
+    "description": "Creator Roadmap resource",
+    "category": "ui-ux-resources",
+    "resourceType": "template",
+    "tags": [
+      "ui-ux-resources",
+      "template",
+      "docs",
+      "how-to",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components"
+    ],
+    "industries": [
+      "community"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Creator Roadmap resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "4f26ecfb-ef31-4eb1-8f1d-7991c5fa1fa8",
+        "label": "Creator Roadmap official site",
+        "url": "https://easlo.gumroad.com/l/vdbko"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "easlo.gumroad.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "docs",
+      "how-to",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:40.329Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:45.268Z",
+    "validatedAt": "2026-02-26T22:00:45.268Z"
+  },
+  {
+    "url": "https://www.hiophelia.com",
+    "title": "Ophelia",
+    "slug": "ophelia",
+    "description": "Ophelia resource",
+    "category": "ui-ux-resources",
+    "resourceType": "utility",
+    "tags": [
+      "ui-ux-resources",
+      "utility",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Ophelia resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "fd601986-93cd-41c7-9f32-19dfbc4dfc70",
+        "label": "Ophelia official site",
+        "url": "https://www.hiophelia.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "hiophelia.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "no-code",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:49.389Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:00:53.107Z",
+    "validatedAt": "2026-02-26T22:00:53.107Z"
+  },
+  {
+    "url": "https://www.bettyblocks.com",
+    "title": "Betty Blocks",
+    "slug": "betty-blocks",
+    "description": "Betty Blocks resource",
+    "category": "ui-ux-resources",
+    "resourceType": "app",
+    "tags": [
+      "ui-ux-resources",
+      "web-apps",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Betty Blocks resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "50bedeb6-6cab-4515-9ba0-356c13583c49",
+        "label": "Betty Blocks official site",
+        "url": "https://www.bettyblocks.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "bettyblocks.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "web-apps",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:00:53.188Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:01:03.842Z",
+    "validatedAt": "2026-02-26T22:01:03.842Z"
+  },
+  {
+    "url": "https://tome.app",
+    "title": "Tome",
+    "slug": "tome",
+    "description": "Tome resource",
+    "category": "ui-ux-resources",
+    "resourceType": "app",
+    "tags": [
+      "ui-ux-resources",
+      "docs",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Tome resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "cc724ba0-b888-4d09-97a7-0898a746f8c1",
+        "label": "Tome official site",
+        "url": "https://tome.app"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "tome.app",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "docs",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "no-code",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:02:32.290Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:02:36.162Z",
+    "validatedAt": "2026-02-26T22:02:36.162Z"
+  },
+  {
+    "url": "https://www.shapr3d.com",
+    "title": "3D CAD for designing manufacturing-ready models | Shapr3D",
+    "slug": "3d-cad-for-designing-manufacturing-ready-models-shapr3d",
+    "description": "Shapr3D resource",
+    "category": "ai-tools",
+    "resourceType": "app",
+    "tags": [
+      "ai-tools",
+      "ai",
+      "design",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Engineering teams adopting AI-assisted workflows",
+      "Developers who need faster iteration loops"
+    ],
+    "notFor": [
+      "Teams with strict data residency constraints and no approved exception process"
+    ],
+    "alternatives": [],
+    "body": "Shapr3D resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "260bf232-76a4-4be7-a6bf-7352094889ac",
+        "label": "3D CAD for designing manufacturing-ready models | Shapr3D official site",
+        "url": "https://www.shapr3d.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "shapr3d.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:04:09.169Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:04:09.988Z",
+    "validatedAt": "2026-02-26T22:04:09.988Z"
+  },
+  {
+    "url": "https://instaprice.app",
+    "title": "instaprice",
+    "slug": "instaprice",
+    "description": "Instaprice is the pricing calculator for freelance projects. Charge the right amount, every time. Create quotes in seconds",
+    "category": "ui-ux-resources",
+    "resourceType": "utility",
+    "tags": [
+      "ui-ux-resources",
+      "utility",
+      "project-management",
+      "pricing",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Instaprice is the pricing calculator for freelance projects. Charge the right amount, every time. Create quotes in seconds Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "9e76fd40-b451-4941-aa0d-cc1d36588a80",
+        "label": "instaprice official site",
+        "url": "https://instaprice.app"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "instaprice.app",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "project-management",
+      "pricing",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "https://firebasestorage.googleapis.com/v0/b/chargethismuch.appspot.com/o/assets%2FOpengraph-instaprice-3.jpg?alt=media&token=75a8c726-ebf0-4f94-ba50-4fdc2cbb57dc",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:04:10.070Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:04:11.943Z",
+    "validatedAt": "2026-02-26T22:04:11.943Z"
+  },
+  {
+    "url": "https://www.hedrick.io/resource/system",
+    "title": "The Webflow Project System 2.0",
+    "slug": "the-webflow-project-system-2-0",
+    "description": "The Webflow Project System 2.0 resource",
+    "category": "ui-ux-resources",
+    "resourceType": "template",
+    "tags": [
+      "ui-ux-resources",
+      "template",
+      "project-management",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [
+      "framer",
+      "wordpress",
+      "wix"
+    ],
+    "body": "The Webflow Project System 2.0 resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "49110c41-851e-4053-ac90-96df9fc3e840",
+        "label": "The Webflow Project System 2.0 official site",
+        "url": "https://www.hedrick.io/resource/system"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "hedrick.io",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "project-management",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:04:27.764Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:04:33.043Z",
+    "validatedAt": "2026-02-26T22:04:33.043Z"
+  },
+  {
+    "url": "https://webflow.com/made-in-webflow/website/teenage-engineering-button",
+    "title": "Teenage Engineering Button Cloneable - Webflow",
+    "slug": "teenage-engineering-button-cloneable-webflow",
+    "description": "Inspired by Teenage Engineering products.",
+    "category": "ui-ux-resources",
+    "resourceType": "component",
+    "tags": [
+      "ui-ux-resources",
+      "component",
+      "design-system",
+      "components",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "developer",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [
+      "framer",
+      "wordpress",
+      "wix"
+    ],
+    "body": "Inspired by Teenage Engineering products. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "2b511bf8-ca85-4426-a612-fe1f64c4ffde",
+        "label": "Teenage Engineering Button Cloneable - Webflow official site",
+        "url": "https://webflow.com/made-in-webflow/website/teenage-engineering-button"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "webflow.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "design-system",
+      "components",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:04:55.993Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:04:59.010Z",
+    "validatedAt": "2026-02-26T22:04:59.010Z"
+  },
+  {
+    "url": "https://www.hvdfonts.com/fonts",
+    "title": "Retail Fonts | HvD Fonts",
+    "slug": "retail-fonts-hvd-fonts",
+    "description": "We are HvD Fonts – a type foundry for high quality, original retail fonts as well as nice custom font solutions.",
+    "category": "ai-tools",
+    "resourceType": "other",
+    "tags": [
+      "ai-tools",
+      "ai",
+      "typeface",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "e-commerce",
+      "marketing"
+    ],
+    "bestFor": [
+      "Engineering teams adopting AI-assisted workflows",
+      "Developers who need faster iteration loops"
+    ],
+    "notFor": [
+      "Teams with strict data residency constraints and no approved exception process"
+    ],
+    "alternatives": [],
+    "body": "We are HvD Fonts – a type foundry for high quality, original retail fonts as well as nice custom font solutions. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "4e8329d4-83ee-4e99-9c3c-2f00ecb06a06",
+        "label": "Retail Fonts | HvD Fonts official site",
+        "url": "https://www.hvdfonts.com/fonts"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "hvdfonts.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "typeface",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:04:59.092Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:05:02.825Z",
+    "validatedAt": "2026-02-26T22:05:02.826Z"
+  },
+  {
+    "url": "https://www.notionsecondbrain.com",
+    "title": "Second Brain Template",
+    "slug": "second-brain-template",
+    "description": "Turn Notion into your second brain to organize your tasks, projects, goals, notes, and more—all in one place.",
+    "category": "ui-ux-resources",
+    "resourceType": "template",
+    "tags": [
+      "ui-ux-resources",
+      "template",
+      "ai",
+      "productivity",
+      "process",
+      "database",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Turn Notion into your second brain to organize your tasks, projects, goals, notes, and more—all in one place. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "c5f288a0-edc0-4d8a-8a23-d193428870ab",
+        "label": "Second Brain Template official site",
+        "url": "https://www.notionsecondbrain.com"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "notionsecondbrain.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "process",
+      "database",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "project-management",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "https://framerusercontent.com/images/lAwpq7KZjVvOBwv4flJpkj2Pzw.png",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:05:02.907Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:05:03.626Z",
+    "validatedAt": "2026-02-26T22:05:03.626Z"
+  },
+  {
+    "url": "https://vmdanilov.gumroad.com/l/optimage",
+    "title": "Optimage 3",
+    "slug": "optimage-3",
+    "description": "Optimage is a novel image optimization tool to automatically reduce file size of your images, videos and documents by up to 90% without losing quality.Support Optimage to continue using it without limits. You will get a license key to register Optimage on any",
+    "category": "ui-ux-resources",
+    "resourceType": "utility",
+    "tags": [
+      "ui-ux-resources",
+      "utility",
+      "devtools",
+      "optimize",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "general",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Optimage is a novel image optimization tool to automatically reduce file size of your images, videos and documents by up to 90% without losing quality.Support Optimage to continue using it without limits. You will get a license key to register Optimage on any Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "88a19905-c2e8-4b42-82be-dec2b08621e7",
+        "label": "Optimage 3 official site",
+        "url": "https://vmdanilov.gumroad.com/l/optimage"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "vmdanilov.gumroad.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "optimize",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental",
+      "dev-tools"
+    ],
+    "image": "https://public-files.gumroad.com/zom6r77m5jamyesz11g8swxl0pi9",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:05:03.707Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:05:05.540Z",
+    "validatedAt": "2026-02-26T22:05:05.540Z"
+  },
+  {
+    "url": "https://powersave.pro",
+    "title": "Powersave | Save ASAP to anywhere",
+    "slug": "powersave-save-asap-to-anywhere",
+    "description": "Save ASAP to anywhere. Save more, categorize &amp; analyze as you browse.",
+    "category": "ui-ux-resources",
+    "resourceType": "utility",
+    "tags": [
+      "ui-ux-resources",
+      "utility",
+      "extending",
+      "database",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Design systems teams",
+      "Frontend developers building reusable UI patterns"
+    ],
+    "notFor": [],
+    "alternatives": [],
+    "body": "Save ASAP to anywhere. Save more, categorize &amp; analyze as you browse. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "336acf9b-e8cf-4407-a862-7ff71e76a842",
+        "label": "Powersave | Save ASAP to anywhere official site",
+        "url": "https://powersave.pro"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "powersave.pro",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "extending",
+      "database",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content"
+    ],
+    "sourceIndustries": [
+      "ai",
+      "dev-tools",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "creative",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "https://powersave.pro/og-image.png",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:05:05.622Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:05:06.953Z",
+    "validatedAt": "2026-02-26T22:05:06.953Z"
+  },
+  {
+    "url": "https://www.figma.com/community/plugin/1164118094004004837",
+    "title": "Photopea for Figma",
+    "slug": "photopea-for-figma",
+    "description": "Photopea for Figma resource",
+    "category": "design-tools",
+    "resourceType": "utility",
+    "tags": [
+      "design-tools",
+      "utility",
+      "design",
+      "editor",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion",
+      "marketing"
+    ],
+    "industries": [
+      "saas",
+      "community",
+      "content",
+      "marketing"
+    ],
+    "bestFor": [
+      "Product designers building interface systems",
+      "Cross-functional teams collaborating on UI"
+    ],
+    "notFor": [
+      "Users who only need basic image editing"
+    ],
+    "alternatives": [
+      "framer",
+      "penpot",
+      "sketch"
+    ],
+    "body": "Photopea for Figma resource Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "9d84a0f2-c227-4b7a-bbd1-4e45e29c151b",
+        "label": "Photopea for Figma official site",
+        "url": "https://www.figma.com/community/plugin/1164118094004004837"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "figma.com",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "editor",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "components",
+      "content",
+      "conversion"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "photography",
+      "saas",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "collaboration",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating"
+    ],
+    "image": "",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "Scrapling",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:06:27.587Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:06:33.464Z",
+    "validatedAt": "2026-02-26T22:06:33.464Z"
+  },
+  {
+    "url": "https://www.dessn.ai",
+    "title": "Dessn - Design in production",
+    "slug": "dessn-design-in-production",
+    "description": "Design and prototype in your own codebase. No coding required. Dessn lets product teams design features directly in production.",
+    "category": "ai-tools",
+    "resourceType": "app",
+    "tags": [
+      "ai-tools",
+      "design",
+      "design-system",
+      "components",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "content",
+      "marketing"
+    ],
+    "industries": [
+      "community",
+      "content",
+      "developer",
+      "marketing"
+    ],
+    "bestFor": [
+      "Engineering teams adopting AI-assisted workflows",
+      "Developers who need faster iteration loops"
+    ],
+    "notFor": [
+      "Teams with strict data residency constraints and no approved exception process"
+    ],
+    "alternatives": [],
+    "body": "Design and prototype in your own codebase. No coding required. Dessn lets product teams design features directly in production. Use this as a starting point, then validate integration constraints, pricing boundaries, and long-term maintenance risk against your current stack. Before adopting, compare alternatives and confirm documentation quality, onboarding path, and the cadence of product updates.",
+    "sources": [
+      {
+        "_key": "21706d49-90d0-4cbe-b566-2dc9909cc700",
+        "label": "Dessn - Design in production official site",
+        "url": "https://www.dessn.ai"
+      }
+    ],
+    "source": "NoCodeSupply",
+    "sourceDomain": "dessn.ai",
+    "sourceCollection": "tools",
+    "sourceTags": [
+      "design-system",
+      "components",
+      "workflow",
+      "charts",
+      "click",
+      "color-palettes",
+      "comments",
+      "content"
+    ],
+    "sourceIndustries": [
+      "creative",
+      "dev-tools",
+      "collaboration",
+      "ai",
+      "advertising",
+      "agriculture",
+      "apparel",
+      "architecture",
+      "beauty",
+      "community",
+      "construction",
+      "crypto",
+      "customer-service",
+      "data-management",
+      "dating",
+      "dental"
+    ],
+    "image": "https://dessn.ai/og.webp",
+    "contentTier": "tier3",
+    "refreshCadenceDays": 90,
+    "factCheckStatus": "needs-review",
+    "researchMethod": {
+      "playbookVersion": "2026-02-26.2",
+      "validationMethod": "HEAD",
+      "validationStatus": 200,
+      "fetchedAt": "2026-02-26T22:06:42.385Z",
+      "lowQualityReason": null
+    },
+    "lastReviewedAt": "2026-02-26T22:06:43.920Z",
+    "validatedAt": "2026-02-26T22:06:43.920Z"
   }
 ]

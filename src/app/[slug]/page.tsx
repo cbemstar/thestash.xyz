@@ -28,10 +28,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Pill } from "@/components/kibo-ui/pill";
 import type { Resource } from "@/types/resource";
 import type { Metadata } from "next";
-import {
-  evaluateResourceTierQuality,
-  shouldNoindexFromTierQuality,
-} from "@/lib/content-tier";
+import { evaluateResourceTierQuality } from "@/lib/content-tier";
 
 import { BASE_URL } from "@/lib/site-url";
 const RESERVED_SLUGS = ["studio", "api"];
@@ -247,9 +244,7 @@ export async function generateMetadata({
       description,
       images: [ogImageUrl],
     },
-    robots: shouldNoindexFromTierQuality(quality)
-      ? { index: false, follow: false }
-      : { index: true, follow: true },
+    robots: { index: true, follow: true },
   };
 }
 

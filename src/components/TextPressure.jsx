@@ -166,16 +166,16 @@ const TextPressure = ({
           font-style: normal;
         }
 
-        .flex {
+        .text-pressure-flex {
           display: flex;
           justify-content: space-between;
         }
 
-        .stroke span {
+        .text-pressure-stroke span {
           position: relative;
           color: ${textColor};
         }
-        .stroke span::after {
+        .text-pressure-stroke span::after {
           content: attr(data-char);
           position: absolute;
           left: 0;
@@ -193,7 +193,13 @@ const TextPressure = ({
     );
   }, [fontFamily, fontUrl, textColor, strokeColor]);
 
-  const dynamicClassName = [className, flex ? 'flex' : '', stroke ? 'stroke' : ''].filter(Boolean).join(' ');
+  const dynamicClassName = [
+    className,
+    flex ? 'text-pressure-flex' : '',
+    stroke ? 'text-pressure-stroke' : ''
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <div

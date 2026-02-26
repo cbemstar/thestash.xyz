@@ -66,6 +66,11 @@ ORCHESTRATOR
 - Curator with auto-approve + publish:
   `npm run agent:curator -- --auto-approve-reviewed --publish-approved --max-publish=25`
 - Daemon (24/7 loop): `npm run agent:daemon -- --interval-min=180 --weekly-hours=168 --auto-approve-reviewed --publish-approved`
+- Daemon service start (background, managed): `npm run agent:daemon:start`
+- Daemon service start with unlimited publish: `npm run agent:daemon:start -- --max-publish=0`
+- Daemon service stop: `npm run agent:daemon:stop`
+- Daemon service status: `npm run agent:daemon:status`
+- Daemon service logs: `npm run agent:daemon:logs -- --lines=200 --follow`
 - Live watch (CLI): `npm run agent:watch -- --agent=research`
 - Request graceful stop: `npm run agent:stop -- "manual review"`
 - Clear stop request: `npm run agent:resume`
